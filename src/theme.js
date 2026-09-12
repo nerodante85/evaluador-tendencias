@@ -32,7 +32,11 @@ export const THEME_CSS = `
     --card: #FFFFFF;
     --sand: #F6F4EF;
     --ink: #343433;
-    --ink-soft: #7E7E7D;
+    /* #7E7E7D original daba ~4.06:1 sobre --paper/--card — por debajo del
+       4.5:1 que pide WCAG AA para texto normal, y este color se usa en
+       casi todas las etiquetas y textos de apoyo del panel. #6B6B6A da
+       ~5.1:1, pasa AA manteniendo el mismo tono neutro. */
+    --ink-soft: #6B6B6A;
     --line: #F2F0ED;
     --line-soft: #F2F0ED;
     --stitch: #E5D5C3;

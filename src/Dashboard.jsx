@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { TrendingUp, TrendingDown, Minus, Pin, ChevronDown, Pencil, Check, Plus, X } from "lucide-react";
 
 import { palette, FONT, THEME_CSS } from "./theme.js";
@@ -522,8 +522,9 @@ function FormularioSenal({ onAgregar, onCancelar }) {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label className="text-[11px] block mb-1" style={{ color: palette.inkSoft }}>Nombre</label>
+          <label htmlFor="senal-nombre" className="text-[11px] block mb-1" style={{ color: palette.inkSoft }}>Nombre</label>
           <input
+            id="senal-nombre"
             autoFocus
             value={f.name}
             onChange={(e) => set("name", e.target.value)}
@@ -533,13 +534,14 @@ function FormularioSenal({ onAgregar, onCancelar }) {
           />
         </div>
 
-        <div>
-          <label className="text-[11px] block mb-1" style={{ color: palette.inkSoft }}>Categoría</label>
+        <div role="group" aria-labelledby="senal-categoria-label">
+          <p id="senal-categoria-label" className="text-[11px] block mb-1" style={{ color: palette.inkSoft }}>Categoría</p>
           <div className="flex gap-1.5">
             {["color", "prenda", "material"].map((c) => (
               <button
                 key={c}
                 onClick={() => set("cat", c)}
+                aria-pressed={f.cat === c}
                 className="px-2.5 py-1.5 rounded-full text-xs font-medium flex-1"
                 style={{
                   background: f.cat === c ? palette.ink : "transparent",
@@ -555,19 +557,20 @@ function FormularioSenal({ onAgregar, onCancelar }) {
 
         {f.cat === "color" && (
           <div>
-            <label className="text-[11px] block mb-1" style={{ color: palette.inkSoft }}>Muestra de color</label>
+            <label htmlFor="senal-swatch" className="text-[11px] block mb-1" style={{ color: palette.inkSoft }}>Muestra de color</label>
             <div className="flex items-center gap-2">
-              <input type="color" value={f.swatch} onChange={(e) => set("swatch", e.target.value)} className="w-9 h-9 rounded-sm" style={{ border: `1px solid ${palette.line}`, background: "transparent" }} />
+              <input id="senal-swatch" type="color" value={f.swatch} onChange={(e) => set("swatch", e.target.value)} className="w-9 h-9 rounded-sm" style={{ border: `1px solid ${palette.line}`, background: "transparent" }} />
               <span className="font-mono text-xs" style={{ color: palette.inkSoft }}>{f.swatch}</span>
             </div>
           </div>
         )}
 
         <div>
-          <label className="text-[11px] block mb-1" style={{ color: palette.inkSoft }}>
+          <label htmlFor="senal-query" className="text-[11px] block mb-1" style={{ color: palette.inkSoft }}>
             Término para medir en Google Trends
           </label>
           <input
+            id="senal-query"
             value={f.query}
             onChange={(e) => set("query", e.target.value)}
             placeholder={f.name ? f.name.toLowerCase() : "como lo buscaría un cliente"}
@@ -580,8 +583,9 @@ function FormularioSenal({ onAgregar, onCancelar }) {
         </div>
 
         <div>
-          <label className="text-[11px] block mb-1" style={{ color: palette.inkSoft }}>Tela o insumo que usas (opcional)</label>
+          <label htmlFor="senal-tela" className="text-[11px] block mb-1" style={{ color: palette.inkSoft }}>Tela o insumo que usas (opcional)</label>
           <input
+            id="senal-tela"
             value={f.tela}
             onChange={(e) => set("tela", e.target.value)}
             placeholder="Ej. chalis estampado 100 g"
@@ -644,20 +648,58 @@ function FormularioSenal({ onAgregar, onCancelar }) {
   );
 }
 
+// Persistencia del autodiagnóstico: vive en localStorage del navegador, no en
+// ningún servidor (no hay backend). Es solo una comodidad para no perder el
+// trabajo marcado si se recarga la página; si localStorage no está disponible
+// (modo privado, cuotas, etc.) el panel sigue funcionando, solo sin recordar.
+const AUTODIAGNOSTICO_KEY = "evaluador-tendencias:autodiagnostico:v1";
+
+function cargarAutodiagnosticoGuardado() {
+  try {
+    const raw = localStorage.getItem(AUTODIAGNOSTICO_KEY);
+    if (!raw) return null;
+    const datos = JSON.parse(raw);
+    if (!datos || typeof datos !== "object") return null;
+    return datos;
+  } catch {
+    return null;
+  }
+}
+
 function Autodiagnostico() {
-  const [nombre, setNombre] = useState("Mi empresa");
+  const guardado = useRef(cargarAutodiagnosticoGuardado()).current;
+
+  const [nombre, setNombre] = useState(guardado?.nombre ?? "Mi empresa");
   const [editando, setEditando] = useState(false);
-  const [adoptadas, setAdoptadas] = useState([]);
-  const [propias, setPropias] = useState([]);
+  const [adoptadas, setAdoptadas] = useState(guardado?.adoptadas ?? []);
+  const [propias, setPropias] = useState(guardado?.propias ?? []);
   const [mostrandoForm, setMostrandoForm] = useState(false);
   const [verExport, setVerExport] = useState(false);
   const [detalle, setDetalle] = useState(null);
 
+  // Contador que solo crece: antes el id/code de una señal propia salía de
+  // `propias.length`, así que borrar una y agregar otra podía repetir el id
+  // de una que seguía en la lista (dos señales con la misma key de React).
+  // Arranca en el máximo id ya guardado para no repetir tampoco entre sesiones.
+  const propiaCounterRef = useRef(
+    (guardado?.propias ?? []).reduce((max, p) => Math.max(max, (p.id ?? 1000) - 1000), 0)
+  );
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(AUTODIAGNOSTICO_KEY, JSON.stringify({ nombre, adoptadas, propias }));
+    } catch {
+      // Sin acceso a localStorage no se puede recordar el estado — no bloquea el uso del panel.
+    }
+  }, [nombre, adoptadas, propias]);
+
   const toggle = (id) => setAdoptadas((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
 
   const agregarPropia = (datos) => {
-    const id = 1000 + propias.length + 1;
-    const nueva = { ...datos, id, propia: true, scope: "propia", confianza: "sin medir", code: `PR-${String(propias.length + 1).padStart(2, "0")}` };
+    propiaCounterRef.current += 1;
+    const n = propiaCounterRef.current;
+    const id = 1000 + n;
+    const nueva = { ...datos, id, propia: true, scope: "propia", confianza: "sin medir", code: `PR-${String(n).padStart(2, "0")}` };
     setPropias((prev) => [...prev, nueva]);
     setAdoptadas((prev) => [...prev, id]); // si la agregaste, es porque la trabajas
     setMostrandoForm(false);
