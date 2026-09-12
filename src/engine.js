@@ -117,7 +117,12 @@ export function computeDecision(t) {
   // Las búsquedas marcadas como ruido no cuentan: un pico por un videojuego
   // o un meme no es demanda de moda por más espectacular que se vea el %.
   const utiles = (t.relacionadas || []).filter((r) => !r.ruido);
-  const hasBreakout = utiles.some((r) => /^\+[0-9]{4,}%$/.test(r.crecimiento) || r.crecimiento === "Breakout");
+  // fetch_trends.py solo emite "Breakout" (literal) o "+{value}%" — el
+  // "crecimiento" nunca trae otro formato, así que basta comparar contra el
+  // literal. Antes también se aceptaba cualquier "+" con 4+ dígitos como
+  // señal de breakout aunque pytrends no lo hubiera marcado así; eso podía
+  // sumar +15 en vez de +5 a una búsqueda relacionada grande pero no oficial.
+  const hasBreakout = utiles.some((r) => r.crecimiento === "Breakout");
   const hasRelated = utiles.length > 0;
   if (hasBreakout) {
     score += 15;
