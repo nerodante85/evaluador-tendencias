@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { TrendingUp, TrendingDown, Minus, Pin, ChevronDown, Pencil, Check, Plus, X } from "lucide-react";
+import { TrendingUp, TrendingDown, Minus, Radar, ChevronDown, Pencil, Check, Plus, X } from "lucide-react";
 
 import { palette, FONT, THEME_CSS } from "./theme.js";
 import {
@@ -31,7 +31,10 @@ import {
   labelDe,
 } from "./engine.js";
 
-const CONF_COLOR = { alta: palette.inkSoft, media: palette.inkSoft, baja: palette.inkSoft };
+// Confianza como potencia de señal, no como semáforo bueno/malo: alta se lee
+// a brillo pleno, baja casi se apaga. Es la misma metáfora del radar
+// aplicada al dato en sí, no solo a la decisión que sale de él.
+const CONF_COLOR = { alta: palette.ink, media: palette.inkSoft, baja: palette.inkDim };
 
 const dirIcon = (dir) => {
   if (dir === "subiendo") return <TrendingUp size={14} />;
@@ -43,8 +46,9 @@ const dirIcon = (dir) => {
 // en todo el panel — la decisión de compra.
 const dirColor = (dir) => (dir === "subiendo" ? palette.rust : palette.inkSoft);
 
-// Sparkline con relleno tenue y punto final marcado: el último valor es el
-// que importa para decidir, así que se señala en vez de dejarlo al ojo.
+// Sparkline con relleno tenue, resplandor de trazo de osciloscopio y punto
+// final marcado: el último valor es el que importa para decidir, así que se
+// señala en vez de dejarlo al ojo.
 function Sparkline({ points, color, w = 76, h = 26 }) {
   const max = Math.max(...points), min = Math.min(...points);
   const range = max - min || 1;
@@ -54,21 +58,34 @@ function Sparkline({ points, color, w = 76, h = 26 }) {
   const [fx, fy] = pts[pts.length - 1];
   return (
     <svg width={w} height={h} className="shrink-0" aria-hidden="true">
-      <polygon points={area} fill={color} opacity="0.08" />
-      <polyline points={linea} fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx={fx} cy={fy} r="2.2" fill={color} />
+      <polygon points={area} fill={color} opacity="0.1" />
+      <polyline
+        points={linea}
+        fill="none"
+        stroke={color}
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        style={{ filter: `drop-shadow(0 0 3px ${color}90)` }}
+      />
+      <circle cx={fx} cy={fy} r="2.4" fill={color} style={{ filter: `drop-shadow(0 0 4px ${color})` }} />
     </svg>
   );
 }
 
-// Etiqueta de decisión: punto de color + texto. Un bloque relleno grita;
-// esto se lee igual de rápido y deja que los swatches sean lo único
-// saturado de la pantalla.
+// Etiqueta de decisión: ya no es una pastilla rellena, es un LED — apagado
+// o encendido, como el estado de un contacto en una consola de radar real.
 function DecisionChip({ label, score }) {
+  const color = DECISION_COLOR[label];
   return (
-    <span className="chip" style={{ color: DECISION_COLOR[label], background: DECISION_BG[label] }}>
-      {label}
-      {score !== undefined && <span className="num" style={{ opacity: 0.75 }}>{score}</span>}
+    <span className="led-chip">
+      <span className="led-dot" style={{ background: color, boxShadow: `0 0 6px ${color}` }} />
+      <span style={{ color }}>{label}</span>
+      {score !== undefined && (
+        <span className="num" style={{ color: palette.inkDim, fontWeight: 400 }}>
+          {score}
+        </span>
+      )}
     </span>
   );
 }
@@ -76,8 +93,8 @@ function DecisionChip({ label, score }) {
 function SectionTitle({ eyebrow, title, sub }) {
   return (
     <div className="mb-5">
-      <p className="text-[11px] tracking-[0.2em] uppercase mb-2" style={{ color: palette.inkSoft, fontFamily: FONT.mono }}>{eyebrow}</p>
-      <h2 style={{ fontFamily: FONT.display, fontWeight: 400, fontSize: "1.9rem", lineHeight: 1.1, letterSpacing: "-0.01em", color: palette.ink }}>{title}</h2>
+      <p className="text-[11px] tracking-[0.2em] uppercase mb-2" style={{ color: palette.inkDim, fontFamily: FONT.mono }}>{eyebrow}</p>
+      <h2 style={{ fontFamily: FONT.display, fontWeight: 460, fontSize: "1.9rem", lineHeight: 1.1, letterSpacing: "-0.01em", color: palette.ink }}>{title}</h2>
       {sub && <p className="text-sm mt-2 leading-relaxed max-w-2xl" style={{ color: palette.inkSoft }}>{sub}</p>}
     </div>
   );
@@ -114,15 +131,16 @@ function DecisionLegend() {
         </p>
         <div className="space-y-1.5">
           {rows.map((r) => (
-            <div key={r.label} className="flex items-start gap-2">
-              <span className="font-mono text-[10px] font-semibold px-2 py-0.5 rounded-full shrink-0" style={{ color: r.color, background: DECISION_BG[r.label] }}>
-                {r.label}
-              </span>
-              <p className="text-xs" style={{ color: palette.inkSoft }}>{r.desc}</p>
+            <div key={r.label} className="flex items-start gap-2.5">
+              <span className="led-dot shrink-0 mt-1" style={{ background: r.color, boxShadow: `0 0 5px ${r.color}` }} />
+              <div>
+                <span className="font-mono text-[10px] font-semibold uppercase tracking-wide" style={{ color: r.color }}>{r.label}</span>
+                <p className="text-xs mt-0.5" style={{ color: palette.inkSoft }}>{r.desc}</p>
+              </div>
             </div>
           ))}
         </div>
-        <p className="text-[10px] mt-2" style={{ color: palette.inkSoft }}>
+        <p className="text-[10px] mt-3 pt-3" style={{ color: palette.inkDim, borderTop: `1px dashed ${palette.line}` }}>
           Esto no reemplaza tu criterio ni el sell-through real de tu tienda (todavía no conectado) — es una forma de ordenar señales dispersas, no una garantía.
         </p>
       </div>
@@ -135,9 +153,14 @@ function SwatchCard({ trend, expanded, onToggle }) {
   return (
     <button
       onClick={onToggle}
-      className="card-flat card-tap p-5 h-full flex flex-col"
-      style={{ position: "relative", boxShadow: expanded ? "inset 0 0 0 1.5px var(--ink)" : undefined }}
+      className={`card-flat card-tap reticle p-5 h-full flex flex-col ${expanded ? "reticle-active" : ""}`}
+      style={{ position: "relative", boxShadow: expanded ? "inset 0 0 0 1.5px var(--accent)" : undefined }}
     >
+      <span className="reticle-corner corner-tl" />
+      <span className="reticle-corner corner-tr" />
+      <span className="reticle-corner corner-bl" />
+      <span className="reticle-corner corner-br" />
+
       {/* Tag de muestra de tela prendido a la tarjeta, como un cartón de
           color físico — incluso las señales sin color llevan un tag neutro
           para mantener el ritmo visual del muestrario. */}
@@ -147,11 +170,11 @@ function SwatchCard({ trend, expanded, onToggle }) {
       <div className="flex items-start justify-between gap-3">
         <p
           className="leading-tight min-w-0"
-          style={{ color: palette.ink, fontSize: "1.02rem", fontWeight: 600, letterSpacing: "-0.01em" }}
+          style={{ color: palette.ink, fontSize: "1.02rem", fontWeight: 600, letterSpacing: "-0.01em", fontFamily: FONT.ui }}
         >
           {trend.name}
         </p>
-        <span className="num text-right shrink-0" style={{ fontFamily: FONT.display, fontSize: "1.75rem", lineHeight: 1, color: palette.ink }}>
+        <span className="num text-right shrink-0" style={{ fontFamily: FONT.mono, fontWeight: 600, fontSize: "1.6rem", lineHeight: 1, color: palette.ink }}>
           {decision.score}
         </span>
       </div>
@@ -167,7 +190,7 @@ function SwatchCard({ trend, expanded, onToggle }) {
             {dirIcon(trend.dir)}
             <span className="capitalize">{trend.dir}</span>
           </div>
-          <p className="num text-[11px] mt-1" style={{ color: palette.inkSoft, fontFamily: FONT.mono }}>
+          <p className="num text-[11px] mt-1" style={{ color: palette.inkDim, fontFamily: FONT.mono }}>
             Momentum {trend.momentum}
           </p>
         </div>
@@ -179,7 +202,7 @@ function SwatchCard({ trend, expanded, onToggle }) {
       </div>
 
       <div className="flex items-center justify-between mt-2.5">
-        <span className="text-[10px] tracking-widest uppercase" style={{ color: palette.inkSoft, fontFamily: FONT.mono }}>{trend.code}</span>
+        <span className="text-[10px] tracking-widest uppercase" style={{ color: palette.inkDim, fontFamily: FONT.mono }}>{trend.code}</span>
         {trend.confianza && (
           <span className="flex items-center gap-1 text-[10px]" style={{ color: CONF_COLOR[trend.confianza], fontFamily: FONT.mono }}>
             <span className="chip-dot" style={{ background: "currentColor" }} />
@@ -191,13 +214,13 @@ function SwatchCard({ trend, expanded, onToggle }) {
       {expanded && (
         <div className="mt-4 pt-4" style={{ borderTop: `1px solid ${palette.line}` }}>
           <div className="mb-3">
-            <p className="font-mono text-[9px] uppercase tracking-wide mb-1" style={{ color: palette.inkSoft }}>
+            <p className="font-mono text-[9px] uppercase tracking-wide mb-1" style={{ color: palette.inkDim }}>
               Por qué "{decision.label}"
             </p>
             <ul className="text-xs space-y-0.5" style={{ color: palette.ink }}>
               {decision.reasons.map((r, i) => (
                 <li key={i} className="flex gap-1.5">
-                  <span style={{ color: palette.inkSoft }}>·</span>
+                  <span style={{ color: palette.rust }}>›</span>
                   <span>{r}</span>
                 </li>
               ))}
@@ -210,7 +233,7 @@ function SwatchCard({ trend, expanded, onToggle }) {
 
           {MATERIALES.some((m) => m.senales.includes(trend.id)) && (
             <div className="mt-2">
-              <p className="font-mono text-[9px] uppercase tracking-wide mb-1" style={{ color: palette.inkSoft }}>
+              <p className="font-mono text-[9px] uppercase tracking-wide mb-1" style={{ color: palette.inkDim }}>
                 Telas que dependen de esta señal
               </p>
               <div className="flex flex-wrap gap-1.5">
@@ -225,17 +248,17 @@ function SwatchCard({ trend, expanded, onToggle }) {
 
           {trend.relacionadas && trend.relacionadas.length > 0 && (
             <div className="mt-2">
-              <p className="font-mono text-[9px] uppercase tracking-wide mb-1" style={{ color: palette.inkSoft }}>
+              <p className="font-mono text-[9px] uppercase tracking-wide mb-1" style={{ color: palette.inkDim }}>
                 Búsquedas relacionadas en alza
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {trend.relacionadas.map((r, i) => (
                   <span
                     key={i}
-                    className="text-xs px-2 py-0.5 rounded-full"
+                    className="text-xs px-2 py-0.5 rounded-full font-mono"
                     style={{
                       background: !r.ruido && r.crecimiento === "Breakout" ? palette.rust : "transparent",
-                      color: r.ruido ? palette.inkSoft : r.crecimiento === "Breakout" ? palette.card : palette.ink,
+                      color: r.ruido ? palette.inkDim : r.crecimiento === "Breakout" ? palette.paper : palette.ink,
                       border: `1px ${r.ruido ? "dashed" : "solid"} ${!r.ruido && r.crecimiento === "Breakout" ? palette.rust : palette.line}`,
                       opacity: r.ruido ? 0.65 : 1,
                     }}
@@ -258,7 +281,7 @@ function SwatchCard({ trend, expanded, onToggle }) {
             >
               {trend.sinDatosSuficientes ? "Sin volumen en Trends" : `Google Trends · ${geoNombre(trend.geoUsado)}`}
             </span>
-            <p className="font-mono text-[10px] uppercase tracking-wide" style={{ color: palette.inkSoft }}>
+            <p className="font-mono text-[10px] uppercase tracking-wide" style={{ color: palette.inkDim }}>
               Fuente: {trend.source}
             </p>
           </div>
@@ -283,7 +306,7 @@ function PlanMateriales() {
 
       {/* Reparto de presupuesto */}
       <div className="card-flat p-4 mb-4">
-        <p className="font-mono text-[10px] uppercase tracking-wide mb-2" style={{ color: palette.inkSoft }}>
+        <p className="font-mono text-[10px] uppercase tracking-wide mb-2" style={{ color: palette.inkDim }}>
           Reparto sugerido del presupuesto de telas
         </p>
         <div className="flex h-2.5 rounded-full overflow-hidden mb-2">
@@ -294,7 +317,7 @@ function PlanMateriales() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
           {PRESUPUESTO.map((p) => (
             <div key={p.id}>
-              <p className="text-xs font-semibold" style={{ color: p.color }}>{p.pct}% {p.label}</p>
+              <p className="text-xs font-semibold font-mono" style={{ color: p.color }}>{p.pct}% {p.label}</p>
               <p className="text-[11px] leading-snug" style={{ color: palette.inkSoft }}>{p.desc}</p>
             </div>
           ))}
@@ -348,7 +371,7 @@ function PlanMateriales() {
                   </div>
                   <div className="text-right shrink-0">
                     <p className="font-mono text-sm" style={{ color: palette.ink }}>{m.consumo}</p>
-                    <p className="text-[10px]" style={{ color: palette.inkSoft }}>por prenda</p>
+                    <p className="text-[10px]" style={{ color: palette.inkDim }}>por prenda</p>
                     <ChevronDown size={14} className="ml-auto mt-1" style={{ color: palette.inkSoft, transform: isOpen ? "rotate(180deg)" : "none", transition: "transform 0.2s" }} />
                   </div>
                 </div>
@@ -356,13 +379,13 @@ function PlanMateriales() {
 
               {isOpen && (
                 <div className="px-4 py-3" style={{ background: palette.paper }}>
-                  <p className="font-mono text-[9px] uppercase tracking-wide mb-1" style={{ color: palette.inkSoft }}>Colores a comprar</p>
+                  <p className="font-mono text-[9px] uppercase tracking-wide mb-1" style={{ color: palette.inkDim }}>Colores a comprar</p>
                   <div className="flex flex-wrap gap-1.5 mb-3">
                     {m.colores.map((c, j) => (
                       <span key={j} className="text-xs px-2 py-0.5 rounded-full" style={{ color: palette.ink, border: `1px solid ${palette.line}` }}>{c}</span>
                     ))}
                   </div>
-                  <p className="font-mono text-[9px] uppercase tracking-wide mb-1" style={{ color: palette.inkSoft }}>Señales del radar que la sostienen</p>
+                  <p className="font-mono text-[9px] uppercase tracking-wide mb-1" style={{ color: palette.inkDim }}>Señales del radar que la sostienen</p>
                   <div className="space-y-1">
                     {resp.señales.map(({ trend, dec }) => (
                       <div key={trend.id} className="flex items-center gap-2 flex-wrap">
@@ -370,11 +393,11 @@ function PlanMateriales() {
                           {dec.score}
                         </span>
                         <span className="text-xs" style={{ color: palette.ink }}>{trend.name}</span>
-                        <span className="text-[10px]" style={{ color: palette.inkSoft }}>· {dec.label} · confianza {trend.confianza}</span>
+                        <span className="text-[10px]" style={{ color: palette.inkDim }}>· {dec.label} · confianza {trend.confianza}</span>
                       </div>
                     ))}
                   </div>
-                  <p className="text-[10px] mt-2 leading-relaxed" style={{ color: palette.inkSoft }}>
+                  <p className="text-[10px] mt-2 leading-relaxed" style={{ color: palette.inkDim }}>
                     El respaldo de la tela toma la mejor de sus señales. Si todas están en "Monitorear", la tela sigue
                     siendo válida como núcleo, pero no hay dato que justifique subir el volumen de compra.
                   </p>
@@ -470,7 +493,7 @@ function CriteriosYCalendario() {
             </div>
           ))}
         </div>
-        <p className="text-[11px] mt-3 leading-relaxed" style={{ color: palette.inkSoft }}>
+        <p className="text-[11px] mt-3 leading-relaxed" style={{ color: palette.inkDim }}>
           Siguiente paso sugerido: registrar por señal si se compró y qué sell-through obtuvo. En dos temporadas el
           panel te dice cuáles fuentes aciertan para este mercado, y la decisión deja de ser intuición.
         </p>
@@ -487,7 +510,7 @@ function ListaSenales({ titulo, color, items, vacio }) {
         <span className="font-mono text-xs" style={{ color }}>{items.length}</span>
       </div>
       {items.length === 0 ? (
-        <p className="text-[11px]" style={{ color: palette.inkSoft }}>{vacio}</p>
+        <p className="text-[11px]" style={{ color: palette.inkDim }}>{vacio}</p>
       ) : (
         <ul className="space-y-1">
           {items.map(({ t, dec }) => (
@@ -577,7 +600,7 @@ function FormularioSenal({ onAgregar, onCancelar }) {
             className="w-full text-sm px-2 py-1.5 rounded-sm outline-none"
             style={{ background: palette.paper, color: palette.ink, border: `1px solid ${palette.line}` }}
           />
-          <p className="text-[10px] mt-1" style={{ color: palette.inkSoft }}>
+          <p className="text-[10px] mt-1" style={{ color: palette.inkDim }}>
             Escríbelo como lo buscaría un cliente, no como lo llamas internamente.
           </p>
         </div>
@@ -604,7 +627,7 @@ function FormularioSenal({ onAgregar, onCancelar }) {
           {Object.entries(EVIDENCIA).map(([campo, cfg]) => (
             <div key={campo}>
               <p className="text-[11px]" style={{ color: palette.ink }}>{cfg.label}</p>
-              <p className="text-[10px] mb-1" style={{ color: palette.inkSoft }}>{cfg.ayuda}</p>
+              <p className="text-[10px] mb-1" style={{ color: palette.inkDim }}>{cfg.ayuda}</p>
               <div className="flex flex-wrap gap-1.5">
                 {cfg.opciones.map((o) => (
                   <button
@@ -640,7 +663,7 @@ function FormularioSenal({ onAgregar, onCancelar }) {
         >
           Agregar al radar
         </button>
-        <button onClick={onCancelar} className="text-xs" style={{ color: palette.inkSoft }}>
+        <button onClick={onCancelar} className="text-xs" style={{ color: palette.inkDim }}>
           Cancelar
         </button>
       </div>
@@ -762,7 +785,7 @@ function Autodiagnostico() {
       {/* Selector de señales */}
       <div className="card-flat p-4 mb-3">
         <div className="flex items-center justify-between mb-2">
-          <p className="font-mono text-[10px] uppercase tracking-wide" style={{ color: palette.inkSoft }}>
+          <p className="font-mono text-[10px] uppercase tracking-wide" style={{ color: palette.inkDim }}>
             Señales que ya trabajas
           </p>
           {adoptadas.length > 0 && (
@@ -776,7 +799,7 @@ function Autodiagnostico() {
           const mias = propias.filter((p) => p.cat === cat);
           return (
             <div key={cat} className="mb-2 last:mb-0">
-              <p className="text-[10px] uppercase tracking-wide mb-1" style={{ color: palette.inkSoft }}>{CAT_LABEL[cat]}</p>
+              <p className="text-[10px] uppercase tracking-wide mb-1" style={{ color: palette.inkDim }}>{CAT_LABEL[cat]}</p>
               <div className="flex flex-wrap gap-1.5">
                 {delRadar.map((t) => {
                   const active = adoptadas.includes(t.id);
@@ -804,7 +827,7 @@ function Autodiagnostico() {
                       className="flex items-center gap-1 text-xs px-2.5 py-1 rounded-full"
                       style={{
                         background: active ? palette.mustard : "transparent",
-                        color: active ? "#fff" : palette.mustard,
+                        color: active ? palette.paper : palette.mustard,
                         border: `1px solid ${palette.mustard}`,
                       }}
                     >
@@ -840,7 +863,7 @@ function Autodiagnostico() {
       )}
 
       {adoptadas.length === 0 ? (
-        <p className="text-xs" style={{ color: palette.inkSoft }}>
+        <p className="text-xs" style={{ color: palette.inkDim }}>
           Marca al menos una señal, o agrega una propia, para ver el diagnóstico.
         </p>
       ) : (
@@ -849,15 +872,15 @@ function Autodiagnostico() {
           <div className="rounded-sm p-4 mb-3" style={{ background: palette.card, border: `1px solid ${palette.line}`, borderLeft: `4px solid ${r.nivelColor}` }}>
             <div className="flex items-end justify-between gap-3 flex-wrap">
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-wide" style={{ color: palette.inkSoft }}>Alineación con señales comprables</p>
-                <p className="font-mono text-4xl leading-none mt-1" style={{ color: r.nivelColor }}>{r.puntaje}<span className="text-lg" style={{ color: palette.inkSoft }}>/100</span></p>
+                <p className="font-mono text-[10px] uppercase tracking-wide" style={{ color: palette.inkDim }}>Alineación con señales comprables</p>
+                <p className="font-mono text-4xl leading-none mt-1" style={{ color: r.nivelColor }}>{r.puntaje}<span className="text-lg" style={{ color: palette.inkDim }}>/100</span></p>
                 <p className="text-sm mt-1" style={{ color: palette.ink, fontFamily: FONT.ui, fontWeight: 600 }}>{r.nivel}</p>
               </div>
               <div className="text-right">
                 <p className="font-mono text-xl" style={{ color: palette.ink }}>
-                  {r.mias.length}<span className="text-xs" style={{ color: palette.inkSoft }}>/{TRENDS.length + propias.length}</span>
+                  {r.mias.length}<span className="text-xs" style={{ color: palette.inkDim }}>/{TRENDS.length + propias.length}</span>
                 </p>
-                <p className="text-[10px] uppercase tracking-wide" style={{ color: palette.inkSoft }}>Señales trabajadas</p>
+                <p className="text-[10px] uppercase tracking-wide" style={{ color: palette.inkDim }}>Señales trabajadas</p>
                 {propias.length > 0 && (
                   <p className="text-[10px] mt-0.5" style={{ color: palette.mustard }}>{propias.length} propia{propias.length !== 1 ? "s" : ""}</p>
                 )}
@@ -898,7 +921,7 @@ function Autodiagnostico() {
                       </span>
                       {t.cat === "color" && <span className="w-3 h-3 rounded-full" style={{ background: t.swatch, border: `1px solid ${palette.line}` }} />}
                       <span className="text-xs" style={{ color: palette.ink }}>{t.name}</span>
-                      <span className="text-[10px]" style={{ color: palette.inkSoft }}>· {dec.label} · {CAT_LABEL[t.cat]}</span>
+                      <span className="text-[10px]" style={{ color: palette.inkDim }}>· {dec.label} · {CAT_LABEL[t.cat]}</span>
                       <ChevronDown size={12} style={{ color: palette.inkSoft, transform: detalle === t.id ? "rotate(180deg)" : "none", transition: "transform 0.2s" }} />
                     </button>
                     {detalle === t.id && (
@@ -909,7 +932,7 @@ function Autodiagnostico() {
                           </li>
                         ))}
                         {t.tela && <li className="text-[11px]" style={{ color: palette.ink }}>Tela: {t.tela}</li>}
-                        <li className="text-[11px] font-mono" style={{ color: palette.inkSoft }}>Trends: "{t.query}"</li>
+                        <li className="text-[11px] font-mono" style={{ color: palette.inkDim }}>Trends: "{t.query}"</li>
                       </ul>
                     )}
                   </div>
@@ -930,7 +953,7 @@ function Autodiagnostico() {
                 {verExport && (
                   <pre
                     className="mt-2 p-2 rounded-sm overflow-x-auto text-[10px] leading-relaxed"
-                    style={{ background: palette.paper, border: `1px solid ${palette.line}`, color: palette.ink, fontFamily: "'IBM Plex Mono', monospace" }}
+                    style={{ background: palette.paper, border: `1px solid ${palette.line}`, color: palette.ink, fontFamily: FONT.mono }}
                   >
 {exportConfig}
                   </pre>
@@ -941,13 +964,13 @@ function Autodiagnostico() {
 
           {/* Cobertura por categoría */}
           <div className="card-flat p-4 mt-3">
-            <p className="font-mono text-[10px] uppercase tracking-wide mb-2" style={{ color: palette.inkSoft }}>Cobertura por categoría</p>
+            <p className="font-mono text-[10px] uppercase tracking-wide mb-2" style={{ color: palette.inkDim }}>Cobertura por categoría</p>
             <div className="space-y-2">
               {r.cobertura.map((c) => (
                 <div key={c.cat}>
                   <div className="flex items-center justify-between text-xs mb-0.5">
                     <span style={{ color: palette.ink }}>{CAT_LABEL[c.cat]}</span>
-                    <span className="font-mono" style={{ color: palette.inkSoft }}>{c.propias}/{c.total}</span>
+                    <span className="font-mono" style={{ color: palette.inkDim }}>{c.propias}/{c.total}</span>
                   </div>
                   <div className="h-1.5 rounded-full overflow-hidden" style={{ background: palette.lineSoft }}>
                     <div className="h-full rounded-full" style={{ width: `${c.pct}%`, background: palette.ink }} />
@@ -963,11 +986,11 @@ function Autodiagnostico() {
 
           {/* Lista de telas derivada */}
           <div className="card-flat p-4 mt-3">
-            <p className="font-mono text-[10px] uppercase tracking-wide mb-2" style={{ color: palette.inkSoft }}>
+            <p className="font-mono text-[10px] uppercase tracking-wide mb-2" style={{ color: palette.inkDim }}>
               Telas que se desprenden de tus señales
             </p>
             {r.telas.length === 0 && r.telasPropias.length === 0 ? (
-              <p className="text-[11px]" style={{ color: palette.inkSoft }}>Ninguna tela del plan depende de las señales marcadas.</p>
+              <p className="text-[11px]" style={{ color: palette.inkDim }}>Ninguna tela del plan depende de las señales marcadas.</p>
             ) : (
               <div className="space-y-1.5">
                 {r.telas.map((m, i) => {
@@ -979,7 +1002,7 @@ function Autodiagnostico() {
                         {grp.label}
                       </span>
                       <span className="text-xs" style={{ color: palette.ink }}>{m.tela}</span>
-                      <span className="text-[10px]" style={{ color: palette.inkSoft }}>· {m.consumo} · {resp.label}</span>
+                      <span className="text-[10px]" style={{ color: palette.inkDim }}>· {m.consumo} · {resp.label}</span>
                     </div>
                   );
                 })}
@@ -989,7 +1012,7 @@ function Autodiagnostico() {
                       Propia
                     </span>
                     <span className="text-xs" style={{ color: palette.ink }}>{t.tela}</span>
-                    <span className="text-[10px]" style={{ color: palette.inkSoft }}>· para {t.senal} · {t.dec.label}</span>
+                    <span className="text-[10px]" style={{ color: palette.inkDim }}>· para {t.senal} · {t.dec.label}</span>
                   </div>
                 ))}
               </div>
@@ -997,6 +1020,36 @@ function Autodiagnostico() {
           </div>
         </>
       )}
+    </div>
+  );
+}
+
+// Cinta de teletipo bajo la barra de navegación: los códigos del radar
+// desfilando como un ticker de mercado — es el mismo dato de las tarjetas
+// de abajo, leído de un vistazo, y refuerza de entrada que esto se comporta
+// como una consola de señales, no como una galería de moda.
+function TickerItem({ t }) {
+  return (
+    <span className="inline-flex items-center gap-2 px-5" style={{ fontFamily: FONT.mono, fontSize: 11 }}>
+      <span style={{ color: palette.inkDim }}>{t.code}</span>
+      <span style={{ color: palette.inkSoft }}>{t.name}</span>
+      <span className="num" style={{ color: dirColor(t.dir) }}>{String(t.momentum).padStart(3, "0")}</span>
+      <span style={{ color: dirColor(t.dir), display: "inline-flex" }}>
+        {t.dir === "subiendo" ? <TrendingUp size={11} /> : t.dir === "bajando" ? <TrendingDown size={11} /> : <Minus size={11} />}
+      </span>
+      <span style={{ color: palette.line }}>/</span>
+    </span>
+  );
+}
+
+function Ticker() {
+  const items = TRENDS.filter((t) => !t.sinDatosSuficientes);
+  return (
+    <div className="ticker" aria-hidden="true">
+      <div className="ticker-track py-2">
+        {items.map((t) => <TickerItem key={`a-${t.id}`} t={t} />)}
+        {items.map((t) => <TickerItem key={`b-${t.id}`} t={t} />)}
+      </div>
     </div>
   );
 }
@@ -1025,17 +1078,18 @@ export default function Dashboard() {
       style={{ background: palette.paper, fontFamily: FONT.ui, color: palette.ink }}
     >
       <style>{THEME_CSS}</style>
+      <div className="radar-scanlines" aria-hidden="true" />
 
       {/* Barra de navegación */}
       <div
         className="sticky top-0 z-20"
-        style={{ background: palette.paper, borderBottom: `1px solid ${palette.line}` }}
+        style={{ background: palette.paper, borderBottom: `1px solid ${palette.line}`, position: "relative" }}
       >
         <div className="max-w-5xl mx-auto px-6 h-12 flex items-center justify-between gap-4">
           <div className="flex items-center gap-2.5 min-w-0">
-            <Pin size={13} style={{ color: palette.rust }} />
-            <span className="text-xs font-medium truncate" style={{ color: palette.ink }}>Radar de tendencias</span>
-            <span className="hidden sm:inline text-xs" style={{ color: palette.inkSoft }}>· ciclo 2026–2027</span>
+            <Radar size={15} style={{ color: palette.rust }} />
+            <span className="text-xs font-medium tracking-wide truncate" style={{ color: palette.ink, fontFamily: FONT.mono }}>RADAR DE TENDENCIAS</span>
+            <span className="hidden sm:inline text-xs" style={{ color: palette.inkDim }}>· ciclo 2026–2027</span>
           </div>
           <nav className="hidden sm:flex items-center gap-5">
             {[
@@ -1051,32 +1105,37 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-6 pb-20">
+      <Ticker />
+
+      <div className="max-w-5xl mx-auto px-6 pb-20" style={{ position: "relative", zIndex: 1 }}>
         {/* Portada */}
-        <header className="pt-14 pb-10">
-          <p className="text-[11px] tracking-[0.24em] uppercase mb-5" style={{ color: palette.inkSoft, fontFamily: FONT.mono }}>
-            Investigación de tendencias · plan de compra
-          </p>
-          <h1
-            className="leading-[1.02]"
-            style={{ fontFamily: FONT.display, fontWeight: 400, color: palette.ink, fontSize: "clamp(2.6rem, 6.5vw, 4.6rem)", letterSpacing: "-0.02em" }}
-          >
-            De la señal<br />
-            <span style={{ fontStyle: "italic", color: palette.inkSoft }}>a la tela</span>
-          </h1>
-          <p className="text-base mt-6 max-w-2xl leading-relaxed" style={{ color: palette.inkSoft }}>
-            {TRENDS.filter((t) => !t.sinDatosSuficientes).length} de {TRENDS.length} señales con datos de Google Trends,
-            cruzadas con Pinterest Predicts y traducidas a una lista de telas. Con la ventana de 24 meses la mayoría de
-            las señales locales quedó en confianza baja: el momentum pesa menos que la etiqueta de confianza y las
-            búsquedas relacionadas.
-          </p>
+        <header className="pt-14 pb-10" style={{ position: "relative" }}>
+          <div className="radar-sweep" aria-hidden="true" />
+          <div style={{ position: "relative", zIndex: 1 }}>
+            <p className="text-[11px] tracking-[0.24em] uppercase mb-5" style={{ color: palette.inkDim, fontFamily: FONT.mono }}>
+              Investigación de tendencias · plan de compra
+            </p>
+            <h1
+              className="leading-[1.02]"
+              style={{ fontFamily: FONT.display, fontWeight: 460, color: palette.ink, fontSize: "clamp(2.6rem, 6.5vw, 4.6rem)", letterSpacing: "-0.01em" }}
+            >
+              De la señal<br />
+              <span style={{ fontStyle: "italic", fontWeight: 420, color: palette.rust }}>a la tela</span>
+            </h1>
+            <p className="text-base mt-6 max-w-2xl leading-relaxed" style={{ color: palette.inkSoft }}>
+              {TRENDS.filter((t) => !t.sinDatosSuficientes).length} de {TRENDS.length} señales con datos de Google Trends,
+              cruzadas con Pinterest Predicts y traducidas a una lista de telas. Con la ventana de 24 meses la mayoría de
+              las señales locales quedó en confianza baja: el momentum pesa menos que la etiqueta de confianza y las
+              búsquedas relacionadas.
+            </p>
+          </div>
         </header>
 
         {/* Color story de la temporada: las señales de color activas, leídas
             como un muestrario de tela — el vocabulario propio del oficio,
             no un adorno genérico. Se recalcula solo del propio TRENDS. */}
         <div className="mb-12">
-          <p className="text-[11px] tracking-[0.2em] uppercase mb-4" style={{ color: palette.inkSoft, fontFamily: FONT.mono }}>
+          <p className="text-[11px] tracking-[0.2em] uppercase mb-4" style={{ color: palette.inkDim, fontFamily: FONT.mono }}>
             Color story de la temporada
           </p>
           <div className="flex flex-wrap gap-5">
@@ -1085,19 +1144,19 @@ export default function Dashboard() {
                 <span
                   style={{
                     display: "block", width: 44, height: 44, borderRadius: 7, position: "relative",
-                    background: t.swatch, boxShadow: "inset 0 0 0 1px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06)",
+                    background: t.swatch, boxShadow: "inset 0 0 0 1px rgba(255,255,255,.16), 0 3px 10px rgba(0,0,0,.5)",
                   }}
                 >
                   <span
                     style={{
                       position: "absolute", top: 5, left: "50%", transform: "translateX(-50%)",
                       width: 5, height: 5, borderRadius: "50%", background: palette.card,
-                      boxShadow: "inset 0 0 0 1px rgba(0,0,0,.14)",
+                      boxShadow: "inset 0 0 0 1px rgba(255,255,255,.2)",
                     }}
                   />
                 </span>
                 <p className="text-center leading-tight" style={{ fontSize: "11px", fontWeight: 500, color: palette.ink }}>{t.name}</p>
-                <p className="font-mono text-center" style={{ fontSize: "9px", color: palette.inkSoft, letterSpacing: ".02em" }}>{t.code}</p>
+                <p className="font-mono text-center" style={{ fontSize: "9px", color: palette.inkDim, letterSpacing: ".02em" }}>{t.code}</p>
               </div>
             ))}
           </div>
@@ -1116,59 +1175,65 @@ export default function Dashboard() {
               className="py-6 px-4 first:pl-0"
               style={{ borderLeft: i === 0 ? "none" : `1px solid ${palette.line}` }}
             >
-              <p className="num leading-none" style={{ fontFamily: FONT.display, fontSize: "2.6rem", color: k.destacar ? palette.rust : palette.ink }}>
+              <p className="num leading-none" style={{ fontFamily: FONT.mono, fontWeight: 600, fontSize: "2.4rem", color: k.destacar ? palette.rust : palette.ink }}>
                 {k.v}
               </p>
-              <p className="text-[11px] uppercase tracking-wider mt-2" style={{ color: palette.inkSoft }}>{k.l}</p>
+              <p className="text-[11px] uppercase tracking-wider mt-2" style={{ color: palette.inkDim }}>{k.l}</p>
             </div>
           ))}
         </div>
 
         {/* Macro context */}
         <div className="mt-12" id="macro">
-          <p className="text-[11px] tracking-[0.2em] uppercase mb-3" style={{ color: palette.inkSoft, fontFamily: FONT.mono }}>
+          <p className="text-[11px] tracking-[0.2em] uppercase mb-3" style={{ color: palette.inkDim, fontFamily: FONT.mono }}>
             Contexto macro para comprar
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <div className="card-flat p-4">
+            <div className="card-flat reticle p-4">
+              <span className="reticle-corner corner-tl" /><span className="reticle-corner corner-tr" />
+              <span className="reticle-corner corner-bl" /><span className="reticle-corner corner-br" />
               <div className="flex items-center justify-between">
                 <p className="text-xs font-medium" style={{ color: palette.ink }}>USD/COP</p>
                 <Sparkline points={MACRO.usdcop.trayectoria} color={dirColor(MACRO.usdcop.direccion)} />
               </div>
-              <p className="font-mono text-xl mt-1" style={{ color: palette.ink }}>
+              <p className="mt-1" style={{ fontFamily: FONT.mono, fontWeight: 600, fontSize: "1.35rem", color: palette.ink }}>
                 ${MACRO.usdcop.actual.toLocaleString("es-CO")}
               </p>
               <div className="flex items-center gap-1 text-xs mt-0.5" style={{ color: dirColor(MACRO.usdcop.direccion) }}>
                 {dirIcon(MACRO.usdcop.direccion)}
                 <span>{MACRO.usdcop.cambio30d > 0 ? "+" : ""}{MACRO.usdcop.cambio30d}% en 30d</span>
               </div>
-              <p className="text-[10px] mt-1" style={{ color: palette.inkSoft }}>
+              <p className="text-[10px] mt-1" style={{ color: palette.inkDim }}>
                 {MACRO.usdcop.live ? `${MACRO.usdcop.fuente || "TRM oficial · datos.gov.co"} · ${MACRO.usdcop.fechaDato}` : "Valor de referencia — corre fetch_macro.py para el dato real"}
               </p>
             </div>
 
-            <div className="card-flat p-4">
+            <div className="card-flat reticle p-4">
+              <span className="reticle-corner corner-tl" /><span className="reticle-corner corner-tr" />
+              <span className="reticle-corner corner-bl" /><span className="reticle-corner corner-br" />
               <div className="flex items-center justify-between">
                 <p className="text-xs font-medium" style={{ color: palette.ink }}>Algodón (futuros ICE)</p>
                 <Sparkline points={MACRO.algodon.trayectoria} color={dirColor(MACRO.algodon.direccion)} />
               </div>
-              <p className="font-mono text-xl mt-1" style={{ color: palette.ink }}>
-                {MACRO.algodon.actual} <span className="text-xs font-normal" style={{ color: palette.inkSoft }}>{MACRO.algodon.unidad}</span>
+              <p className="mt-1" style={{ fontFamily: FONT.mono, fontWeight: 600, fontSize: "1.35rem", color: palette.ink }}>
+                {MACRO.algodon.actual} <span className="text-xs font-normal" style={{ color: palette.inkDim }}>{MACRO.algodon.unidad}</span>
               </p>
               <div className="flex items-center gap-1 text-xs mt-0.5" style={{ color: dirColor(MACRO.algodon.direccion) }}>
                 {dirIcon(MACRO.algodon.direccion)}
                 <span>desde 88 ¢ en mayo</span>
               </div>
-              <p className="text-[10px] mt-1" style={{ color: palette.inkSoft }}>{MACRO.algodon.fuente}</p>
+              <p className="text-[10px] mt-1" style={{ color: palette.inkDim }}>{MACRO.algodon.fuente}</p>
             </div>
 
-            <div className="card-flat p-4">
+            <div className="card-flat reticle p-4">
+              <span className="reticle-corner corner-tl" /><span className="reticle-corner corner-tr" />
+              <span className="reticle-corner corner-bl" /><span className="reticle-corner corner-br" />
               <p className="text-xs font-medium" style={{ color: palette.ink }}>Inflación (IPC)</p>
-              <p className="font-mono text-xl mt-1" style={{ color: palette.ink }}>{MACRO_CONTEXT.ipc.anual} <span className="text-xs font-normal" style={{ color: palette.inkSoft }}>anual</span></p>
+              <p className="mt-1" style={{ fontFamily: FONT.mono, fontWeight: 600, fontSize: "1.35rem", color: palette.ink }}>{MACRO_CONTEXT.ipc.anual} <span className="text-xs font-normal" style={{ color: palette.inkDim }}>anual</span></p>
               <p className="text-xs mt-0.5" style={{ color: palette.inkSoft }}>
                 Prendas y calzado: <span style={{ color: palette.ink, fontWeight: 600 }}>+{MACRO_CONTEXT.ipc.sectorPrendas}</span> mensual
               </p>
-              <p className="text-[10px] mt-1" style={{ color: palette.inkSoft }}>{MACRO_CONTEXT.ipc.fuente}</p>
+              <p className="text-[10px] mt-1" style={{ color: palette.inkDim }}>{MACRO_CONTEXT.ipc.fuente}</p>
             </div>
 
             <div className="rounded-sm p-3" style={{ background: palette.card, border: `1px solid ${palette.line}`, borderLeft: `3px solid ${palette.rust}` }}>
@@ -1178,7 +1243,7 @@ export default function Dashboard() {
               </p>
               <p className="text-xs mt-1 leading-relaxed" style={{ color: palette.inkSoft }}>{MACRO_CONTEXT.arancel.detalle}</p>
               <p className="text-xs mt-1" style={{ color: palette.ink }}>{MACRO_CONTEXT.arancel.accion}</p>
-              <p className="text-[10px] mt-1" style={{ color: palette.inkSoft }}>{MACRO_CONTEXT.arancel.fuente}</p>
+              <p className="text-[10px] mt-1" style={{ color: palette.inkDim }}>{MACRO_CONTEXT.arancel.fuente}</p>
             </div>
 
             <div className="rounded-sm p-3" style={{ background: palette.card, border: `1px solid ${palette.line}`, borderLeft: `3px solid ${palette.mustard}` }}>
@@ -1188,7 +1253,7 @@ export default function Dashboard() {
               </p>
               <p className="text-xs mt-1 leading-relaxed" style={{ color: palette.inkSoft }}>{MACRO_CONTEXT.algodonLectura.detalle}</p>
               <p className="text-xs mt-1" style={{ color: palette.ink }}>{MACRO_CONTEXT.algodonLectura.accion}</p>
-              <p className="text-[10px] mt-1" style={{ color: palette.inkSoft }}>{MACRO_CONTEXT.algodonLectura.fuente}</p>
+              <p className="text-[10px] mt-1" style={{ color: palette.inkDim }}>{MACRO_CONTEXT.algodonLectura.fuente}</p>
             </div>
 
             <div className="card-flat p-4" style={{ borderLeft: `3px solid ${palette.olive}` }}>
@@ -1198,7 +1263,7 @@ export default function Dashboard() {
               </p>
               <p className="text-xs mt-1 leading-relaxed" style={{ color: palette.inkSoft }}>{MACRO_CONTEXT.latam.detalle}</p>
               <p className="text-xs mt-1" style={{ color: palette.ink }}>{MACRO_CONTEXT.latam.accion}</p>
-              <p className="text-[10px] mt-1" style={{ color: palette.inkSoft }}>{MACRO_CONTEXT.latam.fuente}</p>
+              <p className="text-[10px] mt-1" style={{ color: palette.inkDim }}>{MACRO_CONTEXT.latam.fuente}</p>
             </div>
 
             <div className="card-flat p-4">
@@ -1208,7 +1273,7 @@ export default function Dashboard() {
               </p>
               <p className="text-xs mt-0.5" style={{ color: palette.inkSoft }}>{MACRO_CONTEXT.feriaLatam.fecha}</p>
               <p className="text-xs mt-1 leading-relaxed" style={{ color: palette.inkSoft }}>{MACRO_CONTEXT.feriaLatam.nota}</p>
-              <p className="text-[10px] mt-1" style={{ color: palette.inkSoft }}>{MACRO_CONTEXT.feriaLatam.fuente}</p>
+              <p className="text-[10px] mt-1" style={{ color: palette.inkDim }}>{MACRO_CONTEXT.feriaLatam.fuente}</p>
             </div>
 
             <div className="card-flat p-4">
@@ -1217,7 +1282,7 @@ export default function Dashboard() {
                 {MACRO_CONTEXT.feria.nombre}
               </p>
               <p className="text-xs mt-0.5" style={{ color: palette.inkSoft }}>{MACRO_CONTEXT.feria.fecha}</p>
-              <p className="text-[10px] mt-1" style={{ color: palette.inkSoft }}>{MACRO_CONTEXT.feria.fuente}</p>
+              <p className="text-[10px] mt-1" style={{ color: palette.inkDim }}>{MACRO_CONTEXT.feria.fuente}</p>
             </div>
           </div>
         </div>
@@ -1281,7 +1346,7 @@ export default function Dashboard() {
         </div>
 
         {onlyReliable && lowConf.length > 0 && (
-          <p className="text-[11px] mt-2" style={{ color: palette.inkSoft }}>
+          <p className="text-[11px] mt-2" style={{ color: palette.inkDim }}>
             {lowConf.length} señal{lowConf.length !== 1 ? "es" : ""} de confianza baja oculta{lowConf.length !== 1 ? "s" : ""} — visibles como contexto al final del panel.
           </p>
         )}
@@ -1315,7 +1380,7 @@ export default function Dashboard() {
                   <span
                     key={t.id}
                     className="text-xs px-2 py-1 rounded-sm"
-                    style={{ color: palette.inkSoft, border: `1px dashed ${palette.line}`, opacity: 0.75 }}
+                    style={{ color: palette.inkDim, border: `1px dashed ${palette.line}`, opacity: 0.75 }}
                   >
                     {t.name} · {t.momentum}/100 · {t.dir}
                   </span>
@@ -1333,7 +1398,7 @@ export default function Dashboard() {
 
         {/* Pinterest Predicts — annual reference */}
         <div className="mt-10">
-          <p className="font-mono text-[11px] tracking-[0.2em] uppercase mb-1" style={{ color: palette.inkSoft }}>
+          <p className="font-mono text-[11px] tracking-[0.2em] uppercase mb-1" style={{ color: palette.inkDim }}>
             Referencia anual · {PINTEREST_PREDICTS.edicion}
           </p>
           <h2 className="text-xl mb-1" style={{ fontFamily: FONT.ui, fontWeight: 600, color: palette.ink }}>
@@ -1349,7 +1414,7 @@ export default function Dashboard() {
                   <p className="text-sm font-semibold" style={{ color: palette.ink, fontFamily: FONT.ui }}>{it.name}</p>
                   <span
                     className="font-mono text-[9px] px-1.5 py-0.5 rounded-sm uppercase shrink-0"
-                    style={{ color: palette.inkSoft, border: `1px solid ${palette.line}` }}
+                    style={{ color: palette.inkDim, border: `1px solid ${palette.line}` }}
                   >
                     {it.cat}
                   </span>
@@ -1376,7 +1441,7 @@ export default function Dashboard() {
         <footer className="mt-16 pt-6" style={{ borderTop: `1px solid ${palette.line}` }}>
           <div className="flex flex-wrap gap-x-10 gap-y-4 justify-between">
             <div className="max-w-md">
-              <p className="text-[11px] tracking-[0.2em] uppercase mb-2" style={{ color: palette.inkSoft, fontFamily: FONT.mono }}>
+              <p className="text-[11px] tracking-[0.2em] uppercase mb-2" style={{ color: palette.inkDim, fontFamily: FONT.mono }}>
                 Cómo leer este panel
               </p>
               <p className="text-xs leading-relaxed" style={{ color: palette.inkSoft }}>
@@ -1386,7 +1451,7 @@ export default function Dashboard() {
               </p>
             </div>
             <div>
-              <p className="text-[11px] tracking-[0.2em] uppercase mb-2" style={{ color: palette.inkSoft, fontFamily: FONT.mono }}>
+              <p className="text-[11px] tracking-[0.2em] uppercase mb-2" style={{ color: palette.inkDim, fontFamily: FONT.mono }}>
                 Actualización
               </p>
               <ul className="text-xs space-y-1" style={{ color: palette.inkSoft }}>
