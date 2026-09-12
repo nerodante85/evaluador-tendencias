@@ -8,19 +8,6 @@ echo   EVALUADOR DE TENDENCIAS - abrir el panel en el navegador
 echo ==========================================================
 echo.
 
-where node >nul 2>nul
-if errorlevel 1 (
-  echo [!] No encuentro Node.js instalado en este computador.
-  echo.
-  echo     El panel lo necesita para funcionar. Instalalo desde:
-  echo        https://nodejs.org       ^(descarga el boton "LTS"^)
-  echo.
-  echo     Instalalo, cierra esta ventana y vuelve a dar doble clic aqui.
-  echo.
-  pause
-  exit /b 1
-)
-
 echo [1/3] Acomodando el archivo de publicacion...
 if exist "deploy-workflow.yml" (
   if not exist ".github\workflows" mkdir ".github\workflows"
@@ -28,6 +15,23 @@ if exist "deploy-workflow.yml" (
   echo       Listo: .github\workflows\deploy.yml
 ) else (
   echo       Ya estaba acomodado, sigo.
+)
+echo.
+
+where node >nul 2>nul
+if errorlevel 1 (
+  echo [!] No encuentro Node.js instalado en este computador.
+  echo.
+  echo     El panel lo necesita para verse AQUI, en tu computador.
+  echo     Instalalo desde:
+  echo        https://nodejs.org       ^(descarga el boton "LTS"^)
+  echo.
+  echo     Ojo: para PUBLICAR en internet no hace falta Node.js.
+  echo     El archivo de arriba ya quedo acomodado, asi que puedes
+  echo     subirlo con GitHub Desktop aunque no instales nada.
+  echo.
+  pause
+  exit /b 1
 )
 
 echo.
