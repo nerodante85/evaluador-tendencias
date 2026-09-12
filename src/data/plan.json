@@ -1,0 +1,72 @@
+{
+  "_comentario": "El criterio editorial del panel: presupuesto, telas, insumos, calendario, factores, filtro de 5 preguntas y métricas. Se edita a mano. Su versión en prosa está en docs/criterios-compra-materiales.md — si cambias uno, cambia el otro. El campo 'senales' de cada tela son los ids de src/data/trends.json que la justifican: de ahí sale el respaldo que se recalcula solo cuando corres fetch_trends.py.",
+
+  "presupuesto": [
+    { "id": "nucleo", "label": "Núcleo", "pct": 60, "color": "var(--pos)", "desc": "Telas que siempre vendes. Se compran en volumen y en color base." },
+    { "id": "tendencia", "label": "Tendencia", "pct": 30, "color": "var(--warn)", "desc": "Señal fuerte y ya visible en el mercado local. Rollos medianos, color de temporada." },
+    { "id": "apuesta", "label": "Apuesta", "pct": 10, "color": "var(--accent)", "desc": "Señal global que aún no aterriza aquí. Rollo corto, 20–30 unidades de prueba." }
+  ],
+
+  "materiales": [
+    { "grupo": "nucleo", "tela": "Jersey algodón / algodón-poliéster 180–200 g", "refs": "Camisetas, tops, básicos unisex", "consumo": "0,9–1,1 m", "colores": ["Blanco óptico", "Negro", "Gris jaspe", "Verde oliva", "Marfil cálido"], "senales": [1, 8, 4] },
+    { "grupo": "nucleo", "tela": "Denim 10–12 oz con 1–2% elastano", "refs": "Jean bota ancha y recta, chaqueta denim, falda", "consumo": "1,5–1,7 m", "colores": ["Índigo medio", "Índigo oscuro", "Negro", "Lavado claro"], "senales": [9, 8] },
+    { "grupo": "nucleo", "tela": "Twill / drill de algodón 240–280 g", "refs": "Cargo, barrel-leg, chaqueta field, overol", "consumo": "1,4–1,6 m", "colores": ["Beige arena", "Oliva profundo", "Negro", "Chocolate"], "senales": [1, 4] },
+    { "grupo": "nucleo", "tela": "Popelina / oxford de algodón 120–140 g", "refs": "Camisería hombre y mujer, camisa oversize, blusa", "consumo": "1,6–1,8 m", "colores": ["Blanco", "Azul cielo", "Arena", "Raya fina"], "senales": [8, 4] },
+    { "grupo": "nucleo", "tela": "French terry / perchado 280–320 g", "refs": "Sudadera oversize, hoodie, jogger", "consumo": "1,6–1,9 m", "colores": ["Gris jaspe", "Negro", "Oliva", "Crudo"], "senales": [8, 17] },
+    { "grupo": "tendencia", "tela": "Lino y mezcla lino-algodón", "refs": "Camisa fluida, pantalón amplio, capri, conjunto de dos piezas", "consumo": "1,6–2,0 m", "colores": ["Marfil", "Arena", "Terracota", "Azul petróleo"], "senales": [11, 5, 20, 3] },
+    { "grupo": "tendencia", "tela": "Algodón orgánico certificado", "refs": "Línea consciente: básicos con sello, punto de precio superior", "consumo": "0,9–1,1 m", "colores": ["Crudo sin blanquear", "Negro", "Oliva"], "senales": [11, 12, 7] },
+    { "grupo": "tendencia", "tela": "Tela reciclada (rPET o algodón reciclado)", "refs": "Chaqueta liviana, bolsos, línea de comunicación sostenible", "consumo": "1,4–1,8 m", "colores": ["Negro", "Gris", "Azul profundo"], "senales": [12, 7] },
+    { "grupo": "tendencia", "tela": "Gabardina / twill liviano de sastrería", "refs": "Blazer largo y capas suaves — sastrería reinterpretada", "consumo": "1,8–2,2 m", "colores": ["Borgoña", "Azul petróleo", "Oliva profundo", "Negro"], "senales": [10, 2, 3] },
+    { "grupo": "apuesta", "tela": "Cuadros: gingham y Príncipe de Gales", "refs": "Camisería y capas. Casar trazo: +10–20% de consumo", "consumo": "1,8–2,0 m", "colores": ["Dos combinaciones máximo"], "senales": [14] },
+    { "grupo": "apuesta", "tela": "Animal print sutil (cebra, pitón)", "refs": "Una o dos referencias de blusa o accesorio", "consumo": "1,4–1,8 m", "colores": ["Neutro sobre crudo", "Neutro sobre negro"], "senales": [13] },
+    { "grupo": "apuesta", "tela": "Punto en fucsia eléctrico", "refs": "Cápsula corta de color alineada con la paleta global SS27", "consumo": "0,9–1,1 m", "colores": ["Un solo tono"], "senales": [6] },
+    { "grupo": "tendencia", "tela": "Algodón pima peruano", "refs": "Camisetas y básicos de gama alta, línea premium sin cambiar de silueta", "consumo": "0,9–1,1 m", "colores": ["Blanco óptico", "Crudo", "Negro", "Marfil"], "senales": [25, 11] },
+    { "grupo": "tendencia", "tela": "Tela con bordado o aplicación artesanal", "refs": "Camisa, blusa y vestido con pieza focal; el bordado define la caída", "consumo": "1,6–2,0 m", "colores": ["Crudo con hilo de color", "Negro con bordado tono sobre tono"], "senales": [22, 23, 7] },
+    { "grupo": "apuesta", "tela": "Hilaza de algodón para crochet y tejido a mano", "refs": "Detalles, sombrerería, piezas de cápsula. Se compra por kilo, no por metro", "consumo": "300–500 g", "colores": ["Crudo", "Arena", "Terracota"], "senales": [21] },
+    { "grupo": "apuesta", "tela": "Rayón o lino liviano para resort", "refs": "Kimono de playa, pantalón fluido, conjunto de dos piezas", "consumo": "1,8–2,2 m", "colores": ["Estampado natural", "Blanco", "Tierra"], "senales": [24, 20] },
+    { "grupo": "apuesta", "tela": "Punto de alpaca o mezcla alpaca-algodón", "refs": "Suéter liviano y chaleco para tierra fría; nicho de precio alto", "consumo": "600–800 g", "colores": ["Gris natural", "Camel", "Negro"], "senales": [25] }
+  ],
+
+  "insumos": [
+    { "grupo": "Hilos", "que": "Poliéster 40/2 en la carta de color + conos grandes de overlock", "criterio": "Un tono por color de tela; conos grandes solo en negro, blanco y crudo" },
+    { "grupo": "Cierres", "que": "Metálico #4.5 denim, nylon invisible, plástico #5 chaqueta", "criterio": "Insumo importado: cotiza con validez de fecha y guarda stock de seguridad" },
+    { "grupo": "Botones y herrajes", "que": "Remache y presión para denim, corozo para camisería, herraje mate para blazer", "criterio": "El acabado mate y el material natural refuerzan el discurso de hechura" },
+    { "grupo": "Entretelas", "que": "Fusionable liviana, media para blazer, no tejida para pretinas", "criterio": "Prueba de encogimiento antes de comprar volumen" },
+    { "grupo": "Elásticos y cordones", "que": "Elástico 3 y 4 cm para joggers, cordón grueso para hoodie", "criterio": "El streetwear oversize los consume rápido: compra por encima del cálculo" },
+    { "grupo": "Marquilla y empaque", "que": "Marquilla tejida, etiqueta de composición y cuidado, bolsa reciclable", "criterio": "La etiqueta de composición es obligatoria; el empaque sostiene el argumento de precio" },
+    { "grupo": "Accesorios", "que": "Cinturones, bolsos de gran tamaño, correas de cuero o alternativa vegana", "criterio": "Colombiamoda 2026 puso el accesorio como protagonista: margen alto y sin tallaje" }
+  ],
+
+  "calendario": [
+    { "ventana": "Sep – oct 2026", "hacer": "Cerrar colección de fin de año; muestras y prueba de tallaje", "comprar": "Núcleo completo para Navidad + insumos. Aprovechar el algodón en precio bajo." },
+    { "ventana": "Nov – dic 2026", "hacer": "Vender y medir. Registrar sell-through por color y referencia.", "comprar": "Solo reposición de lo que rota. Cero compra nueva de color." },
+    { "ventana": "Ene – feb 2027", "hacer": "Colombiatex: ver tela en mano, negociar rollos cortos, comparar proveedores", "comprar": "Telas de tendencia para el primer semestre; muestras de las apuestas." },
+    { "ventana": "Mar – abr 2027", "hacer": "Producir primer semestre; probar apuestas en cápsulas de 20–30 unidades", "comprar": "Insumos y accesorios. Reposición de núcleo." },
+    { "ventana": "May – jul 2027", "hacer": "Temporada fuerte (madres, prima). Colombiamoda: leer hacia dónde va 2028.", "comprar": "Reposición agresiva de lo que vende; nada nuevo sin dato." },
+    { "ventana": "Ago – sep 2027", "hacer": "Cerrar ciclo: qué color murió, qué tela sobró, qué apuesta funcionó", "comprar": "Compra grande de núcleo para fin de año, con la carta de color depurada." }
+  ],
+
+  "factores": [
+    { "n": "Desfase", "titulo": "Distancia entre la pasarela y tu vitrina", "texto": "Lo que se publica para primavera/verano 2027 llega al consumidor colombiano entre 12 y 24 meses después, y filtrado. Este radar existe para detectar el punto medio: la señal global sube primero, la búsqueda local confirma después." },
+    { "n": "Clima", "titulo": "Tu temporada no es la del hemisferio norte", "texto": "Colombia no tiene otoño/invierno. Del calendario internacional se toma silueta y color, no peso de tela. El calendario que manda es el comercial: madres, regreso a clases, primas y Navidad." },
+    { "n": "Costo", "titulo": "Margen real, no margen de catálogo", "texto": "Costea con tela + desperdicio de trazo (8–15%) + insumos + confección + empaque + merma. Un estampado direccional o de cuadros sube el consumo 10–20% frente a un liso." },
+    { "n": "Taller", "titulo": "Lo que tu taller sabe coser bien", "texto": "Cada tela nueva cuesta curva de aprendizaje: agujas, tensiones, tiempos. Regla práctica: no más de dos materiales verdaderamente nuevos por colección." },
+    { "n": "Inventario", "titulo": "La tela sin vender es plata quieta", "texto": "El riesgo no está en la prenda que no se vendió, sino en los 200 metros del color que no pegó. Color de tendencia en rollos cortos; color base en volumen." },
+    { "n": "Identidad", "titulo": "Coherencia de marca", "texto": "Colombiamoda 2026 puso identidad y sostenibilidad en el centro. La marca que persigue todas las tendencias no se lee como actual, se lee como genérica: elige dos o tres señales y llévalas a fondo." }
+  ],
+
+  "criterios": [
+    { "p": "¿La señal sube local o solo global?", "d": "Global en alza + local plano = observar. Global en alza + local empezando a subir = ventana de entrada. Ambas en meseta alta = tarde, entras a competir por precio." },
+    { "p": "¿Cabe en el clima y el uso real de tu cliente?", "d": "Traduce la tendencia a peso de tela y ocasión de uso antes de aceptarla." },
+    { "p": "¿La tela existe en el mercado nacional a volumen comprable?", "d": "Medellín e Ibagué dan lotes pequeños; importar implica arancel, tiempos y mínimos que un taller propio rara vez absorbe." },
+    { "p": "¿Sirve para más de una referencia?", "d": "Una tela que solo funciona para un vestido es una apuesta. Una que sirve en camisa, blazer y pantalón es inventario seguro." },
+    { "p": "¿Puedes probarla con 20–30 unidades antes de escalar?", "d": "Si el proveedor no te vende un rollo corto, la tendencia todavía no es comprable para ti." }
+  ],
+
+  "metricas": [
+    { "m": "Sell-through a 8 semanas", "d": "Por referencia y por color. Es el único juez de si la tendencia era real para tu cliente." },
+    { "m": "Metros sobrantes por tela", "d": "Si una tela deja más del 15% sin usar, se compró de más o se diseñó de menos." },
+    { "m": "Costo real vs. presupuestado", "d": "La diferencia casi siempre está en desperdicio de trazo y tiempo de taller con material nuevo." },
+    { "m": "Tiempo de confección por referencia", "d": "Te dice cuánto puedes crecer sin contratar, y qué tendencias son caras de coser aunque la tela sea barata." }
+  ]
+}

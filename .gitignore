@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.vite/
+
+# Salidas de los scripts en formato viejo. Lo que el panel lee de verdad
+# (src/data/trends.json y src/data/macro.json) SÍ se versiona: es lo que
+# publica GitHub Pages y es el historial de qué decía el radar y cuándo.
+trends_live.json
+trends_live.js
+macro_live.json
+macro_live.js
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Sistema
+.DS_Store
+Thumbs.db

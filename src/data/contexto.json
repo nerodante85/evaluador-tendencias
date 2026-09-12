@@ -1,0 +1,82 @@
+{
+  "_comentario": "Contexto de baja frecuencia y referencias anuales. Se edita a mano: el algodón cada mes con el reporte de CottonWorks, el IPC cada mes con el boletín del DANE, Pinterest Predicts una vez al año en diciembre, las ferias y el arancel cuando cambien. Nada de esto lo escribe ningún script.",
+
+  "algodon": {
+    "actual": 72,
+    "unidad": "¢/lb",
+    "direccion": "bajando",
+    "trayectoria": [79, 83, 88, 80, 71, 72],
+    "periodo": "junio 2026",
+    "fuente": "CottonWorks, reporte mensual jun. 2026",
+    "live": false
+  },
+
+  "ipc": {
+    "anual": "6,03%",
+    "mensual": "0,17%",
+    "acumuladoAno": "4,94%",
+    "sectorPrendas": "0,31%",
+    "periodo": "julio 2026",
+    "fuente": "DANE, boletín IPC jul. 2026"
+  },
+
+  "latam": {
+    "titular": "El proveedor regional está en modo negociación",
+    "detalle": "Las exportaciones textiles de Perú cayeron 8% en el primer trimestre de 2026 (US$389 millones) y su principal comprador, Estados Unidos, redujo compras 12,3%. La alpaca es su tercer producto de exportación.",
+    "accion": "Un proveedor con demanda floja negocia mejor: es buen momento para pedir cotización de pima y alpaca con lotes pequeños.",
+    "fuente": "ADEX / Infobae Perú, may. 2026"
+  },
+
+  "feriaLatam": {
+    "nombre": "São Paulo Fashion Week",
+    "fecha": "abril (edición 2026: 6–11 de abril)",
+    "nota": "El evento más grande de la región y la mejor lectura anticipada de verano para clima cálido — la temporada brasileña se parece más a la nuestra que cualquier pasarela europea.",
+    "fuente": "Ruta 1825 / SPFW"
+  },
+
+  "feria": {
+    "nombre": "Colombiatex de las Américas 2027",
+    "fecha": "26–28 de enero, 2027 (verificar fecha oficial cerca del evento)",
+    "lugar": "Plaza Mayor, Medellín",
+    "nota": "El Foro de Tendencias es el punto de partida — ahí se presenta la lectura curada de la temporada antes que en cualquier vitrina.",
+    "fuente": "Inexmoda / Colombiatex.com"
+  },
+
+  "arancel": {
+    "titular": "40% a confección importada",
+    "detalle": "Aplica a ropa y textiles por debajo del umbral de US$10/kg. Protege al confeccionista nacional, pero encarece el insumo importado: buena parte de la confección colombiana depende de tela traída de afuera.",
+    "accion": "Antes de casarte con una tela importada, verifica su posición arancelaria y ten identificada una alternativa nacional equivalente.",
+    "fuente": "Decreto 2598 / La República, cobertura del sector"
+  },
+
+  "algodonLectura": {
+    "titular": "Algodón barato hoy, colchón mundial cayendo",
+    "detalle": "Los futuros bajaron de 88 a ~72 ¢/lb entre mayo y junio de 2026, pero el USDA proyecta inventarios finales 5,5 millones de pacas por debajo del año anterior.",
+    "accion": "Si la colección se apoya en jersey y denim de algodón, conviene asegurar precio en la compra grande del cierre de 2026 en vez de esperar a 2027.",
+    "fuente": "CottonWorks / USDA, jun. 2026"
+  },
+
+  "pinterest": {
+    "edicion": "Pinterest Predicts 2026",
+    "precision": "88% de aciertos en los últimos 6 años, según Pinterest",
+    "fuente": "Pinterest Predicts 2026 (newsroom.pinterest.com), dic. 2025",
+    "items": [
+      { "name": "Poetcore (pura poesía)", "cat": "prenda", "note": "Jerséis de cuello alto oversize, blazers vintage, bolsos satchel, accesorios tipo corbata.", "keywords": [{ "t": "estética de poeta", "g": "+175%" }, { "t": "bolsos satchel", "g": "+85%" }] },
+      { "name": "Expedición utilitaria", "cat": "prenda", "note": "Caqui, cargo, camisas utilitarias, lino marrón, pantalones plisados — estética de trotamundos/excavación.", "keywords": [{ "t": "camisa de lino marrón", "g": "+100%" }, { "t": "abrigo de campo", "g": "+65%" }] },
+      { "name": "Broche de oro", "cat": "material", "note": "Joyería vintage masculina: pins, broches de cristal, prendedores de herencia familiar.", "keywords": [{ "t": "accesorios maximalistas", "g": "+105%" }, { "t": "joyería familiar", "g": "+95%" }] },
+      { "name": "Azul bajo cero", "cat": "color", "note": "Tonos fríos y azul hielo en abrigos, accesorios inspirados en glaciares.", "keywords": [{ "t": "azul helado", "g": "+50%" }, { "t": "estética de glaciar", "g": "+35%" }] },
+      { "name": "Delicadeza salvaje", "cat": "material", "note": "Animal print suave y delicado — estampado venado, detalles de mariposa.", "keywords": [{ "t": "estética de venado", "g": "+55%" }] },
+      { "name": "Extra celestial", "cat": "material", "note": "Detalles holográficos, opalescentes, siluetas cósmicas.", "keywords": [{ "t": "maquillaje congelado", "g": "+150%" }] },
+      { "name": "Neodéco", "cat": "prenda", "note": "Revival de Art Decó: geometría zigzag, bordes cromados o de latón.", "keywords": [] },
+      { "name": "Encaje perfecto", "cat": "material", "note": "Encaje y tejidos delicados en cuellos, puños y detalles.", "keywords": [] }
+    ]
+  },
+
+  "pinterestCorroboracion": {
+    "_comentario": "Mapeo manual: qué señales del radar (por id) están corroboradas por una tendencia independiente de Pinterest Predicts. Dos fuentes distintas apuntando al mismo lugar = señal más confiable que cualquiera de las dos por separado. Suma +15 al puntaje. Revisar cada diciembre cuando salga el reporte nuevo.",
+    "3": "Azul bajo cero",
+    "10": "Poetcore",
+    "11": "Expedición utilitaria",
+    "13": "Delicadeza salvaje"
+  }
+}
