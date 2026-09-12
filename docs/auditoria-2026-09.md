@@ -100,3 +100,24 @@ El proyecto pasó de documentos de Claude a un repositorio de código (React + V
 - **Punto 2 (historial que se sobreescribe):** sin cambio en el mecanismo, pero ahora cada corrida queda además en el historial de git.
 
 Lo demás sigue igual que arriba.
+
+## Auditoría full stack — 2026-09-12
+
+Auditoría técnica completa (arquitectura, frontend, seguridad, accesibilidad, rendimiento, DevOps) con Claude Code, ya con el proyecto viviendo en el repositorio. Es un ejercicio distinto al de arriba: aquella auditoría revisaba contenido y datos; esta revisó código. Resultado: sin hallazgos críticos — no hay backend, base de datos ni autenticación que comprometer. Se encontraron y corrigieron 7 puntos, todos ya en `main` (commits `e9c62f6` y `94528e9`) y verificados en el sitio publicado.
+
+**Corregidos:**
+
+1. **Bug de colisión de IDs en el autodiagnóstico.** `agregarPropia` calculaba el `id`/`code` de una señal propia a partir de `propias.length`. Si borrabas una señal y agregabas otra, la nueva podía repetir el `id` de una que seguía en la lista — reproducible y verificado (agregar A y B, borrar A, agregar C: antes C se quedaba con el mismo `id` que B). Ahora usa un contador que solo crece (`propiaCounterRef`), en `src/Dashboard.jsx`.
+2. **El autodiagnóstico no persistía nada.** `adoptadas`, `propias` y `nombre` vivían solo en memoria de React — un refresh borraba todo el trabajo marcado. Ahora se guardan en `localStorage` (clave `evaluador-tendencias:autodiagnostico:v1`), con `try/catch` por si el navegador lo bloquea.
+3. **Labels del formulario de señal propia sin asociar a su input** (`FormularioSenal`) — fallaba WCAG 1.3.1/4.1.2. Ahora cada campo tiene `htmlFor`/`id`, y el selector de categoría usa `role="group"` + `aria-pressed`.
+4. **Contraste de `--ink-soft` por debajo de AA.** El original (`#7E7E7D`) daba ~4.06:1 sobre el fondo, y se usa en casi todas las etiquetas y textos de apoyo del panel. Se cambió a `#6B6B6A` (~5.1:1) en `src/theme.js`.
+5. **Sin favicon ni metaetiquetas Open Graph/Twitter.** Se agregó un favicon (swatch de color en el rust de acento, como SVG inline) y las metaetiquetas básicas en `index.html`, para que compartir el link muestre título y descripción.
+6. **Acciones de GitHub Actions ancladas a tag mutable (`@v4`, `@v5`) en vez de a un commit.** Se anclaron las 5 acciones del workflow a su SHA exacto (verificado con `git ls-remote` contra el repo real de cada acción), con la versión como comentario. Hardening de cadena de suministro; el workflow no maneja secretos, así que el riesgo que cerraba era bajo.
+7. **Heurística de "Breakout" en `computeDecision()` con un criterio redundante.** `hasBreakout` aceptaba tanto el literal `"Breakout"` como cualquier `crecimiento` con 4+ dígitos de porcentaje — pero `fetch_trends.py` nunca emite ese segundo formato salvo como texto libre de una búsqueda relacionada grande no etiquetada oficialmente como breakout. Se simplificó a solo el literal. **Esto sí movió el puntaje** de 4 señales con los datos del 12 de septiembre (13 Animal print, 18 Hanbok reinterpretado, 21 Artesanía elevada, 24 Resort y beachwear tropical: −10 puntos cada una) — se confirmó con Python contra los datos reales antes de aplicarlo y se le preguntó a Ricardo antes de tocar `engine.js`. Ninguna de las 4 cambió de categoría de decisión (Comprar/Probar/Monitorear/Evitar), y `historial/` no guarda el puntaje calculado, así que no afecta la comparación de la línea base de septiembre contra noviembre.
+
+**Verificado, no solo revisado:**
+- `npm run build`, `npm run dev`, `npm install` y `npm audit` corridos con Node real (v24.21.0) — build limpio, 0 vulnerabilidades, panel renderiza sin errores de consola.
+- El bug de colisión de IDs y la persistencia se probaron a mano en el sitio publicado (agregar/borrar/agregar señales propias, recargar la página) — se comportan como se espera.
+- Los dos deploys a GitHub Pages que llevaron estos cambios (runs #4 y #5 de `Publicar panel en GitHub Pages`) terminaron en éxito, y el sitio en vivo se revisó después de cada uno.
+
+**No tocado, a propósito:** los campos `yoy`/`persistencia`/`volatilidad`/`estacional` de la v2 siguen sin usarse en `computeDecision()` (ver más arriba) — eso sigue siendo decisión pendiente de Ricardo, no algo que esta auditoría haya intentado resolver.
