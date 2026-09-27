@@ -36,8 +36,23 @@ Lo que sí es un hallazgo real y accionable:
 - **La exactitud cae con el horizonte para TODOS los modelos, y se acerca a la vara mínima** (de +6-10 puntos sobre "siempre estable" a 6 meses, a +0-10 puntos a 24 meses). Es la base para que el panel (fase 5) anuncie con qué horizonte conviene hablar con confianza, categoría por categoría, en vez de prometer 24 meses parejo para todo.
 - **El tamaño de la muestra es la sospecha más probable, no los modelos en sí.** 36 series × 5 cortes = 180 puntos de comparación por horizonte reparte poca potencia estadística entre 9 pruebas. Antes de descartar Holt-Winters y SARIMA, vale la pena repetir esta misma corrida con una muestra más grande (más series, más cortes) — el código ya lo soporta (`python -m pipeline.cli backtest --series 150 --cortes 10`), solo toma más tiempo de cómputo.
 
+## Actualización: con más muestra, la sospecha era correcta
+
+Se repitió la misma corrida con una muestra mayor (150 series × 10 cortes, 17.056 evaluaciones en vez de 2.060). La sospecha del final de este documento se confirmó:
+
+| Horizonte | Adivinar siempre "estable" | naive_estacional | holt_winters | sarima |
+|---|---:|---:|---:|---:|
+| 6 meses | 74.0% | 81.6% | 81.5% | 81.7% |
+| 12 meses | 59.1% | 62.9% | 62.7% | 64.3% |
+| 24 meses | 42.0% | 43.7% | **53.2%** ✓ | **52.1%** ✓ |
+
+**A 24 meses, tanto Holt-Winters como SARIMA le ganan al baseline de verdad** — significativo por McNemar y sobrevive la corrección de Bonferroni por las 9 pruebas corridas a la vez. A 6 y 12 meses, sigue sin haber ganador: `naive_estacional` sigue siendo difícil de superar en esos horizontes, y no hay razón para complicar el panel ahí.
+
+Esto no contradice el punto anterior sobre no forzar una conclusión — es lo contrario: la conclusión cambió porque se corrigió la causa real (tamaño de muestra), no porque se haya bajado el umbral de significancia ni quitado la corrección de Bonferroni. Mismo método, misma vara, más evidencia.
+
+**Recomendación concreta para la fase 4:** usar `naive_estacional` a 6 y 12 meses (nada le gana, y es el más simple y explicable), y `holt_winters` a 24 meses (le gana al baseline por ~9.5 puntos, con el error de nivel más bajo de los cuatro en ese horizonte). No se comparó Holt-Winters contra SARIMA directamente entre sí — solo cada uno contra el baseline —, así que entre los dos, Holt-Winters es la elección algo más simple y con métricas marginalmente mejores, pero SARIMA queda como candidato razonable si en el futuro se combinan modelos.
+
 ## Qué significa para las fases que siguen
 
-- **Fase 4 (Trend Score):** por ahora, el score debería construirse sobre el naive estacional o descartar por completo la idea de "elegir un modelo ganador" en favor de usar el propio motor de señales de la fase 2 (que no pronostica, solo describe el estado actual) como la base más defendible. No hay evidencia todavía para justificar la complejidad de un SARIMA en producción.
-- **Fase 5 (panel):** la "confianza estadística" que se le muestre al usuario debe reflejar esto — a 24 meses hasta el mejor modelo queda a menos de 10 puntos de "adivinar siempre estable". Prometer certeza a ese horizonte sería deshonesto con la propia evidencia que este backtesting generó.
-- **Repetir con más muestra** es la acción concreta pendiente, no un ajuste de umbrales.
+- **Fase 4 (Trend Score):** con la corrida grande (ver "Actualización" arriba), la recomendación por horizonte queda: `naive_estacional` a 6 y 12 meses, `holt_winters` a 24 meses — el único caso donde un modelo más complejo demostró, con significancia real, que valía la pena.
+- **Fase 5 (panel):** la "confianza estadística" que se le muestre al usuario debe reflejar esto — a 24 meses, incluso ganándole al baseline, el mejor modelo (53.2%) sigue lejos de la certeza. Prometer certeza a ese horizonte sería deshonesto con la propia evidencia que este backtesting generó.

@@ -1,69 +1,69 @@
 {
  "esquema": 1,
- "generado": "2026-09-27T05:24",
- "n_series": 36,
- "n_cortes": 5,
- "n_filas": 2060,
+ "generado": "2026-09-27T05:33",
+ "n_series": 150,
+ "n_cortes": 10,
+ "n_filas": 17056,
  "metricas": {
   "naive_estacional|6": {
-   "n": 170,
-   "exactitud": 0.782,
-   "error_mediano": 2.34
+   "n": 1403,
+   "exactitud": 0.816,
+   "error_mediano": 2.33
   },
   "naive_estacional|12": {
-   "n": 172,
-   "exactitud": 0.605,
-   "error_mediano": 4.83
+   "n": 1422,
+   "exactitud": 0.629,
+   "error_mediano": 3.96
   },
   "naive_estacional|24": {
-   "n": 173,
-   "exactitud": 0.439,
-   "error_mediano": 7.66
+   "n": 1439,
+   "exactitud": 0.437,
+   "error_mediano": 7.5
   },
   "media_movil|6": {
-   "n": 170,
-   "exactitud": 0.759,
-   "error_mediano": 2.14
+   "n": 1403,
+   "exactitud": 0.757,
+   "error_mediano": 2.25
   },
   "media_movil|12": {
-   "n": 172,
-   "exactitud": 0.547,
-   "error_mediano": 4.83
+   "n": 1422,
+   "exactitud": 0.583,
+   "error_mediano": 3.96
   },
   "media_movil|24": {
-   "n": 173,
-   "exactitud": 0.422,
-   "error_mediano": 7.66
+   "n": 1439,
+   "exactitud": 0.412,
+   "error_mediano": 7.5
   },
   "holt_winters|6": {
-   "n": 170,
-   "exactitud": 0.818,
-   "error_mediano": 2.13
+   "n": 1403,
+   "exactitud": 0.815,
+   "error_mediano": 1.67
   },
   "holt_winters|12": {
-   "n": 172,
-   "exactitud": 0.57,
-   "error_mediano": 3.79
+   "n": 1422,
+   "exactitud": 0.627,
+   "error_mediano": 3.39
   },
   "holt_winters|24": {
-   "n": 173,
-   "exactitud": 0.52,
-   "error_mediano": 8.04
+   "n": 1439,
+   "exactitud": 0.532,
+   "error_mediano": 6.58
   },
   "sarima|6": {
-   "n": 170,
-   "exactitud": 0.818,
-   "error_mediano": 1.73
+   "n": 1403,
+   "exactitud": 0.817,
+   "error_mediano": 1.58
   },
   "sarima|12": {
-   "n": 172,
-   "exactitud": 0.61,
-   "error_mediano": 4.14
+   "n": 1422,
+   "exactitud": 0.643,
+   "error_mediano": 3.43
   },
   "sarima|24": {
-   "n": 173,
-   "exactitud": 0.503,
-   "error_mediano": 7.18
+   "n": 1439,
+   "exactitud": 0.521,
+   "error_mediano": 6.85
   }
  },
  "veredicto": {
@@ -75,7 +75,7 @@
   "sarima|12": false,
   "media_movil|24": false,
   "holt_winters|24": true,
-  "sarima|24": false
+  "sarima|24": true
  },
  "veredicto_bonferroni": {
   "media_movil|6": false,
@@ -85,12 +85,12 @@
   "holt_winters|12": false,
   "sarima|12": false,
   "media_movil|24": false,
-  "holt_winters|24": false,
-  "sarima|24": false
+  "holt_winters|24": true,
+  "sarima|24": true
  },
  "clase_mayoritaria": {
-  "6": 0.7176470588235294,
-  "12": 0.5523255813953488,
-  "24": 0.42196531791907516
+  "6": 0.7398431931575196,
+  "12": 0.5914205344585092,
+  "24": 0.42043085476025016
  }
 }
