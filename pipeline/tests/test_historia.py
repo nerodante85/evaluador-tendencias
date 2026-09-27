@@ -31,8 +31,8 @@ class Falso:
         self.guion = list(guion or [])
         self.llamadas = []
 
-    def interes_en_el_tiempo(self, consulta, mercado, *a, **k):
-        self.llamadas.append((mercado.codigo, consulta))
+    def interes_en_el_tiempo(self, consulta, mercado, *a, categoria=None, **k):
+        self.llamadas.append((mercado.codigo, consulta, categoria))
         if self.guion:
             paso = self.guion.pop(0)
             if isinstance(paso, Exception):
@@ -46,6 +46,28 @@ def _correr(tax, backend, tmp_path, **k):
     k.setdefault("jitter", 0)
     r = descargar_historia(tax, backend, dir_raw=tmp_path, dormir=esperas.append, ahora=AHORA, log=lambda *_: None, **k)
     return r, esperas
+
+
+def test_usa_la_categoria_del_nodo_si_tiene_override_y_la_registra(tmp_path):
+    from dataclasses import replace
+
+    tax = _tax(1, ("CO",))
+    con_override = replace(tax.nodos["prenda.n0"], categoria=0)
+    tax = replace(tax, nodos={"prenda.n0": con_override})
+    b = Falso()
+    _correr(tax, b, tmp_path)
+    assert b.llamadas == [("CO", "q0", 0)]
+    reg = leer_serie(ruta_serie("CO", "prenda.n0", tmp_path))
+    assert reg["categoria"] == 0
+
+
+def test_sin_override_usa_la_categoria_ropa_por_defecto(tmp_path):
+    tax = _tax(1, ("CO",))
+    _correr(tax, Falso(), tmp_path)
+    reg = leer_serie(ruta_serie("CO", "prenda.n0", tmp_path))
+    from pipeline.fuentes.trends import CATEGORIA_ROPA
+
+    assert reg["categoria"] == CATEGORIA_ROPA
 
 
 def test_escribe_una_serie_por_nodo_y_mercado_y_descarta_el_mes_parcial(tmp_path):
@@ -116,7 +138,7 @@ def test_se_detiene_limpio_si_varias_series_seguidas_fallan_y_conserva_lo_hecho(
     b2 = Falso()
     r2, _ = _correr(tax, b2, tmp_path)
     assert r2.en_cache == 1 and r2.descargadas == 5
-    assert ("CO", "q0") not in b2.llamadas
+    assert "q0" not in [q for _, q, _ in b2.llamadas]
 
 
 def test_un_exito_reinicia_la_cuenta_de_fallos_seguidos(tmp_path):
@@ -138,7 +160,7 @@ def test_filtra_por_mercado_y_por_tipo(tmp_path):
     tax = _tax(2, ("CO", "MX"))
     b = Falso()
     _correr(tax, b, tmp_path, mercados=["MX"], tipos=["prenda"])
-    assert {m for m, _ in b.llamadas} == {"MX"}
+    assert {m for m, _, _ in b.llamadas} == {"MX"}
 
 
 def test_no_deja_archivos_temporales(tmp_path):

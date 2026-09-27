@@ -23,6 +23,9 @@ nodos:
   - {id: corte.cut_out, nombre: Cut out, q: cut out}
   - {id: corte.espalda_descubierta, nombre: Espalda descubierta, q: espalda descubierta}
   - {id: corte.cuello_alto, nombre: Cuello alto, q: cuello alto}
+  # Probado "manga globo" y "blusa manga globo", con y sin filtro de
+  # categoría (2026-09-27): por debajo de 1 en CO. Vacío real en ese
+  # mercado; en MX/ES ya rendía razonable (ver reporte-calidad-fase1.md).
   - {id: corte.manga_globo, nombre: Manga globo, q: manga globo, relaciones: [prenda.blusa]}
   - {id: corte.hombros_descubiertos, nombre: Hombros descubiertos, q: {CO: hombros descubiertos, MX: hombros descubiertos, ES: hombros al aire}}
   - {id: corte.strapless, nombre: Strapless, q: strapless}

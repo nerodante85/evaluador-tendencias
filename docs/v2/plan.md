@@ -19,7 +19,7 @@ Fuentes → Normalización → Motor de señales → Modelo predictivo → Backt
 | Fase | Entregable | Puerta de salida | Estado |
 |---|---|---|---|
 | 0. Decisiones | `00-decisiones.md`, `01-definicion-tendencia.md` | Definición de tendencia aprobada por Ricardo | Escrita (2026-09-26); falta su aprobación |
-| 1. Taxonomía y datos | `taxonomia/` (158 nodos), `pipeline/`, historia de Trends en CO/MX/ES en `data/v2/raw/`, `reporte-calidad-fase1.md` | Informe de calidad: cuántos nodos tienen datos utilizables | En curso |
+| 1. Taxonomía y datos | `taxonomia/` (158 nodos), `pipeline/`, historia de Trends en CO/MX/ES en `data/v2/raw/`, `reporte-calidad-fase1.md` | Informe de calidad: cuántos nodos tienen datos utilizables | **Hecha.** 474/474 series descargadas, 0 fallidas. 314 `apta_backtest`, 40 `apta_senal`, 108 `insuficiente`, 12 `sin_datos`. Detalle y el ajuste de categoría de Trends en `00-decisiones.md` |
 | 2. Motor de señales | Crecimiento, aceleración, persistencia, volatilidad, saturación y estacionalidad, con pruebas. Clasificación tendencia / pico / estacional / ruido | Los picos conocidos (casos de control) salen como pico | Pendiente |
 | 3. Predicción y backtesting | Seasonal naive, media móvil, Holt-Winters, SARIMA (Prophet opcional). Ventana móvil, horizontes de 6, 12 y 24 meses, cobertura de intervalos | Un modelo por familia solo si le gana al baseline | Pendiente |
 | 4. Trend Score | Pesos ajustados con regresión regularizada, con intervalos y versionados | Comparación con la corrida de noviembre | Pendiente |

@@ -3,6 +3,8 @@
 tipo: tela
 nodos:
   - {id: tela.algodon, nombre: Algodón, q: algodón}
+  # Probado "algodón orgánico" y "ropa de algodón orgánico", con y sin filtro
+  # de categoría (2026-09-27): siempre por debajo de 1 en CO. Vacío real.
   - {id: tela.algodon_organico, nombre: Algodón orgánico, q: algodón orgánico, padre: tela.algodon, v1: [11]}
   - {id: tela.algodon_pima, nombre: Algodón pima, q: algodón pima, padre: tela.algodon, v1: [25]}
   - {id: tela.denim, nombre: Denim, q: {CO: denim, MX: mezclilla, ES: denim}, relaciones: [prenda.jean, prenda.chaqueta_denim]}
@@ -13,7 +15,10 @@ nodos:
   - {id: tela.seda, nombre: Seda, q: seda}
   - {id: tela.satin, nombre: Satín, q: {CO: satín, MX: satín, ES: satén}, relaciones: [prenda.blusa, prenda.vestido]}
   - {id: tela.terciopelo, nombre: Terciopelo, q: terciopelo}
-  - {id: tela.punto, nombre: Punto, q: tejido de punto, relaciones: [prenda.sueter, prenda.cardigan]}
+  # categoria: 0 — "tejido de punto" bajo "Ropa" daba 0.4 en CO; sin filtro,
+  # 32.2 (probado en vivo, 2026-09-27). Cambio grande: probablemente Trends
+  # clasifica esta frase como más técnica/textil que de moda de consumo.
+  - {id: tela.punto, nombre: Punto, q: tejido de punto, relaciones: [prenda.sueter, prenda.cardigan], categoria: 0}
   - {id: tela.poliester, nombre: Poliéster, q: poliéster}
   - {id: tela.elastano, nombre: Licra / elastano, q: {CO: licra, MX: licra, ES: elastano}}
   - {id: tela.viscosa, nombre: Viscosa, q: viscosa}
@@ -21,12 +26,17 @@ nodos:
   - {id: tela.tul, nombre: Tul, q: tul, relaciones: [estilo.balletcore]}
   - {id: tela.pana, nombre: Pana, q: pana}
   - {id: tela.franela, nombre: Franela, q: franela}
+  # Se probaron 3 variantes de consulta y cat=0 en vivo (2026-09-27): "tela
+  # reciclada", "ropa reciclada", "moda reciclada" — todas por debajo de 1 en
+  # CO. Vacío real, no de redacción; queda como está.
   - {id: tela.reciclada, nombre: Tela reciclada, q: tela reciclada, v1: [12], relaciones: [estilo.sostenible]}
   - {id: tela.tencel, nombre: Tencel, q: tencel}
   - {id: tela.alpaca, nombre: Alpaca, q: alpaca, v1: [25]}
   - {id: tela.crochet, nombre: Crochet, q: crochet, v1: [21]}
   - {id: tela.bordado, nombre: Bordado, q: bordado, v1: [22]}
-  - {id: tela.fibras_naturales, nombre: Fibras naturales, q: fibras naturales, v1: [23], relaciones: [estilo.sostenible]}
+  # categoria: 0 — bajo "Ropa" daba 0.0 en CO; sin filtro, 8.1 (probado en
+  # vivo, 2026-09-27).
+  - {id: tela.fibras_naturales, nombre: Fibras naturales, q: fibras naturales, v1: [23], relaciones: [estilo.sostenible], categoria: 0}
   - {id: tela.tecnica, nombre: Tela técnica / dry fit, q: {CO: tela dry fit, MX: tela dry fit, ES: tejido técnico}, v1: [27], relaciones: [prenda.ropa_deportiva]}
   - {id: tela.neopreno, nombre: Neopreno, q: neopreno}
   - {id: tela.gasa, nombre: Gasa, q: gasa}

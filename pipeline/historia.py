@@ -61,7 +61,7 @@ def _escribir_atomico(ruta, datos):
     os.replace(tmp, ruta)
 
 
-def _registro(nodo, mercado, consulta, filas, backend, ahora):
+def _registro(nodo, mercado, consulta, filas, backend, ahora, categoria):
     parcial_descartado = bool(filas) and filas[-1]["parcial"]
     if parcial_descartado:
         filas = filas[:-1]
@@ -70,7 +70,7 @@ def _registro(nodo, mercado, consulta, filas, backend, ahora):
         "nodo": nodo.id,
         "mercado": mercado.codigo,
         "consulta": consulta,
-        "categoria": CATEGORIA_ROPA,
+        "categoria": categoria,
         "timeframe": TIMEFRAME_HISTORIA,
         "backend": backend.nombre,
         "descargado": ahora().isoformat(timespec="minutes"),
@@ -116,10 +116,11 @@ def descargar_historia(
             break
 
         consulta = nodo.consultas[mercado.codigo]
+        categoria = nodo.categoria if nodo.categoria is not None else CATEGORIA_ROPA
         filas = None
         for intento in range(1, reintentos + 1):
             try:
-                filas = backend.interes_en_el_tiempo(consulta, mercado)
+                filas = backend.interes_en_el_tiempo(consulta, mercado, categoria=categoria)
                 break
             except Bloqueado as e:
                 espera = min(60 * 2 ** (intento - 1), 600)
@@ -140,7 +141,7 @@ def descargar_historia(
             continue
 
         fallos_seguidos = 0
-        registro = _registro(nodo, mercado, consulta, filas, backend, ahora)
+        registro = _registro(nodo, mercado, consulta, filas, backend, ahora, categoria)
         _escribir_atomico(ruta, registro)
         hechas_ahora += 1
         if registro["estado"] == "sin_datos":

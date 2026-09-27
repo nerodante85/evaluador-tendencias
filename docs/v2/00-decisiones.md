@@ -44,6 +44,27 @@ Consecuencia de diseño: **una sola fuente en la fase 1**. Por eso el Trend Scor
 
 `trends.json` ya declara `version: 2` y se refiere a la versión del script de la v1. Para no confundir: el producto nuevo es **Radar 2.0** y sus esquemas de datos llevan `esquema`, no `version`.
 
+## Ajuste de consultas tras el primer informe de calidad (2026-09-27)
+
+El primer informe de calidad (474 series) mostró "estilo" y "estampado" débiles y el control de "pico" (`estilo.barbiecore`) sin datos. Antes de asumir que eran términos sin volumen real, se probaron en vivo variantes de redacción y, por separado, la consulta sin el filtro de categoría "Ropa" (`cat=68`) de Google Trends.
+
+**Hallazgo:** no era mayormente un problema de redacción — probar sinónimos no rescató casi ninguna serie. Sí lo era el filtro de categoría: varios términos de estética/técnica aparecían casi en cero dentro de "Ropa" pero con volumen real fuera de ella (Trends los debe estar clasificando como cultura/lifestyle, no como moda de consumo).
+
+Se agregó un campo opcional `categoria` por nodo (`pipeline/taxonomia.py`, `Nodo.categoria`) que sobreescribe la categoría por defecto. Se aplicó, con evidencia en vivo, a:
+
+| Nodo | Antes (media 5 años, CO) | Sin filtro | Categoría |
+|---|---:|---:|---|
+| `estilo.cottagecore` | ~0.4 | 3.9 / **25.6** (MX) / 5.7 | 0 |
+| `estampado.tie_dye` | ~4 | **23.9 / 42.8 / 11.2** | 0 |
+| `tela.punto` | 0.4 | **32.2** | 0 |
+| `tela.fibras_naturales` | 0.0 | 8.1 | 0 |
+| `estampado.cachemira` | 0.7 | 6.9 | 0 |
+| `estilo.mob_wife` | ~0 | 0.4 / 2.3 / 2.5 | 0 (mejora marginal) |
+
+**No se cambió** (se probó y siguió en cero, con y sin filtro de categoría — es un vacío real, no de redacción): `estilo.barbiecore`, `tela.reciclada`, `tela.algodon_organico`, `corte.manga_globo`. `estilo.barbiecore` sigue siendo el único control de "pico" sin datos en ningún mercado; queda documentado como límite de la fuente, no como algo por arreglar.
+
+Efecto en el conjunto: `apta_backtest` pasó de 306 a 314 series; el control de "pico" pasó de 1 de 4 casos usables a 3 de 4.
+
 ## Puertas
 
 | Antes de… | Debe cumplirse |

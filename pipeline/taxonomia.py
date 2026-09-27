@@ -58,6 +58,14 @@ class Nodo:
     v1: tuple = ()
     hex: str | None = None
     familia: str | None = None
+    # Override de categoría de Google Trends para este nodo (ver
+    # pipeline/fuentes/trends.py CATEGORIA_ROPA). None = usa la categoría por
+    # defecto del pipeline. Se agregó el 2026-09-27 tras probar en vivo que
+    # varios términos de estética ("cottagecore", "tie dye", "tejido de
+    # punto") aparecían casi en cero dentro de la categoría "Ropa" pero con
+    # volumen real fuera de ella — el filtro los ahogaba. Solo se usa en los
+    # nodos donde esa prueba mostró mejora real, no como regla general.
+    categoria: int | None = None
 
 
 @dataclass(frozen=True)
@@ -117,6 +125,7 @@ def cargar(directorio=DIR_TAXONOMIA):
                 v1=tuple(n.get("v1", ())),
                 hex=n.get("hex"),
                 familia=n.get("familia"),
+                categoria=n.get("categoria"),
             )
 
     migracion = _leer(directorio / "migracion_v1.yaml")

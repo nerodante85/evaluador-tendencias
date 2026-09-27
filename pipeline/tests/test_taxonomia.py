@@ -27,6 +27,20 @@ def test_el_vocabulario_regional_se_conserva():
     assert jean.consultas == {"CO": "jean", "MX": "jeans", "ES": "vaqueros"}
 
 
+def test_los_nodos_con_override_de_categoria_verificado_en_vivo_lo_conservan():
+    # Ver docs/v2 y los comentarios junto a cada nodo: probado en vivo el
+    # 2026-09-27, la categoría "Ropa" ahogaba estos términos de estética.
+    tax = cargar()
+    for nid in ("estilo.cottagecore", "estilo.mob_wife", "estampado.tie_dye", "estampado.cachemira", "tela.punto", "tela.fibras_naturales"):
+        assert tax.nodos[nid].categoria == 0, nid
+
+
+def test_los_nodos_sin_override_usan_la_categoria_por_defecto():
+    tax = cargar()
+    for nid in ("estilo.barbiecore", "tela.reciclada", "tela.algodon_organico", "corte.manga_globo"):
+        assert tax.nodos[nid].categoria is None, nid
+
+
 # --- El validador tiene que detectar errores de verdad, no solo aprobar ---
 
 

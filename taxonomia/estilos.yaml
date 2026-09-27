@@ -14,18 +14,31 @@ nodos:
   - {id: estilo.retro, nombre: Retro, q: ropa retro}
   - {id: estilo.preppy, nombre: Preppy, q: preppy}
   - {id: estilo.grunge, nombre: Grunge, q: grunge}
-  - {id: estilo.cottagecore, nombre: Cottagecore, q: cottagecore}
+  # categoria: 0 (todas las categorías) — verificado en vivo el 2026-09-27: bajo
+  # la categoría "Ropa" esta consulta da ~0 en los tres mercados; sin filtro,
+  # 3.9/25.6/5.7 (CO/MX/ES). Es un término de estética, no de prenda; el filtro
+  # de Trends lo ahogaba.
+  - {id: estilo.cottagecore, nombre: Cottagecore, q: cottagecore, categoria: 0}
   - {id: estilo.coquette, nombre: Coquette, q: coquette, relaciones: [tela.encaje, prenda.corse]}
   - {id: estilo.balletcore, nombre: Balletcore, q: balletcore, relaciones: [tela.tul]}
   - {id: estilo.gorpcore, nombre: Gorpcore, q: gorpcore, relaciones: [prenda.pantalon_cargo]}
   - {id: estilo.quiet_luxury, nombre: Quiet luxury, q: quiet luxury}
   - {id: estilo.old_money, nombre: Old money, q: old money, relaciones: [prenda.blazer]}
   - {id: estilo.dark_academia, nombre: Dark academia, q: dark academia}
+  # Sin datos utilizables en ningún mercado ni con ("Ropa") ni sin filtro de
+  # categoría (probado en vivo, 2026-09-27: 0.0/1.6/1.0 en CO/MX/ES sin
+  # filtro). No es un problema de redacción de la consulta: es un vacío real
+  # de este término en Google Trends para estos mercados. Queda como está;
+  # ver docs/v2/reporte-calidad-fase1.md — el control de "pico" para este
+  # nodo no se puede validar con esta fuente.
   - {id: estilo.barbiecore, nombre: Barbiecore, q: barbiecore}
   - {id: estilo.western, nombre: Western, q: western}
   - {id: estilo.normcore, nombre: Normcore, q: normcore}
   - {id: estilo.sostenible, nombre: Moda sostenible, q: moda sostenible, v1: [12], relaciones: [tela.reciclada, tela.algodon_organico]}
   - {id: estilo.playa_resort, nombre: Playa y resort, q: ropa de playa, v1: [24], relaciones: [prenda.traje_bano, tela.lino]}
-  - {id: estilo.mob_wife, nombre: Mob wife, q: mob wife}
+  # categoria: 0 — mejora marginal sin el filtro (0.4/2.3/2.5 vs. ~0 con
+  # "Ropa"), probado en vivo 2026-09-27. Probablemente siga en "insuficiente",
+  # pero deja de ser "sin_datos".
+  - {id: estilo.mob_wife, nombre: Mob wife, q: mob wife, categoria: 0}
   - {id: estilo.clean_girl, nombre: Clean girl, q: clean girl}
   - {id: estilo.utilitario, nombre: Utilitario, q: estilo utilitario, relaciones: [prenda.pantalon_cargo]}

@@ -1,0 +1,4746 @@
+{
+ "esquema": 1,
+ "generado": "2026-09-27T04:18",
+ "series": {
+  "CO|prenda.camiseta": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 231,
+   "media24": 63.2,
+   "media36": 60.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.camisa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 235,
+   "media24": 60.2,
+   "media36": 58.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.blusa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 223,
+   "media24": 45.3,
+   "media36": 44.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.polo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 54.5,
+   "media36": 52.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.crop_top": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 156,
+   "media24": 20.2,
+   "media36": 25.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.corse": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 206,
+   "media24": 44.1,
+   "media36": 42.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.vestido": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 270,
+   "media24": 39.5,
+   "media36": 40.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.falda": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 239,
+   "media24": 53.3,
+   "media36": 54.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.pantalon": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 145,
+   "media24": 49.5,
+   "media36": 45.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.jean": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 47.5,
+   "media36": 46.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.short": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 192,
+   "media24": 52.7,
+   "media36": 53.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.bermuda": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 153,
+   "media24": 44.2,
+   "media36": 41.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.leggins": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 206,
+   "media24": 38.1,
+   "media36": 40.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.jogger": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 246,
+   "media24": 27.5,
+   "media36": 31.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.pantalon_cargo": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 57,
+   "media24": 20.2,
+   "media36": 22.8,
+   "ceros36": 0.0,
+   "ceros60": 0.117
+  },
+  "CO|prenda.pantalon_vestir": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 108,
+   "media24": 47.8,
+   "media36": 49.1,
+   "ceros36": 0.056,
+   "ceros60": 0.033
+  },
+  "CO|prenda.capri": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 265,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|prenda.enterizo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 185,
+   "media24": 52.4,
+   "media36": 53.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.overol": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 271,
+   "media24": 26.5,
+   "media36": 26.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.blazer": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 196,
+   "media24": 39.6,
+   "media36": 42.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.chaqueta": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 232,
+   "media24": 55.3,
+   "media36": 53.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.chaqueta_cuero": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 187,
+   "media24": 51.6,
+   "media36": 49.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.chaqueta_bomber": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 131,
+   "media24": 51.7,
+   "media36": 46.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.chaqueta_denim": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 165,
+   "media24": 27.0,
+   "media36": 28.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.abrigo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 187,
+   "media24": 66.2,
+   "media36": 64.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.gabardina": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 270,
+   "media24": 8.0,
+   "media36": 7.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.parka": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 197,
+   "media24": 27.3,
+   "media36": 26.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.chaleco": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 206,
+   "media24": 68.0,
+   "media36": 66.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.sudadera": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 170,
+   "media24": 59.4,
+   "media36": 57.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.sueter": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 140,
+   "media24": 52.2,
+   "media36": 47.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.cardigan": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 233,
+   "media24": 57.7,
+   "media36": 56.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.traje_bano": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 239,
+   "media24": 51.8,
+   "media36": 53.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.bikini": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 269,
+   "media24": 22.7,
+   "media36": 22.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.ropa_deportiva": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 268,
+   "media24": 39.8,
+   "media36": 39.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|prenda.conjunto": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 189,
+   "media24": 1.5,
+   "media36": 1.0,
+   "ceros36": 0.917,
+   "ceros60": 0.95
+  },
+  "CO|corte.oversize": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 81,
+   "media24": 26.0,
+   "media36": 30.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|corte.slim": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 194,
+   "media24": 59.8,
+   "media36": 57.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|corte.skinny": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 105,
+   "media24": 35.3,
+   "media36": 38.4,
+   "ceros36": 0.167,
+   "ceros60": 0.117
+  },
+  "CO|corte.recto": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 57,
+   "media24": 3.7,
+   "media36": 4.9,
+   "ceros36": 0.944,
+   "ceros60": 0.933
+  },
+  "CO|corte.pierna_ancha": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 245,
+   "media24": 0.0,
+   "media36": 0.1,
+   "ceros36": 0.972,
+   "ceros60": 0.983
+  },
+  "CO|corte.baggy": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 148,
+   "media24": 40.0,
+   "media36": 33.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|corte.bota_ancha": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 93,
+   "media24": 20.0,
+   "media36": 19.2,
+   "ceros36": 0.472,
+   "ceros60": 0.367
+  },
+  "CO|corte.tiro_alto": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 257,
+   "media24": 10.1,
+   "media36": 10.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|corte.tiro_bajo": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 81,
+   "media24": 16.7,
+   "media36": 14.7,
+   "ceros36": 0.778,
+   "ceros60": 0.75
+  },
+  "CO|corte.mom": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 87,
+   "media24": 22.0,
+   "media36": 22.0,
+   "ceros36": 0.083,
+   "ceros60": 0.05
+  },
+  "CO|corte.entallado": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 125,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 0.983
+  },
+  "CO|corte.asimetrico": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 230,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|corte.midi": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 132,
+   "media24": 41.4,
+   "media36": 39.3,
+   "ceros36": 0.222,
+   "ceros60": 0.267
+  },
+  "CO|corte.maxi": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 184,
+   "media24": 54.6,
+   "media36": 55.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|corte.mini": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 242,
+   "media24": 8.1,
+   "media36": 8.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|corte.sastreria": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 161,
+   "media24": 31.8,
+   "media36": 31.3,
+   "ceros36": 0.278,
+   "ceros60": 0.2
+  },
+  "CO|corte.plisado": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 217,
+   "media24": 1.8,
+   "media36": 2.0,
+   "ceros36": 0.861,
+   "ceros60": 0.8
+  },
+  "CO|corte.drapeado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 179,
+   "media24": 45.7,
+   "media36": 45.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|corte.cut_out": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 158,
+   "media24": 2.2,
+   "media36": 1.5,
+   "ceros36": 0.972,
+   "ceros60": 0.983
+  },
+  "CO|corte.espalda_descubierta": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 171,
+   "media24": 18.5,
+   "media36": 18.3,
+   "ceros36": 0.028,
+   "ceros60": 0.017
+  },
+  "CO|corte.cuello_alto": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 260,
+   "media24": 4.2,
+   "media36": 4.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|corte.manga_globo": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 255,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 0.967
+  },
+  "CO|corte.hombros_descubiertos": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 131,
+   "media24": 7.6,
+   "media36": 8.1,
+   "ceros36": 0.694,
+   "ceros60": 0.633
+  },
+  "CO|corte.strapless": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 218,
+   "media24": 42.8,
+   "media36": 41.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.algodon": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 141,
+   "media24": 71.3,
+   "media36": 64.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.algodon_organico": {
+   "clase": "sin_datos",
+   "estado": "sin_datos",
+   "meses": 0,
+   "meses_utiles": 0,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|tela.algodon_pima": {
+   "clase": "sin_datos",
+   "estado": "sin_datos",
+   "meses": 0,
+   "meses_utiles": 0,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|tela.denim": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 246,
+   "media24": 67.3,
+   "media36": 62.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.lino": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 216,
+   "media24": 69.5,
+   "media36": 64.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.lana": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 204,
+   "media24": 46.9,
+   "media36": 48.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.cuero": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 271,
+   "media24": 68.5,
+   "media36": 65.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.cuero_vegano": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 215,
+   "media24": 0.6,
+   "media36": 0.4,
+   "ceros36": 0.972,
+   "ceros60": 0.933
+  },
+  "CO|tela.seda": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 188,
+   "media24": 56.9,
+   "media36": 58.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.satin": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 95,
+   "media24": 59.4,
+   "media36": 52.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.terciopelo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 136,
+   "media24": 16.7,
+   "media36": 16.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.punto": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 246,
+   "media24": 15.0,
+   "media36": 15.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.poliester": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 76,
+   "media24": 53.6,
+   "media36": 45.6,
+   "ceros36": 0.056,
+   "ceros60": 0.183
+  },
+  "CO|tela.elastano": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 224,
+   "media24": 90.1,
+   "media36": 89.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.viscosa": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 160,
+   "media24": 1.3,
+   "media36": 0.9,
+   "ceros36": 0.972,
+   "ceros60": 0.85
+  },
+  "CO|tela.encaje": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 187,
+   "media24": 45.6,
+   "media36": 46.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.tul": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 201,
+   "media24": 16.8,
+   "media36": 18.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.pana": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 179,
+   "media24": 46.0,
+   "media36": 46.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.franela": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 267,
+   "media24": 4.0,
+   "media36": 4.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.reciclada": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 113,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 0.983
+  },
+  "CO|tela.tencel": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 29,
+   "media24": 0.0,
+   "media36": 2.8,
+   "ceros36": 0.972,
+   "ceros60": 0.983
+  },
+  "CO|tela.alpaca": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 161,
+   "media24": 13.2,
+   "media36": 16.2,
+   "ceros36": 0.694,
+   "ceros60": 0.65
+  },
+  "CO|tela.crochet": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 197,
+   "media24": 38.6,
+   "media36": 42.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.bordado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 205,
+   "media24": 81.9,
+   "media36": 79.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.fibras_naturales": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 271,
+   "media24": 1.9,
+   "media36": 2.0,
+   "ceros36": 0.083,
+   "ceros60": 0.083
+  },
+  "CO|tela.tecnica": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 124,
+   "media24": 3.8,
+   "media36": 2.5,
+   "ceros36": 0.972,
+   "ceros60": 0.983
+  },
+  "CO|tela.neopreno": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 186,
+   "media24": 20.8,
+   "media36": 21.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.gasa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 179,
+   "media24": 80.5,
+   "media36": 76.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|tela.organza": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 179,
+   "media24": 15.9,
+   "media36": 21.3,
+   "ceros36": 0.583,
+   "ceros60": 0.45
+  },
+  "CO|color.negro": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 214,
+   "media24": 59.7,
+   "media36": 58.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.blanco": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 255,
+   "media24": 63.5,
+   "media36": 61.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.beige": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 182,
+   "media24": 52.0,
+   "media36": 50.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.crema": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 212,
+   "media24": 72.0,
+   "media36": 70.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.gris": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 192,
+   "media24": 60.0,
+   "media36": 56.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.camel": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 182,
+   "media24": 57.5,
+   "media36": 54.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.marron": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 81,
+   "media24": 46.4,
+   "media36": 39.7,
+   "ceros36": 0.083,
+   "ceros60": 0.15
+  },
+  "CO|color.chocolate": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 187,
+   "media24": 67.3,
+   "media36": 62.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.azul_marino": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 168,
+   "media24": 66.5,
+   "media36": 61.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.azul_cielo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 141,
+   "media24": 49.2,
+   "media36": 49.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.azul_petroleo": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 188,
+   "media24": 26.7,
+   "media36": 20.2,
+   "ceros36": 0.389,
+   "ceros60": 0.45
+  },
+  "CO|color.azul_electrico": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 124,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|color.turquesa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 202,
+   "media24": 33.4,
+   "media36": 34.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.verde_oliva": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 124,
+   "media24": 64.5,
+   "media36": 56.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.verde_esmeralda": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 160,
+   "media24": 48.8,
+   "media36": 53.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.verde_menta": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 165,
+   "media24": 32.2,
+   "media36": 33.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.verde_salvia": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 2,
+   "media24": 7.5,
+   "media36": 5.0,
+   "ceros36": 0.944,
+   "ceros60": 0.967
+  },
+  "CO|color.mostaza": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 153,
+   "media24": 8.8,
+   "media36": 9.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.mantequilla": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 223,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 0.983
+  },
+  "CO|color.naranja": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 204,
+   "media24": 60.4,
+   "media36": 60.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.terracota": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 129,
+   "media24": 67.6,
+   "media36": 66.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.coral": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 179,
+   "media24": 44.4,
+   "media36": 46.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.rojo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 216,
+   "media24": 46.6,
+   "media36": 44.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.borgona": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 81,
+   "media24": 45.8,
+   "media36": 30.5,
+   "ceros36": 0.556,
+   "ceros60": 0.717
+  },
+  "CO|color.rosa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 219,
+   "media24": 61.8,
+   "media36": 61.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.fucsia": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 214,
+   "media24": 38.3,
+   "media36": 40.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.lavanda": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 131,
+   "media24": 6.9,
+   "media36": 4.6,
+   "ceros36": 0.944,
+   "ceros60": 0.95
+  },
+  "CO|color.morado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 203,
+   "media24": 63.8,
+   "media36": 63.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.dorado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 196,
+   "media24": 14.0,
+   "media36": 13.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|color.plateado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 173,
+   "media24": 57.0,
+   "media36": 54.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|estampado.floral": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 215,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|estampado.rayas": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 190,
+   "media24": 21.0,
+   "media36": 20.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|estampado.cuadros": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 188,
+   "media24": 23.8,
+   "media36": 26.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|estampado.vichy": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 90,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|estampado.tartan": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 220,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|estampado.animal_print": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 181,
+   "media24": 41.8,
+   "media36": 37.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|estampado.leopardo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 182,
+   "media24": 26.5,
+   "media36": 23.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|estampado.tie_dye": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 102,
+   "media24": 5.3,
+   "media36": 6.1,
+   "ceros36": 0.028,
+   "ceros60": 0.017
+  },
+  "CO|estampado.geometrico": {
+   "clase": "sin_datos",
+   "estado": "sin_datos",
+   "meses": 0,
+   "meses_utiles": 0,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|estampado.abstracto": {
+   "clase": "sin_datos",
+   "estado": "sin_datos",
+   "meses": 0,
+   "meses_utiles": 0,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|estampado.lunares": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 229,
+   "media24": 3.9,
+   "media36": 3.2,
+   "ceros36": 0.611,
+   "ceros60": 0.45
+  },
+  "CO|estampado.tropical": {
+   "clase": "sin_datos",
+   "estado": "sin_datos",
+   "meses": 0,
+   "meses_utiles": 0,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|estampado.cachemira": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 238,
+   "media24": 14.1,
+   "media36": 12.1,
+   "ceros36": 0.028,
+   "ceros60": 0.017
+  },
+  "CO|estampado.camuflado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 167,
+   "media24": 26.0,
+   "media36": 29.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|estampado.grafico": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 46,
+   "media24": 4.2,
+   "media36": 2.8,
+   "ceros36": 0.972,
+   "ceros60": 0.967
+  },
+  "CO|estilo.minimalista": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 198,
+   "media24": 17.0,
+   "media36": 15.6,
+   "ceros36": 0.222,
+   "ceros60": 0.233
+  },
+  "CO|estilo.athleisure": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 22,
+   "media24": 4.2,
+   "media36": 2.8,
+   "ceros36": 0.972,
+   "ceros60": 0.983
+  },
+  "CO|estilo.streetwear": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 93,
+   "media24": 56.9,
+   "media36": 49.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|estilo.vintage": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 173,
+   "media24": 14.0,
+   "media36": 20.9,
+   "ceros36": 0.361,
+   "ceros60": 0.233
+  },
+  "CO|estilo.segunda_mano": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 85,
+   "media24": 9.8,
+   "media36": 13.1,
+   "ceros36": 0.75,
+   "ceros60": 0.5
+  },
+  "CO|estilo.boho": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 132,
+   "media24": 48.7,
+   "media36": 45.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|estilo.y2k": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 263,
+   "media24": 3.9,
+   "media36": 3.7,
+   "ceros36": 0.0,
+   "ceros60": 0.033
+  },
+  "CO|estilo.retro": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 174,
+   "media24": 10.4,
+   "media36": 11.8,
+   "ceros36": 0.778,
+   "ceros60": 0.583
+  },
+  "CO|estilo.preppy": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 239,
+   "media24": 2.0,
+   "media36": 2.8,
+   "ceros36": 0.444,
+   "ceros60": 0.45
+  },
+  "CO|estilo.grunge": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 268,
+   "media24": 0.1,
+   "media36": 0.2,
+   "ceros36": 0.833,
+   "ceros60": 0.533
+  },
+  "CO|estilo.cottagecore": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 224,
+   "media24": 7.4,
+   "media36": 7.4,
+   "ceros36": 0.194,
+   "ceros60": 0.2
+  },
+  "CO|estilo.coquette": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 261,
+   "media24": 2.0,
+   "media36": 6.4,
+   "ceros36": 0.028,
+   "ceros60": 0.1
+  },
+  "CO|estilo.balletcore": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 209,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 0.983
+  },
+  "CO|estilo.gorpcore": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 102,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|estilo.quiet_luxury": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 90,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|estilo.old_money": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 48,
+   "media24": 47.1,
+   "media36": 45.3,
+   "ceros36": 0.0,
+   "ceros60": 0.25
+  },
+  "CO|estilo.dark_academia": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 232,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|estilo.barbiecore": {
+   "clase": "sin_datos",
+   "estado": "sin_datos",
+   "meses": 0,
+   "meses_utiles": 0,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|estilo.western": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 180,
+   "media24": 51.6,
+   "media36": 50.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|estilo.normcore": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 262,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 0.983
+  },
+  "CO|estilo.sostenible": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 91,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|estilo.playa_resort": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 207,
+   "media24": 43.0,
+   "media36": 43.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "CO|estilo.mob_wife": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 32,
+   "media24": 0.0,
+   "media36": 5.0,
+   "ceros36": 0.917,
+   "ceros60": 0.95
+  },
+  "CO|estilo.clean_girl": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 259,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "CO|estilo.utilitario": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 185,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "MX|prenda.camiseta": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 269,
+   "media24": 57.5,
+   "media36": 55.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.camisa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 255,
+   "media24": 70.6,
+   "media36": 68.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.blusa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 234,
+   "media24": 72.2,
+   "media36": 70.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.polo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 269,
+   "media24": 61.7,
+   "media36": 60.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.crop_top": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 162,
+   "media24": 29.5,
+   "media36": 32.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.corse": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 247,
+   "media24": 36.2,
+   "media36": 36.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.vestido": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 57.1,
+   "media36": 57.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.falda": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 262,
+   "media24": 61.5,
+   "media36": 61.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.pantalon": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 146,
+   "media24": 55.8,
+   "media36": 51.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.jean": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 67.4,
+   "media36": 67.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.short": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 254,
+   "media24": 83.0,
+   "media36": 78.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.bermuda": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 266,
+   "media24": 20.9,
+   "media36": 20.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.leggins": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 212,
+   "media24": 40.0,
+   "media36": 41.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.jogger": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 145,
+   "media24": 47.4,
+   "media36": 51.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.pantalon_cargo": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 86,
+   "media24": 46.7,
+   "media36": 44.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.pantalon_vestir": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 142,
+   "media24": 59.1,
+   "media36": 54.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.capri": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 76,
+   "media24": 29.5,
+   "media36": 29.0,
+   "ceros36": 0.5,
+   "ceros60": 0.417
+  },
+  "MX|prenda.enterizo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 183,
+   "media24": 37.2,
+   "media36": 39.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.overol": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 217,
+   "media24": 48.7,
+   "media36": 49.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.blazer": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 200,
+   "media24": 33.9,
+   "media36": 39.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.chaqueta": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 179,
+   "media24": 38.1,
+   "media36": 37.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.chaqueta_cuero": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 182,
+   "media24": 46.5,
+   "media36": 44.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.chaqueta_bomber": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 270,
+   "media24": 7.8,
+   "media36": 7.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.chaqueta_denim": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 165,
+   "media24": 31.5,
+   "media36": 34.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.abrigo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 204,
+   "media24": 23.1,
+   "media36": 23.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.gabardina": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 218,
+   "media24": 44.8,
+   "media36": 45.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.parka": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 234,
+   "media24": 18.3,
+   "media36": 16.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.chaleco": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 232,
+   "media24": 59.8,
+   "media36": 59.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.sudadera": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 169,
+   "media24": 42.6,
+   "media36": 42.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.sueter": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 133,
+   "media24": 29.5,
+   "media36": 28.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.cardigan": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 202,
+   "media24": 42.9,
+   "media36": 45.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.traje_bano": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 54.2,
+   "media36": 54.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.bikini": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 34.0,
+   "media36": 33.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.ropa_deportiva": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 271,
+   "media24": 49.7,
+   "media36": 47.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|prenda.conjunto": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 76,
+   "media24": 58.4,
+   "media36": 60.1,
+   "ceros36": 0.139,
+   "ceros60": 0.3
+  },
+  "MX|corte.oversize": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 110,
+   "media24": 62.4,
+   "media36": 63.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.slim": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 256,
+   "media24": 61.2,
+   "media36": 59.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.skinny": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 223,
+   "media24": 35.2,
+   "media36": 38.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.recto": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 169,
+   "media24": 72.5,
+   "media36": 65.6,
+   "ceros36": 0.0,
+   "ceros60": 0.05
+  },
+  "MX|corte.pierna_ancha": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 262,
+   "media24": 10.5,
+   "media36": 8.8,
+   "ceros36": 0.0,
+   "ceros60": 0.033
+  },
+  "MX|corte.baggy": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 165,
+   "media24": 57.3,
+   "media36": 47.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.bota_ancha": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 122,
+   "media24": 54.1,
+   "media36": 54.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.tiro_alto": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 196,
+   "media24": 54.6,
+   "media36": 55.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.tiro_bajo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 193,
+   "media24": 48.0,
+   "media36": 39.7,
+   "ceros36": 0.028,
+   "ceros60": 0.083
+  },
+  "MX|corte.mom": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 110,
+   "media24": 17.3,
+   "media36": 19.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.entallado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 180,
+   "media24": 55.0,
+   "media36": 54.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.asimetrico": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 203,
+   "media24": 7.4,
+   "media36": 7.1,
+   "ceros36": 0.694,
+   "ceros60": 0.767
+  },
+  "MX|corte.midi": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 148,
+   "media24": 73.0,
+   "media36": 72.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.maxi": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 203,
+   "media24": 71.3,
+   "media36": 70.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.mini": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 259,
+   "media24": 28.8,
+   "media36": 28.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.sastreria": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 256,
+   "media24": 39.0,
+   "media36": 39.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.plisado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 245,
+   "media24": 10.5,
+   "media36": 10.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.drapeado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 195,
+   "media24": 52.5,
+   "media36": 49.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.cut_out": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 235,
+   "media24": 6.7,
+   "media36": 6.7,
+   "ceros36": 0.25,
+   "ceros60": 0.15
+  },
+  "MX|corte.espalda_descubierta": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 185,
+   "media24": 55.6,
+   "media36": 54.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.cuello_alto": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 173,
+   "media24": 35.5,
+   "media36": 35.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.manga_globo": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 80,
+   "media24": 20.4,
+   "media36": 15.8,
+   "ceros36": 0.694,
+   "ceros60": 0.583
+  },
+  "MX|corte.hombros_descubiertos": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 145,
+   "media24": 26.8,
+   "media36": 30.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|corte.strapless": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 232,
+   "media24": 57.8,
+   "media36": 55.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.algodon": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 146,
+   "media24": 66.5,
+   "media36": 59.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.algodon_organico": {
+   "clase": "sin_datos",
+   "estado": "sin_datos",
+   "meses": 0,
+   "meses_utiles": 0,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "MX|tela.algodon_pima": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 9,
+   "media24": 4.2,
+   "media36": 2.8,
+   "ceros36": 0.972,
+   "ceros60": 0.983
+  },
+  "MX|tela.denim": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 269,
+   "media24": 70.8,
+   "media36": 70.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.lino": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 234,
+   "media24": 66.8,
+   "media36": 62.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.lana": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 250,
+   "media24": 46.9,
+   "media36": 48.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.cuero": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 260,
+   "media24": 68.3,
+   "media36": 66.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.cuero_vegano": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 54,
+   "media24": 4.2,
+   "media36": 2.8,
+   "ceros36": 0.972,
+   "ceros60": 0.967
+  },
+  "MX|tela.seda": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 236,
+   "media24": 79.8,
+   "media36": 77.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.satin": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 82,
+   "media24": 49.9,
+   "media36": 40.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.terciopelo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 158,
+   "media24": 17.5,
+   "media36": 17.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.punto": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 247,
+   "media24": 22.2,
+   "media36": 22.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.poliester": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 207,
+   "media24": 57.5,
+   "media36": 51.4,
+   "ceros36": 0.0,
+   "ceros60": 0.033
+  },
+  "MX|tela.elastano": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 251,
+   "media24": 79.3,
+   "media36": 73.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.viscosa": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 186,
+   "media24": 20.1,
+   "media36": 17.7,
+   "ceros36": 0.611,
+   "ceros60": 0.583
+  },
+  "MX|tela.encaje": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 221,
+   "media24": 52.3,
+   "media36": 52.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.tul": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 208,
+   "media24": 33.1,
+   "media36": 35.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.pana": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 187,
+   "media24": 40.5,
+   "media36": 39.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.franela": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 166,
+   "media24": 29.0,
+   "media36": 29.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.reciclada": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 61,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "MX|tela.tencel": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 60,
+   "media24": 7.4,
+   "media36": 4.9,
+   "ceros36": 0.944,
+   "ceros60": 0.95
+  },
+  "MX|tela.alpaca": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 261,
+   "media24": 1.6,
+   "media36": 1.7,
+   "ceros36": 0.222,
+   "ceros60": 0.183
+  },
+  "MX|tela.crochet": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 212,
+   "media24": 44.4,
+   "media36": 45.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.bordado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 256,
+   "media24": 65.8,
+   "media36": 65.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.fibras_naturales": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 247,
+   "media24": 13.3,
+   "media36": 13.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.tecnica": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 111,
+   "media24": 49.5,
+   "media36": 48.7,
+   "ceros36": 0.139,
+   "ceros60": 0.15
+  },
+  "MX|tela.neopreno": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 138,
+   "media24": 5.5,
+   "media36": 5.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.gasa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 210,
+   "media24": 79.4,
+   "media36": 75.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|tela.organza": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 220,
+   "media24": 45.7,
+   "media36": 45.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.negro": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 225,
+   "media24": 62.6,
+   "media36": 62.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.blanco": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 256,
+   "media24": 65.5,
+   "media36": 65.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.beige": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 193,
+   "media24": 65.4,
+   "media36": 62.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.crema": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 221,
+   "media24": 79.9,
+   "media36": 77.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.gris": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 213,
+   "media24": 63.4,
+   "media36": 61.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.camel": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 217,
+   "media24": 39.2,
+   "media36": 38.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.marron": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 156,
+   "media24": 44.8,
+   "media36": 38.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.chocolate": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 231,
+   "media24": 64.0,
+   "media36": 60.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.azul_marino": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 194,
+   "media24": 76.3,
+   "media36": 73.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.azul_cielo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 179,
+   "media24": 75.8,
+   "media36": 73.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.azul_petroleo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 243,
+   "media24": 18.8,
+   "media36": 16.4,
+   "ceros36": 0.0,
+   "ceros60": 0.017
+  },
+  "MX|color.azul_electrico": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 132,
+   "media24": 24.2,
+   "media36": 20.3,
+   "ceros36": 0.75,
+   "ceros60": 0.633
+  },
+  "MX|color.turquesa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 210,
+   "media24": 29.1,
+   "media36": 29.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.verde_oliva": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 112,
+   "media24": 57.6,
+   "media36": 47.3,
+   "ceros36": 0.0,
+   "ceros60": 0.033
+  },
+  "MX|color.verde_esmeralda": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 176,
+   "media24": 38.4,
+   "media36": 45.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.verde_menta": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 163,
+   "media24": 22.8,
+   "media36": 22.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.verde_salvia": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 248,
+   "media24": 2.8,
+   "media36": 1.8,
+   "ceros36": 0.694,
+   "ceros60": 0.817
+  },
+  "MX|color.mostaza": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 168,
+   "media24": 12.1,
+   "media36": 13.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.mantequilla": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 217,
+   "media24": 4.5,
+   "media36": 3.0,
+   "ceros36": 0.861,
+   "ceros60": 0.917
+  },
+  "MX|color.naranja": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 221,
+   "media24": 71.6,
+   "media36": 72.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.terracota": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 94,
+   "media24": 66.4,
+   "media36": 63.0,
+   "ceros36": 0.0,
+   "ceros60": 0.017
+  },
+  "MX|color.coral": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 201,
+   "media24": 12.7,
+   "media36": 12.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.rojo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 230,
+   "media24": 50.7,
+   "media36": 48.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.borgona": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 131,
+   "media24": 53.4,
+   "media36": 41.1,
+   "ceros36": 0.083,
+   "ceros60": 0.117
+  },
+  "MX|color.rosa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 252,
+   "media24": 69.7,
+   "media36": 68.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.fucsia": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 209,
+   "media24": 36.2,
+   "media36": 40.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.lavanda": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 148,
+   "media24": 59.9,
+   "media36": 58.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.morado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 214,
+   "media24": 60.0,
+   "media36": 62.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.dorado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 172,
+   "media24": 18.2,
+   "media36": 17.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|color.plateado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 198,
+   "media24": 67.5,
+   "media36": 64.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estampado.floral": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 90,
+   "media24": 18.0,
+   "media36": 26.3,
+   "ceros36": 0.278,
+   "ceros60": 0.183
+  },
+  "MX|estampado.rayas": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 229,
+   "media24": 79.2,
+   "media36": 74.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estampado.cuadros": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 212,
+   "media24": 32.2,
+   "media36": 34.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estampado.vichy": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 69,
+   "media24": 9.6,
+   "media36": 6.4,
+   "ceros36": 0.917,
+   "ceros60": 0.95
+  },
+  "MX|estampado.tartan": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 203,
+   "media24": 0.5,
+   "media36": 0.4,
+   "ceros36": 0.972,
+   "ceros60": 0.967
+  },
+  "MX|estampado.animal_print": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 188,
+   "media24": 62.7,
+   "media36": 55.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estampado.leopardo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 219,
+   "media24": 69.2,
+   "media36": 61.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estampado.tie_dye": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 99,
+   "media24": 5.7,
+   "media36": 6.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estampado.geometrico": {
+   "clase": "sin_datos",
+   "estado": "sin_datos",
+   "meses": 0,
+   "meses_utiles": 0,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "MX|estampado.abstracto": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 150,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "MX|estampado.lunares": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 183,
+   "media24": 51.8,
+   "media36": 46.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estampado.tropical": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 148,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 0.9
+  },
+  "MX|estampado.cachemira": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 233,
+   "media24": 61.5,
+   "media36": 53.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estampado.camuflado": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 148,
+   "media24": 20.2,
+   "media36": 22.6,
+   "ceros36": 0.417,
+   "ceros60": 0.283
+  },
+  "MX|estampado.grafico": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 207,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "MX|estilo.minimalista": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 161,
+   "media24": 65.7,
+   "media36": 61.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estilo.athleisure": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 186,
+   "media24": 19.5,
+   "media36": 15.7,
+   "ceros36": 0.694,
+   "ceros60": 0.717
+  },
+  "MX|estilo.streetwear": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 122,
+   "media24": 47.0,
+   "media36": 41.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estilo.vintage": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 219,
+   "media24": 34.8,
+   "media36": 37.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estilo.segunda_mano": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 160,
+   "media24": 10.5,
+   "media36": 13.2,
+   "ceros36": 0.583,
+   "ceros60": 0.383
+  },
+  "MX|estilo.boho": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 189,
+   "media24": 45.9,
+   "media36": 41.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estilo.y2k": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 63,
+   "media24": 67.9,
+   "media36": 62.0,
+   "ceros36": 0.0,
+   "ceros60": 0.017
+  },
+  "MX|estilo.retro": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 251,
+   "media24": 3.5,
+   "media36": 3.9,
+   "ceros36": 0.139,
+   "ceros60": 0.1
+  },
+  "MX|estilo.preppy": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 184,
+   "media24": 41.4,
+   "media36": 45.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estilo.grunge": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 193,
+   "media24": 22.8,
+   "media36": 23.1,
+   "ceros36": 0.028,
+   "ceros60": 0.017
+  },
+  "MX|estilo.cottagecore": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 217,
+   "media24": 23.5,
+   "media36": 24.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estilo.coquette": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 33,
+   "media24": 2.7,
+   "media36": 6.8,
+   "ceros36": 0.0,
+   "ceros60": 0.033
+  },
+  "MX|estilo.balletcore": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 230,
+   "media24": 0.3,
+   "media36": 0.2,
+   "ceros36": 0.972,
+   "ceros60": 0.983
+  },
+  "MX|estilo.gorpcore": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 44,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 0.983
+  },
+  "MX|estilo.quiet_luxury": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 183,
+   "media24": 1.9,
+   "media36": 1.2,
+   "ceros36": 0.972,
+   "ceros60": 0.983
+  },
+  "MX|estilo.old_money": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 247,
+   "media24": 25.9,
+   "media36": 25.3,
+   "ceros36": 0.0,
+   "ceros60": 0.117
+  },
+  "MX|estilo.dark_academia": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 256,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 0.983
+  },
+  "MX|estilo.barbiecore": {
+   "clase": "sin_datos",
+   "estado": "sin_datos",
+   "meses": 0,
+   "meses_utiles": 0,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "MX|estilo.western": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 266,
+   "media24": 20.2,
+   "media36": 18.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estilo.normcore": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 250,
+   "media24": 0.0,
+   "media36": 0.1,
+   "ceros36": 0.972,
+   "ceros60": 0.867
+  },
+  "MX|estilo.sostenible": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 156,
+   "media24": 3.5,
+   "media36": 2.3,
+   "ceros36": 0.972,
+   "ceros60": 0.983
+  },
+  "MX|estilo.playa_resort": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 233,
+   "media24": 31.1,
+   "media36": 31.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "MX|estilo.mob_wife": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 32,
+   "media24": 1.7,
+   "media36": 7.7,
+   "ceros36": 0.722,
+   "ceros60": 0.833
+  },
+  "MX|estilo.clean_girl": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 100,
+   "media24": 0.0,
+   "media36": 2.4,
+   "ceros36": 0.972,
+   "ceros60": 0.983
+  },
+  "MX|estilo.utilitario": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 145,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "ES|prenda.camiseta": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 76.4,
+   "media36": 74.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.camisa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 268,
+   "media24": 74.2,
+   "media36": 72.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.blusa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 225,
+   "media24": 69.0,
+   "media36": 64.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.polo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 77.7,
+   "media36": 75.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.crop_top": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 165,
+   "media24": 35.5,
+   "media36": 35.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.corse": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 269,
+   "media24": 53.0,
+   "media36": 49.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.vestido": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 61.0,
+   "media36": 61.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.falda": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 269,
+   "media24": 78.5,
+   "media36": 77.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.pantalon": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 160,
+   "media24": 61.5,
+   "media36": 54.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.jean": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 76.3,
+   "media36": 74.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.short": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 248,
+   "media24": 61.5,
+   "media36": 56.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.bermuda": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 206,
+   "media24": 36.5,
+   "media36": 33.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.leggins": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 222,
+   "media24": 39.5,
+   "media36": 41.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.jogger": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 140,
+   "media24": 46.2,
+   "media36": 46.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.pantalon_cargo": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 93,
+   "media24": 61.2,
+   "media36": 60.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.pantalon_vestir": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 124,
+   "media24": 53.8,
+   "media36": 48.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.capri": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 52,
+   "media24": 21.5,
+   "media36": 16.2,
+   "ceros36": 0.694,
+   "ceros60": 0.767
+  },
+  "ES|prenda.enterizo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 164,
+   "media24": 41.2,
+   "media36": 43.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.overol": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 235,
+   "media24": 47.8,
+   "media36": 50.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.blazer": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 217,
+   "media24": 34.6,
+   "media36": 36.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.chaqueta": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 237,
+   "media24": 51.4,
+   "media36": 49.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.chaqueta_cuero": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 227,
+   "media24": 51.1,
+   "media36": 49.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.chaqueta_bomber": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 58.2,
+   "media36": 56.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.chaqueta_denim": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 188,
+   "media24": 55.2,
+   "media36": 56.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.abrigo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 179,
+   "media24": 33.8,
+   "media36": 32.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.gabardina": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 216,
+   "media24": 58.0,
+   "media36": 54.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.parka": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 251,
+   "media24": 42.2,
+   "media36": 40.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.chaleco": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 235,
+   "media24": 52.8,
+   "media36": 55.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.sudadera": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 191,
+   "media24": 43.2,
+   "media36": 44.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.sueter": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 200,
+   "media24": 38.5,
+   "media36": 37.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.cardigan": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 204,
+   "media24": 44.3,
+   "media36": 41.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.traje_bano": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 38.2,
+   "media36": 37.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.bikini": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 43.0,
+   "media36": 41.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.ropa_deportiva": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 44.5,
+   "media36": 42.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|prenda.conjunto": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 89,
+   "media24": 53.7,
+   "media36": 47.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.oversize": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 162,
+   "media24": 71.6,
+   "media36": 70.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.slim": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 182,
+   "media24": 33.5,
+   "media36": 31.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.skinny": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 195,
+   "media24": 35.8,
+   "media36": 37.6,
+   "ceros36": 0.167,
+   "ceros60": 0.117
+  },
+  "ES|corte.recto": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 163,
+   "media24": 59.2,
+   "media36": 56.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.pierna_ancha": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 114,
+   "media24": 61.1,
+   "media36": 50.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.baggy": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 203,
+   "media24": 72.6,
+   "media36": 62.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.bota_ancha": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 270,
+   "media24": 16.4,
+   "media36": 17.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.tiro_alto": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 257,
+   "media24": 51.7,
+   "media36": 49.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.tiro_bajo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 259,
+   "media24": 77.1,
+   "media36": 65.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.mom": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 137,
+   "media24": 33.1,
+   "media36": 36.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.entallado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 201,
+   "media24": 61.5,
+   "media36": 60.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.asimetrico": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 264,
+   "media24": 11.7,
+   "media36": 11.1,
+   "ceros36": 0.0,
+   "ceros60": 0.05
+  },
+  "ES|corte.midi": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 155,
+   "media24": 61.8,
+   "media36": 63.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.maxi": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 198,
+   "media24": 52.4,
+   "media36": 53.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.mini": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 261,
+   "media24": 53.8,
+   "media36": 54.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.sastreria": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 193,
+   "media24": 41.8,
+   "media36": 45.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.plisado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 183,
+   "media24": 35.5,
+   "media36": 37.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.drapeado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 201,
+   "media24": 65.0,
+   "media36": 63.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.cut_out": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 160,
+   "media24": 22.2,
+   "media36": 27.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.espalda_descubierta": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 194,
+   "media24": 41.2,
+   "media36": 42.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.cuello_alto": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 167,
+   "media24": 30.2,
+   "media36": 29.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|corte.manga_globo": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 101,
+   "media24": 13.5,
+   "media36": 14.8,
+   "ceros36": 0.778,
+   "ceros60": 0.75
+  },
+  "ES|corte.hombros_descubiertos": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 126,
+   "media24": 0.0,
+   "media36": 1.8,
+   "ceros36": 0.944,
+   "ceros60": 0.95
+  },
+  "ES|corte.strapless": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 206,
+   "media24": 10.6,
+   "media36": 8.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.algodon": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 167,
+   "media24": 70.6,
+   "media36": 62.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.algodon_organico": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 102,
+   "media24": 11.6,
+   "media36": 7.7,
+   "ceros36": 0.917,
+   "ceros60": 0.9
+  },
+  "ES|tela.algodon_pima": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 90,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "ES|tela.denim": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 260,
+   "media24": 43.5,
+   "media36": 39.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.lino": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 145,
+   "media24": 34.5,
+   "media36": 32.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.lana": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 239,
+   "media24": 38.6,
+   "media36": 36.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.cuero": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 53.1,
+   "media36": 52.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.cuero_vegano": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 190,
+   "media24": 31.7,
+   "media36": 34.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.seda": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 271,
+   "media24": 76.1,
+   "media36": 72.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.satin": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 234,
+   "media24": 59.5,
+   "media36": 53.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.terciopelo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 179,
+   "media24": 32.6,
+   "media36": 31.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.punto": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 208,
+   "media24": 53.5,
+   "media36": 52.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.poliester": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 94,
+   "media24": 50.5,
+   "media36": 43.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.elastano": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 183,
+   "media24": 66.7,
+   "media36": 61.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.viscosa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 153,
+   "media24": 50.3,
+   "media36": 46.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.encaje": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 234,
+   "media24": 59.0,
+   "media36": 52.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.tul": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 208,
+   "media24": 21.6,
+   "media36": 22.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.pana": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 176,
+   "media24": 32.1,
+   "media36": 29.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.franela": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 186,
+   "media24": 32.9,
+   "media36": 31.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.reciclada": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 171,
+   "media24": 0.0,
+   "media36": 1.1,
+   "ceros36": 0.972,
+   "ceros60": 0.983
+  },
+  "ES|tela.tencel": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 118,
+   "media24": 38.9,
+   "media36": 37.2,
+   "ceros36": 0.278,
+   "ceros60": 0.217
+  },
+  "ES|tela.alpaca": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 268,
+   "media24": 19.2,
+   "media36": 18.2,
+   "ceros36": 0.028,
+   "ceros60": 0.017
+  },
+  "ES|tela.crochet": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 218,
+   "media24": 55.8,
+   "media36": 55.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.bordado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 260,
+   "media24": 65.0,
+   "media36": 62.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.fibras_naturales": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 235,
+   "media24": 55.0,
+   "media36": 54.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.tecnica": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 162,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "ES|tela.neopreno": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 249,
+   "media24": 48.9,
+   "media36": 49.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.gasa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 232,
+   "media24": 64.5,
+   "media36": 59.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|tela.organza": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 212,
+   "media24": 47.0,
+   "media36": 45.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.negro": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 237,
+   "media24": 64.3,
+   "media36": 63.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.blanco": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 37.5,
+   "media36": 36.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.beige": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 189,
+   "media24": 79.0,
+   "media36": 76.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.crema": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 234,
+   "media24": 65.5,
+   "media36": 63.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.gris": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 222,
+   "media24": 57.9,
+   "media36": 55.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.camel": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 235,
+   "media24": 46.6,
+   "media36": 47.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.marron": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 151,
+   "media24": 49.2,
+   "media36": 39.2,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.chocolate": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 251,
+   "media24": 51.3,
+   "media36": 40.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.azul_marino": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 198,
+   "media24": 82.8,
+   "media36": 77.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.azul_cielo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 160,
+   "media24": 70.7,
+   "media36": 67.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.azul_petroleo": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 239,
+   "media24": 8.6,
+   "media36": 6.8,
+   "ceros36": 0.583,
+   "ceros60": 0.533
+  },
+  "ES|color.azul_electrico": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 148,
+   "media24": 33.1,
+   "media36": 34.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.turquesa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 240,
+   "media24": 72.1,
+   "media36": 72.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.verde_oliva": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 156,
+   "media24": 59.2,
+   "media36": 50.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.verde_esmeralda": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 174,
+   "media24": 74.3,
+   "media36": 68.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.verde_menta": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 230,
+   "media24": 56.2,
+   "media36": 57.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.verde_salvia": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 67,
+   "media24": 26.2,
+   "media36": 20.7,
+   "ceros36": 0.556,
+   "ceros60": 0.667
+  },
+  "ES|color.mostaza": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 180,
+   "media24": 32.5,
+   "media36": 32.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.mantequilla": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 26,
+   "media24": 26.0,
+   "media36": 18.1,
+   "ceros36": 0.611,
+   "ceros60": 0.767
+  },
+  "ES|color.naranja": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 260,
+   "media24": 70.6,
+   "media36": 71.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.terracota": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 79,
+   "media24": 51.1,
+   "media36": 43.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.coral": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 258,
+   "media24": 51.4,
+   "media36": 49.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.rojo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 264,
+   "media24": 67.3,
+   "media36": 67.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.borgona": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 142,
+   "media24": 52.1,
+   "media36": 44.6,
+   "ceros36": 0.056,
+   "ceros60": 0.117
+  },
+  "ES|color.rosa": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 272,
+   "media24": 86.8,
+   "media36": 85.3,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.fucsia": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 211,
+   "media24": 24.8,
+   "media36": 28.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.lavanda": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 198,
+   "media24": 59.5,
+   "media36": 59.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.morado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 216,
+   "media24": 68.8,
+   "media36": 69.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.dorado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 204,
+   "media24": 38.6,
+   "media36": 37.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|color.plateado": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 203,
+   "media24": 60.5,
+   "media36": 60.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estampado.floral": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 161,
+   "media24": 31.3,
+   "media36": 32.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estampado.rayas": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 256,
+   "media24": 66.7,
+   "media36": 61.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estampado.cuadros": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 248,
+   "media24": 45.6,
+   "media36": 42.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estampado.vichy": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 215,
+   "media24": 63.7,
+   "media36": 60.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estampado.tartan": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 179,
+   "media24": 20.6,
+   "media36": 18.5,
+   "ceros36": 0.667,
+   "ceros60": 0.667
+  },
+  "ES|estampado.animal_print": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 171,
+   "media24": 60.3,
+   "media36": 55.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estampado.leopardo": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 216,
+   "media24": 57.4,
+   "media36": 56.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estampado.tie_dye": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 174,
+   "media24": 9.2,
+   "media36": 9.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estampado.geometrico": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 52,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 0.967
+  },
+  "ES|estampado.abstracto": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 173,
+   "media24": 0.0,
+   "media36": 1.8,
+   "ceros36": 0.972,
+   "ceros60": 0.967
+  },
+  "ES|estampado.lunares": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 206,
+   "media24": 29.8,
+   "media36": 27.4,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estampado.tropical": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 261,
+   "media24": 0.5,
+   "media36": 0.3,
+   "ceros36": 0.972,
+   "ceros60": 0.9
+  },
+  "ES|estampado.cachemira": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 251,
+   "media24": 29.8,
+   "media36": 26.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estampado.camuflado": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 199,
+   "media24": 5.5,
+   "media36": 6.5,
+   "ceros36": 0.722,
+   "ceros60": 0.733
+  },
+  "ES|estampado.grafico": {
+   "clase": "sin_datos",
+   "estado": "sin_datos",
+   "meses": 0,
+   "meses_utiles": 0,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "ES|estilo.minimalista": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 212,
+   "media24": 74.5,
+   "media36": 76.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estilo.athleisure": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 123,
+   "media24": 16.5,
+   "media36": 14.7,
+   "ceros36": 0.611,
+   "ceros60": 0.55
+  },
+  "ES|estilo.streetwear": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 203,
+   "media24": 21.9,
+   "media36": 18.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estilo.vintage": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 234,
+   "media24": 42.9,
+   "media36": 46.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estilo.segunda_mano": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 264,
+   "media24": 21.2,
+   "media36": 22.7,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estilo.boho": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 169,
+   "media24": 40.0,
+   "media36": 37.8,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estilo.y2k": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 67,
+   "media24": 20.0,
+   "media36": 18.1,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estilo.retro": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 225,
+   "media24": 44.8,
+   "media36": 47.0,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estilo.preppy": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 204,
+   "media24": 10.8,
+   "media36": 11.6,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estilo.grunge": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 236,
+   "media24": 18.9,
+   "media36": 18.4,
+   "ceros36": 0.083,
+   "ceros60": 0.05
+  },
+  "ES|estilo.cottagecore": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 77,
+   "media24": 11.0,
+   "media36": 10.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estilo.coquette": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 198,
+   "media24": 12.0,
+   "media36": 18.9,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estilo.balletcore": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 193,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "ES|estilo.gorpcore": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 249,
+   "media24": 2.0,
+   "media36": 1.6,
+   "ceros36": 0.861,
+   "ceros60": 0.85
+  },
+  "ES|estilo.quiet_luxury": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 3,
+   "media24": 4.2,
+   "media36": 2.8,
+   "ceros36": 0.972,
+   "ceros60": 0.983
+  },
+  "ES|estilo.old_money": {
+   "clase": "apta_senal",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 245,
+   "media24": 59.2,
+   "media36": 54.0,
+   "ceros36": 0.0,
+   "ceros60": 0.2
+  },
+  "ES|estilo.dark_academia": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 246,
+   "media24": 2.0,
+   "media36": 2.1,
+   "ceros36": 0.889,
+   "ceros60": 0.9
+  },
+  "ES|estilo.barbiecore": {
+   "clase": "sin_datos",
+   "estado": "sin_datos",
+   "meses": 0,
+   "meses_utiles": 0,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  },
+  "ES|estilo.western": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 229,
+   "media24": 14.7,
+   "media36": 12.5,
+   "ceros36": 0.0,
+   "ceros60": 0.0
+  },
+  "ES|estilo.normcore": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 239,
+   "media24": 0.6,
+   "media36": 0.4,
+   "ceros36": 0.972,
+   "ceros60": 0.983
+  },
+  "ES|estilo.sostenible": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 127,
+   "media24": 3.4,
+   "media36": 9.6,
+   "ceros36": 0.861,
+   "ceros60": 0.8
+  },
+  "ES|estilo.playa_resort": {
+   "clase": "apta_backtest",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 230,
+   "media24": 31.0,
+   "media36": 30.2,
+   "ceros36": 0.056,
+   "ceros60": 0.05
+  },
+  "ES|estilo.mob_wife": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 32,
+   "media24": 2.8,
+   "media36": 8.5,
+   "ceros36": 0.722,
+   "ceros60": 0.833
+  },
+  "ES|estilo.clean_girl": {
+   "clase": "insuficiente",
+   "estado": "ok",
+   "meses": 272,
+   "meses_utiles": 7,
+   "media24": 4.2,
+   "media36": 2.8,
+   "ceros36": 0.972,
+   "ceros60": 0.983
+  },
+  "ES|estilo.utilitario": {
+   "clase": "sin_datos",
+   "estado": "sin_datos",
+   "meses": 0,
+   "meses_utiles": 0,
+   "media24": 0.0,
+   "media36": 0.0,
+   "ceros36": 1.0,
+   "ceros60": 1.0
+  }
+ }
+}

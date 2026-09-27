@@ -7,11 +7,15 @@ nodos:
   - {id: estampado.tartan, nombre: Tartán, q: tartán, padre: estampado.cuadros}
   - {id: estampado.animal_print, nombre: Animal print, q: animal print, v1: [13]}
   - {id: estampado.leopardo, nombre: Leopardo, q: leopardo, padre: estampado.animal_print, v1: [13]}
-  - {id: estampado.tie_dye, nombre: Tie dye, q: tie dye}
+  # categoria: 0 — bajo "Ropa" daba ~0-4 (insuficiente en CO); sin filtro,
+  # 23.9/42.8/11.2 en CO/MX/ES (probado en vivo, 2026-09-27).
+  - {id: estampado.tie_dye, nombre: Tie dye, q: tie dye, categoria: 0}
   - {id: estampado.geometrico, nombre: Geométrico, q: estampado geométrico}
   - {id: estampado.abstracto, nombre: Abstracto, q: estampado abstracto}
   - {id: estampado.lunares, nombre: Lunares, q: lunares}
   - {id: estampado.tropical, nombre: Tropical, q: estampado tropical, relaciones: [estilo.playa_resort]}
-  - {id: estampado.cachemira, nombre: Cachemira / paisley, q: {CO: paisley, MX: paisley, ES: cachemira}}
+  # categoria: 0 — "paisley" bajo "Ropa" daba 0.7 en CO; sin filtro, 6.9
+  # (probado en vivo, 2026-09-27).
+  - {id: estampado.cachemira, nombre: Cachemira / paisley, q: {CO: paisley, MX: paisley, ES: cachemira}, categoria: 0}
   - {id: estampado.camuflado, nombre: Camuflado, q: camuflado, relaciones: [prenda.pantalon_cargo]}
   - {id: estampado.grafico, nombre: Estampado gráfico, q: estampado gráfico, relaciones: [prenda.camiseta]}
