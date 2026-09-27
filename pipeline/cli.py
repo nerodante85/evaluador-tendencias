@@ -14,6 +14,7 @@ import sys
 from .calidad import escribir_informe, evaluar
 from .historia import DIR_RAW, descargar_historia
 from .fuentes.trends import BackendPytrends
+from .reporte_senales import main as senales_main
 from .taxonomia import RAIZ, cargar, validar
 
 
@@ -35,6 +36,7 @@ def main(argv=None):
     h.add_argument("--limite", type=int, help="máximo de descargas nuevas (para probar)")
     h.add_argument("--refrescar", action="store_true", help="volver a descargar aunque ya exista")
     sub.add_parser("calidad", help="genera el informe de calidad")
+    sub.add_parser("senales", help="corre el motor de señales (fase 2) y genera su informe")
     a = p.parse_args(argv)
 
     tax = cargar()
@@ -73,6 +75,10 @@ def main(argv=None):
         js = RAIZ / "data" / "v2" / "calidad.json"
         escribir_informe(tax, resultado, md, js)
         print(f"Informe: {md}\nDatos: {js}")
+        return 0
+
+    if a.cmd == "senales":
+        senales_main()
         return 0
 
 

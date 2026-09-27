@@ -1,0 +1,3192 @@
+{
+ "esquema": 1,
+ "generado": "2026-09-27T04:59",
+ "señales": {
+  "CO|prenda.camiseta": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1532,
+   "persistencia": 9,
+   "aceleracion": 0.0686,
+   "volatilidad": 0.202,
+   "saturacion": 0.677,
+   "estacional": false
+  },
+  "CO|prenda.camisa": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1456,
+   "persistencia": 7,
+   "aceleracion": 0.1366,
+   "volatilidad": 0.242,
+   "saturacion": 0.642,
+   "estacional": true
+  },
+  "CO|prenda.blusa": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1066,
+   "persistencia": 8,
+   "aceleracion": 0.1162,
+   "volatilidad": 0.269,
+   "saturacion": 0.476,
+   "estacional": true
+  },
+  "CO|prenda.polo": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0517,
+   "persistencia": 3,
+   "aceleracion": -0.0502,
+   "volatilidad": 0.27,
+   "saturacion": 0.559,
+   "estacional": true
+  },
+  "CO|prenda.crop_top": {
+   "etiqueta": "baja_sostenida",
+   "crecimiento": -0.2527,
+   "persistencia": 1,
+   "aceleracion": 0.0986,
+   "volatilidad": 0.344,
+   "saturacion": 0.172,
+   "estacional": true
+  },
+  "CO|prenda.corse": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.1548,
+   "persistencia": 5,
+   "aceleracion": 0.1276,
+   "volatilidad": 0.395,
+   "saturacion": 0.472,
+   "estacional": true
+  },
+  "CO|prenda.vestido": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0127,
+   "persistencia": 4,
+   "aceleracion": 0.0688,
+   "volatilidad": 0.193,
+   "saturacion": 0.398,
+   "estacional": false
+  },
+  "CO|prenda.falda": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0518,
+   "persistencia": 3,
+   "aceleracion": -0.0166,
+   "volatilidad": 0.239,
+   "saturacion": 0.519,
+   "estacional": true
+  },
+  "CO|prenda.pantalon": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.4596,
+   "persistencia": 12,
+   "aceleracion": 0.3957,
+   "volatilidad": 0.326,
+   "saturacion": 0.588,
+   "estacional": false
+  },
+  "CO|prenda.jean": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0522,
+   "persistencia": 4,
+   "aceleracion": 0.0264,
+   "volatilidad": 0.332,
+   "saturacion": 0.487,
+   "estacional": true
+  },
+  "CO|prenda.short": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0126,
+   "persistencia": 3,
+   "aceleracion": 0.0044,
+   "volatilidad": 0.205,
+   "saturacion": 0.523,
+   "estacional": true
+  },
+  "CO|prenda.bermuda": {
+   "etiqueta": "estable",
+   "crecimiento": 0.2129,
+   "persistencia": 9,
+   "aceleracion": 0.0778,
+   "volatilidad": 0.342,
+   "saturacion": 0.484,
+   "estacional": true
+  },
+  "CO|prenda.leggins": {
+   "etiqueta": "estable",
+   "crecimiento": -0.144,
+   "persistencia": 2,
+   "aceleracion": -0.0724,
+   "volatilidad": 0.165,
+   "saturacion": 0.352,
+   "estacional": true
+  },
+  "CO|prenda.jogger": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1846,
+   "persistencia": 1,
+   "aceleracion": 0.0228,
+   "volatilidad": 0.372,
+   "saturacion": 0.247,
+   "estacional": true
+  },
+  "CO|prenda.pantalon_cargo": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": -0.1629,
+   "persistencia": 3,
+   "aceleracion": 0.0537,
+   "volatilidad": 0.685,
+   "saturacion": 0.184,
+   "estacional": true
+  },
+  "CO|prenda.pantalon_vestir": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.2604,
+   "persistencia": 10,
+   "aceleracion": 0.4453,
+   "volatilidad": 0.504,
+   "saturacion": 0.532,
+   "estacional": false
+  },
+  "CO|prenda.enterizo": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1083,
+   "persistencia": 4,
+   "aceleracion": -0.1053,
+   "volatilidad": 0.242,
+   "saturacion": 0.494,
+   "estacional": true
+  },
+  "CO|prenda.overol": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0988,
+   "persistencia": 3,
+   "aceleracion": -0.1202,
+   "volatilidad": 0.264,
+   "saturacion": 0.251,
+   "estacional": true
+  },
+  "CO|prenda.blazer": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1625,
+   "persistencia": 2,
+   "aceleracion": -0.0373,
+   "volatilidad": 0.268,
+   "saturacion": 0.361,
+   "estacional": false
+  },
+  "CO|prenda.chaqueta": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1131,
+   "persistencia": 7,
+   "aceleracion": 0.0433,
+   "volatilidad": 0.223,
+   "saturacion": 0.583,
+   "estacional": true
+  },
+  "CO|prenda.chaqueta_cuero": {
+   "etiqueta": "estable",
+   "crecimiento": 0.2387,
+   "persistencia": 11,
+   "aceleracion": 0.1973,
+   "volatilidad": 0.244,
+   "saturacion": 0.571,
+   "estacional": true
+  },
+  "CO|prenda.chaqueta_bomber": {
+   "etiqueta": "estable",
+   "crecimiento": 0.2064,
+   "persistencia": 9,
+   "aceleracion": -0.1128,
+   "volatilidad": 0.309,
+   "saturacion": 0.565,
+   "estacional": true
+  },
+  "CO|prenda.chaqueta_denim": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0274,
+   "persistencia": 3,
+   "aceleracion": 0.0909,
+   "volatilidad": 0.301,
+   "saturacion": 0.266,
+   "estacional": true
+  },
+  "CO|prenda.abrigo": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0658,
+   "persistencia": 3,
+   "aceleracion": -0.1813,
+   "volatilidad": 0.189,
+   "saturacion": 0.639,
+   "estacional": false
+  },
+  "CO|prenda.gabardina": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0707,
+   "persistencia": 3,
+   "aceleracion": -0.1831,
+   "volatilidad": 0.156,
+   "saturacion": 0.077,
+   "estacional": false
+  },
+  "CO|prenda.parka": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0241,
+   "persistencia": 5,
+   "aceleracion": -0.1689,
+   "volatilidad": 0.215,
+   "saturacion": 0.27,
+   "estacional": false
+  },
+  "CO|prenda.chaleco": {
+   "etiqueta": "estable",
+   "crecimiento": -0.017,
+   "persistencia": 4,
+   "aceleracion": -0.1013,
+   "volatilidad": 0.214,
+   "saturacion": 0.674,
+   "estacional": true
+  },
+  "CO|prenda.sudadera": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0518,
+   "persistencia": 4,
+   "aceleracion": -0.0012,
+   "volatilidad": 0.228,
+   "saturacion": 0.609,
+   "estacional": true
+  },
+  "CO|prenda.sueter": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.6268,
+   "persistencia": 12,
+   "aceleracion": 0.5853,
+   "volatilidad": 0.339,
+   "saturacion": 0.647,
+   "estacional": false
+  },
+  "CO|prenda.cardigan": {
+   "etiqueta": "estable",
+   "crecimiento": -0.2198,
+   "persistencia": 2,
+   "aceleracion": -0.4412,
+   "volatilidad": 0.233,
+   "saturacion": 0.506,
+   "estacional": true
+  },
+  "CO|prenda.traje_bano": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0211,
+   "persistencia": 6,
+   "aceleracion": 0.1004,
+   "volatilidad": 0.114,
+   "saturacion": 0.523,
+   "estacional": false
+  },
+  "CO|prenda.bikini": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0566,
+   "persistencia": 7,
+   "aceleracion": 0.0092,
+   "volatilidad": 0.114,
+   "saturacion": 0.233,
+   "estacional": false
+  },
+  "CO|prenda.ropa_deportiva": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0688,
+   "persistencia": 1,
+   "aceleracion": -0.1427,
+   "volatilidad": 0.077,
+   "saturacion": 0.383,
+   "estacional": false
+  },
+  "CO|corte.oversize": {
+   "etiqueta": "estable",
+   "crecimiento": -0.2143,
+   "persistencia": 2,
+   "aceleracion": 0.0489,
+   "volatilidad": 0.374,
+   "saturacion": 0.229,
+   "estacional": true
+  },
+  "CO|corte.slim": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1499,
+   "persistencia": 8,
+   "aceleracion": 0.081,
+   "volatilidad": 0.259,
+   "saturacion": 0.639,
+   "estacional": false
+  },
+  "CO|corte.skinny": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.4795,
+   "persistencia": 10,
+   "aceleracion": 0.8414,
+   "volatilidad": 0.712,
+   "saturacion": 0.422,
+   "estacional": false
+  },
+  "CO|corte.baggy": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.1454,
+   "persistencia": 5,
+   "aceleracion": -0.6717,
+   "volatilidad": 0.412,
+   "saturacion": 0.427,
+   "estacional": true
+  },
+  "CO|corte.tiro_alto": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1163,
+   "persistencia": 2,
+   "aceleracion": 0.0179,
+   "volatilidad": 0.33,
+   "saturacion": 0.095,
+   "estacional": true
+  },
+  "CO|corte.mom": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1828,
+   "persistencia": 3,
+   "aceleracion": -0.2813,
+   "volatilidad": 0.442,
+   "saturacion": 0.198,
+   "estacional": true
+  },
+  "CO|corte.midi": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1991,
+   "persistencia": 9,
+   "aceleracion": 0.128,
+   "volatilidad": 0.579,
+   "saturacion": 0.452,
+   "estacional": false
+  },
+  "CO|corte.maxi": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0549,
+   "persistencia": 3,
+   "aceleracion": -0.0374,
+   "volatilidad": 0.242,
+   "saturacion": 0.531,
+   "estacional": false
+  },
+  "CO|corte.mini": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0312,
+   "persistencia": 7,
+   "aceleracion": 0.0807,
+   "volatilidad": 0.252,
+   "saturacion": 0.083,
+   "estacional": true
+  },
+  "CO|corte.drapeado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.062,
+   "persistencia": 5,
+   "aceleracion": 0.062,
+   "volatilidad": 0.295,
+   "saturacion": 0.471,
+   "estacional": false
+  },
+  "CO|corte.espalda_descubierta": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0136,
+   "persistencia": 7,
+   "aceleracion": -0.0191,
+   "volatilidad": 0.375,
+   "saturacion": 0.187,
+   "estacional": true
+  },
+  "CO|corte.strapless": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0916,
+   "persistencia": 7,
+   "aceleracion": 0.0708,
+   "volatilidad": 0.209,
+   "saturacion": 0.447,
+   "estacional": true
+  },
+  "CO|tela.algodon": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.3471,
+   "persistencia": 12,
+   "aceleracion": 0.1421,
+   "volatilidad": 0.198,
+   "saturacion": 0.844,
+   "estacional": false
+  },
+  "CO|tela.denim": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0062,
+   "persistencia": 3,
+   "aceleracion": -0.2777,
+   "volatilidad": 0.173,
+   "saturacion": 0.675,
+   "estacional": true
+  },
+  "CO|tela.lino": {
+   "etiqueta": "estable",
+   "crecimiento": 0.053,
+   "persistencia": 7,
+   "aceleracion": -0.1699,
+   "volatilidad": 0.2,
+   "saturacion": 0.713,
+   "estacional": true
+  },
+  "CO|tela.lana": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0703,
+   "persistencia": 3,
+   "aceleracion": -0.0292,
+   "volatilidad": 0.191,
+   "saturacion": 0.452,
+   "estacional": true
+  },
+  "CO|tela.cuero": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0692,
+   "persistencia": 6,
+   "aceleracion": -0.0304,
+   "volatilidad": 0.15,
+   "saturacion": 0.708,
+   "estacional": true
+  },
+  "CO|tela.seda": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0706,
+   "persistencia": 2,
+   "aceleracion": -0.0146,
+   "volatilidad": 0.215,
+   "saturacion": 0.548,
+   "estacional": true
+  },
+  "CO|tela.satin": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.5629,
+   "persistencia": 11,
+   "aceleracion": 0.3874,
+   "volatilidad": 0.355,
+   "saturacion": 0.724,
+   "estacional": false
+  },
+  "CO|tela.terciopelo": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0861,
+   "persistencia": 3,
+   "aceleracion": -0.0861,
+   "volatilidad": 0.45,
+   "saturacion": 0.159,
+   "estacional": true
+  },
+  "CO|tela.punto": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0273,
+   "persistencia": 4,
+   "aceleracion": 0.0196,
+   "volatilidad": 0.206,
+   "saturacion": 0.148,
+   "estacional": true
+  },
+  "CO|tela.poliester": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.3213,
+   "persistencia": 10,
+   "aceleracion": -0.2305,
+   "volatilidad": 0.236,
+   "saturacion": 0.772,
+   "estacional": false
+  },
+  "CO|tela.elastano": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0206,
+   "persistencia": 7,
+   "aceleracion": 0.0093,
+   "volatilidad": 0.062,
+   "saturacion": 0.91,
+   "estacional": false
+  },
+  "CO|tela.encaje": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0621,
+   "persistencia": 7,
+   "aceleracion": 0.1621,
+   "volatilidad": 0.13,
+   "saturacion": 0.47,
+   "estacional": false
+  },
+  "CO|tela.tul": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": -0.0099,
+   "persistencia": 6,
+   "aceleracion": 0.1877,
+   "volatilidad": 0.419,
+   "saturacion": 0.168,
+   "estacional": true
+  },
+  "CO|tela.pana": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0388,
+   "persistencia": 4,
+   "aceleracion": 0.0623,
+   "volatilidad": 0.293,
+   "saturacion": 0.468,
+   "estacional": true
+  },
+  "CO|tela.crochet": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1025,
+   "persistencia": 2,
+   "aceleracion": 0.0988,
+   "volatilidad": 0.125,
+   "saturacion": 0.365,
+   "estacional": false
+  },
+  "CO|tela.bordado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1117,
+   "persistencia": 11,
+   "aceleracion": 0.0597,
+   "volatilidad": 0.098,
+   "saturacion": 0.863,
+   "estacional": false
+  },
+  "CO|tela.neopreno": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0659,
+   "persistencia": 3,
+   "aceleracion": -0.0582,
+   "volatilidad": 0.155,
+   "saturacion": 0.201,
+   "estacional": false
+  },
+  "CO|tela.gasa": {
+   "etiqueta": "estable",
+   "crecimiento": 0.083,
+   "persistencia": 11,
+   "aceleracion": -0.0599,
+   "volatilidad": 0.091,
+   "saturacion": 0.855,
+   "estacional": false
+  },
+  "CO|color.negro": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0545,
+   "persistencia": 4,
+   "aceleracion": 0.0295,
+   "volatilidad": 0.255,
+   "saturacion": 0.613,
+   "estacional": true
+  },
+  "CO|color.blanco": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0388,
+   "persistencia": 4,
+   "aceleracion": -0.0438,
+   "volatilidad": 0.195,
+   "saturacion": 0.647,
+   "estacional": true
+  },
+  "CO|color.beige": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0409,
+   "persistencia": 3,
+   "aceleracion": -0.0217,
+   "volatilidad": 0.276,
+   "saturacion": 0.53,
+   "estacional": true
+  },
+  "CO|color.crema": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1546,
+   "persistencia": 12,
+   "aceleracion": 0.1458,
+   "volatilidad": 0.135,
+   "saturacion": 0.772,
+   "estacional": true
+  },
+  "CO|color.gris": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0839,
+   "persistencia": 6,
+   "aceleracion": -0.0913,
+   "volatilidad": 0.203,
+   "saturacion": 0.624,
+   "estacional": true
+  },
+  "CO|color.camel": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1444,
+   "persistencia": 7,
+   "aceleracion": 0.0454,
+   "volatilidad": 0.262,
+   "saturacion": 0.614,
+   "estacional": true
+  },
+  "CO|color.marron": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 1.2355,
+   "persistencia": 12,
+   "aceleracion": 1.1503,
+   "volatilidad": 0.459,
+   "saturacion": 0.737,
+   "estacional": false
+  },
+  "CO|color.chocolate": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.2714,
+   "persistencia": 11,
+   "aceleracion": 0.1228,
+   "volatilidad": 0.166,
+   "saturacion": 0.856,
+   "estacional": false
+  },
+  "CO|color.azul_marino": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.2847,
+   "persistencia": 12,
+   "aceleracion": 0.1197,
+   "volatilidad": 0.193,
+   "saturacion": 0.748,
+   "estacional": false
+  },
+  "CO|color.azul_cielo": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0451,
+   "persistencia": 6,
+   "aceleracion": 0.0945,
+   "volatilidad": 0.262,
+   "saturacion": 0.502,
+   "estacional": true
+  },
+  "CO|color.turquesa": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0463,
+   "persistencia": 5,
+   "aceleracion": 0.0565,
+   "volatilidad": 0.223,
+   "saturacion": 0.326,
+   "estacional": false
+  },
+  "CO|color.verde_oliva": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.4864,
+   "persistencia": 11,
+   "aceleracion": 0.1992,
+   "volatilidad": 0.278,
+   "saturacion": 0.787,
+   "estacional": false
+  },
+  "CO|color.verde_esmeralda": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0692,
+   "persistencia": 3,
+   "aceleracion": 0.1138,
+   "volatilidad": 0.243,
+   "saturacion": 0.471,
+   "estacional": false
+  },
+  "CO|color.verde_menta": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1262,
+   "persistencia": 2,
+   "aceleracion": -0.1072,
+   "volatilidad": 0.277,
+   "saturacion": 0.3,
+   "estacional": true
+  },
+  "CO|color.mostaza": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0734,
+   "persistencia": 3,
+   "aceleracion": 0.1367,
+   "volatilidad": 0.382,
+   "saturacion": 0.084,
+   "estacional": true
+  },
+  "CO|color.naranja": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0394,
+   "persistencia": 4,
+   "aceleracion": 0.0734,
+   "volatilidad": 0.186,
+   "saturacion": 0.616,
+   "estacional": true
+  },
+  "CO|color.terracota": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1342,
+   "persistencia": 8,
+   "aceleracion": 0.1472,
+   "volatilidad": 0.24,
+   "saturacion": 0.718,
+   "estacional": true
+  },
+  "CO|color.coral": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0461,
+   "persistencia": 6,
+   "aceleracion": 0.1645,
+   "volatilidad": 0.149,
+   "saturacion": 0.454,
+   "estacional": true
+  },
+  "CO|color.rojo": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0904,
+   "persistencia": 3,
+   "aceleracion": -0.3425,
+   "volatilidad": 0.342,
+   "saturacion": 0.444,
+   "estacional": true
+  },
+  "CO|color.rosa": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0799,
+   "persistencia": 9,
+   "aceleracion": 0.1045,
+   "volatilidad": 0.129,
+   "saturacion": 0.642,
+   "estacional": true
+  },
+  "CO|color.fucsia": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1263,
+   "persistencia": 2,
+   "aceleracion": -0.0239,
+   "volatilidad": 0.187,
+   "saturacion": 0.357,
+   "estacional": false
+  },
+  "CO|color.morado": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0194,
+   "persistencia": 4,
+   "aceleracion": -0.0285,
+   "volatilidad": 0.212,
+   "saturacion": 0.632,
+   "estacional": true
+  },
+  "CO|color.dorado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0303,
+   "persistencia": 4,
+   "aceleracion": -0.0771,
+   "volatilidad": 0.171,
+   "saturacion": 0.142,
+   "estacional": true
+  },
+  "CO|color.plateado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1837,
+   "persistencia": 8,
+   "aceleracion": 0.1227,
+   "volatilidad": 0.246,
+   "saturacion": 0.618,
+   "estacional": true
+  },
+  "CO|estampado.rayas": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0531,
+   "persistencia": 6,
+   "aceleracion": 0.0237,
+   "volatilidad": 0.132,
+   "saturacion": 0.215,
+   "estacional": false
+  },
+  "CO|estampado.cuadros": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1373,
+   "persistencia": 3,
+   "aceleracion": 0.0761,
+   "volatilidad": 0.296,
+   "saturacion": 0.22,
+   "estacional": true
+  },
+  "CO|estampado.animal_print": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0202,
+   "persistencia": 5,
+   "aceleracion": -0.4516,
+   "volatilidad": 0.201,
+   "saturacion": 0.422,
+   "estacional": true
+  },
+  "CO|estampado.leopardo": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.12,
+   "persistencia": 7,
+   "aceleracion": -0.3018,
+   "volatilidad": 0.425,
+   "saturacion": 0.28,
+   "estacional": true
+  },
+  "CO|estampado.tie_dye": {
+   "etiqueta": "baja_sostenida",
+   "crecimiento": -0.2838,
+   "persistencia": 1,
+   "aceleracion": -0.097,
+   "volatilidad": 0.458,
+   "saturacion": 0.044,
+   "estacional": false
+  },
+  "CO|estampado.cachemira": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0926,
+   "persistencia": 7,
+   "aceleracion": -0.6127,
+   "volatilidad": 0.351,
+   "saturacion": 0.147,
+   "estacional": false
+  },
+  "CO|estampado.camuflado": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1118,
+   "persistencia": 2,
+   "aceleracion": 0.1559,
+   "volatilidad": 0.326,
+   "saturacion": 0.245,
+   "estacional": true
+  },
+  "CO|estilo.minimalista": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.4059,
+   "persistencia": 11,
+   "aceleracion": 0.2801,
+   "volatilidad": 0.488,
+   "saturacion": 0.199,
+   "estacional": false
+  },
+  "CO|estilo.streetwear": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.3153,
+   "persistencia": 10,
+   "aceleracion": -0.1064,
+   "volatilidad": 0.294,
+   "saturacion": 0.647,
+   "estacional": false
+  },
+  "CO|estilo.boho": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.1791,
+   "persistencia": 8,
+   "aceleracion": 0.0239,
+   "volatilidad": 0.306,
+   "saturacion": 0.527,
+   "estacional": false
+  },
+  "CO|estilo.cottagecore": {
+   "etiqueta": "baja_sostenida",
+   "crecimiento": -0.4196,
+   "persistencia": 2,
+   "aceleracion": -0.664,
+   "volatilidad": 0.616,
+   "saturacion": 0.054,
+   "estacional": false
+  },
+  "CO|estilo.old_money": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1275,
+   "persistencia": 4,
+   "aceleracion": -0.3379,
+   "volatilidad": 0.35,
+   "saturacion": 0.439,
+   "estacional": true
+  },
+  "CO|estilo.western": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0429,
+   "persistencia": 5,
+   "aceleracion": 0.007,
+   "volatilidad": 0.283,
+   "saturacion": 0.527,
+   "estacional": false
+  },
+  "CO|estilo.playa_resort": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0235,
+   "persistencia": 8,
+   "aceleracion": 0.0576,
+   "volatilidad": 0.147,
+   "saturacion": 0.435,
+   "estacional": false
+  },
+  "MX|prenda.camiseta": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1529,
+   "persistencia": 8,
+   "aceleracion": 0.0881,
+   "volatilidad": 0.235,
+   "saturacion": 0.616,
+   "estacional": false
+  },
+  "MX|prenda.camisa": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1416,
+   "persistencia": 9,
+   "aceleracion": 0.117,
+   "volatilidad": 0.155,
+   "saturacion": 0.752,
+   "estacional": true
+  },
+  "MX|prenda.blusa": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1677,
+   "persistencia": 11,
+   "aceleracion": 0.1601,
+   "volatilidad": 0.163,
+   "saturacion": 0.777,
+   "estacional": false
+  },
+  "MX|prenda.polo": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0108,
+   "persistencia": 3,
+   "aceleracion": -0.0828,
+   "volatilidad": 0.196,
+   "saturacion": 0.613,
+   "estacional": true
+  },
+  "MX|prenda.crop_top": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1019,
+   "persistencia": 2,
+   "aceleracion": 0.1161,
+   "volatilidad": 0.105,
+   "saturacion": 0.279,
+   "estacional": false
+  },
+  "MX|prenda.corse": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.0471,
+   "persistencia": 3,
+   "aceleracion": 0.0678,
+   "volatilidad": 0.531,
+   "saturacion": 0.371,
+   "estacional": true
+  },
+  "MX|prenda.vestido": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0448,
+   "persistencia": 8,
+   "aceleracion": 0.0877,
+   "volatilidad": 0.114,
+   "saturacion": 0.583,
+   "estacional": false
+  },
+  "MX|prenda.falda": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0136,
+   "persistencia": 4,
+   "aceleracion": 0.0389,
+   "volatilidad": 0.229,
+   "saturacion": 0.619,
+   "estacional": true
+  },
+  "MX|prenda.pantalon": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.5849,
+   "persistencia": 12,
+   "aceleracion": 0.5945,
+   "volatilidad": 0.285,
+   "saturacion": 0.684,
+   "estacional": false
+  },
+  "MX|prenda.jean": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0232,
+   "persistencia": 4,
+   "aceleracion": -0.0123,
+   "volatilidad": 0.116,
+   "saturacion": 0.666,
+   "estacional": true
+  },
+  "MX|prenda.short": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0869,
+   "persistencia": 9,
+   "aceleracion": -0.0487,
+   "volatilidad": 0.157,
+   "saturacion": 0.865,
+   "estacional": false
+  },
+  "MX|prenda.bermuda": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1139,
+   "persistencia": 7,
+   "aceleracion": 0.1505,
+   "volatilidad": 0.282,
+   "saturacion": 0.22,
+   "estacional": false
+  },
+  "MX|prenda.leggins": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0083,
+   "persistencia": 5,
+   "aceleracion": 0.0576,
+   "volatilidad": 0.125,
+   "saturacion": 0.398,
+   "estacional": false
+  },
+  "MX|prenda.jogger": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1221,
+   "persistencia": 1,
+   "aceleracion": 0.0085,
+   "volatilidad": 0.181,
+   "saturacion": 0.443,
+   "estacional": true
+  },
+  "MX|prenda.pantalon_cargo": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.3257,
+   "persistencia": 12,
+   "aceleracion": 0.3152,
+   "volatilidad": 0.307,
+   "saturacion": 0.532,
+   "estacional": false
+  },
+  "MX|prenda.pantalon_vestir": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.5847,
+   "persistencia": 12,
+   "aceleracion": 0.5991,
+   "volatilidad": 0.321,
+   "saturacion": 0.725,
+   "estacional": false
+  },
+  "MX|prenda.enterizo": {
+   "etiqueta": "baja_sostenida",
+   "crecimiento": -0.2524,
+   "persistencia": 0,
+   "aceleracion": -0.2058,
+   "volatilidad": 0.186,
+   "saturacion": 0.318,
+   "estacional": false
+  },
+  "MX|prenda.overol": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.0017,
+   "persistencia": 3,
+   "aceleracion": 0.0428,
+   "volatilidad": 0.29,
+   "saturacion": 0.487,
+   "estacional": true
+  },
+  "MX|prenda.blazer": {
+   "etiqueta": "estable",
+   "crecimiento": -0.211,
+   "persistencia": 2,
+   "aceleracion": 0.0357,
+   "volatilidad": 0.222,
+   "saturacion": 0.299,
+   "estacional": true
+  },
+  "MX|prenda.chaqueta": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.011,
+   "persistencia": 4,
+   "aceleracion": -0.0254,
+   "volatilidad": 0.502,
+   "saturacion": 0.383,
+   "estacional": true
+  },
+  "MX|prenda.chaqueta_cuero": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.1238,
+   "persistencia": 6,
+   "aceleracion": 0.0759,
+   "volatilidad": 0.385,
+   "saturacion": 0.492,
+   "estacional": true
+  },
+  "MX|prenda.chaqueta_bomber": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.2118,
+   "persistencia": 6,
+   "aceleracion": 0.1877,
+   "volatilidad": 0.452,
+   "saturacion": 0.086,
+   "estacional": true
+  },
+  "MX|prenda.chaqueta_denim": {
+   "etiqueta": "estable",
+   "crecimiento": -0.074,
+   "persistencia": 3,
+   "aceleracion": 0.1325,
+   "volatilidad": 0.32,
+   "saturacion": 0.302,
+   "estacional": true
+  },
+  "MX|prenda.abrigo": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": -0.0108,
+   "persistencia": 4,
+   "aceleracion": 0.0744,
+   "volatilidad": 0.808,
+   "saturacion": 0.23,
+   "estacional": true
+  },
+  "MX|prenda.gabardina": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0347,
+   "persistencia": 4,
+   "aceleracion": -0.0185,
+   "volatilidad": 0.338,
+   "saturacion": 0.44,
+   "estacional": true
+  },
+  "MX|prenda.parka": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0806,
+   "persistencia": 8,
+   "aceleracion": -0.2548,
+   "volatilidad": 0.257,
+   "saturacion": 0.19,
+   "estacional": false
+  },
+  "MX|prenda.chaleco": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0028,
+   "persistencia": 3,
+   "aceleracion": -0.0449,
+   "volatilidad": 0.241,
+   "saturacion": 0.597,
+   "estacional": true
+  },
+  "MX|prenda.sudadera": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.1049,
+   "persistencia": 5,
+   "aceleracion": 0.131,
+   "volatilidad": 0.428,
+   "saturacion": 0.448,
+   "estacional": true
+  },
+  "MX|prenda.sueter": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.5616,
+   "persistencia": 8,
+   "aceleracion": 0.7227,
+   "volatilidad": 0.677,
+   "saturacion": 0.359,
+   "estacional": false
+  },
+  "MX|prenda.cardigan": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1607,
+   "persistencia": 2,
+   "aceleracion": -0.0596,
+   "volatilidad": 0.308,
+   "saturacion": 0.392,
+   "estacional": true
+  },
+  "MX|prenda.traje_bano": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0122,
+   "persistencia": 5,
+   "aceleracion": -0.0183,
+   "volatilidad": 0.235,
+   "saturacion": 0.539,
+   "estacional": false
+  },
+  "MX|prenda.bikini": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0173,
+   "persistencia": 9,
+   "aceleracion": -0.057,
+   "volatilidad": 0.103,
+   "saturacion": 0.343,
+   "estacional": false
+  },
+  "MX|prenda.ropa_deportiva": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0748,
+   "persistencia": 9,
+   "aceleracion": -0.0395,
+   "volatilidad": 0.098,
+   "saturacion": 0.515,
+   "estacional": false
+  },
+  "MX|prenda.conjunto": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0212,
+   "persistencia": 5,
+   "aceleracion": 0.0509,
+   "volatilidad": 0.435,
+   "saturacion": 0.578,
+   "estacional": false
+  },
+  "MX|corte.oversize": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0237,
+   "persistencia": 3,
+   "aceleracion": 0.0131,
+   "volatilidad": 0.104,
+   "saturacion": 0.617,
+   "estacional": false
+  },
+  "MX|corte.slim": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1137,
+   "persistencia": 9,
+   "aceleracion": 0.067,
+   "volatilidad": 0.18,
+   "saturacion": 0.645,
+   "estacional": false
+  },
+  "MX|corte.skinny": {
+   "etiqueta": "estable",
+   "crecimiento": -0.2152,
+   "persistencia": 1,
+   "aceleracion": -0.0802,
+   "volatilidad": 0.198,
+   "saturacion": 0.31,
+   "estacional": false
+  },
+  "MX|corte.recto": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.3249,
+   "persistencia": 11,
+   "aceleracion": 0.1243,
+   "volatilidad": 0.231,
+   "saturacion": 0.826,
+   "estacional": false
+  },
+  "MX|corte.pierna_ancha": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 1.1899,
+   "persistencia": 12,
+   "aceleracion": 0.9555,
+   "volatilidad": 0.443,
+   "saturacion": 0.144,
+   "estacional": false
+  },
+  "MX|corte.baggy": {
+   "etiqueta": "estable",
+   "crecimiento": 0.2142,
+   "persistencia": 10,
+   "aceleracion": -0.6676,
+   "volatilidad": 0.225,
+   "saturacion": 0.628,
+   "estacional": false
+  },
+  "MX|corte.bota_ancha": {
+   "etiqueta": "estable",
+   "crecimiento": -0.077,
+   "persistencia": 5,
+   "aceleracion": -0.1235,
+   "volatilidad": 0.231,
+   "saturacion": 0.519,
+   "estacional": false
+  },
+  "MX|corte.tiro_alto": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0046,
+   "persistencia": 4,
+   "aceleracion": 0.0405,
+   "volatilidad": 0.145,
+   "saturacion": 0.545,
+   "estacional": false
+  },
+  "MX|corte.tiro_bajo": {
+   "etiqueta": "estable",
+   "crecimiento": 0.2832,
+   "persistencia": 8,
+   "aceleracion": -0.5532,
+   "volatilidad": 0.312,
+   "saturacion": 0.54,
+   "estacional": false
+  },
+  "MX|corte.mom": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1718,
+   "persistencia": 1,
+   "aceleracion": 0.0232,
+   "volatilidad": 0.161,
+   "saturacion": 0.157,
+   "estacional": true
+  },
+  "MX|corte.entallado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0705,
+   "persistencia": 9,
+   "aceleracion": 0.0783,
+   "volatilidad": 0.183,
+   "saturacion": 0.569,
+   "estacional": false
+  },
+  "MX|corte.midi": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1615,
+   "persistencia": 10,
+   "aceleracion": 0.2029,
+   "volatilidad": 0.197,
+   "saturacion": 0.785,
+   "estacional": false
+  },
+  "MX|corte.maxi": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0627,
+   "persistencia": 8,
+   "aceleracion": 0.0699,
+   "volatilidad": 0.159,
+   "saturacion": 0.735,
+   "estacional": true
+  },
+  "MX|corte.mini": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0475,
+   "persistencia": 8,
+   "aceleracion": 0.0106,
+   "volatilidad": 0.141,
+   "saturacion": 0.294,
+   "estacional": false
+  },
+  "MX|corte.sastreria": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0776,
+   "persistencia": 8,
+   "aceleracion": 0.1419,
+   "volatilidad": 0.118,
+   "saturacion": 0.405,
+   "estacional": false
+  },
+  "MX|corte.plisado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0403,
+   "persistencia": 9,
+   "aceleracion": 0.1482,
+   "volatilidad": 0.128,
+   "saturacion": 0.107,
+   "estacional": false
+  },
+  "MX|corte.drapeado": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.2744,
+   "persistencia": 10,
+   "aceleracion": 0.2049,
+   "volatilidad": 0.194,
+   "saturacion": 0.588,
+   "estacional": false
+  },
+  "MX|corte.cut_out": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": -0.2308,
+   "persistencia": 5,
+   "aceleracion": -0.3683,
+   "volatilidad": 0.674,
+   "saturacion": 0.058,
+   "estacional": false
+  },
+  "MX|corte.espalda_descubierta": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1778,
+   "persistencia": 9,
+   "aceleracion": 0.1712,
+   "volatilidad": 0.222,
+   "saturacion": 0.602,
+   "estacional": false
+  },
+  "MX|corte.cuello_alto": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.1654,
+   "persistencia": 6,
+   "aceleracion": 0.2252,
+   "volatilidad": 0.516,
+   "saturacion": 0.382,
+   "estacional": true
+  },
+  "MX|corte.hombros_descubiertos": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0094,
+   "persistencia": 7,
+   "aceleracion": 0.2903,
+   "volatilidad": 0.233,
+   "saturacion": 0.269,
+   "estacional": true
+  },
+  "MX|corte.strapless": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1094,
+   "persistencia": 10,
+   "aceleracion": 0.036,
+   "volatilidad": 0.148,
+   "saturacion": 0.608,
+   "estacional": false
+  },
+  "MX|tela.algodon": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.4729,
+   "persistencia": 12,
+   "aceleracion": 0.2829,
+   "volatilidad": 0.233,
+   "saturacion": 0.808,
+   "estacional": false
+  },
+  "MX|tela.denim": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1067,
+   "persistencia": 10,
+   "aceleracion": 0.1285,
+   "volatilidad": 0.131,
+   "saturacion": 0.743,
+   "estacional": true
+  },
+  "MX|tela.lino": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0967,
+   "persistencia": 6,
+   "aceleracion": -0.1215,
+   "volatilidad": 0.296,
+   "saturacion": 0.699,
+   "estacional": false
+  },
+  "MX|tela.lana": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0519,
+   "persistencia": 3,
+   "aceleracion": 0.0248,
+   "volatilidad": 0.331,
+   "saturacion": 0.457,
+   "estacional": true
+  },
+  "MX|tela.cuero": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1161,
+   "persistencia": 9,
+   "aceleracion": 0.0828,
+   "volatilidad": 0.161,
+   "saturacion": 0.721,
+   "estacional": true
+  },
+  "MX|tela.seda": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0426,
+   "persistencia": 9,
+   "aceleracion": -0.0506,
+   "volatilidad": 0.106,
+   "saturacion": 0.815,
+   "estacional": false
+  },
+  "MX|tela.satin": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 1.7406,
+   "persistencia": 12,
+   "aceleracion": 1.5285,
+   "volatilidad": 0.545,
+   "saturacion": 0.731,
+   "estacional": false
+  },
+  "MX|tela.terciopelo": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.0144,
+   "persistencia": 3,
+   "aceleracion": 0.0858,
+   "volatilidad": 0.584,
+   "saturacion": 0.176,
+   "estacional": true
+  },
+  "MX|tela.punto": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0,
+   "persistencia": 6,
+   "aceleracion": 0.0825,
+   "volatilidad": 0.169,
+   "saturacion": 0.223,
+   "estacional": false
+  },
+  "MX|tela.poliester": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.4847,
+   "persistencia": 12,
+   "aceleracion": 0.3064,
+   "volatilidad": 0.268,
+   "saturacion": 0.687,
+   "estacional": false
+  },
+  "MX|tela.elastano": {
+   "etiqueta": "estable",
+   "crecimiento": 0.2468,
+   "persistencia": 12,
+   "aceleracion": 0.0865,
+   "volatilidad": 0.153,
+   "saturacion": 0.88,
+   "estacional": false
+  },
+  "MX|tela.encaje": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1843,
+   "persistencia": 11,
+   "aceleracion": 0.2554,
+   "volatilidad": 0.117,
+   "saturacion": 0.568,
+   "estacional": false
+  },
+  "MX|tela.tul": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0587,
+   "persistencia": 5,
+   "aceleracion": 0.0963,
+   "volatilidad": 0.311,
+   "saturacion": 0.321,
+   "estacional": true
+  },
+  "MX|tela.pana": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.0994,
+   "persistencia": 5,
+   "aceleracion": 0.0972,
+   "volatilidad": 0.492,
+   "saturacion": 0.424,
+   "estacional": true
+  },
+  "MX|tela.franela": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": -0.0227,
+   "persistencia": 3,
+   "aceleracion": 0.0049,
+   "volatilidad": 0.611,
+   "saturacion": 0.287,
+   "estacional": true
+  },
+  "MX|tela.crochet": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0094,
+   "persistencia": 6,
+   "aceleracion": 0.0812,
+   "volatilidad": 0.078,
+   "saturacion": 0.446,
+   "estacional": false
+  },
+  "MX|tela.bordado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0533,
+   "persistencia": 8,
+   "aceleracion": 0.0649,
+   "volatilidad": 0.069,
+   "saturacion": 0.675,
+   "estacional": false
+  },
+  "MX|tela.fibras_naturales": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0667,
+   "persistencia": 4,
+   "aceleracion": -0.0607,
+   "volatilidad": 0.205,
+   "saturacion": 0.128,
+   "estacional": false
+  },
+  "MX|tela.tecnica": {
+   "etiqueta": "estable",
+   "crecimiento": 0.2187,
+   "persistencia": 10,
+   "aceleracion": 0.2718,
+   "volatilidad": 0.53,
+   "saturacion": 0.543,
+   "estacional": false
+  },
+  "MX|tela.neopreno": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0469,
+   "persistencia": 6,
+   "aceleracion": -0.0198,
+   "volatilidad": 0.183,
+   "saturacion": 0.056,
+   "estacional": true
+  },
+  "MX|tela.gasa": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1771,
+   "persistencia": 12,
+   "aceleracion": 0.11,
+   "volatilidad": 0.123,
+   "saturacion": 0.858,
+   "estacional": false
+  },
+  "MX|tela.organza": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1984,
+   "persistencia": 10,
+   "aceleracion": 0.2674,
+   "volatilidad": 0.237,
+   "saturacion": 0.498,
+   "estacional": false
+  },
+  "MX|color.negro": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0589,
+   "persistencia": 6,
+   "aceleracion": 0.0996,
+   "volatilidad": 0.186,
+   "saturacion": 0.644,
+   "estacional": true
+  },
+  "MX|color.blanco": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0349,
+   "persistencia": 7,
+   "aceleracion": 0.0349,
+   "volatilidad": 0.109,
+   "saturacion": 0.667,
+   "estacional": false
+  },
+  "MX|color.beige": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0795,
+   "persistencia": 9,
+   "aceleracion": -0.0243,
+   "volatilidad": 0.162,
+   "saturacion": 0.679,
+   "estacional": true
+  },
+  "MX|color.crema": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1467,
+   "persistencia": 10,
+   "aceleracion": 0.1342,
+   "volatilidad": 0.146,
+   "saturacion": 0.853,
+   "estacional": false
+  },
+  "MX|color.gris": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0679,
+   "persistencia": 5,
+   "aceleracion": -0.0003,
+   "volatilidad": 0.184,
+   "saturacion": 0.655,
+   "estacional": true
+  },
+  "MX|color.camel": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.1435,
+   "persistencia": 8,
+   "aceleracion": 0.1912,
+   "volatilidad": 0.341,
+   "saturacion": 0.418,
+   "estacional": true
+  },
+  "MX|color.marron": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 1.0395,
+   "persistencia": 12,
+   "aceleracion": 0.8939,
+   "volatilidad": 0.423,
+   "saturacion": 0.602,
+   "estacional": false
+  },
+  "MX|color.chocolate": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1529,
+   "persistencia": 9,
+   "aceleracion": 0.0423,
+   "volatilidad": 0.19,
+   "saturacion": 0.685,
+   "estacional": true
+  },
+  "MX|color.azul_marino": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1204,
+   "persistencia": 10,
+   "aceleracion": 0.068,
+   "volatilidad": 0.123,
+   "saturacion": 0.807,
+   "estacional": false
+  },
+  "MX|color.azul_cielo": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1578,
+   "persistencia": 10,
+   "aceleracion": 0.1298,
+   "volatilidad": 0.165,
+   "saturacion": 0.813,
+   "estacional": false
+  },
+  "MX|color.azul_petroleo": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.5196,
+   "persistencia": 11,
+   "aceleracion": 0.2318,
+   "volatilidad": 0.349,
+   "saturacion": 0.227,
+   "estacional": false
+  },
+  "MX|color.turquesa": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0086,
+   "persistencia": 8,
+   "aceleracion": 0.0283,
+   "volatilidad": 0.115,
+   "saturacion": 0.292,
+   "estacional": false
+  },
+  "MX|color.verde_oliva": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.668,
+   "persistencia": 11,
+   "aceleracion": 0.0543,
+   "volatilidad": 0.341,
+   "saturacion": 0.72,
+   "estacional": false
+  },
+  "MX|color.verde_esmeralda": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1449,
+   "persistencia": 1,
+   "aceleracion": 0.1451,
+   "volatilidad": 0.155,
+   "saturacion": 0.354,
+   "estacional": false
+  },
+  "MX|color.verde_menta": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0222,
+   "persistencia": 7,
+   "aceleracion": -0.0284,
+   "volatilidad": 0.221,
+   "saturacion": 0.23,
+   "estacional": false
+  },
+  "MX|color.mostaza": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0667,
+   "persistencia": 2,
+   "aceleracion": 0.1719,
+   "volatilidad": 0.212,
+   "saturacion": 0.117,
+   "estacional": true
+  },
+  "MX|color.naranja": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0047,
+   "persistencia": 4,
+   "aceleracion": 0.0535,
+   "volatilidad": 0.131,
+   "saturacion": 0.718,
+   "estacional": true
+  },
+  "MX|color.terracota": {
+   "etiqueta": "estable",
+   "crecimiento": 0.2294,
+   "persistencia": 12,
+   "aceleracion": 0.1701,
+   "volatilidad": 0.181,
+   "saturacion": 0.733,
+   "estacional": false
+  },
+  "MX|color.coral": {
+   "etiqueta": "estable",
+   "crecimiento": 0.047,
+   "persistencia": 9,
+   "aceleracion": 0.0857,
+   "volatilidad": 0.153,
+   "saturacion": 0.13,
+   "estacional": false
+  },
+  "MX|color.rojo": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0513,
+   "persistencia": 3,
+   "aceleracion": -0.2026,
+   "volatilidad": 0.305,
+   "saturacion": 0.493,
+   "estacional": true
+  },
+  "MX|color.borgona": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.5266,
+   "persistencia": 10,
+   "aceleracion": -1.034,
+   "volatilidad": 0.437,
+   "saturacion": 0.645,
+   "estacional": false
+  },
+  "MX|color.rosa": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0502,
+   "persistencia": 9,
+   "aceleracion": 0.034,
+   "volatilidad": 0.078,
+   "saturacion": 0.714,
+   "estacional": false
+  },
+  "MX|color.fucsia": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0428,
+   "persistencia": 4,
+   "aceleracion": 0.185,
+   "volatilidad": 0.105,
+   "saturacion": 0.354,
+   "estacional": false
+  },
+  "MX|color.lavanda": {
+   "etiqueta": "estable",
+   "crecimiento": 0.107,
+   "persistencia": 9,
+   "aceleracion": 0.1041,
+   "volatilidad": 0.222,
+   "saturacion": 0.629,
+   "estacional": false
+  },
+  "MX|color.morado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0211,
+   "persistencia": 6,
+   "aceleracion": 0.1322,
+   "volatilidad": 0.124,
+   "saturacion": 0.606,
+   "estacional": true
+  },
+  "MX|color.dorado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0372,
+   "persistencia": 8,
+   "aceleracion": -0.0065,
+   "volatilidad": 0.151,
+   "saturacion": 0.186,
+   "estacional": true
+  },
+  "MX|color.plateado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0743,
+   "persistencia": 8,
+   "aceleracion": -0.0609,
+   "volatilidad": 0.167,
+   "saturacion": 0.699,
+   "estacional": true
+  },
+  "MX|estampado.rayas": {
+   "etiqueta": "estable",
+   "crecimiento": 0.124,
+   "persistencia": 10,
+   "aceleracion": -0.019,
+   "volatilidad": 0.124,
+   "saturacion": 0.838,
+   "estacional": false
+  },
+  "MX|estampado.cuadros": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0,
+   "persistencia": 3,
+   "aceleracion": 0.1988,
+   "volatilidad": 0.37,
+   "saturacion": 0.323,
+   "estacional": true
+  },
+  "MX|estampado.animal_print": {
+   "etiqueta": "estable",
+   "crecimiento": 0.186,
+   "persistencia": 9,
+   "aceleracion": -0.2414,
+   "volatilidad": 0.201,
+   "saturacion": 0.68,
+   "estacional": true
+  },
+  "MX|estampado.leopardo": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0946,
+   "persistencia": 7,
+   "aceleracion": -0.3291,
+   "volatilidad": 0.194,
+   "saturacion": 0.723,
+   "estacional": false
+  },
+  "MX|estampado.tie_dye": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1486,
+   "persistencia": 1,
+   "aceleracion": 0.0885,
+   "volatilidad": 0.301,
+   "saturacion": 0.052,
+   "estacional": false
+  },
+  "MX|estampado.lunares": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.8402,
+   "persistencia": 11,
+   "aceleracion": 0.8581,
+   "volatilidad": 0.479,
+   "saturacion": 0.672,
+   "estacional": false
+  },
+  "MX|estampado.cachemira": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0359,
+   "persistencia": 6,
+   "aceleracion": -0.53,
+   "volatilidad": 0.251,
+   "saturacion": 0.626,
+   "estacional": false
+  },
+  "MX|estilo.minimalista": {
+   "etiqueta": "estable",
+   "crecimiento": 0.2166,
+   "persistencia": 7,
+   "aceleracion": 0.1261,
+   "volatilidad": 0.241,
+   "saturacion": 0.721,
+   "estacional": false
+  },
+  "MX|estilo.streetwear": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.4469,
+   "persistencia": 12,
+   "aceleracion": 0.1446,
+   "volatilidad": 0.322,
+   "saturacion": 0.556,
+   "estacional": false
+  },
+  "MX|estilo.vintage": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1549,
+   "persistencia": 1,
+   "aceleracion": -0.0241,
+   "volatilidad": 0.151,
+   "saturacion": 0.318,
+   "estacional": false
+  },
+  "MX|estilo.boho": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.0146,
+   "persistencia": 3,
+   "aceleracion": -0.4287,
+   "volatilidad": 0.31,
+   "saturacion": 0.463,
+   "estacional": false
+  },
+  "MX|estilo.y2k": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1378,
+   "persistencia": 9,
+   "aceleracion": -0.1259,
+   "volatilidad": 0.173,
+   "saturacion": 0.723,
+   "estacional": false
+  },
+  "MX|estilo.preppy": {
+   "etiqueta": "baja_sostenida",
+   "crecimiento": -0.3378,
+   "persistencia": 1,
+   "aceleracion": -0.2621,
+   "volatilidad": 0.357,
+   "saturacion": 0.33,
+   "estacional": false
+  },
+  "MX|estilo.grunge": {
+   "etiqueta": "baja_sostenida",
+   "crecimiento": -0.2722,
+   "persistencia": 1,
+   "aceleracion": -0.381,
+   "volatilidad": 0.327,
+   "saturacion": 0.192,
+   "estacional": false
+  },
+  "MX|estilo.cottagecore": {
+   "etiqueta": "baja_sostenida",
+   "crecimiento": -0.2939,
+   "persistencia": 1,
+   "aceleracion": -0.3219,
+   "volatilidad": 0.281,
+   "saturacion": 0.194,
+   "estacional": false
+  },
+  "MX|estilo.old_money": {
+   "etiqueta": "estable",
+   "crecimiento": -0.2075,
+   "persistencia": 1,
+   "aceleracion": -0.4124,
+   "volatilidad": 0.255,
+   "saturacion": 0.229,
+   "estacional": true
+  },
+  "MX|estilo.western": {
+   "etiqueta": "estable",
+   "crecimiento": 0.2045,
+   "persistencia": 10,
+   "aceleracion": -0.0384,
+   "volatilidad": 0.233,
+   "saturacion": 0.221,
+   "estacional": true
+  },
+  "MX|estilo.playa_resort": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0027,
+   "persistencia": 5,
+   "aceleracion": 0.0133,
+   "volatilidad": 0.256,
+   "saturacion": 0.312,
+   "estacional": false
+  },
+  "ES|prenda.camiseta": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0984,
+   "persistencia": 8,
+   "aceleracion": 0.0821,
+   "volatilidad": 0.14,
+   "saturacion": 0.8,
+   "estacional": false
+  },
+  "ES|prenda.camisa": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1152,
+   "persistencia": 8,
+   "aceleracion": 0.077,
+   "volatilidad": 0.152,
+   "saturacion": 0.782,
+   "estacional": false
+  },
+  "ES|prenda.blusa": {
+   "etiqueta": "estable",
+   "crecimiento": 0.2051,
+   "persistencia": 10,
+   "aceleracion": 0.0875,
+   "volatilidad": 0.194,
+   "saturacion": 0.754,
+   "estacional": true
+  },
+  "ES|prenda.polo": {
+   "etiqueta": "estable",
+   "crecimiento": 0.045,
+   "persistencia": 7,
+   "aceleracion": -0.0179,
+   "volatilidad": 0.138,
+   "saturacion": 0.794,
+   "estacional": false
+  },
+  "ES|prenda.crop_top": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.0214,
+   "persistencia": 4,
+   "aceleracion": 0.0045,
+   "volatilidad": 0.431,
+   "saturacion": 0.358,
+   "estacional": false
+  },
+  "ES|prenda.corse": {
+   "etiqueta": "estable",
+   "crecimiento": 0.2377,
+   "persistencia": 12,
+   "aceleracion": 0.1152,
+   "volatilidad": 0.298,
+   "saturacion": 0.586,
+   "estacional": true
+  },
+  "ES|prenda.vestido": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0055,
+   "persistencia": 6,
+   "aceleracion": 0.0177,
+   "volatilidad": 0.209,
+   "saturacion": 0.612,
+   "estacional": true
+  },
+  "ES|prenda.falda": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0032,
+   "persistencia": 5,
+   "aceleracion": -0.044,
+   "volatilidad": 0.147,
+   "saturacion": 0.783,
+   "estacional": false
+  },
+  "ES|prenda.pantalon": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.9112,
+   "persistencia": 12,
+   "aceleracion": 0.8483,
+   "volatilidad": 0.346,
+   "saturacion": 0.807,
+   "estacional": false
+  },
+  "ES|prenda.jean": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0654,
+   "persistencia": 8,
+   "aceleracion": 0.0206,
+   "volatilidad": 0.178,
+   "saturacion": 0.787,
+   "estacional": false
+  },
+  "ES|prenda.short": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1191,
+   "persistencia": 6,
+   "aceleracion": -0.1037,
+   "volatilidad": 0.349,
+   "saturacion": 0.65,
+   "estacional": false
+  },
+  "ES|prenda.bermuda": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.2404,
+   "persistencia": 5,
+   "aceleracion": 0.0904,
+   "volatilidad": 0.788,
+   "saturacion": 0.404,
+   "estacional": true
+  },
+  "ES|prenda.leggins": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0063,
+   "persistencia": 5,
+   "aceleracion": 0.1122,
+   "volatilidad": 0.361,
+   "saturacion": 0.397,
+   "estacional": false
+  },
+  "ES|prenda.jogger": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0237,
+   "persistencia": 5,
+   "aceleracion": 0.069,
+   "volatilidad": 0.315,
+   "saturacion": 0.468,
+   "estacional": false
+  },
+  "ES|prenda.pantalon_cargo": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1875,
+   "persistencia": 11,
+   "aceleracion": 0.245,
+   "volatilidad": 0.239,
+   "saturacion": 0.665,
+   "estacional": true
+  },
+  "ES|prenda.pantalon_vestir": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.5087,
+   "persistencia": 12,
+   "aceleracion": 0.3514,
+   "volatilidad": 0.341,
+   "saturacion": 0.647,
+   "estacional": false
+  },
+  "ES|prenda.enterizo": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0551,
+   "persistencia": 4,
+   "aceleracion": 0.0426,
+   "volatilidad": 0.142,
+   "saturacion": 0.4,
+   "estacional": false
+  },
+  "ES|prenda.overol": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1026,
+   "persistencia": 2,
+   "aceleracion": -0.0014,
+   "volatilidad": 0.147,
+   "saturacion": 0.452,
+   "estacional": false
+  },
+  "ES|prenda.blazer": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0853,
+   "persistencia": 5,
+   "aceleracion": 0.0124,
+   "volatilidad": 0.316,
+   "saturacion": 0.331,
+   "estacional": false
+  },
+  "ES|prenda.chaqueta": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.0705,
+   "persistencia": 6,
+   "aceleracion": -0.0373,
+   "volatilidad": 0.482,
+   "saturacion": 0.532,
+   "estacional": true
+  },
+  "ES|prenda.chaqueta_cuero": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.101,
+   "persistencia": 7,
+   "aceleracion": 0.0746,
+   "volatilidad": 0.461,
+   "saturacion": 0.536,
+   "estacional": true
+  },
+  "ES|prenda.chaqueta_bomber": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1216,
+   "persistencia": 7,
+   "aceleracion": 0.0983,
+   "volatilidad": 0.381,
+   "saturacion": 0.615,
+   "estacional": false
+  },
+  "ES|prenda.chaqueta_denim": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0629,
+   "persistencia": 6,
+   "aceleracion": -0.0249,
+   "volatilidad": 0.242,
+   "saturacion": 0.534,
+   "estacional": false
+  },
+  "ES|prenda.abrigo": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.0609,
+   "persistencia": 5,
+   "aceleracion": -0.0127,
+   "volatilidad": 0.966,
+   "saturacion": 0.348,
+   "estacional": true
+  },
+  "ES|prenda.gabardina": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0297,
+   "persistencia": 7,
+   "aceleracion": -0.249,
+   "volatilidad": 0.435,
+   "saturacion": 0.571,
+   "estacional": false
+  },
+  "ES|prenda.parka": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": -0.0039,
+   "persistencia": 5,
+   "aceleracion": -0.1637,
+   "volatilidad": 0.69,
+   "saturacion": 0.422,
+   "estacional": false
+  },
+  "ES|prenda.chaleco": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1435,
+   "persistencia": 3,
+   "aceleracion": -0.0869,
+   "volatilidad": 0.266,
+   "saturacion": 0.487,
+   "estacional": true
+  },
+  "ES|prenda.sudadera": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1007,
+   "persistencia": 5,
+   "aceleracion": -0.0845,
+   "volatilidad": 0.555,
+   "saturacion": 0.409,
+   "estacional": true
+  },
+  "ES|prenda.sueter": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.0952,
+   "persistencia": 5,
+   "aceleracion": 0.0196,
+   "volatilidad": 0.694,
+   "saturacion": 0.403,
+   "estacional": true
+  },
+  "ES|prenda.cardigan": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.0641,
+   "persistencia": 6,
+   "aceleracion": -0.168,
+   "volatilidad": 0.487,
+   "saturacion": 0.457,
+   "estacional": false
+  },
+  "ES|prenda.traje_bano": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": -0.0044,
+   "persistencia": 4,
+   "aceleracion": -0.1104,
+   "volatilidad": 0.752,
+   "saturacion": 0.381,
+   "estacional": true
+  },
+  "ES|prenda.bikini": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": -0.0019,
+   "persistencia": 4,
+   "aceleracion": -0.1637,
+   "volatilidad": 0.649,
+   "saturacion": 0.43,
+   "estacional": false
+  },
+  "ES|prenda.ropa_deportiva": {
+   "etiqueta": "estable",
+   "crecimiento": 0.2021,
+   "persistencia": 11,
+   "aceleracion": 0.1546,
+   "volatilidad": 0.128,
+   "saturacion": 0.486,
+   "estacional": false
+  },
+  "ES|prenda.conjunto": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.2284,
+   "persistencia": 7,
+   "aceleracion": -0.1413,
+   "volatilidad": 0.379,
+   "saturacion": 0.592,
+   "estacional": false
+  },
+  "ES|corte.oversize": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0388,
+   "persistencia": 6,
+   "aceleracion": -0.1084,
+   "volatilidad": 0.199,
+   "saturacion": 0.702,
+   "estacional": true
+  },
+  "ES|corte.slim": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.2149,
+   "persistencia": 6,
+   "aceleracion": 0.0876,
+   "volatilidad": 0.429,
+   "saturacion": 0.367,
+   "estacional": false
+  },
+  "ES|corte.skinny": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1706,
+   "persistencia": 6,
+   "aceleracion": -0.1181,
+   "volatilidad": 0.567,
+   "saturacion": 0.324,
+   "estacional": false
+  },
+  "ES|corte.recto": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1021,
+   "persistencia": 8,
+   "aceleracion": 0.017,
+   "volatilidad": 0.37,
+   "saturacion": 0.621,
+   "estacional": false
+  },
+  "ES|corte.pierna_ancha": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 1.1685,
+   "persistencia": 12,
+   "aceleracion": 0.886,
+   "volatilidad": 0.396,
+   "saturacion": 0.837,
+   "estacional": false
+  },
+  "ES|corte.baggy": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1308,
+   "persistencia": 8,
+   "aceleracion": -0.5151,
+   "volatilidad": 0.196,
+   "saturacion": 0.771,
+   "estacional": false
+  },
+  "ES|corte.bota_ancha": {
+   "etiqueta": "estable",
+   "crecimiento": -0.2489,
+   "persistencia": 3,
+   "aceleracion": -0.2763,
+   "volatilidad": 0.46,
+   "saturacion": 0.141,
+   "estacional": false
+  },
+  "ES|corte.tiro_alto": {
+   "etiqueta": "estable",
+   "crecimiento": 0.136,
+   "persistencia": 10,
+   "aceleracion": 0.0561,
+   "volatilidad": 0.116,
+   "saturacion": 0.55,
+   "estacional": false
+  },
+  "ES|corte.tiro_bajo": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0975,
+   "persistencia": 10,
+   "aceleracion": -0.6185,
+   "volatilidad": 0.094,
+   "saturacion": 0.877,
+   "estacional": false
+  },
+  "ES|corte.mom": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": -0.0657,
+   "persistencia": 4,
+   "aceleracion": 0.1188,
+   "volatilidad": 0.382,
+   "saturacion": 0.32,
+   "estacional": true
+  },
+  "ES|corte.entallado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1026,
+   "persistencia": 11,
+   "aceleracion": 0.0969,
+   "volatilidad": 0.101,
+   "saturacion": 0.645,
+   "estacional": false
+  },
+  "ES|corte.asimetrico": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.3814,
+   "persistencia": 8,
+   "aceleracion": 0.3898,
+   "volatilidad": 0.436,
+   "saturacion": 0.136,
+   "estacional": false
+  },
+  "ES|corte.midi": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0357,
+   "persistencia": 7,
+   "aceleracion": 0.1357,
+   "volatilidad": 0.178,
+   "saturacion": 0.629,
+   "estacional": false
+  },
+  "ES|corte.maxi": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0298,
+   "persistencia": 5,
+   "aceleracion": 0.0194,
+   "volatilidad": 0.294,
+   "saturacion": 0.516,
+   "estacional": true
+  },
+  "ES|corte.mini": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0169,
+   "persistencia": 5,
+   "aceleracion": 0.0187,
+   "volatilidad": 0.225,
+   "saturacion": 0.533,
+   "estacional": true
+  },
+  "ES|corte.sastreria": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": -0.0197,
+   "persistencia": 5,
+   "aceleracion": 0.1869,
+   "volatilidad": 0.327,
+   "saturacion": 0.414,
+   "estacional": false
+  },
+  "ES|corte.plisado": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0897,
+   "persistencia": 6,
+   "aceleracion": 0.0323,
+   "volatilidad": 0.324,
+   "saturacion": 0.338,
+   "estacional": false
+  },
+  "ES|corte.drapeado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0717,
+   "persistencia": 7,
+   "aceleracion": 0.0331,
+   "volatilidad": 0.247,
+   "saturacion": 0.672,
+   "estacional": false
+  },
+  "ES|corte.cut_out": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": -0.0149,
+   "persistencia": 4,
+   "aceleracion": 0.3723,
+   "volatilidad": 0.587,
+   "saturacion": 0.221,
+   "estacional": false
+  },
+  "ES|corte.espalda_descubierta": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0279,
+   "persistencia": 5,
+   "aceleracion": 0.0338,
+   "volatilidad": 0.316,
+   "saturacion": 0.407,
+   "estacional": false
+  },
+  "ES|corte.cuello_alto": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.2277,
+   "persistencia": 6,
+   "aceleracion": 0.2746,
+   "volatilidad": 0.789,
+   "saturacion": 0.333,
+   "estacional": true
+  },
+  "ES|corte.strapless": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 1.5417,
+   "persistencia": 8,
+   "aceleracion": 1.3988,
+   "volatilidad": 1.774,
+   "saturacion": 0.152,
+   "estacional": false
+  },
+  "ES|tela.algodon": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.4963,
+   "persistencia": 12,
+   "aceleracion": 0.2366,
+   "volatilidad": 0.248,
+   "saturacion": 0.847,
+   "estacional": false
+  },
+  "ES|tela.denim": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.0531,
+   "persistencia": 4,
+   "aceleracion": -0.3463,
+   "volatilidad": 0.285,
+   "saturacion": 0.446,
+   "estacional": false
+  },
+  "ES|tela.lino": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.126,
+   "persistencia": 5,
+   "aceleracion": -0.0492,
+   "volatilidad": 0.898,
+   "saturacion": 0.365,
+   "estacional": true
+  },
+  "ES|tela.lana": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.1287,
+   "persistencia": 5,
+   "aceleracion": -0.013,
+   "volatilidad": 0.74,
+   "saturacion": 0.409,
+   "estacional": true
+  },
+  "ES|tela.cuero": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0254,
+   "persistencia": 5,
+   "aceleracion": 0.0141,
+   "volatilidad": 0.32,
+   "saturacion": 0.537,
+   "estacional": true
+  },
+  "ES|tela.cuero_vegano": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0783,
+   "persistencia": 4,
+   "aceleracion": 0.1135,
+   "volatilidad": 0.599,
+   "saturacion": 0.304,
+   "estacional": false
+  },
+  "ES|tela.seda": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0964,
+   "persistencia": 8,
+   "aceleracion": -0.0217,
+   "volatilidad": 0.14,
+   "saturacion": 0.796,
+   "estacional": true
+  },
+  "ES|tela.satin": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.7748,
+   "persistencia": 12,
+   "aceleracion": 0.757,
+   "volatilidad": 0.326,
+   "saturacion": 0.762,
+   "estacional": false
+  },
+  "ES|tela.terciopelo": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.0051,
+   "persistencia": 4,
+   "aceleracion": -0.1092,
+   "volatilidad": 0.792,
+   "saturacion": 0.327,
+   "estacional": true
+  },
+  "ES|tela.punto": {
+   "etiqueta": "estable",
+   "crecimiento": 0.098,
+   "persistencia": 8,
+   "aceleracion": 0.0729,
+   "volatilidad": 0.267,
+   "saturacion": 0.56,
+   "estacional": true
+  },
+  "ES|tela.poliester": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.6601,
+   "persistencia": 11,
+   "aceleracion": 0.4039,
+   "volatilidad": 0.349,
+   "saturacion": 0.631,
+   "estacional": false
+  },
+  "ES|tela.elastano": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.381,
+   "persistencia": 12,
+   "aceleracion": 0.3143,
+   "volatilidad": 0.224,
+   "saturacion": 0.773,
+   "estacional": false
+  },
+  "ES|tela.viscosa": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.1844,
+   "persistencia": 5,
+   "aceleracion": 0.0078,
+   "volatilidad": 0.457,
+   "saturacion": 0.546,
+   "estacional": false
+  },
+  "ES|tela.encaje": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.323,
+   "persistencia": 12,
+   "aceleracion": 0.0601,
+   "volatilidad": 0.206,
+   "saturacion": 0.672,
+   "estacional": false
+  },
+  "ES|tela.tul": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1026,
+   "persistencia": 4,
+   "aceleracion": -0.0036,
+   "volatilidad": 0.177,
+   "saturacion": 0.204,
+   "estacional": false
+  },
+  "ES|tela.pana": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.1569,
+   "persistencia": 5,
+   "aceleracion": -0.0411,
+   "volatilidad": 0.932,
+   "saturacion": 0.344,
+   "estacional": false
+  },
+  "ES|tela.franela": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.1067,
+   "persistencia": 4,
+   "aceleracion": 0.0353,
+   "volatilidad": 0.84,
+   "saturacion": 0.346,
+   "estacional": true
+  },
+  "ES|tela.alpaca": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.533,
+   "persistencia": 7,
+   "aceleracion": 0.59,
+   "volatilidad": 0.644,
+   "saturacion": 0.233,
+   "estacional": false
+  },
+  "ES|tela.crochet": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1737,
+   "persistencia": 7,
+   "aceleracion": 0.2361,
+   "volatilidad": 0.326,
+   "saturacion": 0.603,
+   "estacional": false
+  },
+  "ES|tela.bordado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0912,
+   "persistencia": 8,
+   "aceleracion": 0.0147,
+   "volatilidad": 0.232,
+   "saturacion": 0.678,
+   "estacional": false
+  },
+  "ES|tela.fibras_naturales": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1104,
+   "persistencia": 11,
+   "aceleracion": 0.1323,
+   "volatilidad": 0.11,
+   "saturacion": 0.578,
+   "estacional": false
+  },
+  "ES|tela.neopreno": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0085,
+   "persistencia": 6,
+   "aceleracion": 0.0049,
+   "volatilidad": 0.157,
+   "saturacion": 0.487,
+   "estacional": false
+  },
+  "ES|tela.gasa": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1711,
+   "persistencia": 9,
+   "aceleracion": -0.0016,
+   "volatilidad": 0.266,
+   "saturacion": 0.696,
+   "estacional": true
+  },
+  "ES|tela.organza": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.1464,
+   "persistencia": 7,
+   "aceleracion": 0.1191,
+   "volatilidad": 0.338,
+   "saturacion": 0.502,
+   "estacional": false
+  },
+  "ES|color.negro": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0383,
+   "persistencia": 4,
+   "aceleracion": 0.0181,
+   "volatilidad": 0.214,
+   "saturacion": 0.655,
+   "estacional": true
+  },
+  "ES|color.blanco": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0455,
+   "persistencia": 5,
+   "aceleracion": 0.0053,
+   "volatilidad": 0.148,
+   "saturacion": 0.383,
+   "estacional": false
+  },
+  "ES|color.beige": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0755,
+   "persistencia": 7,
+   "aceleracion": 0.0152,
+   "volatilidad": 0.125,
+   "saturacion": 0.819,
+   "estacional": false
+  },
+  "ES|color.crema": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1031,
+   "persistencia": 6,
+   "aceleracion": 0.0627,
+   "volatilidad": 0.267,
+   "saturacion": 0.687,
+   "estacional": true
+  },
+  "ES|color.gris": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0,
+   "persistencia": 4,
+   "aceleracion": -0.1156,
+   "volatilidad": 0.336,
+   "saturacion": 0.579,
+   "estacional": true
+  },
+  "ES|color.camel": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0608,
+   "persistencia": 5,
+   "aceleracion": 0.1262,
+   "volatilidad": 0.351,
+   "saturacion": 0.48,
+   "estacional": false
+  },
+  "ES|color.marron": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 1.152,
+   "persistencia": 12,
+   "aceleracion": 0.5216,
+   "volatilidad": 0.45,
+   "saturacion": 0.672,
+   "estacional": false
+  },
+  "ES|color.chocolate": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.9102,
+   "persistencia": 12,
+   "aceleracion": 0.1025,
+   "volatilidad": 0.396,
+   "saturacion": 0.673,
+   "estacional": false
+  },
+  "ES|color.azul_marino": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0949,
+   "persistencia": 9,
+   "aceleracion": -0.0857,
+   "volatilidad": 0.119,
+   "saturacion": 0.874,
+   "estacional": false
+  },
+  "ES|color.azul_cielo": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1095,
+   "persistencia": 8,
+   "aceleracion": 0.0021,
+   "volatilidad": 0.192,
+   "saturacion": 0.743,
+   "estacional": false
+  },
+  "ES|color.azul_electrico": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0307,
+   "persistencia": 7,
+   "aceleracion": 0.1298,
+   "volatilidad": 0.272,
+   "saturacion": 0.336,
+   "estacional": true
+  },
+  "ES|color.turquesa": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0206,
+   "persistencia": 5,
+   "aceleracion": -0.0322,
+   "volatilidad": 0.177,
+   "saturacion": 0.713,
+   "estacional": false
+  },
+  "ES|color.verde_oliva": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.5393,
+   "persistencia": 12,
+   "aceleracion": 0.1566,
+   "volatilidad": 0.259,
+   "saturacion": 0.789,
+   "estacional": false
+  },
+  "ES|color.verde_esmeralda": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0964,
+   "persistencia": 7,
+   "aceleracion": -0.1369,
+   "volatilidad": 0.167,
+   "saturacion": 0.777,
+   "estacional": false
+  },
+  "ES|color.verde_menta": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0534,
+   "persistencia": 4,
+   "aceleracion": -0.0336,
+   "volatilidad": 0.241,
+   "saturacion": 0.547,
+   "estacional": false
+  },
+  "ES|color.mostaza": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1196,
+   "persistencia": 10,
+   "aceleracion": 0.1711,
+   "volatilidad": 0.116,
+   "saturacion": 0.343,
+   "estacional": false
+  },
+  "ES|color.naranja": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0012,
+   "persistencia": 6,
+   "aceleracion": 0.0128,
+   "volatilidad": 0.106,
+   "saturacion": 0.706,
+   "estacional": false
+  },
+  "ES|color.terracota": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.5195,
+   "persistencia": 8,
+   "aceleracion": 0.0913,
+   "volatilidad": 0.433,
+   "saturacion": 0.617,
+   "estacional": false
+  },
+  "ES|color.coral": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1536,
+   "persistencia": 7,
+   "aceleracion": 0.0964,
+   "volatilidad": 0.341,
+   "saturacion": 0.551,
+   "estacional": false
+  },
+  "ES|color.rojo": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0566,
+   "persistencia": 2,
+   "aceleracion": -0.059,
+   "volatilidad": 0.144,
+   "saturacion": 0.653,
+   "estacional": true
+  },
+  "ES|color.borgona": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.2828,
+   "persistencia": 7,
+   "aceleracion": -0.2652,
+   "volatilidad": 0.418,
+   "saturacion": 0.586,
+   "estacional": false
+  },
+  "ES|color.rosa": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0067,
+   "persistencia": 5,
+   "aceleracion": -0.0655,
+   "volatilidad": 0.07,
+   "saturacion": 0.865,
+   "estacional": false
+  },
+  "ES|color.fucsia": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1662,
+   "persistencia": 3,
+   "aceleracion": 0.0526,
+   "volatilidad": 0.262,
+   "saturacion": 0.226,
+   "estacional": false
+  },
+  "ES|color.lavanda": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0816,
+   "persistencia": 8,
+   "aceleracion": 0.1301,
+   "volatilidad": 0.242,
+   "saturacion": 0.618,
+   "estacional": false
+  },
+  "ES|color.morado": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0192,
+   "persistencia": 3,
+   "aceleracion": 0.0122,
+   "volatilidad": 0.103,
+   "saturacion": 0.682,
+   "estacional": false
+  },
+  "ES|color.dorado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0692,
+   "persistencia": 9,
+   "aceleracion": 0.0,
+   "volatilidad": 0.146,
+   "saturacion": 0.399,
+   "estacional": false
+  },
+  "ES|color.plateado": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0537,
+   "persistencia": 6,
+   "aceleracion": 0.0607,
+   "volatilidad": 0.166,
+   "saturacion": 0.621,
+   "estacional": true
+  },
+  "ES|estampado.floral": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1036,
+   "persistencia": 7,
+   "aceleracion": 0.2177,
+   "volatilidad": 0.382,
+   "saturacion": 0.328,
+   "estacional": true
+  },
+  "ES|estampado.rayas": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.3036,
+   "persistencia": 11,
+   "aceleracion": 0.1735,
+   "volatilidad": 0.217,
+   "saturacion": 0.755,
+   "estacional": false
+  },
+  "ES|estampado.cuadros": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.3248,
+   "persistencia": 7,
+   "aceleracion": 0.2687,
+   "volatilidad": 0.434,
+   "saturacion": 0.52,
+   "estacional": false
+  },
+  "ES|estampado.vichy": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1193,
+   "persistencia": 6,
+   "aceleracion": 0.0252,
+   "volatilidad": 0.294,
+   "saturacion": 0.672,
+   "estacional": true
+  },
+  "ES|estampado.animal_print": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0286,
+   "persistencia": 6,
+   "aceleracion": -0.3929,
+   "volatilidad": 0.329,
+   "saturacion": 0.594,
+   "estacional": false
+  },
+  "ES|estampado.leopardo": {
+   "etiqueta": "estable",
+   "crecimiento": -0.17,
+   "persistencia": 5,
+   "aceleracion": -0.3411,
+   "volatilidad": 0.346,
+   "saturacion": 0.521,
+   "estacional": false
+  },
+  "ES|estampado.tie_dye": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.5227,
+   "persistencia": 3,
+   "aceleracion": 0.8509,
+   "volatilidad": 1.339,
+   "saturacion": 0.112,
+   "estacional": false
+  },
+  "ES|estampado.lunares": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.5683,
+   "persistencia": 7,
+   "aceleracion": 0.5425,
+   "volatilidad": 0.642,
+   "saturacion": 0.363,
+   "estacional": false
+  },
+  "ES|estampado.cachemira": {
+   "etiqueta": "estable",
+   "crecimiento": -0.1499,
+   "persistencia": 4,
+   "aceleracion": -0.7691,
+   "volatilidad": 0.585,
+   "saturacion": 0.274,
+   "estacional": false
+  },
+  "ES|estilo.minimalista": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0607,
+   "persistencia": 5,
+   "aceleracion": -0.0006,
+   "volatilidad": 0.139,
+   "saturacion": 0.722,
+   "estacional": false
+  },
+  "ES|estilo.streetwear": {
+   "etiqueta": "estable",
+   "crecimiento": 0.561,
+   "persistencia": 10,
+   "aceleracion": 0.1759,
+   "volatilidad": 0.76,
+   "saturacion": 0.267,
+   "estacional": false
+  },
+  "ES|estilo.vintage": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0855,
+   "persistencia": 3,
+   "aceleracion": 0.0778,
+   "volatilidad": 0.216,
+   "saturacion": 0.41,
+   "estacional": false
+  },
+  "ES|estilo.segunda_mano": {
+   "etiqueta": "estable",
+   "crecimiento": 0.1435,
+   "persistencia": 10,
+   "aceleracion": 0.3765,
+   "volatilidad": 0.202,
+   "saturacion": 0.226,
+   "estacional": false
+  },
+  "ES|estilo.boho": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.0403,
+   "persistencia": 6,
+   "aceleracion": -0.1372,
+   "volatilidad": 0.44,
+   "saturacion": 0.408,
+   "estacional": false
+  },
+  "ES|estilo.y2k": {
+   "etiqueta": "alza_sostenida",
+   "crecimiento": 0.7175,
+   "persistencia": 10,
+   "aceleracion": 0.6763,
+   "volatilidad": 0.85,
+   "saturacion": 0.253,
+   "estacional": false
+  },
+  "ES|estilo.retro": {
+   "etiqueta": "estable",
+   "crecimiento": -0.0596,
+   "persistencia": 4,
+   "aceleracion": 0.041,
+   "volatilidad": 0.282,
+   "saturacion": 0.434,
+   "estacional": false
+  },
+  "ES|estilo.preppy": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.1148,
+   "persistencia": 4,
+   "aceleracion": 0.357,
+   "volatilidad": 0.489,
+   "saturacion": 0.113,
+   "estacional": false
+  },
+  "ES|estilo.grunge": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.265,
+   "persistencia": 5,
+   "aceleracion": 0.3171,
+   "volatilidad": 0.945,
+   "saturacion": 0.211,
+   "estacional": false
+  },
+  "ES|estilo.cottagecore": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.3909,
+   "persistencia": 3,
+   "aceleracion": 0.4344,
+   "volatilidad": 1.066,
+   "saturacion": 0.128,
+   "estacional": false
+  },
+  "ES|estilo.coquette": {
+   "etiqueta": "baja_sostenida",
+   "crecimiento": -0.3018,
+   "persistencia": 1,
+   "aceleracion": 0.2704,
+   "volatilidad": 0.256,
+   "saturacion": 0.098,
+   "estacional": false
+  },
+  "ES|estilo.old_money": {
+   "etiqueta": "estable",
+   "crecimiento": 0.0699,
+   "persistencia": 9,
+   "aceleracion": -0.2462,
+   "volatilidad": 0.159,
+   "saturacion": 0.613,
+   "estacional": false
+  },
+  "ES|estilo.western": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.7795,
+   "persistencia": 8,
+   "aceleracion": 0.4702,
+   "volatilidad": 1.213,
+   "saturacion": 0.188,
+   "estacional": false
+  },
+  "ES|estilo.playa_resort": {
+   "etiqueta": "pico_atencion",
+   "crecimiento": 0.1594,
+   "persistencia": 4,
+   "aceleracion": 0.1565,
+   "volatilidad": 0.797,
+   "saturacion": 0.333,
+   "estacional": false
+  }
+ }
+}

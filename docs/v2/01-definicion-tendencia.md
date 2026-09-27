@@ -55,6 +55,10 @@ Series con un comportamiento conocido, para verificar que las etiquetas hacen lo
 
 Están listados en `taxonomia/control.yaml` y el informe de calidad verifica que cada uno tenga datos utilizables.
 
+## Aprobación
+
+**Aprobada por Ricardo el 2026-09-27**, sin cambios sobre la versión escrita el 2026-09-26. Queda fija para la fase 3; cualquier ajuste posterior se anota abajo con fecha y motivo, y obliga a repetir el backtesting completo.
+
 ## Cambios a esta definición
 
 _(ninguno todavía)_
