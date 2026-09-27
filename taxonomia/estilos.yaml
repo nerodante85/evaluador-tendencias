@@ -1,0 +1,31 @@
+# Estilos. Varios son etiquetas en inglés que la gente busca tal cual (quiet
+# luxury, coquette). Incluye modas pasajeras a propósito (barbiecore,
+# cottagecore): son los casos que el sistema tiene que aprender a separar de
+# una tendencia sostenida.
+tipo: estilo
+nodos:
+  - {id: estilo.minimalista, nombre: Minimalista, q: minimalista}
+  - {id: estilo.athleisure, nombre: Athleisure, q: athleisure, relaciones: [prenda.ropa_deportiva, prenda.jogger]}
+  - {id: estilo.streetwear, nombre: Streetwear, q: streetwear, v1: [8], relaciones: [prenda.sudadera, corte.oversize]}
+  - {id: estilo.vintage, nombre: Vintage, q: ropa vintage, v1: [7]}
+  - {id: estilo.segunda_mano, nombre: Segunda mano, q: ropa de segunda mano, v1: [7]}
+  - {id: estilo.boho, nombre: Boho, q: boho}
+  - {id: estilo.y2k, nombre: Y2K, q: y2k, relaciones: [corte.tiro_bajo, prenda.crop_top]}
+  - {id: estilo.retro, nombre: Retro, q: ropa retro}
+  - {id: estilo.preppy, nombre: Preppy, q: preppy}
+  - {id: estilo.grunge, nombre: Grunge, q: grunge}
+  - {id: estilo.cottagecore, nombre: Cottagecore, q: cottagecore}
+  - {id: estilo.coquette, nombre: Coquette, q: coquette, relaciones: [tela.encaje, prenda.corse]}
+  - {id: estilo.balletcore, nombre: Balletcore, q: balletcore, relaciones: [tela.tul]}
+  - {id: estilo.gorpcore, nombre: Gorpcore, q: gorpcore, relaciones: [prenda.pantalon_cargo]}
+  - {id: estilo.quiet_luxury, nombre: Quiet luxury, q: quiet luxury}
+  - {id: estilo.old_money, nombre: Old money, q: old money, relaciones: [prenda.blazer]}
+  - {id: estilo.dark_academia, nombre: Dark academia, q: dark academia}
+  - {id: estilo.barbiecore, nombre: Barbiecore, q: barbiecore}
+  - {id: estilo.western, nombre: Western, q: western}
+  - {id: estilo.normcore, nombre: Normcore, q: normcore}
+  - {id: estilo.sostenible, nombre: Moda sostenible, q: moda sostenible, v1: [12], relaciones: [tela.reciclada, tela.algodon_organico]}
+  - {id: estilo.playa_resort, nombre: Playa y resort, q: ropa de playa, v1: [24], relaciones: [prenda.traje_bano, tela.lino]}
+  - {id: estilo.mob_wife, nombre: Mob wife, q: mob wife}
+  - {id: estilo.clean_girl, nombre: Clean girl, q: clean girl}
+  - {id: estilo.utilitario, nombre: Utilitario, q: estilo utilitario, relaciones: [prenda.pantalon_cargo]}

@@ -1,0 +1,37 @@
+# Colores. `hex` es el color de referencia para mostrarlo; `familia` agrupa
+# para la navegación. Se miden por el nombre del color dentro de la categoría
+# Ropa de Google Trends (así "negro" cuenta búsquedas de ropa negra, no del
+# adjetivo suelto). Familias: neutro, marron, azul, verde, amarillo, naranja,
+# rojo, rosa, morado, metalico.
+tipo: color
+nodos:
+  - {id: color.negro, nombre: Negro, q: negro, hex: "#111111", familia: neutro}
+  - {id: color.blanco, nombre: Blanco, q: blanco, hex: "#F5F5F0", familia: neutro}
+  - {id: color.beige, nombre: Beige y arena, q: beige, hex: "#D9C7A7", familia: neutro, v1: [4]}
+  - {id: color.crema, nombre: Crema y marfil, q: crema, hex: "#F1E7D0", familia: neutro}
+  - {id: color.gris, nombre: Gris, q: gris, hex: "#8A8D91", familia: neutro}
+  - {id: color.camel, nombre: Camel, q: camel, hex: "#B98A4E", familia: marron}
+  - {id: color.marron, nombre: Marrón, q: {CO: marrón, MX: café, ES: marrón}, hex: "#6B4A34", familia: marron}
+  - {id: color.chocolate, nombre: Chocolate, q: chocolate, hex: "#4A2C21", familia: marron}
+  - {id: color.azul_marino, nombre: Azul marino, q: azul marino, hex: "#1B2A4A", familia: azul}
+  - {id: color.azul_cielo, nombre: Azul cielo, q: azul cielo, hex: "#8DB9E0", familia: azul}
+  - {id: color.azul_petroleo, nombre: Azul petróleo, q: azul petróleo, hex: "#1F4E5F", familia: azul, v1: [3]}
+  - {id: color.azul_electrico, nombre: Azul eléctrico, q: azul eléctrico, hex: "#2A5BFF", familia: azul, v1: [30]}
+  - {id: color.turquesa, nombre: Turquesa, q: turquesa, hex: "#2BB5B0", familia: azul}
+  - {id: color.verde_oliva, nombre: Verde oliva, q: verde oliva, hex: "#5B6B47", familia: verde, v1: [1]}
+  - {id: color.verde_esmeralda, nombre: Verde esmeralda, q: verde esmeralda, hex: "#0E7A55", familia: verde}
+  - {id: color.verde_menta, nombre: Verde menta, q: verde menta, hex: "#A8DCC3", familia: verde}
+  - {id: color.verde_salvia, nombre: Verde salvia, q: verde salvia, hex: "#9CAF88", familia: verde}
+  - {id: color.mostaza, nombre: Mostaza, q: mostaza, hex: "#C9A227", familia: amarillo}
+  - {id: color.mantequilla, nombre: Amarillo mantequilla, q: amarillo mantequilla, hex: "#F2E3A5", familia: amarillo, v1: [4]}
+  - {id: color.naranja, nombre: Naranja, q: naranja, hex: "#F28C28", familia: naranja}
+  - {id: color.terracota, nombre: Terracota, q: terracota, hex: "#B2542D", familia: naranja, v1: [5]}
+  - {id: color.coral, nombre: Coral, q: coral, hex: "#F26B5B", familia: naranja}
+  - {id: color.rojo, nombre: Rojo, q: rojo, hex: "#C22E22", familia: rojo, v1: [26]}
+  - {id: color.borgona, nombre: Borgoña y vino, q: borgoña, hex: "#6B2338", familia: rojo, v1: [2]}
+  - {id: color.rosa, nombre: Rosa, q: rosa, hex: "#F4A6BD", familia: rosa}
+  - {id: color.fucsia, nombre: Fucsia, q: fucsia, hex: "#E4007C", familia: rosa, v1: [6]}
+  - {id: color.lavanda, nombre: Lavanda y lila, q: lavanda, hex: "#B8A1D9", familia: morado, v1: [5]}
+  - {id: color.morado, nombre: Morado, q: morado, hex: "#6A2C91", familia: morado}
+  - {id: color.dorado, nombre: Dorado, q: dorado, hex: "#C9A24A", familia: metalico}
+  - {id: color.plateado, nombre: Plateado, q: plateado, hex: "#B8BEC6", familia: metalico}

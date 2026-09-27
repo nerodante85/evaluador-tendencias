@@ -1,0 +1,40 @@
+# Prendas. `q` es la consulta que se mide en Google Trends: un texto si es
+# igual en los tres mercados, o un mapa CO/MX/ES cuando el vocabulario cambia.
+# `v1` lista los ids de las señales de la v1 que este nodo continúa.
+tipo: prenda
+nodos:
+  - {id: prenda.camiseta, nombre: Camiseta, q: {CO: camiseta, MX: playera, ES: camiseta}, relaciones: [tela.algodon, estampado.grafico]}
+  - {id: prenda.camisa, nombre: Camisa, q: camisa, relaciones: [tela.lino, estampado.rayas]}
+  - {id: prenda.blusa, nombre: Blusa, q: blusa, relaciones: [tela.satin, corte.manga_globo]}
+  - {id: prenda.polo, nombre: Polo, q: polo}
+  - {id: prenda.crop_top, nombre: Crop top, q: crop top, relaciones: [estilo.y2k]}
+  - {id: prenda.corse, nombre: Corsé, q: corset, relaciones: [estilo.coquette]}
+  - {id: prenda.vestido, nombre: Vestido, q: vestido, relaciones: [estampado.floral]}
+  - {id: prenda.falda, nombre: Falda, q: falda, relaciones: [corte.midi, corte.mini]}
+  - {id: prenda.pantalon, nombre: Pantalón, q: pantalón}
+  - {id: prenda.jean, nombre: Jean, q: {CO: jean, MX: jeans, ES: vaqueros}, padre: prenda.pantalon, relaciones: [tela.denim, corte.pierna_ancha, corte.baggy, corte.skinny]}
+  - {id: prenda.short, nombre: Short, q: {CO: short, MX: shorts, ES: shorts}}
+  - {id: prenda.bermuda, nombre: Bermuda, q: bermuda, padre: prenda.short}
+  - {id: prenda.leggins, nombre: Leggins, q: leggins, relaciones: [prenda.ropa_deportiva]}
+  - {id: prenda.jogger, nombre: Jogger, q: jogger, padre: prenda.pantalon, relaciones: [estilo.athleisure]}
+  - {id: prenda.pantalon_cargo, nombre: Pantalón cargo, q: pantalón cargo, padre: prenda.pantalon, relaciones: [estilo.utilitario, estilo.gorpcore]}
+  - {id: prenda.pantalon_vestir, nombre: Pantalón de vestir, q: {CO: pantalón de vestir, MX: pantalón de vestir, ES: pantalón de traje}, padre: prenda.pantalon, relaciones: [corte.sastreria]}
+  - {id: prenda.capri, nombre: Pantalón capri, q: pantalón capri, padre: prenda.pantalon, v1: [20]}
+  - {id: prenda.enterizo, nombre: Enterizo, q: {CO: enterizo, MX: jumpsuit, ES: mono mujer}}
+  - {id: prenda.overol, nombre: Overol, q: {CO: overol, MX: overol, ES: peto}, relaciones: [tela.denim]}
+  - {id: prenda.blazer, nombre: Blazer, q: blazer, v1: [10], relaciones: [corte.sastreria, estilo.old_money]}
+  - {id: prenda.chaqueta, nombre: Chaqueta, q: {CO: chaqueta, MX: chamarra, ES: chaqueta}}
+  - {id: prenda.chaqueta_cuero, nombre: Chaqueta de cuero, q: {CO: chaqueta de cuero, MX: chamarra de cuero, ES: chaqueta de cuero}, padre: prenda.chaqueta, relaciones: [tela.cuero, tela.cuero_vegano]}
+  - {id: prenda.chaqueta_bomber, nombre: Chaqueta bomber, q: {CO: chaqueta bomber, MX: chamarra bomber, ES: bomber}, padre: prenda.chaqueta}
+  - {id: prenda.chaqueta_denim, nombre: Chaqueta denim, q: {CO: chaqueta de jean, MX: chamarra de mezclilla, ES: chaqueta vaquera}, padre: prenda.chaqueta, relaciones: [tela.denim]}
+  - {id: prenda.abrigo, nombre: Abrigo, q: abrigo, relaciones: [tela.lana]}
+  - {id: prenda.gabardina, nombre: Gabardina, q: gabardina, padre: prenda.abrigo}
+  - {id: prenda.parka, nombre: Parka, q: parka, padre: prenda.abrigo}
+  - {id: prenda.chaleco, nombre: Chaleco, q: chaleco}
+  - {id: prenda.sudadera, nombre: Sudadera / buzo, q: {CO: buzo, MX: sudadera, ES: sudadera}, relaciones: [corte.oversize, estilo.streetwear]}
+  - {id: prenda.sueter, nombre: Suéter, q: {CO: suéter, MX: suéter, ES: jersey}, relaciones: [tela.lana, tela.punto]}
+  - {id: prenda.cardigan, nombre: Cárdigan, q: cardigan, padre: prenda.sueter, relaciones: [tela.punto]}
+  - {id: prenda.traje_bano, nombre: Traje de baño, q: {CO: vestido de baño, MX: traje de baño, ES: bañador}, relaciones: [estilo.playa_resort]}
+  - {id: prenda.bikini, nombre: Bikini, q: bikini, padre: prenda.traje_bano}
+  - {id: prenda.ropa_deportiva, nombre: Ropa deportiva, q: ropa deportiva, relaciones: [estilo.athleisure, tela.tecnica]}
+  - {id: prenda.conjunto, nombre: Conjunto de dos piezas, q: conjunto dos piezas}

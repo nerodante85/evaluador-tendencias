@@ -1,0 +1,17 @@
+tipo: estampado
+nodos:
+  - {id: estampado.floral, nombre: Floral, q: estampado floral, relaciones: [prenda.vestido]}
+  - {id: estampado.rayas, nombre: Rayas, q: rayas, relaciones: [prenda.camisa]}
+  - {id: estampado.cuadros, nombre: Cuadros, q: cuadros, v1: [14], relaciones: [prenda.camisa]}
+  - {id: estampado.vichy, nombre: Vichy / gingham, q: {CO: gingham, MX: gingham, ES: vichy}, padre: estampado.cuadros, v1: [14]}
+  - {id: estampado.tartan, nombre: Tartán, q: tartán, padre: estampado.cuadros}
+  - {id: estampado.animal_print, nombre: Animal print, q: animal print, v1: [13]}
+  - {id: estampado.leopardo, nombre: Leopardo, q: leopardo, padre: estampado.animal_print, v1: [13]}
+  - {id: estampado.tie_dye, nombre: Tie dye, q: tie dye}
+  - {id: estampado.geometrico, nombre: Geométrico, q: estampado geométrico}
+  - {id: estampado.abstracto, nombre: Abstracto, q: estampado abstracto}
+  - {id: estampado.lunares, nombre: Lunares, q: lunares}
+  - {id: estampado.tropical, nombre: Tropical, q: estampado tropical, relaciones: [estilo.playa_resort]}
+  - {id: estampado.cachemira, nombre: Cachemira / paisley, q: {CO: paisley, MX: paisley, ES: cachemira}}
+  - {id: estampado.camuflado, nombre: Camuflado, q: camuflado, relaciones: [prenda.pantalon_cargo]}
+  - {id: estampado.grafico, nombre: Estampado gráfico, q: estampado gráfico, relaciones: [prenda.camiseta]}

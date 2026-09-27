@@ -51,6 +51,28 @@ septiembre en `historial/`. Es la evidencia que sostiene todo el plan comercial
 (`docs/estrategia-comercializacion.md`): sin eso, no hay caso que mostrarle a un
 cliente.
 
+## Radar 2.0 (en construcción)
+
+Desde el 2026-09-26 se construye una segunda versión del producto, pensada para
+**empresarios de la confección y diseñadoras** en Colombia, México y España — ya
+no para el taller de Ricardo ni para Conecta Moda (eso describe el origen de la
+v1). Plan y decisiones: `docs/v2/`. Reglas para trabajar en ella:
+
+- **La v1 no se toca hasta la comparación del 9 de noviembre de 2026.** Eso
+  incluye `computeDecision()`, `trends.json`, `trends_config.json` y los dos
+  scripts `fetch_*.py`. La v2 vive aparte: `pipeline/` (Python), `taxonomia/`,
+  `data/v2/` y, desde la fase 5, `src/data/v2/`.
+- **`data/v2/raw/` es evidencia, como `historial/`**: son las series tal como las
+  devolvió Google. No se editan ni se limpian a mano; si una serie está mal, se
+  arregla la consulta en `taxonomia/` y se vuelve a descargar.
+- **La definición de "tendencia sostenida"** (`docs/v2/01-definicion-tendencia.md`)
+  se fijó antes de ajustar modelos para que el backtesting no sea circular. No
+  la cambies para que un resultado salga mejor: si hay que cambiarla, se anota
+  ahí con fecha y motivo y se repite el backtesting completo.
+- `pytrends` está archivado (abr. 2025). Nada fuera de `pipeline/fuentes/` debe
+  importarlo.
+- Pruebas: `python -m pytest pipeline`.
+
 ## Al publicar
 
 El sitio es **público** desde el momento en que GitHub Pages está activo. El día

@@ -1,0 +1,33 @@
+# Telas, materiales y técnicas textiles (crochet y bordado entran aquí porque
+# así los trataba la v1: se compran como material o insumo).
+tipo: tela
+nodos:
+  - {id: tela.algodon, nombre: Algodón, q: algodón}
+  - {id: tela.algodon_organico, nombre: Algodón orgánico, q: algodón orgánico, padre: tela.algodon, v1: [11]}
+  - {id: tela.algodon_pima, nombre: Algodón pima, q: algodón pima, padre: tela.algodon, v1: [25]}
+  - {id: tela.denim, nombre: Denim, q: {CO: denim, MX: mezclilla, ES: denim}, relaciones: [prenda.jean, prenda.chaqueta_denim]}
+  - {id: tela.lino, nombre: Lino, q: lino, v1: [11], relaciones: [prenda.camisa, estilo.playa_resort]}
+  - {id: tela.lana, nombre: Lana, q: lana, relaciones: [prenda.abrigo, prenda.sueter]}
+  - {id: tela.cuero, nombre: Cuero, q: cuero, relaciones: [prenda.chaqueta_cuero]}
+  - {id: tela.cuero_vegano, nombre: Cuero vegano, q: {CO: cuero vegano, MX: piel vegana, ES: polipiel}, relaciones: [prenda.chaqueta_cuero]}
+  - {id: tela.seda, nombre: Seda, q: seda}
+  - {id: tela.satin, nombre: Satín, q: {CO: satín, MX: satín, ES: satén}, relaciones: [prenda.blusa, prenda.vestido]}
+  - {id: tela.terciopelo, nombre: Terciopelo, q: terciopelo}
+  - {id: tela.punto, nombre: Punto, q: tejido de punto, relaciones: [prenda.sueter, prenda.cardigan]}
+  - {id: tela.poliester, nombre: Poliéster, q: poliéster}
+  - {id: tela.elastano, nombre: Licra / elastano, q: {CO: licra, MX: licra, ES: elastano}}
+  - {id: tela.viscosa, nombre: Viscosa, q: viscosa}
+  - {id: tela.encaje, nombre: Encaje, q: encaje, relaciones: [estilo.coquette]}
+  - {id: tela.tul, nombre: Tul, q: tul, relaciones: [estilo.balletcore]}
+  - {id: tela.pana, nombre: Pana, q: pana}
+  - {id: tela.franela, nombre: Franela, q: franela}
+  - {id: tela.reciclada, nombre: Tela reciclada, q: tela reciclada, v1: [12], relaciones: [estilo.sostenible]}
+  - {id: tela.tencel, nombre: Tencel, q: tencel}
+  - {id: tela.alpaca, nombre: Alpaca, q: alpaca, v1: [25]}
+  - {id: tela.crochet, nombre: Crochet, q: crochet, v1: [21]}
+  - {id: tela.bordado, nombre: Bordado, q: bordado, v1: [22]}
+  - {id: tela.fibras_naturales, nombre: Fibras naturales, q: fibras naturales, v1: [23], relaciones: [estilo.sostenible]}
+  - {id: tela.tecnica, nombre: Tela técnica / dry fit, q: {CO: tela dry fit, MX: tela dry fit, ES: tejido técnico}, v1: [27], relaciones: [prenda.ropa_deportiva]}
+  - {id: tela.neopreno, nombre: Neopreno, q: neopreno}
+  - {id: tela.gasa, nombre: Gasa, q: gasa}
+  - {id: tela.organza, nombre: Organza, q: organza}

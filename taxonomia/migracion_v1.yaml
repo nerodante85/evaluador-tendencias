@@ -1,0 +1,12 @@
+# Destino de las 30 señales de la v1 en la taxonomía de la v2. Los nodos que
+# continúan una señal lo declaran con `v1: [id]`. Aquí van solo las señales que
+# NO tienen nodo, con el motivo. Una prueba verifica que cada id del 1 al 30
+# esté en un lugar o en el otro.
+fuera_de_alcance:
+  15: "Guochao: se medía en China con caracteres chinos. Fuera de los mercados CO/MX/ES."
+  16: "Hanfu: se medía en China. Fuera de los mercados CO/MX/ES."
+  17: "Streetwear coreano: se medía en Corea. Fuera de los mercados CO/MX/ES."
+  18: "Hanbok: se medía en Corea. Fuera de los mercados CO/MX/ES."
+  19: "Harajuku/Y2K: se medía en Japón. El componente Y2K sí continúa como estilo.y2k, pero la señal japonesa no."
+  28: "Trazabilidad textil: es un atributo de proveedor, no algo que la gente busque como moda."
+  29: "Oferta masiva china: es una tendencia de costo, no de estilo (así lo decía su propia nota)."

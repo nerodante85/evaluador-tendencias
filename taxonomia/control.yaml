@@ -1,0 +1,22 @@
+# Casos de control: series con un comportamiento que se conoce de antemano,
+# para sanear el método (ver docs/v2/01-definicion-tendencia.md). Son
+# hipótesis, no verdad de terreno: si los datos dicen otra cosa, mandan los datos.
+control:
+  pico:
+    - estilo.barbiecore
+    - estampado.tie_dye
+    - estilo.cottagecore
+    - estilo.mob_wife
+  alza:
+    - prenda.pantalon_cargo
+    - corte.baggy
+    - corte.pierna_ancha
+  baja:
+    - corte.skinny
+  estacional:
+    - prenda.traje_bano
+    - prenda.abrigo
+    - tela.lana
+  estable:
+    - prenda.camiseta
+    - tela.algodon

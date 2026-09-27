@@ -1,0 +1,6 @@
+# Dependencias del pipeline de Radar 2.0. Suma a las de la v1 (pytrends, pandas,
+# requests) lo que la v1 no necesita; por eso vive aparte y no toca el
+# requirements.txt de la raíz que usan los .bat.
+-r ../requirements.txt
+pyyaml>=6.0
+pytest>=8.0

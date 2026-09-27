@@ -1,0 +1,8 @@
+# Mercados de Radar 2.0. `hl` es el idioma de la interfaz de Google Trends y
+# `tz` el desfase en minutos que espera pytrends (positivo = al oeste de UTC).
+# Con datos mensuales la zona horaria casi no importa, pero se fija para que
+# las descargas sean reproducibles.
+mercados:
+  - {codigo: CO, nombre: Colombia, hl: es-CO, tz: 300}
+  - {codigo: MX, nombre: México, hl: es-MX, tz: 360}
+  - {codigo: ES, nombre: España, hl: es-ES, tz: -60}

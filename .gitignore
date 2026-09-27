@@ -19,3 +19,6 @@ venv/
 # Sistema
 .DS_Store
 Thumbs.db
+
+# Pruebas de Python
+.pytest_cache/

@@ -1,0 +1,28 @@
+# Cortes y siluetas. Se miden como consulta de búsqueda, así que varios están
+# expresados con la prenda a la que casi siempre acompañan (jean, falda, vestido).
+tipo: corte
+nodos:
+  - {id: corte.oversize, nombre: Oversize, q: oversize, v1: [8], relaciones: [prenda.sudadera, prenda.camiseta]}
+  - {id: corte.slim, nombre: Slim fit, q: slim fit}
+  - {id: corte.skinny, nombre: Skinny / pitillo, q: {CO: jean skinny, MX: jeans skinny, ES: vaqueros pitillo}, relaciones: [prenda.jean]}
+  - {id: corte.recto, nombre: Recto, q: {CO: jean recto, MX: jeans rectos, ES: vaqueros rectos}, relaciones: [prenda.jean]}
+  - {id: corte.pierna_ancha, nombre: Pierna ancha, q: {CO: jean pierna ancha, MX: pantalón ancho, ES: pantalón ancho}, relaciones: [prenda.jean, prenda.pantalon]}
+  - {id: corte.baggy, nombre: Baggy, q: baggy, relaciones: [prenda.jean]}
+  - {id: corte.bota_ancha, nombre: Bota ancha / campana, q: {CO: jean bota ancha, MX: jeans acampanados, ES: vaqueros campana}, v1: [9], relaciones: [prenda.jean]}
+  - {id: corte.tiro_alto, nombre: Tiro alto, q: {CO: tiro alto, MX: cintura alta, ES: cintura alta}, relaciones: [prenda.jean]}
+  - {id: corte.tiro_bajo, nombre: Tiro bajo, q: tiro bajo, relaciones: [prenda.jean, estilo.y2k]}
+  - {id: corte.mom, nombre: Mom fit, q: mom jeans, relaciones: [prenda.jean]}
+  - {id: corte.entallado, nombre: Entallado, q: {CO: entallado, MX: entallado, ES: ajustado}}
+  - {id: corte.asimetrico, nombre: Asimétrico, q: vestido asimétrico, relaciones: [prenda.vestido]}
+  - {id: corte.midi, nombre: Midi, q: falda midi, relaciones: [prenda.falda]}
+  - {id: corte.maxi, nombre: Maxi / largo, q: vestido largo, relaciones: [prenda.vestido]}
+  - {id: corte.mini, nombre: Mini, q: minifalda, relaciones: [prenda.falda]}
+  - {id: corte.sastreria, nombre: Sastrería, q: traje sastre, relaciones: [prenda.blazer, prenda.pantalon_vestir]}
+  - {id: corte.plisado, nombre: Plisado, q: plisado}
+  - {id: corte.drapeado, nombre: Drapeado, q: drapeado}
+  - {id: corte.cut_out, nombre: Cut out, q: cut out}
+  - {id: corte.espalda_descubierta, nombre: Espalda descubierta, q: espalda descubierta}
+  - {id: corte.cuello_alto, nombre: Cuello alto, q: cuello alto}
+  - {id: corte.manga_globo, nombre: Manga globo, q: manga globo, relaciones: [prenda.blusa]}
+  - {id: corte.hombros_descubiertos, nombre: Hombros descubiertos, q: {CO: hombros descubiertos, MX: hombros descubiertos, ES: hombros al aire}}
+  - {id: corte.strapless, nombre: Strapless, q: strapless}
