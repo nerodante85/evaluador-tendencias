@@ -30,7 +30,9 @@ Sin definir. Se difiere y no bloquea la fase 1, que no cuesta nada. Para que la 
 | Proveedores de pago (SerpApi, DataForSEO, Glimpse) | No evaluados. Costo desconocido. | Respaldo natural si `pytrends` deja de funcionar. Depende del presupuesto. |
 | Forks comunitarios (`trendspy`, `pytrends-modern`) | No evaluados. | Afirmación de terceros de que están mantenidos. Probar antes de depender. |
 | Redes sociales | Fuera del alcance. | Sin acceso legal ni API utilizable. Se reevalúa si aparece. |
-| Pinterest Trends, MercadoLibre, catálogos, pasarelas, Wikipedia | Sin verificar. | Fase 6. Cada una necesita revisión de acceso y términos de uso antes de comprometerla. |
+| Wikipedia Pageviews | **Verificado (fase 6, 2026-09-27): acceso gratis y sin llave, funciona.** No se integró: la búsqueda automática de artículos no resuelve términos de moda específicos (necesita curación manual, nodo por nodo), el volumen es bajo/ruidoso comparado con Trends, y no se puede separar por país. Adaptador probado en `pipeline/fuentes/wikipedia.py`, sin conectar al pipeline. Detalle: `docs/v2/revision-fuentes-fase6.md`. | Pausada — no vale la pena para los ~150 nodos; posible proyecto chico aparte para ~15-20 conceptos amplios, a decisión de Ricardo. |
+| MercadoLibre | **Verificado (fase 6, 2026-09-27): ya NO es pública.** Los endpoints de tendencias y búsqueda que se documentaban como accesibles sin llave devuelven 403 hoy — exige una aplicación de desarrollador registrada. | Pausada, a la espera de que Ricardo decida si registra una app (requiere su propia cuenta y aceptar términos). |
+| Pinterest Trends, catálogos, pasarelas | Sin verificar. | Fase 6, próxima ronda. |
 
 Consecuencia de diseño: **una sola fuente en la fase 1**. Por eso el Trend Score de la fase 4 solo podrá calcular los factores medibles con búsquedas y deberá mostrar cuántos de los ocho tiene disponibles.
 
