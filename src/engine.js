@@ -255,6 +255,82 @@ export function computeDecisionPropia(s) {
 
 export const decisionDe = (t) => (t.propia ? computeDecisionPropia(t) : computeDecision(t));
 
+// --- Patrón de la serie: ¿esto parece tendencia real, o algo más? ---
+//
+// `computeDecision()` (arriba) decide si comprar, y ese cálculo NO cambia:
+// es la misma fórmula desde antes de la foto de septiembre en `historial/`,
+// y tiene que seguir siéndolo hasta la comparación del 9 de noviembre — ver
+// CLAUDE.md. Esta función es un indicador NUEVO, en paralelo, que no toca
+// el puntaje de ninguna señal: solo lee `yoy`, `persistencia` y `estacional`,
+// que `fetch_trends.py` ya calcula desde hace tiempo pero que el panel nunca
+// mostraba (hallazgo H-01 de la auditoría del 2026-09-27, ver
+// docs/auditoria-2026-09-27-prelanzamiento/AUDIT-REPORT.md).
+//
+// A diferencia del motor de Radar 2.0 (pipeline/senales.py), esta lectura NO
+// pasó por backtesting — es una clasificación simple y directa de los mismos
+// campos, para dar contexto honesto, no una probabilidad calibrada. Por eso
+// nunca se mezcla con el puntaje de compra ni cambia la etiqueta de decisión.
+export const PATRON_LABEL = {
+  estacional: "Patrón estacional",
+  tendencia: "Tendencia sostenida",
+  pico: "Pico aislado",
+  declive: "Caída sostenida",
+};
+
+export const PATRON_COLOR = {
+  estacional: "var(--warn)",
+  tendencia: "var(--pos)",
+  pico: "var(--ink-soft)",
+  declive: "var(--neg)",
+};
+
+const PERSISTENCIA_ALTA = 9; // de 12 meses — mismo umbral que usa pipeline/senales.py de Radar 2.0
+const PERSISTENCIA_BAJA = 2;
+const YOY_CRECE = 15; // % — más laxo que el 25% de Radar 2.0: v1 mide 24 meses, no toda la historia
+const YOY_CAE = -30;
+
+export function clasificarPatron(t) {
+  // Las señales propias del autodiagnóstico no vienen de Trends: no tienen
+  // yoy/persistencia/estacional, así que no hay nada que clasificar aquí.
+  if (t.propia || t.sinDatosSuficientes) return null;
+
+  if (t.estacional) {
+    return {
+      tipo: "estacional",
+      detalle:
+        "El pico de los últimos 12 meses coincide con el mismo mes del año pasado y no hay crecimiento interanual que lo explique mejor: probablemente es de calendario, no de tendencia. Comprar porque \"está subiendo\" ahora mismo puede ser comprar tarde y caro.",
+    };
+  }
+
+  if (t.persistencia == null) return null;
+
+  if (t.persistencia >= PERSISTENCIA_ALTA && (t.yoy == null || t.yoy >= YOY_CRECE)) {
+    return {
+      tipo: "tendencia",
+      detalle: `Se mantuvo por encima de su nivel base ${t.persistencia} de los últimos 12 meses${
+        t.yoy != null ? ` y creció ${t.yoy}% contra el mismo trimestre del año pasado` : ""
+      } — no es un pico aislado.`,
+    };
+  }
+
+  if (t.persistencia <= PERSISTENCIA_BAJA && t.momentum >= 15) {
+    return {
+      tipo: "pico",
+      detalle:
+        "El nivel actual casi no se sostuvo en los últimos 12 meses — el momentum de hoy puede ser un pico de atención puntual, no una tendencia que vaya a seguir.",
+    };
+  }
+
+  if (t.yoy != null && t.yoy <= YOY_CAE && t.persistencia <= 4) {
+    return {
+      tipo: "declive",
+      detalle: `Cayó ${Math.abs(t.yoy)}% contra el mismo trimestre del año pasado y no se sostuvo en los últimos 12 meses.`,
+    };
+  }
+
+  return null; // sin patrón claro con esta lectura simple — no se fuerza una etiqueta
+}
+
 export function evaluarEmpresa(adoptadas, propias) {
   const universo = [...TRENDS, ...propias];
   const evaluadas = universo.map((t) => ({ t, dec: decisionDe(t), adoptada: adoptadas.includes(t.id) }));

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { TrendingUp, TrendingDown, Minus, Radar, ChevronDown, Pencil, Check, Plus, X } from "lucide-react";
+import { TrendingUp, TrendingDown, Minus, Radar, ChevronDown, Pencil, Check, Plus, X, Zap, CalendarClock } from "lucide-react";
 
 import { palette, FONT, THEME_CSS } from "./theme.js";
 import {
@@ -24,7 +24,10 @@ import {
   DECISION_COLOR,
   DECISION_BG,
   EVIDENCIA,
+  PATRON_LABEL,
+  PATRON_COLOR,
   computeDecision,
+  clasificarPatron,
   respaldoTela,
   evaluarEmpresa,
   geoNombre,
@@ -90,6 +93,28 @@ function DecisionChip({ label, score }) {
   );
 }
 
+// Chip del patrón de la serie (clasificarPatron en engine.js) — deliberadamente
+// distinto en forma al DecisionChip (contorno punteado, no LED sólido): no es
+// una decisión, es contexto sobre si esto se ve como tendencia real, pico o
+// estacionalidad. Nunca se mezcla con el puntaje de compra.
+const PATRON_ICONO = { tendencia: TrendingUp, declive: TrendingDown, pico: Zap, estacional: CalendarClock };
+
+function PatronChip({ patron }) {
+  if (!patron) return null;
+  const color = PATRON_COLOR[patron.tipo];
+  const Icono = PATRON_ICONO[patron.tipo];
+  return (
+    <span
+      className="inline-flex items-center gap-1 text-[10px] font-mono px-1.5 py-0.5 rounded-sm uppercase"
+      style={{ color, border: `1px dashed ${color}` }}
+      title={patron.detalle}
+    >
+      <Icono size={10} />
+      {PATRON_LABEL[patron.tipo]}
+    </span>
+  );
+}
+
 function SectionTitle({ eyebrow, title, sub }) {
   return (
     <div className="mb-5">
@@ -148,8 +173,51 @@ function DecisionLegend() {
   );
 }
 
+function PatronLegend() {
+  const rows = [
+    { tipo: "tendencia", desc: "Se sostuvo por encima de su nivel base la mayoría de los últimos 12 meses. Es la lectura más parecida a una tendencia real, no un pico." },
+    { tipo: "estacional", desc: "El pico coincide con el mismo mes del año pasado, sin crecimiento interanual que lo explique mejor: probablemente es de calendario, se repite cada año." },
+    { tipo: "pico", desc: "El nivel actual casi no se sostuvo en los últimos 12 meses. Puede desinflarse tan rápido como llegó." },
+    { tipo: "declive", desc: "Cayó fuerte contra el mismo trimestre del año pasado y no se sostuvo." },
+  ];
+  return (
+    <Collapsible label="¿Qué es el sello de patrón junto a cada señal?">
+      <div className="card-flat p-4">
+        <p className="text-xs leading-relaxed mb-2" style={{ color: palette.ink }}>
+          Es un indicador nuevo, separado del puntaje de compra de arriba — <strong>no cambia ni un punto de ninguna
+          señal</strong>. Lee <code>yoy</code> (crecimiento contra el mismo trimestre del año pasado), <code>persistencia</code>
+          (cuántos de los últimos 12 meses se sostuvo por encima de su base) y <code>estacional</code>, que{" "}
+          <code>fetch_trends.py</code> ya calcula desde hace tiempo pero que antes no se mostraba en ningún lado.
+          Existe para responder la pregunta que más importa antes de comprar: ¿esto es una tendencia de verdad, o
+          nada más un pico o un patrón que se repite cada año?
+        </p>
+        <div className="space-y-1.5">
+          {rows.map((r) => {
+            const Icono = PATRON_ICONO[r.tipo];
+            return (
+              <div key={r.tipo} className="flex items-start gap-2.5">
+                <Icono size={13} className="shrink-0 mt-0.5" style={{ color: PATRON_COLOR[r.tipo] }} />
+                <div>
+                  <span className="font-mono text-[10px] font-semibold uppercase tracking-wide" style={{ color: PATRON_COLOR[r.tipo] }}>{PATRON_LABEL[r.tipo]}</span>
+                  <p className="text-xs mt-0.5" style={{ color: palette.inkSoft }}>{r.desc}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <p className="text-[10px] mt-3 pt-3" style={{ color: palette.inkDim, borderTop: `1px dashed ${palette.line}` }}>
+          A diferencia del puntaje de compra, esta lectura no pasó por backtesting todavía — es un contexto simple y
+          directo del dato, no una probabilidad calibrada. Una señal sin sello no tiene un patrón claro con esta
+          lectura, o no tiene los meses de historia suficientes para calcularlo.
+        </p>
+      </div>
+    </Collapsible>
+  );
+}
+
 function SwatchCard({ trend, expanded, onToggle }) {
   const decision = computeDecision(trend);
+  const patron = clasificarPatron(trend);
   return (
     <button
       onClick={onToggle}
@@ -182,6 +250,7 @@ function SwatchCard({ trend, expanded, onToggle }) {
       <div className="flex items-center gap-1.5 mt-2 flex-wrap">
         <DecisionChip label={decision.label} />
         <span className="chip">{SCOPE_LABEL[trend.scope]}</span>
+        <PatronChip patron={patron} />
       </div>
 
       <div className="flex items-end justify-between gap-3 mt-4 pt-3 stitch" style={{ marginTop: "auto" }}>
@@ -213,6 +282,15 @@ function SwatchCard({ trend, expanded, onToggle }) {
 
       {expanded && (
         <div className="mt-4 pt-4" style={{ borderTop: `1px solid ${palette.line}` }}>
+          {patron && (
+            <div className="mb-3 p-2.5 rounded-sm" style={{ border: `1px dashed ${PATRON_COLOR[patron.tipo]}` }}>
+              <p className="font-mono text-[9px] uppercase tracking-wide mb-1 flex items-center gap-1.5" style={{ color: PATRON_COLOR[patron.tipo] }}>
+                {(() => { const I = PATRON_ICONO[patron.tipo]; return <I size={11} />; })()}
+                {PATRON_LABEL[patron.tipo]} — contexto, no parte del puntaje
+              </p>
+              <p className="text-xs leading-relaxed" style={{ color: palette.ink }}>{patron.detalle}</p>
+            </div>
+          )}
           <div className="mb-3">
             <p className="font-mono text-[9px] uppercase tracking-wide mb-1" style={{ color: palette.inkDim }}>
               Por qué "{decision.label}"
@@ -1298,6 +1376,7 @@ export default function Dashboard() {
 
         {/* Decision engine legend */}
         <DecisionLegend />
+        <PatronLegend />
 
         {/* Filters */}
         <div className="flex gap-2 mt-5 flex-wrap items-center">

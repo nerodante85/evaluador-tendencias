@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/Dashboard.jsx"
+        ],
+        "createdAt": "2026-09-27T14:28:48.314Z",
+        "reason": "user confirmed: borde izquierdo de color es un motivo deliberado del sistema de diseño 'Radar Terminal' (PlanMateriales, CriteriosYCalendario, ListaSenales, Autodiagnostico), aprobado por Ricardo en una sesión anterior de rediseño, no una regresión de esta sesión"
+      }
+    ]
+  }
+}
