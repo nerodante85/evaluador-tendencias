@@ -4,3 +4,4 @@
 -r ../requirements.txt
 pyyaml>=6.0
 pytest>=8.0
+statsmodels>=0.14  # Holt-Winters y SARIMA (fase 3, pipeline/modelos.py)

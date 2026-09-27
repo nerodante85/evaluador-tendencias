@@ -14,6 +14,7 @@ import sys
 from .calidad import escribir_informe, evaluar
 from .historia import DIR_RAW, descargar_historia
 from .fuentes.trends import BackendPytrends
+from .reporte_backtesting import main as backtest_main
 from .reporte_senales import main as senales_main
 from .taxonomia import RAIZ, cargar, validar
 
@@ -37,6 +38,9 @@ def main(argv=None):
     h.add_argument("--refrescar", action="store_true", help="volver a descargar aunque ya exista")
     sub.add_parser("calidad", help="genera el informe de calidad")
     sub.add_parser("senales", help="corre el motor de señales (fase 2) y genera su informe")
+    b = sub.add_parser("backtest", help="corre el backtesting (fase 3) sobre una muestra y genera su informe")
+    b.add_argument("--series", type=int, default=36, help="cuántas series (mercado x nodo) incluir en la muestra")
+    b.add_argument("--cortes", type=int, default=5, help="cuántos puntos de corte probar por serie")
     a = p.parse_args(argv)
 
     tax = cargar()
@@ -79,6 +83,10 @@ def main(argv=None):
 
     if a.cmd == "senales":
         senales_main()
+        return 0
+
+    if a.cmd == "backtest":
+        backtest_main(n_series=a.series, n_cortes=a.cortes)
         return 0
 
 

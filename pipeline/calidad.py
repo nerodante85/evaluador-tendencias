@@ -37,18 +37,25 @@ def _media(xs):
     return sum(xs) / len(xs) if xs else 0.0
 
 
+def inicio_historia_util(valores, piso=PISO_RUIDO):
+    """Índice (0-based) donde arranca la historia útil de la serie: el
+    primer mes con volumen real (>= piso) dentro de la primera ventana de 12
+    meses cuya media ya cruza el piso. None si la serie nunca lo cruza.
+
+    Antes de ese punto es ruido de bajo volumen — no cuenta como historia
+    (ver el módulo). El backtesting (pipeline/backtesting.py) usa esto para
+    no calentar los modelos con años de ceros antes de que la señal exista."""
+    n = len(valores)
+    for i in range(11, n):
+        if _media(valores[i - 11 : i + 1]) >= piso:
+            return next(j for j in range(i - 11, i + 1) if valores[j] >= piso)
+    return None
+
+
 def metricas(valores):
     """Métricas de una serie mensual (lista de enteros, del más viejo al más nuevo)."""
     n = len(valores)
-    # Media móvil de los 12 meses que TERMINAN en el mes i. La historia útil
-    # empieza en el primer mes con volumen real (>= piso) dentro de la primera
-    # ventana que cruza el piso: así una serie que arranca tarde no se lleva
-    # de regalo los meses de ruido que la preceden.
-    inicio = None
-    for i in range(11, n):
-        if _media(valores[i - 11 : i + 1]) >= PISO_RUIDO:
-            inicio = next(j for j in range(i - 11, i + 1) if valores[j] >= PISO_RUIDO)
-            break
+    inicio = inicio_historia_util(valores)
     ultimos60 = valores[-60:]
     ultimos36 = valores[-36:]
     return {
