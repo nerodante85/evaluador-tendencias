@@ -7,7 +7,9 @@ from pipeline.backtesting import (
     emparejar_con_baseline,
     evaluar_serie,
     frecuencia_clase_mayoritaria,
+    matriz_confusion_por_clase,
     muestra_estratificada,
+    precision_recall_por_clase,
 )
 from pipeline.taxonomia import Mercado, Nodo, Taxonomia
 
@@ -216,6 +218,66 @@ def test_sin_casos_emparejados_para_un_modelo_no_hay_veredicto():
     resultados = _par("sarima", 12, 0, True, True)
     veredicto = comparar_contra_baseline(resultados, horizontes=(6,), modelos={"naive_estacional": None, "sarima": None})
     assert ("sarima", 6) not in veredicto
+
+
+# --- matriz_confusion_por_clase / precision_recall_por_clase ---
+
+
+def _fila(modelo, horizonte, etiqueta_real, etiqueta_pred):
+    return Resultado("CO", "x", 0, horizonte, modelo, etiqueta_real, etiqueta_pred, 10.0, 10.0)
+
+
+def test_precision_y_recall_de_un_modelo_perfecto_son_uno():
+    resultados = [
+        _fila("m", 12, "alza_sostenida", "alza_sostenida"),
+        _fila("m", 12, "estable", "estable"),
+        _fila("m", 12, "baja_sostenida", "baja_sostenida"),
+    ]
+    pr = precision_recall_por_clase(resultados, horizontes=(12,))
+    for c in ("alza_sostenida", "estable", "baja_sostenida"):
+        assert pr[("m", 12)][c]["precision"] == 1.0
+        assert pr[("m", 12)][c]["recall"] == 1.0
+
+
+def test_falso_positivo_baja_la_precision_no_el_recall_de_la_clase_afectada():
+    # el modelo dice "alza_sostenida" dos veces: una vez acierta, una vez la
+    # serie en realidad era "estable" — un falso positivo de alza.
+    resultados = [
+        _fila("m", 12, "alza_sostenida", "alza_sostenida"),
+        _fila("m", 12, "estable", "alza_sostenida"),
+    ]
+    pr = precision_recall_por_clase(resultados, horizontes=(12,))
+    assert pr[("m", 12)]["alza_sostenida"] == {"precision": 0.5, "recall": 1.0, "tp": 1, "fp": 1, "fn": 0}
+
+
+def test_falso_negativo_baja_el_recall_no_la_precision_de_la_clase_afectada():
+    # la serie sí terminó en "alza_sostenida" dos veces; el modelo solo la
+    # detectó una — una tendencia real que se dejó pasar.
+    resultados = [
+        _fila("m", 12, "alza_sostenida", "alza_sostenida"),
+        _fila("m", 12, "alza_sostenida", "estable"),
+    ]
+    pr = precision_recall_por_clase(resultados, horizontes=(12,))
+    assert pr[("m", 12)]["alza_sostenida"] == {"precision": 1.0, "recall": 0.5, "tp": 1, "fp": 0, "fn": 1}
+
+
+def test_clase_que_nunca_se_predijo_ni_ocurrio_da_precision_y_recall_none():
+    resultados = [_fila("m", 12, "estable", "estable")]
+    pr = precision_recall_por_clase(resultados, horizontes=(12,))
+    assert pr[("m", 12)]["alza_sostenida"] == {"precision": None, "recall": None, "tp": 0, "fp": 0, "fn": 0}
+
+
+def test_matriz_separa_por_modelo_y_horizonte():
+    resultados = [
+        _fila("naive_estacional", 12, "alza_sostenida", "alza_sostenida"),
+        _fila("sarima", 12, "estable", "alza_sostenida"),
+        _fila("naive_estacional", 24, "estable", "estable"),
+    ]
+    m = matriz_confusion_por_clase(resultados)
+    assert set(m) == {("naive_estacional", 12), ("sarima", 12), ("naive_estacional", 24)}
+    assert m[("naive_estacional", 12)]["alza_sostenida"]["tp"] == 1
+    assert m[("sarima", 12)]["alza_sostenida"]["fp"] == 1
+    assert m[("sarima", 12)]["estable"]["fn"] == 1
 
 
 # --- frecuencia_clase_mayoritaria: la vara mínima real, no 25% al azar ---

@@ -9,13 +9,21 @@ baseline — no es un fracaso del proyecto, es lo que dice `comparar_contra_base
 import json
 from datetime import datetime
 
-from .backtesting import HORIZONTES, MODELOS, agregar_por_modelo_y_horizonte, comparar_contra_baseline, correr, frecuencia_clase_mayoritaria
+from .backtesting import (
+    HORIZONTES,
+    MODELOS,
+    agregar_por_modelo_y_horizonte,
+    comparar_contra_baseline,
+    correr,
+    frecuencia_clase_mayoritaria,
+    precision_recall_por_clase,
+)
 from .calidad import evaluar
 from .historia import DIR_RAW, leer_serie, ruta_serie
 from .taxonomia import RAIZ, cargar
 
 
-def escribir_informe(agregado, veredicto, veredicto_bonferroni, mayoritaria, n_series, n_cortes, n_filas, ruta_md, ruta_json, hoy=None):
+def escribir_informe(agregado, veredicto, veredicto_bonferroni, mayoritaria, precision_recall, n_series, n_cortes, n_filas, ruta_md, ruta_json, hoy=None):
     hoy = hoy or datetime.now()
     modelos = list(MODELOS)
     baseline = "naive_estacional"
@@ -72,6 +80,26 @@ def escribir_informe(agregado, veredicto, veredicto_bonferroni, mayoritaria, n_s
             if met is None:
                 continue
             L.append(f"| {m} | {h} | {met.n} | {met.exactitud} | {met.error_mediano} |")
+    L.append("")
+    L.append("## Precision y recall de \"alza_sostenida\" — la clase que más importa para decidir compra")
+    L.append("")
+    L.append("La exactitud de arriba es un promedio sobre las cuatro etiquetas; con clases desbalanceadas (`estable` domina casi todos los horizontes) puede esconder que un modelo falle sistemáticamente más en una dirección. Estas dos preguntas son distintas y le importan a decisiones distintas:")
+    L.append("")
+    L.append("- **Precision** — de las veces que el modelo dijo \"esto va a ser alza sostenida\", ¿cuántas eran ciertas? Precision baja = comprar por señales falsas (falso positivo).")
+    L.append("- **Recall** — de las veces que la serie SÍ terminó en alza sostenida, ¿cuántas detectó el modelo? Recall bajo = dejar pasar tendencias reales (falso negativo).")
+    L.append("")
+    L.append("| Modelo | Horizonte | Precision | Recall | TP | FP | FN |")
+    L.append("|---|---:|---:|---:|---:|---:|---:|")
+    for m in modelos:
+        for h in HORIZONTES:
+            pr = precision_recall.get((m, h), {}).get("alza_sostenida")
+            if pr is None:
+                continue
+            prec = pr["precision"] if pr["precision"] is not None else "—"
+            rec = pr["recall"] if pr["recall"] is not None else "—"
+            L.append(f"| {m} | {h} | {prec} | {rec} | {pr['tp']} | {pr['fp']} | {pr['fn']} |")
+    L.append("")
+    L.append("La matriz completa (las cuatro etiquetas, no solo `alza_sostenida`) queda en `data/v2/backtesting.json` bajo `precision_recall`.")
     ruta_md.write_text("\n".join(L), encoding="utf-8")
 
     ruta_json.parent.mkdir(parents=True, exist_ok=True)
@@ -85,6 +113,7 @@ def escribir_informe(agregado, veredicto, veredicto_bonferroni, mayoritaria, n_s
         "veredicto": {f"{m}|{h}": v for (m, h), v in veredicto.items()},
         "veredicto_bonferroni": {f"{m}|{h}": v for (m, h), v in veredicto_bonferroni.items()},
         "clase_mayoritaria": {str(h): v for h, v in mayoritaria.items()},
+        "precision_recall": {f"{m}|{h}": por_clase for (m, h), por_clase in precision_recall.items()},
     }
     ruta_json.write_text(json.dumps(salida, ensure_ascii=False, indent=1), encoding="utf-8")
 
@@ -98,9 +127,10 @@ def main(n_series=36, n_cortes=5, log=print):
     n_pruebas = len([1 for h in HORIZONTES for m in MODELOS if m != "naive_estacional"])
     veredicto_bonferroni = comparar_contra_baseline(resultados, alpha=0.05 / n_pruebas)
     mayoritaria = frecuencia_clase_mayoritaria(resultados)
+    precision_recall = precision_recall_por_clase(resultados)
     md = RAIZ / "docs" / "v2" / "reporte-backtesting-fase3.md"
     js = RAIZ / "data" / "v2" / "backtesting.json"
-    escribir_informe(agregado, veredicto, veredicto_bonferroni, mayoritaria, n_series, n_cortes, len(resultados), md, js)
+    escribir_informe(agregado, veredicto, veredicto_bonferroni, mayoritaria, precision_recall, n_series, n_cortes, len(resultados), md, js)
     log(f"\nInforme: {md}\nDatos: {js}")
 
 

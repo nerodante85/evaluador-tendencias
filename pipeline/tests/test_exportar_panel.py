@@ -88,6 +88,7 @@ def test_construir_metodologia_con_datos_los_pasa_tal_cual():
     pesos = {
         "horizonte_meses": 24, "variables": ["crecimiento"], "coeficientes": {"crecimiento": 0.1},
         "n_entrenamiento": 10, "n_prueba": 5, "evaluacion_fuera_de_muestra": {"auc": 0.6}, "calibrado": "2026-09-27T00:00",
+        "intervalos_95": {"crecimiento": [-0.1, 0.3]},
     }
     backtesting = {
         "n_series": 10, "n_cortes": 5, "n_filas": 100, "metricas": {}, "veredicto_bonferroni": {},
@@ -95,4 +96,16 @@ def test_construir_metodologia_con_datos_los_pasa_tal_cual():
     }
     m = construir_metodologia(pesos, backtesting)
     assert m["trend_score"]["evaluacion"] == {"auc": 0.6}
+    assert m["trend_score"]["intervalos_95"] == {"crecimiento": [-0.1, 0.3]}
     assert m["backtesting"]["clase_mayoritaria"] == {"24": 0.4}
+
+
+def test_construir_metodologia_sin_intervalos_no_revienta():
+    # pesos generados antes de que existiera "intervalos_95" en el JSON —
+    # no debe romper el export, solo faltar el campo.
+    pesos = {
+        "horizonte_meses": 24, "variables": ["crecimiento"], "coeficientes": {"crecimiento": 0.1},
+        "n_entrenamiento": 10, "n_prueba": 5, "evaluacion_fuera_de_muestra": {"auc": 0.6}, "calibrado": "2026-09-27T00:00",
+    }
+    m = construir_metodologia(pesos, backtesting=None)
+    assert m["trend_score"]["intervalos_95"] == {}

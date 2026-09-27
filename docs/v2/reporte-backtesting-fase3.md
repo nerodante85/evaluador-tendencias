@@ -2,7 +2,7 @@
 
 Generado el 2026-09-27 por `python -m pipeline.cli backtest`. Método: `docs/v2/01-definicion-tendencia.md` (aprobado). Código: `pipeline/backtesting.py`, `pipeline/modelos.py`.
 
-Muestra: **150 series** × hasta 10 cortes cada una → **17056 evaluaciones** (serie × corte × horizonte × modelo).
+Muestra: **280 series** × hasta 10 cortes cada una → **32188 evaluaciones** (serie × corte × horizonte × modelo).
 
 ## Puerta de salida: ¿algún modelo le gana al baseline?
 
@@ -26,18 +26,42 @@ La fila `(mayoría)` no es un modelo: es adivinar siempre la etiqueta real más 
 
 | Modelo | Horizonte | n | Exactitud | Error mediano |
 |---|---:|---:|---:|---:|
-| (mayoría) | 6 | — | 0.74 | — |
-| (mayoría) | 12 | — | 0.591 | — |
-| (mayoría) | 24 | — | 0.42 | — |
-| naive_estacional | 6 | 1403 | 0.816 | 2.33 |
-| naive_estacional | 12 | 1422 | 0.629 | 3.96 |
-| naive_estacional | 24 | 1439 | 0.437 | 7.5 |
-| media_movil | 6 | 1403 | 0.757 | 2.25 |
-| media_movil | 12 | 1422 | 0.583 | 3.96 |
-| media_movil | 24 | 1439 | 0.412 | 7.5 |
-| holt_winters | 6 | 1403 | 0.815 | 1.67 |
-| holt_winters | 12 | 1422 | 0.627 | 3.39 |
-| holt_winters | 24 | 1439 | 0.532 | 6.58 |
-| sarima | 6 | 1403 | 0.817 | 1.58 |
-| sarima | 12 | 1422 | 0.643 | 3.43 |
-| sarima | 24 | 1439 | 0.521 | 6.85 |
+| (mayoría) | 6 | — | 0.765 | — |
+| (mayoría) | 12 | — | 0.608 | — |
+| (mayoría) | 24 | — | 0.427 | — |
+| naive_estacional | 6 | 2656 | 0.848 | 2.25 |
+| naive_estacional | 12 | 2681 | 0.656 | 3.92 |
+| naive_estacional | 24 | 2710 | 0.461 | 7.5 |
+| media_movil | 6 | 2656 | 0.779 | 2.2 |
+| media_movil | 12 | 2681 | 0.601 | 3.92 |
+| media_movil | 24 | 2710 | 0.42 | 7.5 |
+| holt_winters | 6 | 2656 | 0.844 | 1.62 |
+| holt_winters | 12 | 2681 | 0.657 | 3.38 |
+| holt_winters | 24 | 2710 | 0.551 | 6.53 |
+| sarima | 6 | 2656 | 0.85 | 1.53 |
+| sarima | 12 | 2681 | 0.672 | 3.26 |
+| sarima | 24 | 2710 | 0.543 | 6.71 |
+
+## Precision y recall de "alza_sostenida" — la clase que más importa para decidir compra
+
+La exactitud de arriba es un promedio sobre las cuatro etiquetas; con clases desbalanceadas (`estable` domina casi todos los horizontes) puede esconder que un modelo falle sistemáticamente más en una dirección. Estas dos preguntas son distintas y le importan a decisiones distintas:
+
+- **Precision** — de las veces que el modelo dijo "esto va a ser alza sostenida", ¿cuántas eran ciertas? Precision baja = comprar por señales falsas (falso positivo).
+- **Recall** — de las veces que la serie SÍ terminó en alza sostenida, ¿cuántas detectó el modelo? Recall bajo = dejar pasar tendencias reales (falso negativo).
+
+| Modelo | Horizonte | Precision | Recall | TP | FP | FN |
+|---|---:|---:|---:|---:|---:|---:|
+| naive_estacional | 6 | — | 0.0 | 0 | 0 | 148 |
+| naive_estacional | 12 | — | 0.0 | 0 | 0 | 578 |
+| naive_estacional | 24 | — | 0.0 | 0 | 0 | 1046 |
+| media_movil | 6 | — | 0.0 | 0 | 0 | 148 |
+| media_movil | 12 | — | 0.0 | 0 | 0 | 578 |
+| media_movil | 24 | — | 0.0 | 0 | 0 | 1046 |
+| holt_winters | 6 | 0.49 | 0.331 | 49 | 51 | 99 |
+| holt_winters | 12 | 0.487 | 0.318 | 184 | 194 | 394 |
+| holt_winters | 24 | 0.589 | 0.494 | 517 | 361 | 529 |
+| sarima | 6 | 0.391 | 0.23 | 34 | 53 | 114 |
+| sarima | 12 | 0.528 | 0.279 | 161 | 144 | 417 |
+| sarima | 24 | 0.564 | 0.507 | 530 | 409 | 516 |
+
+La matriz completa (las cuatro etiquetas, no solo `alza_sostenida`) queda en `data/v2/backtesting.json` bajo `precision_recall`.

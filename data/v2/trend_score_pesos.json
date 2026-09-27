@@ -1,6 +1,6 @@
 {
  "esquema": 1,
- "calibrado": "2026-09-27T05:42",
+ "calibrado": "2026-09-27T09:58",
  "horizonte_meses": 24,
  "variables": [
   "crecimiento",
@@ -10,56 +10,56 @@
   "saturacion"
  ],
  "coeficientes": {
-  "crecimiento": -0.088,
-  "aceleracion": -0.1206,
-  "persistencia": 0.4316,
-  "volatilidad": 0.3045,
-  "saturacion": 0.1819
+  "crecimiento": -0.0278,
+  "aceleracion": -0.0997,
+  "persistencia": 0.4582,
+  "volatilidad": 0.2168,
+  "saturacion": 0.1073
  },
- "intercepto": -0.6468,
+ "intercepto": -0.6101,
  "medias": {
-  "crecimiento": 0.1809558359621451,
-  "aceleracion": -0.05345446898002103,
-  "persistencia": 6.98527865404837,
-  "volatilidad": 0.3743922187171399,
-  "saturacion": 0.5137970557308097
+  "crecimiento": 0.1762909192825112,
+  "aceleracion": -0.046406894618834085,
+  "persistencia": 7.083520179372197,
+  "volatilidad": 0.3422208520179372,
+  "saturacion": 0.5464411434977579
  },
  "desvios": {
-  "crecimiento": 0.4236250978122469,
-  "aceleracion": 0.6342273160394682,
-  "persistencia": 3.4849524662566074,
-  "volatilidad": 0.28305197640803487,
-  "saturacion": 0.19779331486853527
+  "crecimiento": 0.39615221923294935,
+  "aceleracion": 0.567681426198616,
+  "persistencia": 3.4539374013526576,
+  "volatilidad": 0.25758297564275884,
+  "saturacion": 0.19054212518140856
  },
  "intervalos_95": {
   "crecimiento": [
-   -0.3281,
-   0.1521
+   -0.1991,
+   0.1434
   ],
   "aceleracion": [
-   -0.291,
-   0.0499
+   -0.2226,
+   0.0233
   ],
   "persistencia": [
-   0.2251,
-   0.6381
+   0.3085,
+   0.6079
   ],
   "volatilidad": [
-   0.1187,
-   0.4903
+   0.083,
+   0.3507
   ],
   "saturacion": [
-   0.0052,
-   0.3586
+   -0.0234,
+   0.2381
   ]
  },
  "alpha_regularizacion": 1.0,
- "n_entrenamiento": 951,
- "n_prueba": 382,
+ "n_entrenamiento": 1784,
+ "n_prueba": 753,
  "evaluacion_fuera_de_muestra": {
-  "n": 382,
-  "exactitud": 0.66,
-  "exactitud_mayoria": 0.649,
-  "auc": 0.675
+  "n": 753,
+  "exactitud": 0.639,
+  "exactitud_mayoria": 0.625,
+  "auc": 0.655
  }
 }

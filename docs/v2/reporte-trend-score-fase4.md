@@ -4,13 +4,13 @@ Generado el 2026-09-27 por `python -m pipeline.cli trend_score`. Pesos calibrado
 
 **Horizonte: 24 meses** — el único donde la fase 3 demostró que hay señal real que capturar (holt_winters/sarima le ganan al baseline ahí). El target es binario: ¿la serie terminó en `alza_sostenida` a ese horizonte?
 
-Entrenamiento: 951 filas (series distintas de las de prueba). Prueba: 382 filas, de series que el ajuste nunca vio.
+Entrenamiento: 1784 filas (series distintas de las de prueba). Prueba: 753 filas, de series que el ajuste nunca vio.
 
 ## Puerta de salida: ¿el score predice mejor que adivinar la clase mayoritaria?
 
-- Exactitud fuera de muestra (score ≥ 50 = "probable alza"): **0.66**
-- Adivinar siempre la clase más común, en el mismo conjunto de prueba: **0.649**
-- AUC (¿qué tan seguido un caso que sí fue alza recibe más puntaje que uno que no?, 0.5 = igual que azar): **0.675**
+- Exactitud fuera de muestra (score ≥ 50 = "probable alza"): **0.639**
+- Adivinar siempre la clase más común, en el mismo conjunto de prueba: **0.625**
+- AUC (¿qué tan seguido un caso que sí fue alza recibe más puntaje que uno que no?, 0.5 = igual que azar): **0.655**
 
 El score generaliza mejor que la referencia mínima en datos que no vio durante el ajuste.
 
@@ -22,12 +22,12 @@ Positivo = sube el score; negativo = lo baja. El intervalo es al 95%; si cruza e
 
 | Variable | Peso | Intervalo 95% |
 |---|---:|---|
-| crecimiento | -0.088 | [-0.3281, 0.1521] |
-| aceleracion | -0.1206 | [-0.291, 0.0499] |
-| persistencia | 0.4316 | [0.2251, 0.6381] |
-| volatilidad | 0.3045 | [0.1187, 0.4903] |
-| saturacion | 0.1819 | [0.0052, 0.3586] |
-| (intercepto) | -0.6468 | — |
+| crecimiento | -0.0278 | [-0.1991, 0.1434] |
+| aceleracion | -0.0997 | [-0.2226, 0.0233] |
+| persistencia | 0.4582 | [0.3085, 0.6079] |
+| volatilidad | 0.2168 | [0.083, 0.3507] |
+| saturacion | 0.1073 | [-0.0234, 0.2381] |
+| (intercepto) | -0.6101 | — |
 
 ## Limitaciones, para no sobrevender esto
 

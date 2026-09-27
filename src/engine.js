@@ -331,8 +331,13 @@ export function clasificarPatron(t) {
   return null; // sin patrón claro con esta lectura simple — no se fuerza una etiqueta
 }
 
-export function evaluarEmpresa(adoptadas, propias) {
-  const universo = [...TRENDS, ...propias];
+// `trendsBase`/`materialesBase` son inyectables (por defecto, los datos
+// reales importados arriba) solo para que las pruebas puedan pasar un
+// universo de señales sintético y fijo, sin depender de lo que traiga la
+// próxima corrida de fetch_trends.py. El comportamiento con los valores por
+// defecto es exactamente el mismo de siempre.
+export function evaluarEmpresa(adoptadas, propias, trendsBase = TRENDS, materialesBase = MATERIALES) {
+  const universo = [...trendsBase, ...propias];
   const evaluadas = universo.map((t) => ({ t, dec: decisionDe(t), adoptada: adoptadas.includes(t.id) }));
 
   const mias = evaluadas.filter((e) => e.adoptada);
@@ -359,7 +364,7 @@ export function evaluarEmpresa(adoptadas, propias) {
     return { cat, total, propias: propiasCat, pct: total ? Math.round((propiasCat / total) * 100) : 0 };
   });
 
-  const telas = MATERIALES.filter((m) => m.senales.some((id) => adoptadas.includes(id)));
+  const telas = materialesBase.filter((m) => m.senales.some((id) => adoptadas.includes(id)));
   const telasPropias = mias
     .filter((e) => e.t.propia && e.t.tela)
     .map((e) => ({ tela: e.t.tela, senal: e.t.name, dec: e.dec }));

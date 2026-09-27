@@ -10,6 +10,7 @@ from datetime import datetime
 
 from .calidad import evaluar as evaluar_calidad
 from .historia import DIR_RAW, leer_serie, ruta_serie
+from .historial_metricas import registrar as registrar_historial
 from .senales import ETIQUETAS
 from .taxonomia import RAIZ, cargar
 from .trend_score import (
@@ -44,6 +45,7 @@ def escribir_pesos(pesos, n_train, n_test, evaluacion, ruta_json, hoy):
         },
     }
     ruta_json.write_text(json.dumps(salida, ensure_ascii=False, indent=1), encoding="utf-8")
+    return salida
 
 
 def escribir_informe(pesos, n_train, n_test, evaluacion, ruta_md, hoy):
@@ -126,9 +128,15 @@ def main(n_series=150, n_cortes=8, alpha=1.0, log=print):
 
     md = RAIZ / "docs" / "v2" / "reporte-trend-score-fase4.md"
     escribir_informe(pesos, len(train), len(test), evaluacion, md, hoy)
-    escribir_pesos(pesos, len(train), len(test), evaluacion, RAIZ / "data" / "v2" / "trend_score_pesos.json", hoy)
+    pesos_dict = escribir_pesos(pesos, len(train), len(test), evaluacion, RAIZ / "data" / "v2" / "trend_score_pesos.json", hoy)
     hoy_datos = calcular_hoy(tax, calidad, DIR_RAW, pesos, RAIZ / "data" / "v2" / "trend_score.json", hoy)
+
+    alerta, mensaje_drift = registrar_historial(pesos_dict)
     log(f"Informe: {md}\nSeñales puntuadas hoy: {len(hoy_datos)}")
+    if alerta:
+        log(f"\n⚠ ALERTA DE DEGRADACIÓN: {mensaje_drift}")
+    else:
+        log(f"\nHistorial de calibraciones: {RAIZ / 'data' / 'v2' / 'trend_score_historial.json'}")
 
 
 if __name__ == "__main__":

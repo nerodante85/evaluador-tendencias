@@ -16,6 +16,7 @@ from .historia import DIR_RAW, descargar_historia
 from .fuentes.trends import BackendPytrends
 from .exportar_panel import main as exportar_main
 from .mercadolibre_auth import main as mercadolibre_auth_main
+from .monitor_fuente import main as monitor_fuente_main
 from .reporte_backtesting import main as backtest_main
 from .reporte_senales import main as senales_main
 from .reporte_trend_score import main as trend_score_main
@@ -50,6 +51,7 @@ def main(argv=None):
     sub.add_parser("exportar", help="consolida todo en src/data/v2/catalogo.json, para que lo lea el panel")
     ml = sub.add_parser("mercadolibre-auth", help="fase 6: autoriza la app de MercadoLibre y prueba en vivo /trends y /search (interactivo)")
     ml.add_argument("--sitio", default="MCO", help="MCO (Colombia) o MLM (México) — ES no aplica, MercadoLibre no opera ahí")
+    sub.add_parser("monitor-fuente", help="chequeo rápido: ¿pytrends sigue funcionando? (lo usa .github/workflows/monitor-fuente.yml, también se puede correr a mano)")
     a = p.parse_args(argv)
 
     tax = cargar()
@@ -108,6 +110,9 @@ def main(argv=None):
 
     if a.cmd == "mercadolibre-auth":
         return mercadolibre_auth_main(a.sitio)
+
+    if a.cmd == "monitor-fuente":
+        return monitor_fuente_main()
 
 
 if __name__ == "__main__":

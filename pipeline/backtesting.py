@@ -220,6 +220,46 @@ def emparejar_con_baseline(resultados, baseline="naive_estacional"):
     return pares
 
 
+def matriz_confusion_por_clase(resultados, horizontes=HORIZONTES, clases=ETIQUETAS_EVALUABLES):
+    """{(modelo, horizonte): {clase: {"tp", "fp", "fn"}}} — la exactitud agregada
+    (arriba) puede esconder que un modelo falle sistemáticamente más en una
+    dirección que en otra, sobre todo con clases desbalanceadas (`estable`
+    domina la mayoría de los horizontes). Base para `precision_recall_por_clase`."""
+    conteo = {}
+    for r in resultados:
+        clave = (r.modelo, r.horizonte)
+        m = conteo.setdefault(clave, {c: {"tp": 0, "fp": 0, "fn": 0} for c in clases})
+        if r.etiqueta_pred == r.etiqueta_real:
+            if r.etiqueta_real in m:
+                m[r.etiqueta_real]["tp"] += 1
+        else:
+            if r.etiqueta_pred in m:
+                m[r.etiqueta_pred]["fp"] += 1
+            if r.etiqueta_real in m:
+                m[r.etiqueta_real]["fn"] += 1
+    return conteo
+
+
+def precision_recall_por_clase(resultados, horizontes=HORIZONTES, clases=ETIQUETAS_EVALUABLES):
+    """{(modelo, horizonte): {clase: {"precision", "recall", "tp", "fp", "fn"}}}.
+
+    Precision: de las veces que el modelo dijo `clase`, ¿cuántas eran ciertas?
+    (falso positivo caro: comprar por una señal que "predijo" alza y no era).
+    Recall: de las veces que la serie SÍ terminó en `clase`, ¿cuántas detectó
+    el modelo? (falso negativo caro: dejar pasar una tendencia real que el
+    modelo no marcó). `None` cuando no hay denominador (el modelo nunca
+    predijo esa clase, o esa clase nunca ocurrió en la muestra)."""
+    matriz = matriz_confusion_por_clase(resultados, horizontes, clases)
+    salida = {}
+    for clave, por_clase in matriz.items():
+        salida[clave] = {}
+        for c, m in por_clase.items():
+            precision = round(m["tp"] / (m["tp"] + m["fp"]), 3) if (m["tp"] + m["fp"]) > 0 else None
+            recall = round(m["tp"] / (m["tp"] + m["fn"]), 3) if (m["tp"] + m["fn"]) > 0 else None
+            salida[clave][c] = {"precision": precision, "recall": recall, **m}
+    return salida
+
+
 def comparar_contra_baseline(resultados, horizontes=HORIZONTES, baseline="naive_estacional", modelos=MODELOS, alpha=0.05, margen_minimo=0.03):
     """Para cada (modelo, horizonte) que no sea el baseline: ¿le ganó de
     verdad, o solo parece mejor por azar de la muestra?

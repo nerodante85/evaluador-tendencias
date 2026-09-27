@@ -89,6 +89,13 @@ def construir_metodologia(pesos, backtesting):
             "horizonte_meses": pesos["horizonte_meses"],
             "variables": pesos["variables"],
             "coeficientes": pesos["coeficientes"],
+            # Para que el panel pueda distinguir una variable con respaldo
+            # estadístico real de una cuyo intervalo cruza cero (ver hallazgo
+            # H-04 de la auditoría del 2026-09-27 y docs/v2/hallazgo-trend-score-fase4.md):
+            # la lista de "Evidencia" no debe presentar crecimiento/aceleración
+            # como si explicaran el puntaje cuando su propio intervalo dice que
+            # no aportan con la evidencia actual.
+            "intervalos_95": pesos.get("intervalos_95", {}),
             "n_entrenamiento": pesos["n_entrenamiento"],
             "n_prueba": pesos["n_prueba"],
             "evaluacion": pesos["evaluacion_fuera_de_muestra"],

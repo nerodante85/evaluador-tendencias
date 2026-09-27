@@ -1,0 +1,13 @@
+{
+ "esquema": 1,
+ "calibraciones": [
+  {
+   "calibrado": "2026-09-27T09:58",
+   "n_entrenamiento": 1784,
+   "n_prueba": 753,
+   "auc": 0.655,
+   "exactitud": 0.639,
+   "exactitud_mayoria": 0.625
+  }
+ ]
+}

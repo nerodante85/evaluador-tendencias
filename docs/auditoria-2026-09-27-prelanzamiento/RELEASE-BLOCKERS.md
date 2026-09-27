@@ -11,6 +11,8 @@ Solo lo que impide clasificar la app como lista para venderse activamente como h
 
 3. **La comparación septiembre-vs-noviembre no existe todavía** (solo una foto en `historial/`). No es un bug — es el calendario esperado — pero bloquea cualquier afirmación de "el radar acertó X%" en material comercial hasta el 9 de noviembre de 2026 o después.
 
+5. **H-06 (actualizado 2026-09-27, verificado con datos reales) — no citar la exactitud del backtesting sin la salvedad.** 51.7% de 600 cortes históricos reales cambian de etiqueta bajo una escala que simula lo que se habría visto en vivo en esa fecha, contra la escala actual (que incorpora el futuro). La comparación relativa entre modelos parece robusta a esto; la "verdad de referencia" del backtesting, no necesariamente. Detalle: `docs/v2/hallazgo-escala-historica-fase3.md`. No bloquea el código — bloquea presentar el 43–53% de exactitud reportado como si fuera una simulación perfectamente fiel al pasado, sin decir esto.
+
 ## Verificar antes de cerrar (no bloquea el código, sí el checklist de seguridad)
 
 4. **H-12 — Confirmar que el Client Secret de MercadoLibre expuesto en esta sesión ya fue rotado** en el DevCenter.

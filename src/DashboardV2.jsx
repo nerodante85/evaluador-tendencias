@@ -49,11 +49,17 @@ function Collapsible({ label, children, defaultOpen = false }) {
 
 const ESTADO_ICONO = { alza_sostenida: TrendingUp, baja_sostenida: TrendingDown, pico_atencion: Zap, estable: Minus };
 
+// H-09 de la auditoría del 2026-09-27: este chip describe una ventana que ya
+// terminó (los últimos 12 meses medidos), no una predicción — antes ese
+// aviso vivía solo en el footer del panel. El tooltip lo deja junto al chip
+// mismo, donde de verdad se lee.
+const ESTADO_TOOLTIP = "Describe los últimos 12 meses medidos, no una predicción de lo que viene. Para eso está el puntaje (score), que sí mira hacia adelante.";
+
 function EstadoChip({ estado }) {
   const color = ESTADO_COLOR[estado] || palette.inkDim;
   const Icono = ESTADO_ICONO[estado] || Minus;
   return (
-    <span className="led-chip">
+    <span className="led-chip" title={ESTADO_TOOLTIP}>
       <span className="led-dot" style={{ background: color, boxShadow: `0 0 6px ${color}` }} />
       <span style={{ color, display: "inline-flex", alignItems: "center", gap: 4 }}>
         <Icono size={12} />
@@ -110,13 +116,23 @@ function NodoCard({ nodo, expanded, onToggle }) {
 
       <div className="flex items-end justify-between gap-3 mt-4 pt-3 stitch" style={{ marginTop: "auto" }}>
         <div>
-          <p className="num text-[11px]" style={{ color: palette.inkDim, fontFamily: FONT.mono }}>Momentum {m.momentum}</p>
+          <p
+            className="num text-[11px]"
+            style={{ color: palette.inkDim, fontFamily: FONT.mono }}
+            title="Nivel promedio de interés en los últimos 12 meses — no es velocidad de cambio. Para eso está 'aceleración' en la Evidencia de abajo."
+          >
+            Momentum {m.momentum}
+          </p>
           {nivel && <p className="text-[11px] mt-1" style={{ color: palette.inkSoft }}>Puntaje {nivel.label.toLowerCase()} · historia de datos: {CALIDAD_LABEL[m.calidad].toLowerCase()}</p>}
         </div>
       </div>
 
       {expanded && (
         <div className="mt-4 pt-4 text-left" style={{ borderTop: `1px solid ${palette.line}` }}>
+          <p className="text-[11px] leading-relaxed mb-3" style={{ color: palette.inkDim }}>
+            <strong style={{ color: palette.ink }}>{ESTADO_LABEL[m.estado_actual] || m.estado_actual}</strong> describe los últimos 12
+            meses ya medidos, no una predicción — el puntaje de abajo (si lo tiene) es lo único de esta tarjeta que mira hacia adelante.
+          </p>
           {m.score_24m != null && (
             <p className="text-xs leading-relaxed mb-3" style={{ color: palette.ink }}>
               <strong style={{ color: nivel.color }}>{m.score_24m}/100</strong> — probabilidad estimada de tendencia sostenida al alza en los próximos {HORIZONTE_SCORE} meses, calibrada contra patrones históricos comparables. No es una certeza: en pruebas fuera de muestra, el puntaje acierta el {Math.round((METODOLOGIA?.trend_score?.evaluacion?.auc ?? 0.5) * 100)}% de las veces mejor que el azar (ver metodología).

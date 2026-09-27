@@ -42,33 +42,73 @@ export function mejorMercado(nodo) {
   })[0];
 }
 
+// ¿El intervalo de confianza al 95% de esta variable cruza cero? Si cruza,
+// el propio Trend Score dice que no hay evidencia sólida de que aporte algo
+// (docs/v2/hallazgo-trend-score-fase4.md) — no se puede tratar como parte
+// del "por qué" del puntaje aunque el valor crudo de la variable sea real.
+// `intervalos` es inyectable (por defecto, los del catálogo real importado
+// arriba) solo para que las pruebas puedan fijar un escenario sin depender
+// de la calibración vigente del Trend Score, que cambia cada vez que se
+// recalibra. El comportamiento por defecto es el de siempre.
+function pesoSignificativo(variable, intervalos = METODOLOGIA?.trend_score?.intervalos_95) {
+  const ic = intervalos?.[variable];
+  if (!ic || ic.length !== 2) return null; // sin dato: ni se afirma ni se niega
+  const [lo, hi] = ic;
+  return lo > 0 || hi < 0; // true = no cruza cero = sí aporta con la evidencia actual
+}
+
 // Evidencia en lenguaje llano — nunca "será", siempre lo que ya se observó.
-// Ver docs/v2/hallazgo-trend-score-fase4.md: crecimiento/aceleración solas
-// no tienen respaldo estadístico fuerte (se correlacionan con persistencia),
-// así que se listan como contexto, no como el argumento principal.
-export function evidencia(m) {
+//
+// H-04 de la auditoría del 2026-09-27: antes, esta lista mostraba todas las
+// variables por igual, lo que podía leerse como que todas "explican" un
+// puntaje alto. Pero el intervalo de confianza de cada variable (calibrado
+// en pipeline/trend_score.py, docs/v2/hallazgo-trend-score-fase4.md) puede
+// cruzar cero — ahí el modelo real no tiene evidencia sólida de que esa
+// variable aporte, aunque el dato crudo sea real. Qué variable cruza cero
+// **cambia entre calibraciones** (con la muestra grande del 2026-09-27,
+// `saturación` empezó a cruzar cero, cosa que la fase 4 ya anticipaba como
+// posible con más datos) — por eso el chequeo es dinámico contra
+// `intervalos_95`, no una lista fija de nombres.
+function variableConRespaldo(variable, intervalos) {
+  const sig = pesoSignificativo(variable, intervalos);
+  return sig !== false; // null (sin dato) se trata como "no se sabe" -> no se marca
+}
+
+export function evidencia(m, intervalos = METODOLOGIA?.trend_score?.intervalos_95) {
   const puntos = [];
+  const sinRespaldo = [];
+  const agregar = (variable, texto) => (variableConRespaldo(variable, intervalos) ? puntos : sinRespaldo).push(texto);
+
   if (m.persistencia != null) {
-    if (m.persistencia >= 9) puntos.push(`Se mantuvo por encima de su nivel base ${m.persistencia} de los últimos 12 meses — no es un pico aislado.`);
-    else if (m.persistencia <= 3) puntos.push("Poca persistencia: el nivel actual no se sostuvo la mayoría de los últimos 12 meses.");
+    if (m.persistencia >= 9) agregar("persistencia", `Se mantuvo por encima de su nivel base ${m.persistencia} de los últimos 12 meses — no es un pico aislado.`);
+    else if (m.persistencia <= 3) agregar("persistencia", "Poca persistencia: el nivel actual no se sostuvo la mayoría de los últimos 12 meses.");
   }
   if (m.crecimiento != null) {
-    if (m.crecimiento >= 0.25) puntos.push("Crecimiento sostenido de búsquedas frente al período anterior.");
-    else if (m.crecimiento <= -0.25) puntos.push("Caída sostenida de búsquedas frente al período anterior.");
+    if (m.crecimiento >= 0.25) agregar("crecimiento", "Crecimiento sostenido de búsquedas frente al período anterior.");
+    else if (m.crecimiento <= -0.25) agregar("crecimiento", "Caída sostenida de búsquedas frente al período anterior.");
   }
   if (m.aceleracion != null) {
-    if (m.aceleracion > 0.15) puntos.push("El ritmo de crecimiento se está acelerando frente a hace un año.");
-    else if (m.aceleracion < -0.15) puntos.push("El ritmo de crecimiento se está frenando frente a hace un año.");
+    if (m.aceleracion > 0.15) agregar("aceleracion", "El ritmo de crecimiento se está acelerando frente a hace un año.");
+    else if (m.aceleracion < -0.15) agregar("aceleracion", "El ritmo de crecimiento se está frenando frente a hace un año.");
   }
   if (m.volatilidad != null && m.volatilidad > 0.6) {
-    puntos.push("Lectura poco estable (alta volatilidad): tomar con más cautela de lo habitual.");
+    agregar("volatilidad", "Lectura poco estable (alta volatilidad): tomar con más cautela de lo habitual.");
   }
   if (m.saturacion != null && m.saturacion >= 0.9) {
-    puntos.push("Está en su nivel más alto de los últimos años — puede tener poco margen adicional de crecimiento.");
+    agregar("saturacion", "Está en su nivel más alto de los últimos años — puede tener poco margen adicional de crecimiento.");
   }
   if (m.estacional) {
+    // La estacionalidad no entra al Trend Score a propósito (no es mejor ni
+    // peor, es un contexto distinto — docs/v2/hallazgo-trend-score-fase4.md),
+    // así que no tiene sentido buscarle un intervalo: siempre es contexto.
     puntos.push("El patrón coincide con estacionalidad de calendario: parte de la señal puede ser de temporada, no de tendencia.");
   }
+
+  // Las que no tienen respaldo estadístico van al final, marcadas — son un
+  // dato real (así está la serie), pero el Trend Score no las usa para
+  // decidir el puntaje de arriba.
+  sinRespaldo.forEach((texto) => puntos.push(`${texto} (dato de contexto: el modelo no encontró evidencia sólida de que esto mueva el puntaje)`));
+
   return puntos;
 }
 
