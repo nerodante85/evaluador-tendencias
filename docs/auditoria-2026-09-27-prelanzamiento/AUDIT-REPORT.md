@@ -17,7 +17,7 @@ No se encontró IA generativa en ningún punto del sistema (se verificó: no hay
 
 No se encontraron vulnerabilidades de seguridad activas, secretos filtrados en el historial de git, ni dependencias con CVEs conocidos. El punto de seguridad más concreto de esta sesión (un Client Secret de MercadoLibre expuesto en una captura de pantalla) ya fue señalado y se recomendó rotarlo en el momento; queda registrado aquí para el checklist.
 
-**Veredicto (sección 32):** **NO LISTA** — ver razones en la sección de Release Gate al final de este documento.
+**Veredicto (sección 32):** ~~NO LISTA~~ → **BETA CONTROLADA** tras esta ronda de correcciones (ver "Actualización 5" al final de este documento) — sigue sin llegar a CANDIDATA A LANZAMIENTO porque falta la comparación septiembre-vs-noviembre, que ningún cambio de código puede adelantar.
 
 ---
 
@@ -342,6 +342,12 @@ Se repitió el backtesting con 280 de las 314 series `apta_backtest` disponibles
 **Por qué esto no afecta al panel público hoy:** el Trend Score ya se calibró solo a 24 meses, antes de este hallazgo, precisamente porque ese era el único horizonte con señal real — esa decisión resultó ser más acertada de lo que se sabía en ese momento. Lo que sí queda expuesto es un hueco en la metodología de la "puerta de salida" (`comparar_contra_baseline`, que solo mira exactitud, nunca recall por clase) — si algún día se extiende el pronóstico a 6-12 meses con el mismo criterio, se podría adoptar en silencio un modelo ciego a la clase que justifica una compra. **Nuevo hallazgo H-19, severidad ALTA** — no bloquea el lanzamiento actual (el panel no expone esto), pero debe corregirse en la metodología antes de que alguien extienda el pronóstico a horizontes cortos.
 
 Con la muestra grande, el Trend Score también se recalibró (`data/v2/trend_score_pesos.json`): exactitud fuera de muestra 0.639 vs. mayoría 0.625 (antes 0.660 vs. 0.649 con muestra chica — la mejora sobre la vara mínima sigue siendo modesta, ahora con casi el doble de evidencia detrás), AUC 0.655 (antes 0.675). Primera entrada registrada en el historial de calibraciones nuevo (`data/v2/trend_score_historial.json`, `pipeline/historial_metricas.py`) — sin alerta de degradación, es la primera vez que se registra.
+
+## Actualización 5 (2026-09-27) — reclasificación del release gate
+
+Con los dos bloqueadores accionables cerrados (H-02, H-12) y el resto del checklist trabajado (H-01 mitigado en paralelo, H-04/H-07/H-09 corregidos y verificados, H-06 y H-19 investigados y documentados con evidencia real, monitorización nueva, 33 pruebas de frontend donde antes había cero), el veredicto **pasa de NO LISTA a BETA CONTROLADA**.
+
+No sube a CANDIDATA A LANZAMIENTO todavía porque sigue faltando lo único que ningún cambio de código puede adelantar: la comparación septiembre-vs-noviembre. El propio `docs/estrategia-comercializacion.md` lo dice sin rodeos — es "la evidencia que sostiene todo el plan comercial: sin eso, no hay caso que mostrarle a un cliente". Hasta el 9 de noviembre de 2026, este producto puede probarse y refinarse (beta controlada), pero no debería presentarse a un cliente externo como algo ya validado con resultados reales.
 
 ## Criterios para una nueva auditoría
 
