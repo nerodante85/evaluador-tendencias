@@ -16,6 +16,7 @@ from .historia import DIR_RAW, descargar_historia
 from .fuentes.trends import BackendPytrends
 from .reporte_backtesting import main as backtest_main
 from .reporte_senales import main as senales_main
+from .reporte_trend_score import main as trend_score_main
 from .taxonomia import RAIZ, cargar, validar
 
 
@@ -41,6 +42,9 @@ def main(argv=None):
     b = sub.add_parser("backtest", help="corre el backtesting (fase 3) sobre una muestra y genera su informe")
     b.add_argument("--series", type=int, default=36, help="cuántas series (mercado x nodo) incluir en la muestra")
     b.add_argument("--cortes", type=int, default=5, help="cuántos puntos de corte probar por serie")
+    t = sub.add_parser("trend_score", help="calibra el Trend Score (fase 4) y genera su informe")
+    t.add_argument("--series", type=int, default=150, help="cuántas series incluir en el ajuste")
+    t.add_argument("--cortes", type=int, default=8, help="cuántos cortes por serie")
     a = p.parse_args(argv)
 
     tax = cargar()
@@ -87,6 +91,10 @@ def main(argv=None):
 
     if a.cmd == "backtest":
         backtest_main(n_series=a.series, n_cortes=a.cortes)
+        return 0
+
+    if a.cmd == "trend_score":
+        trend_score_main(n_series=a.series, n_cortes=a.cortes)
         return 0
 
 

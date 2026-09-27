@@ -1,0 +1,65 @@
+{
+ "esquema": 1,
+ "calibrado": "2026-09-27T05:42",
+ "horizonte_meses": 24,
+ "variables": [
+  "crecimiento",
+  "aceleracion",
+  "persistencia",
+  "volatilidad",
+  "saturacion"
+ ],
+ "coeficientes": {
+  "crecimiento": -0.088,
+  "aceleracion": -0.1206,
+  "persistencia": 0.4316,
+  "volatilidad": 0.3045,
+  "saturacion": 0.1819
+ },
+ "intercepto": -0.6468,
+ "medias": {
+  "crecimiento": 0.1809558359621451,
+  "aceleracion": -0.05345446898002103,
+  "persistencia": 6.98527865404837,
+  "volatilidad": 0.3743922187171399,
+  "saturacion": 0.5137970557308097
+ },
+ "desvios": {
+  "crecimiento": 0.4236250978122469,
+  "aceleracion": 0.6342273160394682,
+  "persistencia": 3.4849524662566074,
+  "volatilidad": 0.28305197640803487,
+  "saturacion": 0.19779331486853527
+ },
+ "intervalos_95": {
+  "crecimiento": [
+   -0.3281,
+   0.1521
+  ],
+  "aceleracion": [
+   -0.291,
+   0.0499
+  ],
+  "persistencia": [
+   0.2251,
+   0.6381
+  ],
+  "volatilidad": [
+   0.1187,
+   0.4903
+  ],
+  "saturacion": [
+   0.0052,
+   0.3586
+  ]
+ },
+ "alpha_regularizacion": 1.0,
+ "n_entrenamiento": 951,
+ "n_prueba": 382,
+ "evaluacion_fuera_de_muestra": {
+  "n": 382,
+  "exactitud": 0.66,
+  "exactitud_mayoria": 0.649,
+  "auc": 0.675
+ }
+}
