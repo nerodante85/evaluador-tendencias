@@ -41,15 +41,30 @@ Se probó en vivo el endpoint de tendencias (`/trends/MCO`) y el de búsqueda de
 
 Registrar una aplicación de desarrollador implica usar una cuenta de MercadoLibre y aceptar sus términos — eso es una decisión de Ricardo, no algo para hacer por cuenta propia. Queda pendiente de tu decisión, no de una prueba técnica.
 
+## Pinterest Trends API — descartada por la forma del dato, no solo por el acceso
+
+Se investigó la API oficial de Pinterest (`trends_read`, endpoint `trending_keywords`), corroborado con la documentación oficial y con fuentes independientes coincidentes:
+
+1. **Solo da el día de hoy — nunca fechas pasadas.** Cita textual encontrada: "Users are not able to retrieve trends for past dates, and API data is returned for today's date only." No hay forma de pedir una serie histórica por término, ni con acceso completo. Esto la descarta de raíz para el backtesting, que es la base de todo este pipeline — no es un problema de acceso, es que el dato no existe en la forma que se necesita.
+2. **Es un top-50 del día, no una consulta por término.** La API devuelve los 50 términos que más están subiendo hoy en general — no se le puede preguntar "¿cómo ha ido 'pantalón cargo' este año?" como sí se le pregunta a Google Trends o a Wikipedia. Son dos formas de dato completamente distintas.
+3. **Colombia no está entre los mercados que soporta.** Mercados confirmados: US, CA, GB+IE, DE, FR, IT, ES, MX, BR, AU+NZ, JP. De los tres mercados de Radar 2.0, **solo España y México están cubiertos — Colombia no.**
+4. **Además, igual que MercadoLibre, requiere cuenta de negocio de Pinterest + app registrada + revisión de Pinterest** (con un proceso que en algunos casos pide hasta un video del flujo de OAuth) — otra decisión de cuenta/términos, no algo técnico para resolver por cuenta propia.
+
+**No se construyó ningún adaptador.** A diferencia de Wikipedia (donde el código quedó listo para un futuro uso curado), aquí no hay nada que dejar listo: la API simplemente no puede alimentar el pipeline de series históricas por más acceso que se consiga.
+
+Nota aparte para no confundir: esto es la API de **Pinterest Trends**, distinta de **Pinterest Predicts** (el reporte editorial anual que ya se usa a mano en `src/data/contexto.json` desde la v1) — ese reporte sigue siendo válido y no se toca, es contenido editorial anual, no un endpoint de datos.
+
 ## Lo que sigue sin tocar, sin cambios desde la fase 0
 
 - **API oficial de Google Trends (alpha):** sigue esperando que Ricardo solicite acceso.
 - **Proveedores de pago (SerpApi, DataForSEO, Glimpse):** sigue sin presupuesto definido.
 - **Redes sociales:** sigue fuera de alcance (sin acceso legal).
-- **Pinterest Trends:** no se evaluó en esta ronda (queda para una próxima).
+- **Catálogos y pasarelas:** no se evaluaron en esta ronda.
 
 ## Decisión pendiente para Ricardo
 
 1. ¿Vale la pena una lista curada a mano de ~15-20 conceptos amplios para Wikipedia, sabiendo que no separa por país y que el volumen es bajo? ¿O se deja en pausa?
 2. ¿Quieres registrar una aplicación de desarrollador en MercadoLibre (con tu propia cuenta) para que se pueda evaluar su API de verdad?
 3. ¿Ya se definió presupuesto para un proveedor de pago, o sigue en pausa?
+
+(Pinterest Trends ya no está en esta lista — se descartó por la forma del dato, no necesita una decisión tuya.)
