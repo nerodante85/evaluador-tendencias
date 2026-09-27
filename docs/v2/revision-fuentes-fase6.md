@@ -39,7 +39,23 @@ Puerta de esta fase (`docs/v2/plan.md`): "cada fuente supera su revisión de acc
 
 Se probó en vivo el endpoint de tendencias (`/trends/MCO`) y el de búsqueda de productos (`/sites/MCO/search`), ambos sin autenticación: **los dos devolvieron 403 Forbidden.** MercadoLibre exige hoy una aplicación registrada (client ID/secret, vía su portal de desarrolladores) incluso para búsquedas básicas — ya no es de acceso libre como se documentó como posibilidad en la fase 0.
 
-Registrar una aplicación de desarrollador implica usar una cuenta de MercadoLibre y aceptar sus términos — eso es una decisión de Ricardo, no algo para hacer por cuenta propia. Queda pendiente de tu decisión, no de una prueba técnica.
+Registrar una aplicación de desarrollador implica usar una cuenta de MercadoLibre y aceptar sus términos — eso es una decisión de Ricardo, no algo para hacer por cuenta propia. Se revisó la guía oficial ("Crea una aplicación en Mercado Libre") para dejar claro qué pide exactamente, sin necesidad de iniciar sesión para verlo:
+
+### Lo que pide, paso a paso
+
+1. **Una cuenta de MercadoLibre.** La guía recomienda explícitamente que sea "la cuenta del propietario de la solución" y que se cree "bajo una entidad legal" — es decir, piensan en esto como una cuenta de negocio, no una personal de comprador. Es tu decisión si usas una cuenta existente o creas una nueva para esto.
+2. **Entrar a "Mis aplicaciones" (DevCenter)** con esa cuenta y hacer clic en "Crear nueva aplicación".
+3. **Datos obligatorios del formulario:**
+   - Nombre (único).
+   - Descripción — máximo 150 caracteres, se le muestra al usuario cuando la app pide autorización. Sugerencia ya redactada: *"Radar de tendencias de moda: consulta datos públicos de búsqueda y catálogo en Colombia, México y España para análisis de mercado."* (130 caracteres).
+   - Logo de la empresa (con dimensiones específicas que pide el formulario).
+   - **URI de redirect — debe ser HTTPS.** Este proyecto no tiene servidor propio, pero el sitio de GitHub Pages ya sirve por HTTPS: una URL como `https://nerodante85.github.io/evaluador-tendencias/` alcanza como redirect URI técnicamente válido (el flujo de OAuth solo necesita que el navegador aterrice ahí con un código en la URL, que se copia a mano para el script — no hace falta que la página "haga" nada con ese código).
+   - Scopes: pedir solo **Lectura** (GET) — esto es de solo consulta, no hace falta Escritura (PUT/POST/DELETE).
+   - Tópicos (notificaciones push de Ordenes/Mensajes/etc.): no aplican, se pueden dejar sin marcar — son para vendedores que reciben pedidos, no para este uso.
+4. Al guardar, entrega **Client ID y Secret Key** — con eso se arma el adaptador (`pipeline/fuentes/mercadolibre.py`, todavía no escrito).
+5. En algunos países (Argentina, México, Brasil, Chile — Colombia no aparece en esa lista en la guía) piden validar que los datos de la cuenta coincidan con el titular antes de dejar crear la aplicación.
+
+Nada de esto se hizo — es exactamente el punto donde se necesita tu cuenta y tu decisión. Si decides seguir, con el Client ID y Secret Key ya se puede escribir el adaptador siguiendo el mismo patrón de `pipeline/fuentes/trends.py` y `wikipedia.py`.
 
 ## Pinterest Trends API — descartada por la forma del dato, no solo por el acceso
 
