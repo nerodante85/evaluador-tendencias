@@ -9,8 +9,8 @@ Generado por la auditoría del 2026-09-27. Marcar cuando de verdad se verificó,
 - [ ] Verificado (con un caso real) si el riesgo de H-06 (umbrales absolutos sobre series re-escaladas) cambia algún veredicto ya publicado.
 
 ## Exposición pública
-- [ ] `v2.html` restringido (robots, o autenticación mínima) hasta que su propia documentación confirme que está lista para producción, **o** el aviso "en construcción" se refuerza para que sea imposible de ignorar (hoy ya existe pero es un texto pequeño).
-- [ ] `robots.txt` agregado si se decide seguir publicando ambas versiones mientras se completa la validación.
+- [x] **(2026-09-27)** H-02 resuelto con la opción proporcionada por GitHub Pages (sin autenticación real, que exigiría repositorio privado — reservado para cuando entren datos de clientes, per `CLAUDE.md`): `public/robots.txt` con `Disallow: /v2.html` para todos los crawlers, más `<meta name="robots" content="noindex, nofollow">` directo en `v2.html` (más confiable que robots.txt solo, ya que no depende de que el crawler lo respete). El `<title>`, la meta `description` y el `og:description`/`og:title` ahora dicen explícitamente "en construcción" — así que hasta un link compartido sin abrir la página avisa que no es el producto terminado. Verificado en el build (`dist/robots.txt` y `dist/v2.html`).
+- [ ] Quitar el `noindex` de `v2.html` cuando Radar 2.0 se dé por listo para lanzamiento general (repetir muestra de calibración más grande, backtesting con más series — ver checklist de "Metodología" arriba).
 
 ## Seguridad
 - [x] Sin secretos en el historial de git (verificado 2026-09-27).

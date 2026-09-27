@@ -1,0 +1,6 @@
+# Radar 2.0 (v2.html) sigue en validación interna — ver docs/v2/hallazgo-trend-score-fase4.md
+# y docs/auditoria-2026-09-27-prelanzamiento/AUDIT-REPORT.md (hallazgo H-02).
+# No indexar hasta que se dé por listo para lanzamiento general. La v1
+# (index.html) es el producto terminado y sí debe indexarse normalmente.
+User-agent: *
+Disallow: /v2.html

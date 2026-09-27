@@ -314,6 +314,14 @@ Con datos reales de la foto de septiembre, el chip ya identifica casos concretos
 
 **H-01 pasa de "sin mitigar" a "mitigado parcialmente"** en `RELEASE-CHECKLIST.md`. Sigue pendiente la decisión de fondo — qué hacer con `computeDecision()` en sí — que se revisará después del 9 de noviembre, como se acordó explícitamente para no invalidar la comparación.
 
+## Actualización 2 (2026-09-27) — H-02 y H-12 resueltos
+
+**H-12:** Ricardo confirmó que rotó el Client Secret de MercadoLibre expuesto en la captura de pantalla. Cerrado.
+
+**H-02:** `v2.html` gana `<meta name="robots" content="noindex, nofollow">`, `public/robots.txt` (`Disallow: /v2.html`), y el `<title>`/`description`/`og:*` ahora dicen "en construcción" explícitamente — verificado en el build (`dist/robots.txt`, `dist/v2.html`). GitHub Pages no ofrece autenticación real sin pasar a repositorio privado, que `CLAUDE.md` reserva a propósito para cuando entren datos de un cliente — así que la mitigación proporcionada es dejar de indexarlo y avisar honestamente en cualquier vista previa compartida, no esconderlo del todo. La página sigue siendo alcanzable por quien tenga el link directo, lo cual es aceptable dado que no expone datos personales ni de clientes, solo metodología y agregados de Google Trends.
+
+Con esto, los dos bloqueadores accionables de `RELEASE-BLOCKERS.md` quedan resueltos. Sigue pendiente el punto de fondo (H-01: decisión sobre `computeDecision()` de v1, después del 9 de noviembre) y la comparación septiembre-vs-noviembre en sí, que dependen del calendario, no de código.
+
 ## Criterios para una nueva auditoría
 
 Repetir esta auditoría cuando: (a) se resuelva el punto 1 sobre v1, (b) `v2.html` deje de estar expuesto sin restricción o su documentación interna confirme que ya está listo para producción, (c) exista al menos una segunda foto en `historial/` para poder auditar aciertos reales, no solo metodología.
