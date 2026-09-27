@@ -1,0 +1,6397 @@
+{
+ "esquema": 1,
+ "generado": "2026-09-27T05:48",
+ "mercados": {
+  "CO": "Colombia",
+  "MX": "México",
+  "ES": "España"
+ },
+ "tipos": [
+  "prenda",
+  "corte",
+  "tela",
+  "color",
+  "estampado",
+  "estilo"
+ ],
+ "metodologia": {
+  "trend_score": {
+   "horizonte_meses": 24,
+   "variables": [
+    "crecimiento",
+    "aceleracion",
+    "persistencia",
+    "volatilidad",
+    "saturacion"
+   ],
+   "coeficientes": {
+    "crecimiento": -0.088,
+    "aceleracion": -0.1206,
+    "persistencia": 0.4316,
+    "volatilidad": 0.3045,
+    "saturacion": 0.1819
+   },
+   "n_entrenamiento": 951,
+   "n_prueba": 382,
+   "evaluacion": {
+    "n": 382,
+    "exactitud": 0.66,
+    "exactitud_mayoria": 0.649,
+    "auc": 0.675
+   },
+   "calibrado": "2026-09-27T05:42"
+  },
+  "backtesting": {
+   "n_series": 150,
+   "n_cortes": 10,
+   "n_filas": 17056,
+   "metricas": {
+    "naive_estacional|6": {
+     "n": 1403,
+     "exactitud": 0.816,
+     "error_mediano": 2.33
+    },
+    "naive_estacional|12": {
+     "n": 1422,
+     "exactitud": 0.629,
+     "error_mediano": 3.96
+    },
+    "naive_estacional|24": {
+     "n": 1439,
+     "exactitud": 0.437,
+     "error_mediano": 7.5
+    },
+    "media_movil|6": {
+     "n": 1403,
+     "exactitud": 0.757,
+     "error_mediano": 2.25
+    },
+    "media_movil|12": {
+     "n": 1422,
+     "exactitud": 0.583,
+     "error_mediano": 3.96
+    },
+    "media_movil|24": {
+     "n": 1439,
+     "exactitud": 0.412,
+     "error_mediano": 7.5
+    },
+    "holt_winters|6": {
+     "n": 1403,
+     "exactitud": 0.815,
+     "error_mediano": 1.67
+    },
+    "holt_winters|12": {
+     "n": 1422,
+     "exactitud": 0.627,
+     "error_mediano": 3.39
+    },
+    "holt_winters|24": {
+     "n": 1439,
+     "exactitud": 0.532,
+     "error_mediano": 6.58
+    },
+    "sarima|6": {
+     "n": 1403,
+     "exactitud": 0.817,
+     "error_mediano": 1.58
+    },
+    "sarima|12": {
+     "n": 1422,
+     "exactitud": 0.643,
+     "error_mediano": 3.43
+    },
+    "sarima|24": {
+     "n": 1439,
+     "exactitud": 0.521,
+     "error_mediano": 6.85
+    }
+   },
+   "veredicto_bonferroni": {
+    "media_movil|6": false,
+    "holt_winters|6": false,
+    "sarima|6": false,
+    "media_movil|12": false,
+    "holt_winters|12": false,
+    "sarima|12": false,
+    "media_movil|24": false,
+    "holt_winters|24": true,
+    "sarima|24": true
+   },
+   "clase_mayoritaria": {
+    "6": 0.7398431931575196,
+    "12": 0.5914205344585092,
+    "24": 0.42043085476025016
+   },
+   "generado": "2026-09-27T05:33"
+  }
+ },
+ "nodos": {
+  "prenda.camiseta": {
+   "tipo": "prenda",
+   "nombre": "Camiseta",
+   "padre": null,
+   "relaciones": [
+    "tela.algodon",
+    "estampado.grafico"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 67.8,
+     "estado_actual": "estable",
+     "score_24m": 38.9,
+     "crecimiento": 0.1532,
+     "persistencia": 9,
+     "aceleracion": 0.0686,
+     "volatilidad": 0.202,
+     "saturacion": 0.677,
+     "estacional": false,
+     "query": "camiseta"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 61.6,
+     "estado_actual": "estable",
+     "score_24m": 35.5,
+     "crecimiento": 0.1529,
+     "persistencia": 8,
+     "aceleracion": 0.0881,
+     "volatilidad": 0.235,
+     "saturacion": 0.616,
+     "estacional": false,
+     "query": "playera"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 80.0,
+     "estado_actual": "estable",
+     "score_24m": 37.3,
+     "crecimiento": 0.0984,
+     "persistencia": 8,
+     "aceleracion": 0.0821,
+     "volatilidad": 0.14,
+     "saturacion": 0.8,
+     "estacional": false,
+     "query": "camiseta"
+    }
+   }
+  },
+  "prenda.camisa": {
+   "tipo": "prenda",
+   "nombre": "Camisa",
+   "padre": null,
+   "relaciones": [
+    "tela.lino",
+    "estampado.rayas"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 64.2,
+     "estado_actual": "estable",
+     "score_24m": 33.2,
+     "crecimiento": 0.1456,
+     "persistencia": 7,
+     "aceleracion": 0.1366,
+     "volatilidad": 0.242,
+     "saturacion": 0.642,
+     "estacional": true,
+     "query": "camisa"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 75.2,
+     "estado_actual": "estable",
+     "score_24m": 39.2,
+     "crecimiento": 0.1416,
+     "persistencia": 9,
+     "aceleracion": 0.117,
+     "volatilidad": 0.155,
+     "saturacion": 0.752,
+     "estacional": true,
+     "query": "camisa"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 78.2,
+     "estado_actual": "estable",
+     "score_24m": 37.2,
+     "crecimiento": 0.1152,
+     "persistencia": 8,
+     "aceleracion": 0.077,
+     "volatilidad": 0.152,
+     "saturacion": 0.782,
+     "estacional": false,
+     "query": "camisa"
+    }
+   }
+  },
+  "prenda.blusa": {
+   "tipo": "prenda",
+   "nombre": "Blusa",
+   "padre": null,
+   "relaciones": [
+    "tela.satin",
+    "corte.manga_globo"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 47.6,
+     "estado_actual": "estable",
+     "score_24m": 33.5,
+     "crecimiento": 0.1066,
+     "persistencia": 8,
+     "aceleracion": 0.1162,
+     "volatilidad": 0.269,
+     "saturacion": 0.476,
+     "estacional": true,
+     "query": "blusa"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 77.8,
+     "estado_actual": "estable",
+     "score_24m": 45.7,
+     "crecimiento": 0.1677,
+     "persistencia": 11,
+     "aceleracion": 0.1601,
+     "volatilidad": 0.163,
+     "saturacion": 0.777,
+     "estacional": false,
+     "query": "blusa"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 75.4,
+     "estado_actual": "estable",
+     "score_24m": 43.1,
+     "crecimiento": 0.2051,
+     "persistencia": 10,
+     "aceleracion": 0.0875,
+     "volatilidad": 0.194,
+     "saturacion": 0.754,
+     "estacional": true,
+     "query": "blusa"
+    }
+   }
+  },
+  "prenda.polo": {
+   "tipo": "prenda",
+   "nombre": "Polo",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 55.9,
+     "estado_actual": "estable",
+     "score_24m": 23.4,
+     "crecimiento": 0.0517,
+     "persistencia": 3,
+     "aceleracion": -0.0502,
+     "volatilidad": 0.27,
+     "saturacion": 0.559,
+     "estacional": true,
+     "query": "polo"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 61.3,
+     "estado_actual": "estable",
+     "score_24m": 23.2,
+     "crecimiento": -0.0108,
+     "persistencia": 3,
+     "aceleracion": -0.0828,
+     "volatilidad": 0.196,
+     "saturacion": 0.613,
+     "estacional": true,
+     "query": "polo"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 79.4,
+     "estado_actual": "estable",
+     "score_24m": 35.0,
+     "crecimiento": 0.045,
+     "persistencia": 7,
+     "aceleracion": -0.0179,
+     "volatilidad": 0.138,
+     "saturacion": 0.794,
+     "estacional": false,
+     "query": "polo"
+    }
+   }
+  },
+  "prenda.crop_top": {
+   "tipo": "prenda",
+   "nombre": "Crop top",
+   "padre": null,
+   "relaciones": [
+    "estilo.y2k"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 17.2,
+     "estado_actual": "baja_sostenida",
+     "score_24m": 15.8,
+     "crecimiento": -0.2527,
+     "persistencia": 1,
+     "aceleracion": 0.0986,
+     "volatilidad": 0.344,
+     "saturacion": 0.172,
+     "estacional": true,
+     "query": "crop top"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 27.9,
+     "estado_actual": "estable",
+     "score_24m": 14.9,
+     "crecimiento": -0.1019,
+     "persistencia": 2,
+     "aceleracion": 0.1161,
+     "volatilidad": 0.105,
+     "saturacion": 0.279,
+     "estacional": false,
+     "query": "crop top"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 35.8,
+     "estado_actual": "pico_atencion",
+     "score_24m": 25.4,
+     "crecimiento": 0.0214,
+     "persistencia": 4,
+     "aceleracion": 0.0045,
+     "volatilidad": 0.431,
+     "saturacion": 0.358,
+     "estacional": false,
+     "query": "crop top"
+    }
+   }
+  },
+  "prenda.corse": {
+   "tipo": "prenda",
+   "nombre": "Corsé",
+   "padre": null,
+   "relaciones": [
+    "estilo.coquette"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 47.2,
+     "estado_actual": "pico_atencion",
+     "score_24m": 28.1,
+     "crecimiento": 0.1548,
+     "persistencia": 5,
+     "aceleracion": 0.1276,
+     "volatilidad": 0.395,
+     "saturacion": 0.472,
+     "estacional": true,
+     "query": "corset"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 37.1,
+     "estado_actual": "pico_atencion",
+     "score_24m": 25.0,
+     "crecimiento": 0.0471,
+     "persistencia": 3,
+     "aceleracion": 0.0678,
+     "volatilidad": 0.531,
+     "saturacion": 0.371,
+     "estacional": true,
+     "query": "corset"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 58.6,
+     "estado_actual": "estable",
+     "score_24m": 47.9,
+     "crecimiento": 0.2377,
+     "persistencia": 12,
+     "aceleracion": 0.1152,
+     "volatilidad": 0.298,
+     "saturacion": 0.586,
+     "estacional": true,
+     "query": "corset"
+    }
+   }
+  },
+  "prenda.vestido": {
+   "tipo": "prenda",
+   "nombre": "Vestido",
+   "padre": null,
+   "relaciones": [
+    "estampado.floral"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 39.8,
+     "estado_actual": "estable",
+     "score_24m": 21.3,
+     "crecimiento": 0.0127,
+     "persistencia": 4,
+     "aceleracion": 0.0688,
+     "volatilidad": 0.193,
+     "saturacion": 0.398,
+     "estacional": false,
+     "query": "vestido"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 58.3,
+     "estado_actual": "estable",
+     "score_24m": 32.4,
+     "crecimiento": 0.0448,
+     "persistencia": 8,
+     "aceleracion": 0.0877,
+     "volatilidad": 0.114,
+     "saturacion": 0.583,
+     "estacional": false,
+     "query": "vestido"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 61.2,
+     "estado_actual": "estable",
+     "score_24m": 30.3,
+     "crecimiento": 0.0055,
+     "persistencia": 6,
+     "aceleracion": 0.0177,
+     "volatilidad": 0.209,
+     "saturacion": 0.612,
+     "estacional": true,
+     "query": "vestido"
+    }
+   }
+  },
+  "prenda.falda": {
+   "tipo": "prenda",
+   "nombre": "Falda",
+   "padre": null,
+   "relaciones": [
+    "corte.midi",
+    "corte.mini"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 51.9,
+     "estado_actual": "estable",
+     "score_24m": 22.4,
+     "crecimiento": -0.0518,
+     "persistencia": 3,
+     "aceleracion": -0.0166,
+     "volatilidad": 0.239,
+     "saturacion": 0.519,
+     "estacional": true,
+     "query": "falda"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 61.9,
+     "estado_actual": "estable",
+     "score_24m": 25.8,
+     "crecimiento": 0.0136,
+     "persistencia": 4,
+     "aceleracion": 0.0389,
+     "volatilidad": 0.229,
+     "saturacion": 0.619,
+     "estacional": true,
+     "query": "falda"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 78.3,
+     "estado_actual": "estable",
+     "score_24m": 29.9,
+     "crecimiento": -0.0032,
+     "persistencia": 5,
+     "aceleracion": -0.044,
+     "volatilidad": 0.147,
+     "saturacion": 0.783,
+     "estacional": false,
+     "query": "falda"
+    }
+   }
+  },
+  "prenda.pantalon": {
+   "tipo": "prenda",
+   "nombre": "Pantalón",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 58.8,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 46.2,
+     "crecimiento": 0.4596,
+     "persistencia": 12,
+     "aceleracion": 0.3957,
+     "volatilidad": 0.326,
+     "saturacion": 0.588,
+     "estacional": false,
+     "query": "pantalón"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 68.4,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 45.7,
+     "crecimiento": 0.5849,
+     "persistencia": 12,
+     "aceleracion": 0.5945,
+     "volatilidad": 0.285,
+     "saturacion": 0.684,
+     "estacional": false,
+     "query": "pantalón"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 80.8,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 47.3,
+     "crecimiento": 0.9112,
+     "persistencia": 12,
+     "aceleracion": 0.8483,
+     "volatilidad": 0.346,
+     "saturacion": 0.807,
+     "estacional": false,
+     "query": "pantalón"
+    }
+   }
+  },
+  "prenda.jean": {
+   "tipo": "prenda",
+   "nombre": "Jean",
+   "padre": "prenda.pantalon",
+   "relaciones": [
+    "tela.denim",
+    "corte.pierna_ancha",
+    "corte.baggy",
+    "corte.skinny"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 48.8,
+     "estado_actual": "estable",
+     "score_24m": 25.4,
+     "crecimiento": 0.0522,
+     "persistencia": 4,
+     "aceleracion": 0.0264,
+     "volatilidad": 0.332,
+     "saturacion": 0.487,
+     "estacional": true,
+     "query": "jean"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 66.6,
+     "estado_actual": "estable",
+     "score_24m": 24.6,
+     "crecimiento": -0.0232,
+     "persistencia": 4,
+     "aceleracion": -0.0123,
+     "volatilidad": 0.116,
+     "saturacion": 0.666,
+     "estacional": true,
+     "query": "jeans"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 78.8,
+     "estado_actual": "estable",
+     "score_24m": 38.4,
+     "crecimiento": 0.0654,
+     "persistencia": 8,
+     "aceleracion": 0.0206,
+     "volatilidad": 0.178,
+     "saturacion": 0.787,
+     "estacional": false,
+     "query": "vaqueros"
+    }
+   }
+  },
+  "prenda.short": {
+   "tipo": "prenda",
+   "nombre": "Short",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 52.3,
+     "estado_actual": "estable",
+     "score_24m": 21.7,
+     "crecimiento": -0.0126,
+     "persistencia": 3,
+     "aceleracion": 0.0044,
+     "volatilidad": 0.205,
+     "saturacion": 0.523,
+     "estacional": true,
+     "query": "short"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 86.5,
+     "estado_actual": "estable",
+     "score_24m": 42.8,
+     "crecimiento": 0.0869,
+     "persistencia": 9,
+     "aceleracion": -0.0487,
+     "volatilidad": 0.157,
+     "saturacion": 0.865,
+     "estacional": false,
+     "query": "shorts"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 65.0,
+     "estado_actual": "estable",
+     "score_24m": 34.3,
+     "crecimiento": 0.1191,
+     "persistencia": 6,
+     "aceleracion": -0.1037,
+     "volatilidad": 0.349,
+     "saturacion": 0.65,
+     "estacional": false,
+     "query": "shorts"
+    }
+   }
+  },
+  "prenda.bermuda": {
+   "tipo": "prenda",
+   "nombre": "Bermuda",
+   "padre": "prenda.short",
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 48.4,
+     "estado_actual": "estable",
+     "score_24m": 38.0,
+     "crecimiento": 0.2129,
+     "persistencia": 9,
+     "aceleracion": 0.0778,
+     "volatilidad": 0.342,
+     "saturacion": 0.484,
+     "estacional": true,
+     "query": "bermuda"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 22.0,
+     "estado_actual": "estable",
+     "score_24m": 26.1,
+     "crecimiento": 0.1139,
+     "persistencia": 7,
+     "aceleracion": 0.1505,
+     "volatilidad": 0.282,
+     "saturacion": 0.22,
+     "estacional": false,
+     "query": "bermuda"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 40.4,
+     "estado_actual": "pico_atencion",
+     "score_24m": 35.7,
+     "crecimiento": 0.2404,
+     "persistencia": 5,
+     "aceleracion": 0.0904,
+     "volatilidad": 0.788,
+     "saturacion": 0.404,
+     "estacional": true,
+     "query": "bermuda"
+    }
+   }
+  },
+  "prenda.leggins": {
+   "tipo": "prenda",
+   "nombre": "Leggins",
+   "padre": null,
+   "relaciones": [
+    "prenda.ropa_deportiva"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 35.2,
+     "estado_actual": "estable",
+     "score_24m": 17.3,
+     "crecimiento": -0.144,
+     "persistencia": 2,
+     "aceleracion": -0.0724,
+     "volatilidad": 0.165,
+     "saturacion": 0.352,
+     "estacional": true,
+     "query": "leggins"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 39.8,
+     "estado_actual": "estable",
+     "score_24m": 22.3,
+     "crecimiento": -0.0083,
+     "persistencia": 5,
+     "aceleracion": 0.0576,
+     "volatilidad": 0.125,
+     "saturacion": 0.398,
+     "estacional": false,
+     "query": "leggins"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 39.7,
+     "estado_actual": "estable",
+     "score_24m": 26.7,
+     "crecimiento": 0.0063,
+     "persistencia": 5,
+     "aceleracion": 0.1122,
+     "volatilidad": 0.361,
+     "saturacion": 0.397,
+     "estacional": false,
+     "query": "leggins"
+    }
+   }
+  },
+  "prenda.jogger": {
+   "tipo": "prenda",
+   "nombre": "Jogger",
+   "padre": "prenda.pantalon",
+   "relaciones": [
+    "estilo.athleisure"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 24.7,
+     "estado_actual": "estable",
+     "score_24m": 17.2,
+     "crecimiento": -0.1846,
+     "persistencia": 1,
+     "aceleracion": 0.0228,
+     "volatilidad": 0.372,
+     "saturacion": 0.247,
+     "estacional": true,
+     "query": "jogger"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 44.3,
+     "estado_actual": "estable",
+     "score_24m": 16.7,
+     "crecimiento": -0.1221,
+     "persistencia": 1,
+     "aceleracion": 0.0085,
+     "volatilidad": 0.181,
+     "saturacion": 0.443,
+     "estacional": true,
+     "query": "jogger"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 46.8,
+     "estado_actual": "estable",
+     "score_24m": 27.1,
+     "crecimiento": 0.0237,
+     "persistencia": 5,
+     "aceleracion": 0.069,
+     "volatilidad": 0.315,
+     "saturacion": 0.468,
+     "estacional": false,
+     "query": "jogger"
+    }
+   }
+  },
+  "prenda.pantalon_cargo": {
+   "tipo": "prenda",
+   "nombre": "Pantalón cargo",
+   "padre": "prenda.pantalon",
+   "relaciones": [
+    "estilo.utilitario",
+    "estilo.gorpcore"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 18.4,
+     "estado_actual": "pico_atencion",
+     "score_24m": 25.8,
+     "crecimiento": -0.1629,
+     "persistencia": 3,
+     "aceleracion": 0.0537,
+     "volatilidad": 0.685,
+     "saturacion": 0.184,
+     "estacional": true,
+     "query": "pantalón cargo"
+    },
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 53.2,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 45.5,
+     "crecimiento": 0.3257,
+     "persistencia": 12,
+     "aceleracion": 0.3152,
+     "volatilidad": 0.307,
+     "saturacion": 0.532,
+     "estacional": false,
+     "query": "pantalón cargo"
+    },
+    "ES": {
+     "calidad": "apta_senal",
+     "momentum": 66.5,
+     "estado_actual": "estable",
+     "score_24m": 44.7,
+     "crecimiento": 0.1875,
+     "persistencia": 11,
+     "aceleracion": 0.245,
+     "volatilidad": 0.239,
+     "saturacion": 0.665,
+     "estacional": true,
+     "query": "pantalón cargo"
+    }
+   }
+  },
+  "prenda.pantalon_vestir": {
+   "tipo": "prenda",
+   "nombre": "Pantalón de vestir",
+   "padre": "prenda.pantalon",
+   "relaciones": [
+    "corte.sastreria"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 53.2,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 44.3,
+     "crecimiento": 0.2604,
+     "persistencia": 10,
+     "aceleracion": 0.4453,
+     "volatilidad": 0.504,
+     "saturacion": 0.532,
+     "estacional": false,
+     "query": "pantalón de vestir"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 72.5,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 47.6,
+     "crecimiento": 0.5847,
+     "persistencia": 12,
+     "aceleracion": 0.5991,
+     "volatilidad": 0.321,
+     "saturacion": 0.725,
+     "estacional": false,
+     "query": "pantalón de vestir"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 64.8,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 47.9,
+     "crecimiento": 0.5087,
+     "persistencia": 12,
+     "aceleracion": 0.3514,
+     "volatilidad": 0.341,
+     "saturacion": 0.647,
+     "estacional": false,
+     "query": "pantalón de traje"
+    }
+   }
+  },
+  "prenda.enterizo": {
+   "tipo": "prenda",
+   "nombre": "Enterizo",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 49.4,
+     "estado_actual": "estable",
+     "score_24m": 24.8,
+     "crecimiento": -0.1083,
+     "persistencia": 4,
+     "aceleracion": -0.1053,
+     "volatilidad": 0.242,
+     "saturacion": 0.494,
+     "estacional": true,
+     "query": "enterizo"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 31.8,
+     "estado_actual": "baja_sostenida",
+     "score_24m": 14.5,
+     "crecimiento": -0.2524,
+     "persistencia": 0,
+     "aceleracion": -0.2058,
+     "volatilidad": 0.186,
+     "saturacion": 0.318,
+     "estacional": false,
+     "query": "jumpsuit"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 40.0,
+     "estado_actual": "estable",
+     "score_24m": 20.7,
+     "crecimiento": -0.0551,
+     "persistencia": 4,
+     "aceleracion": 0.0426,
+     "volatilidad": 0.142,
+     "saturacion": 0.4,
+     "estacional": false,
+     "query": "mono mujer"
+    }
+   }
+  },
+  "prenda.overol": {
+   "tipo": "prenda",
+   "nombre": "Overol",
+   "padre": null,
+   "relaciones": [
+    "tela.denim"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 25.1,
+     "estado_actual": "estable",
+     "score_24m": 19.3,
+     "crecimiento": -0.0988,
+     "persistencia": 3,
+     "aceleracion": -0.1202,
+     "volatilidad": 0.264,
+     "saturacion": 0.251,
+     "estacional": true,
+     "query": "overol"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 48.8,
+     "estado_actual": "pico_atencion",
+     "score_24m": 22.5,
+     "crecimiento": 0.0017,
+     "persistencia": 3,
+     "aceleracion": 0.0428,
+     "volatilidad": 0.29,
+     "saturacion": 0.487,
+     "estacional": true,
+     "query": "overol"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 45.2,
+     "estado_actual": "estable",
+     "score_24m": 18.0,
+     "crecimiento": -0.1026,
+     "persistencia": 2,
+     "aceleracion": -0.0014,
+     "volatilidad": 0.147,
+     "saturacion": 0.452,
+     "estacional": false,
+     "query": "peto"
+    }
+   }
+  },
+  "prenda.blazer": {
+   "tipo": "prenda",
+   "nombre": "Blazer",
+   "padre": null,
+   "relaciones": [
+    "corte.sastreria",
+    "estilo.old_money"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    10
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 36.1,
+     "estado_actual": "estable",
+     "score_24m": 19.0,
+     "crecimiento": -0.1625,
+     "persistencia": 2,
+     "aceleracion": -0.0373,
+     "volatilidad": 0.268,
+     "saturacion": 0.361,
+     "estacional": false,
+     "query": "blazer"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 29.9,
+     "estado_actual": "estable",
+     "score_24m": 17.3,
+     "crecimiento": -0.211,
+     "persistencia": 2,
+     "aceleracion": 0.0357,
+     "volatilidad": 0.222,
+     "saturacion": 0.299,
+     "estacional": true,
+     "query": "blazer"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 33.1,
+     "estado_actual": "estable",
+     "score_24m": 25.3,
+     "crecimiento": -0.0853,
+     "persistencia": 5,
+     "aceleracion": 0.0124,
+     "volatilidad": 0.316,
+     "saturacion": 0.331,
+     "estacional": false,
+     "query": "blazer"
+    }
+   }
+  },
+  "prenda.chaqueta": {
+   "tipo": "prenda",
+   "nombre": "Chaqueta",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 58.2,
+     "estado_actual": "estable",
+     "score_24m": 32.1,
+     "crecimiento": 0.1131,
+     "persistencia": 7,
+     "aceleracion": 0.0433,
+     "volatilidad": 0.223,
+     "saturacion": 0.583,
+     "estacional": true,
+     "query": "chaqueta"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 38.3,
+     "estado_actual": "pico_atencion",
+     "score_24m": 27.5,
+     "crecimiento": 0.011,
+     "persistencia": 4,
+     "aceleracion": -0.0254,
+     "volatilidad": 0.502,
+     "saturacion": 0.383,
+     "estacional": true,
+     "query": "chamarra"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 53.2,
+     "estado_actual": "pico_atencion",
+     "score_24m": 35.1,
+     "crecimiento": 0.0705,
+     "persistencia": 6,
+     "aceleracion": -0.0373,
+     "volatilidad": 0.482,
+     "saturacion": 0.532,
+     "estacional": true,
+     "query": "chaqueta"
+    }
+   }
+  },
+  "prenda.chaqueta_cuero": {
+   "tipo": "prenda",
+   "nombre": "Chaqueta de cuero",
+   "padre": "prenda.chaqueta",
+   "relaciones": [
+    "tela.cuero",
+    "tela.cuero_vegano"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 57.1,
+     "estado_actual": "estable",
+     "score_24m": 42.6,
+     "crecimiento": 0.2387,
+     "persistencia": 11,
+     "aceleracion": 0.1973,
+     "volatilidad": 0.244,
+     "saturacion": 0.571,
+     "estacional": true,
+     "query": "chaqueta de cuero"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 49.2,
+     "estado_actual": "pico_atencion",
+     "score_24m": 31.2,
+     "crecimiento": 0.1238,
+     "persistencia": 6,
+     "aceleracion": 0.0759,
+     "volatilidad": 0.385,
+     "saturacion": 0.492,
+     "estacional": true,
+     "query": "chamarra de cuero"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 53.6,
+     "estado_actual": "pico_atencion",
+     "score_24m": 36.8,
+     "crecimiento": 0.101,
+     "persistencia": 7,
+     "aceleracion": 0.0746,
+     "volatilidad": 0.461,
+     "saturacion": 0.536,
+     "estacional": true,
+     "query": "chaqueta de cuero"
+    }
+   }
+  },
+  "prenda.chaqueta_bomber": {
+   "tipo": "prenda",
+   "nombre": "Chaqueta bomber",
+   "padre": "prenda.chaqueta",
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 56.5,
+     "estado_actual": "estable",
+     "score_24m": 39.8,
+     "crecimiento": 0.2064,
+     "persistencia": 9,
+     "aceleracion": -0.1128,
+     "volatilidad": 0.309,
+     "saturacion": 0.565,
+     "estacional": true,
+     "query": "chaqueta bomber"
+    },
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 8.6,
+     "estado_actual": "pico_atencion",
+     "score_24m": 24.4,
+     "crecimiento": 0.2118,
+     "persistencia": 6,
+     "aceleracion": 0.1877,
+     "volatilidad": 0.452,
+     "saturacion": 0.086,
+     "estacional": true,
+     "query": "chamarra bomber"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 61.5,
+     "estado_actual": "estable",
+     "score_24m": 36.3,
+     "crecimiento": 0.1216,
+     "persistencia": 7,
+     "aceleracion": 0.0983,
+     "volatilidad": 0.381,
+     "saturacion": 0.615,
+     "estacional": false,
+     "query": "bomber"
+    }
+   }
+  },
+  "prenda.chaqueta_denim": {
+   "tipo": "prenda",
+   "nombre": "Chaqueta denim",
+   "padre": "prenda.chaqueta",
+   "relaciones": [
+    "tela.denim"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 26.6,
+     "estado_actual": "estable",
+     "score_24m": 19.3,
+     "crecimiento": -0.0274,
+     "persistencia": 3,
+     "aceleracion": 0.0909,
+     "volatilidad": 0.301,
+     "saturacion": 0.266,
+     "estacional": true,
+     "query": "chaqueta de jean"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 30.2,
+     "estado_actual": "estable",
+     "score_24m": 20.2,
+     "crecimiento": -0.074,
+     "persistencia": 3,
+     "aceleracion": 0.1325,
+     "volatilidad": 0.32,
+     "saturacion": 0.302,
+     "estacional": true,
+     "query": "chamarra de mezclilla"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 53.4,
+     "estado_actual": "estable",
+     "score_24m": 30.0,
+     "crecimiento": -0.0629,
+     "persistencia": 6,
+     "aceleracion": -0.0249,
+     "volatilidad": 0.242,
+     "saturacion": 0.534,
+     "estacional": false,
+     "query": "chaqueta vaquera"
+    }
+   }
+  },
+  "prenda.abrigo": {
+   "tipo": "prenda",
+   "nombre": "Abrigo",
+   "padre": null,
+   "relaciones": [
+    "tela.lana"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 63.9,
+     "estado_actual": "estable",
+     "score_24m": 24.1,
+     "crecimiento": -0.0658,
+     "persistencia": 3,
+     "aceleracion": -0.1813,
+     "volatilidad": 0.189,
+     "saturacion": 0.639,
+     "estacional": false,
+     "query": "abrigo"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 23.0,
+     "estado_actual": "pico_atencion",
+     "score_24m": 31.1,
+     "crecimiento": -0.0108,
+     "persistencia": 4,
+     "aceleracion": 0.0744,
+     "volatilidad": 0.808,
+     "saturacion": 0.23,
+     "estacional": true,
+     "query": "abrigo"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 34.8,
+     "estado_actual": "pico_atencion",
+     "score_24m": 40.3,
+     "crecimiento": 0.0609,
+     "persistencia": 5,
+     "aceleracion": -0.0127,
+     "volatilidad": 0.966,
+     "saturacion": 0.348,
+     "estacional": true,
+     "query": "abrigo"
+    }
+   }
+  },
+  "prenda.gabardina": {
+   "tipo": "prenda",
+   "nombre": "Gabardina",
+   "padre": "prenda.abrigo",
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 7.7,
+     "estado_actual": "estable",
+     "score_24m": 15.4,
+     "crecimiento": -0.0707,
+     "persistencia": 3,
+     "aceleracion": -0.1831,
+     "volatilidad": 0.156,
+     "saturacion": 0.077,
+     "estacional": false,
+     "query": "gabardina"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 44.0,
+     "estado_actual": "estable",
+     "score_24m": 25.2,
+     "crecimiento": -0.0347,
+     "persistencia": 4,
+     "aceleracion": -0.0185,
+     "volatilidad": 0.338,
+     "saturacion": 0.44,
+     "estacional": true,
+     "query": "gabardina"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 57.1,
+     "estado_actual": "estable",
+     "score_24m": 39.0,
+     "crecimiento": -0.0297,
+     "persistencia": 7,
+     "aceleracion": -0.249,
+     "volatilidad": 0.435,
+     "saturacion": 0.571,
+     "estacional": false,
+     "query": "gabardina"
+    }
+   }
+  },
+  "prenda.parka": {
+   "tipo": "prenda",
+   "nombre": "Parka",
+   "padre": "prenda.abrigo",
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 27.0,
+     "estado_actual": "estable",
+     "score_24m": 22.7,
+     "crecimiento": -0.0241,
+     "persistencia": 5,
+     "aceleracion": -0.1689,
+     "volatilidad": 0.215,
+     "saturacion": 0.27,
+     "estacional": false,
+     "query": "parka"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 19.0,
+     "estado_actual": "estable",
+     "score_24m": 29.2,
+     "crecimiento": 0.0806,
+     "persistencia": 8,
+     "aceleracion": -0.2548,
+     "volatilidad": 0.257,
+     "saturacion": 0.19,
+     "estacional": false,
+     "query": "parka"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 42.2,
+     "estado_actual": "pico_atencion",
+     "score_24m": 35.9,
+     "crecimiento": -0.0039,
+     "persistencia": 5,
+     "aceleracion": -0.1637,
+     "volatilidad": 0.69,
+     "saturacion": 0.422,
+     "estacional": false,
+     "query": "parka"
+    }
+   }
+  },
+  "prenda.chaleco": {
+   "tipo": "prenda",
+   "nombre": "Chaleco",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 67.4,
+     "estado_actual": "estable",
+     "score_24m": 27.1,
+     "crecimiento": -0.017,
+     "persistencia": 4,
+     "aceleracion": -0.1013,
+     "volatilidad": 0.214,
+     "saturacion": 0.674,
+     "estacional": true,
+     "query": "chaleco"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 59.7,
+     "estado_actual": "estable",
+     "score_24m": 23.7,
+     "crecimiento": -0.0028,
+     "persistencia": 3,
+     "aceleracion": -0.0449,
+     "volatilidad": 0.241,
+     "saturacion": 0.597,
+     "estacional": true,
+     "query": "chaleco"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 48.8,
+     "estado_actual": "estable",
+     "score_24m": 23.0,
+     "crecimiento": -0.1435,
+     "persistencia": 3,
+     "aceleracion": -0.0869,
+     "volatilidad": 0.266,
+     "saturacion": 0.487,
+     "estacional": true,
+     "query": "chaleco"
+    }
+   }
+  },
+  "prenda.sudadera": {
+   "tipo": "prenda",
+   "nombre": "Sudadera / buzo",
+   "padre": null,
+   "relaciones": [
+    "corte.oversize",
+    "estilo.streetwear"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 60.9,
+     "estado_actual": "estable",
+     "score_24m": 25.5,
+     "crecimiento": 0.0518,
+     "persistencia": 4,
+     "aceleracion": -0.0012,
+     "volatilidad": 0.228,
+     "saturacion": 0.609,
+     "estacional": true,
+     "query": "buzo"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 44.8,
+     "estado_actual": "pico_atencion",
+     "score_24m": 28.6,
+     "crecimiento": 0.1049,
+     "persistencia": 5,
+     "aceleracion": 0.131,
+     "volatilidad": 0.428,
+     "saturacion": 0.448,
+     "estacional": true,
+     "query": "sudadera"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 40.9,
+     "estado_actual": "estable",
+     "score_24m": 32.5,
+     "crecimiento": -0.1007,
+     "persistencia": 5,
+     "aceleracion": -0.0845,
+     "volatilidad": 0.555,
+     "saturacion": 0.409,
+     "estacional": true,
+     "query": "sudadera"
+    }
+   }
+  },
+  "prenda.sueter": {
+   "tipo": "prenda",
+   "nombre": "Suéter",
+   "padre": null,
+   "relaciones": [
+    "tela.lana",
+    "tela.punto"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 64.7,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 46.1,
+     "crecimiento": 0.6268,
+     "persistencia": 12,
+     "aceleracion": 0.5853,
+     "volatilidad": 0.339,
+     "saturacion": 0.647,
+     "estacional": false,
+     "query": "suéter"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 35.9,
+     "estado_actual": "pico_atencion",
+     "score_24m": 36.2,
+     "crecimiento": 0.5616,
+     "persistencia": 8,
+     "aceleracion": 0.7227,
+     "volatilidad": 0.677,
+     "saturacion": 0.359,
+     "estacional": false,
+     "query": "suéter"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 40.2,
+     "estado_actual": "pico_atencion",
+     "score_24m": 34.4,
+     "crecimiento": 0.0952,
+     "persistencia": 5,
+     "aceleracion": 0.0196,
+     "volatilidad": 0.694,
+     "saturacion": 0.403,
+     "estacional": true,
+     "query": "jersey"
+    }
+   }
+  },
+  "prenda.cardigan": {
+   "tipo": "prenda",
+   "nombre": "Cárdigan",
+   "padre": "prenda.sueter",
+   "relaciones": [
+    "tela.punto"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 50.6,
+     "estado_actual": "estable",
+     "score_24m": 22.0,
+     "crecimiento": -0.2198,
+     "persistencia": 2,
+     "aceleracion": -0.4412,
+     "volatilidad": 0.233,
+     "saturacion": 0.506,
+     "estacional": true,
+     "query": "cardigan"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 39.2,
+     "estado_actual": "estable",
+     "score_24m": 20.2,
+     "crecimiento": -0.1607,
+     "persistencia": 2,
+     "aceleracion": -0.0596,
+     "volatilidad": 0.308,
+     "saturacion": 0.392,
+     "estacional": true,
+     "query": "cardigan"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 45.7,
+     "estado_actual": "pico_atencion",
+     "score_24m": 34.2,
+     "crecimiento": 0.0641,
+     "persistencia": 6,
+     "aceleracion": -0.168,
+     "volatilidad": 0.487,
+     "saturacion": 0.457,
+     "estacional": false,
+     "query": "cardigan"
+    }
+   }
+  },
+  "prenda.traje_bano": {
+   "tipo": "prenda",
+   "nombre": "Traje de baño",
+   "padre": null,
+   "relaciones": [
+    "estilo.playa_resort"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 52.3,
+     "estado_actual": "estable",
+     "score_24m": 26.2,
+     "crecimiento": 0.0211,
+     "persistencia": 6,
+     "aceleracion": 0.1004,
+     "volatilidad": 0.114,
+     "saturacion": 0.523,
+     "estacional": false,
+     "query": "vestido de baño"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 53.9,
+     "estado_actual": "estable",
+     "score_24m": 27.2,
+     "crecimiento": -0.0122,
+     "persistencia": 5,
+     "aceleracion": -0.0183,
+     "volatilidad": 0.235,
+     "saturacion": 0.539,
+     "estacional": false,
+     "query": "traje de baño"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 38.1,
+     "estado_actual": "pico_atencion",
+     "score_24m": 33.6,
+     "crecimiento": -0.0044,
+     "persistencia": 4,
+     "aceleracion": -0.1104,
+     "volatilidad": 0.752,
+     "saturacion": 0.381,
+     "estacional": true,
+     "query": "bañador"
+    }
+   }
+  },
+  "prenda.bikini": {
+   "tipo": "prenda",
+   "nombre": "Bikini",
+   "padre": "prenda.traje_bano",
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 23.3,
+     "estado_actual": "estable",
+     "score_24m": 23.7,
+     "crecimiento": 0.0566,
+     "persistencia": 7,
+     "aceleracion": 0.0092,
+     "volatilidad": 0.114,
+     "saturacion": 0.233,
+     "estacional": false,
+     "query": "bikini"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 34.3,
+     "estado_actual": "estable",
+     "score_24m": 30.8,
+     "crecimiento": 0.0173,
+     "persistencia": 9,
+     "aceleracion": -0.057,
+     "volatilidad": 0.103,
+     "saturacion": 0.343,
+     "estacional": false,
+     "query": "bikini"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 43.0,
+     "estado_actual": "pico_atencion",
+     "score_24m": 32.3,
+     "crecimiento": -0.0019,
+     "persistencia": 4,
+     "aceleracion": -0.1637,
+     "volatilidad": 0.649,
+     "saturacion": 0.43,
+     "estacional": false,
+     "query": "bikini"
+    }
+   }
+  },
+  "prenda.ropa_deportiva": {
+   "tipo": "prenda",
+   "nombre": "Ropa deportiva",
+   "padre": null,
+   "relaciones": [
+    "estilo.athleisure",
+    "tela.tecnica"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 38.3,
+     "estado_actual": "estable",
+     "score_24m": 14.7,
+     "crecimiento": -0.0688,
+     "persistencia": 1,
+     "aceleracion": -0.1427,
+     "volatilidad": 0.077,
+     "saturacion": 0.383,
+     "estacional": false,
+     "query": "ropa deportiva"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 51.5,
+     "estado_actual": "estable",
+     "score_24m": 33.8,
+     "crecimiento": 0.0748,
+     "persistencia": 9,
+     "aceleracion": -0.0395,
+     "volatilidad": 0.098,
+     "saturacion": 0.515,
+     "estacional": false,
+     "query": "ropa deportiva"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 48.6,
+     "estado_actual": "estable",
+     "score_24m": 38.1,
+     "crecimiento": 0.2021,
+     "persistencia": 11,
+     "aceleracion": 0.1546,
+     "volatilidad": 0.128,
+     "saturacion": 0.486,
+     "estacional": false,
+     "query": "ropa deportiva"
+    }
+   }
+  },
+  "prenda.conjunto": {
+   "tipo": "prenda",
+   "nombre": "Conjunto de dos piezas",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 57.8,
+     "estado_actual": "estable",
+     "score_24m": 32.2,
+     "crecimiento": -0.0212,
+     "persistencia": 5,
+     "aceleracion": 0.0509,
+     "volatilidad": 0.435,
+     "saturacion": 0.578,
+     "estacional": false,
+     "query": "conjunto dos piezas"
+    },
+    "ES": {
+     "calidad": "apta_senal",
+     "momentum": 59.2,
+     "estado_actual": "pico_atencion",
+     "score_24m": 36.3,
+     "crecimiento": 0.2284,
+     "persistencia": 7,
+     "aceleracion": -0.1413,
+     "volatilidad": 0.379,
+     "saturacion": 0.592,
+     "estacional": false,
+     "query": "conjunto dos piezas"
+    }
+   }
+  },
+  "corte.oversize": {
+   "tipo": "corte",
+   "nombre": "Oversize",
+   "padre": null,
+   "relaciones": [
+    "prenda.sudadera",
+    "prenda.camiseta"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    8
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 22.9,
+     "estado_actual": "estable",
+     "score_24m": 18.8,
+     "crecimiento": -0.2143,
+     "persistencia": 2,
+     "aceleracion": 0.0489,
+     "volatilidad": 0.374,
+     "saturacion": 0.229,
+     "estacional": true,
+     "query": "oversize"
+    },
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 61.7,
+     "estado_actual": "estable",
+     "score_24m": 21.3,
+     "crecimiento": -0.0237,
+     "persistencia": 3,
+     "aceleracion": 0.0131,
+     "volatilidad": 0.104,
+     "saturacion": 0.617,
+     "estacional": false,
+     "query": "oversize"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 70.2,
+     "estado_actual": "estable",
+     "score_24m": 32.6,
+     "crecimiento": -0.0388,
+     "persistencia": 6,
+     "aceleracion": -0.1084,
+     "volatilidad": 0.199,
+     "saturacion": 0.702,
+     "estacional": true,
+     "query": "oversize"
+    }
+   }
+  },
+  "corte.slim": {
+   "tipo": "corte",
+   "nombre": "Slim fit",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 63.9,
+     "estado_actual": "estable",
+     "score_24m": 36.6,
+     "crecimiento": 0.1499,
+     "persistencia": 8,
+     "aceleracion": 0.081,
+     "volatilidad": 0.259,
+     "saturacion": 0.639,
+     "estacional": false,
+     "query": "slim fit"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 64.5,
+     "estado_actual": "estable",
+     "score_24m": 37.9,
+     "crecimiento": 0.1137,
+     "persistencia": 9,
+     "aceleracion": 0.067,
+     "volatilidad": 0.18,
+     "saturacion": 0.645,
+     "estacional": false,
+     "query": "slim fit"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 36.8,
+     "estado_actual": "pico_atencion",
+     "score_24m": 29.3,
+     "crecimiento": 0.2149,
+     "persistencia": 6,
+     "aceleracion": 0.0876,
+     "volatilidad": 0.429,
+     "saturacion": 0.367,
+     "estacional": false,
+     "query": "slim fit"
+    }
+   }
+  },
+  "corte.skinny": {
+   "tipo": "corte",
+   "nombre": "Skinny / pitillo",
+   "padre": null,
+   "relaciones": [
+    "prenda.jean"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 42.2,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 44.4,
+     "crecimiento": 0.4795,
+     "persistencia": 10,
+     "aceleracion": 0.8414,
+     "volatilidad": 0.712,
+     "saturacion": 0.422,
+     "estacional": false,
+     "query": "jean skinny"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 31.0,
+     "estado_actual": "estable",
+     "score_24m": 15.7,
+     "crecimiento": -0.2152,
+     "persistencia": 1,
+     "aceleracion": -0.0802,
+     "volatilidad": 0.198,
+     "saturacion": 0.31,
+     "estacional": false,
+     "query": "jeans skinny"
+    },
+    "ES": {
+     "calidad": "apta_senal",
+     "momentum": 32.4,
+     "estado_actual": "estable",
+     "score_24m": 34.3,
+     "crecimiento": -0.1706,
+     "persistencia": 6,
+     "aceleracion": -0.1181,
+     "volatilidad": 0.567,
+     "saturacion": 0.324,
+     "estacional": false,
+     "query": "vaqueros pitillo"
+    }
+   }
+  },
+  "corte.recto": {
+   "tipo": "corte",
+   "nombre": "Recto",
+   "padre": null,
+   "relaciones": [
+    "prenda.jean"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 82.6,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 48.0,
+     "crecimiento": 0.3249,
+     "persistencia": 11,
+     "aceleracion": 0.1243,
+     "volatilidad": 0.231,
+     "saturacion": 0.826,
+     "estacional": false,
+     "query": "jeans rectos"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 62.1,
+     "estado_actual": "estable",
+     "score_24m": 39.5,
+     "crecimiento": 0.1021,
+     "persistencia": 8,
+     "aceleracion": 0.017,
+     "volatilidad": 0.37,
+     "saturacion": 0.621,
+     "estacional": false,
+     "query": "vaqueros rectos"
+    }
+   }
+  },
+  "corte.pierna_ancha": {
+   "tipo": "corte",
+   "nombre": "Pierna ancha",
+   "padre": null,
+   "relaciones": [
+    "prenda.jean",
+    "prenda.pantalon"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 14.4,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 33.3,
+     "crecimiento": 1.1899,
+     "persistencia": 12,
+     "aceleracion": 0.9555,
+     "volatilidad": 0.443,
+     "saturacion": 0.144,
+     "estacional": false,
+     "query": "pantalón ancho"
+    },
+    "ES": {
+     "calidad": "apta_senal",
+     "momentum": 83.7,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 47.8,
+     "crecimiento": 1.1685,
+     "persistencia": 12,
+     "aceleracion": 0.886,
+     "volatilidad": 0.396,
+     "saturacion": 0.837,
+     "estacional": false,
+     "query": "pantalón ancho"
+    }
+   }
+  },
+  "corte.baggy": {
+   "tipo": "corte",
+   "nombre": "Baggy",
+   "padre": null,
+   "relaciones": [
+    "prenda.jean"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 42.7,
+     "estado_actual": "pico_atencion",
+     "score_24m": 30.9,
+     "crecimiento": 0.1454,
+     "persistencia": 5,
+     "aceleracion": -0.6717,
+     "volatilidad": 0.412,
+     "saturacion": 0.427,
+     "estacional": true,
+     "query": "baggy"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 62.8,
+     "estado_actual": "estable",
+     "score_24m": 44.5,
+     "crecimiento": 0.2142,
+     "persistencia": 10,
+     "aceleracion": -0.6676,
+     "volatilidad": 0.225,
+     "saturacion": 0.628,
+     "estacional": false,
+     "query": "baggy"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 77.1,
+     "estado_actual": "estable",
+     "score_24m": 40.7,
+     "crecimiento": 0.1308,
+     "persistencia": 8,
+     "aceleracion": -0.5151,
+     "volatilidad": 0.196,
+     "saturacion": 0.771,
+     "estacional": false,
+     "query": "baggy"
+    }
+   }
+  },
+  "corte.bota_ancha": {
+   "tipo": "corte",
+   "nombre": "Bota ancha / campana",
+   "padre": null,
+   "relaciones": [
+    "prenda.jean"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    9
+   ],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 51.9,
+     "estado_actual": "estable",
+     "score_24m": 27.4,
+     "crecimiento": -0.077,
+     "persistencia": 5,
+     "aceleracion": -0.1235,
+     "volatilidad": 0.231,
+     "saturacion": 0.519,
+     "estacional": false,
+     "query": "jeans acampanados"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 14.1,
+     "estado_actual": "estable",
+     "score_24m": 22.1,
+     "crecimiento": -0.2489,
+     "persistencia": 3,
+     "aceleracion": -0.2763,
+     "volatilidad": 0.46,
+     "saturacion": 0.141,
+     "estacional": false,
+     "query": "vaqueros campana"
+    }
+   }
+  },
+  "corte.tiro_alto": {
+   "tipo": "corte",
+   "nombre": "Tiro alto",
+   "padre": null,
+   "relaciones": [
+    "prenda.jean"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 9.5,
+     "estado_actual": "estable",
+     "score_24m": 16.1,
+     "crecimiento": -0.1163,
+     "persistencia": 2,
+     "aceleracion": 0.0179,
+     "volatilidad": 0.33,
+     "saturacion": 0.095,
+     "estacional": true,
+     "query": "tiro alto"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 54.5,
+     "estado_actual": "estable",
+     "score_24m": 22.9,
+     "crecimiento": -0.0046,
+     "persistencia": 4,
+     "aceleracion": 0.0405,
+     "volatilidad": 0.145,
+     "saturacion": 0.545,
+     "estacional": false,
+     "query": "cintura alta"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 55.0,
+     "estado_actual": "estable",
+     "score_24m": 37.1,
+     "crecimiento": 0.136,
+     "persistencia": 10,
+     "aceleracion": 0.0561,
+     "volatilidad": 0.116,
+     "saturacion": 0.55,
+     "estacional": false,
+     "query": "cintura alta"
+    }
+   }
+  },
+  "corte.tiro_bajo": {
+   "tipo": "corte",
+   "nombre": "Tiro bajo",
+   "padre": null,
+   "relaciones": [
+    "prenda.jean",
+    "estilo.y2k"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 54.0,
+     "estado_actual": "estable",
+     "score_24m": 38.0,
+     "crecimiento": 0.2832,
+     "persistencia": 8,
+     "aceleracion": -0.5532,
+     "volatilidad": 0.312,
+     "saturacion": 0.54,
+     "estacional": false,
+     "query": "tiro bajo"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 80.7,
+     "estado_actual": "estable",
+     "score_24m": 47.1,
+     "crecimiento": 0.0975,
+     "persistencia": 10,
+     "aceleracion": -0.6185,
+     "volatilidad": 0.094,
+     "saturacion": 0.877,
+     "estacional": false,
+     "query": "tiro bajo"
+    }
+   }
+  },
+  "corte.mom": {
+   "tipo": "corte",
+   "nombre": "Mom fit",
+   "padre": null,
+   "relaciones": [
+    "prenda.jean"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 19.8,
+     "estado_actual": "estable",
+     "score_24m": 22.5,
+     "crecimiento": -0.1828,
+     "persistencia": 3,
+     "aceleracion": -0.2813,
+     "volatilidad": 0.442,
+     "saturacion": 0.198,
+     "estacional": true,
+     "query": "mom jeans"
+    },
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 15.7,
+     "estado_actual": "estable",
+     "score_24m": 13.2,
+     "crecimiento": -0.1718,
+     "persistencia": 1,
+     "aceleracion": 0.0232,
+     "volatilidad": 0.161,
+     "saturacion": 0.157,
+     "estacional": true,
+     "query": "mom jeans"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 32.0,
+     "estado_actual": "pico_atencion",
+     "score_24m": 23.7,
+     "crecimiento": -0.0657,
+     "persistencia": 4,
+     "aceleracion": 0.1188,
+     "volatilidad": 0.382,
+     "saturacion": 0.32,
+     "estacional": true,
+     "query": "mom jeans"
+    }
+   }
+  },
+  "corte.entallado": {
+   "tipo": "corte",
+   "nombre": "Entallado",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 56.9,
+     "estado_actual": "estable",
+     "score_24m": 36.5,
+     "crecimiento": 0.0705,
+     "persistencia": 9,
+     "aceleracion": 0.0783,
+     "volatilidad": 0.183,
+     "saturacion": 0.569,
+     "estacional": false,
+     "query": "entallado"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 64.5,
+     "estado_actual": "estable",
+     "score_24m": 41.7,
+     "crecimiento": 0.1026,
+     "persistencia": 11,
+     "aceleracion": 0.0969,
+     "volatilidad": 0.101,
+     "saturacion": 0.645,
+     "estacional": false,
+     "query": "ajustado"
+    }
+   }
+  },
+  "corte.asimetrico": {
+   "tipo": "corte",
+   "nombre": "Asimétrico",
+   "padre": null,
+   "relaciones": [
+    "prenda.vestido"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 13.6,
+     "estado_actual": "pico_atencion",
+     "score_24m": 28.3,
+     "crecimiento": 0.3814,
+     "persistencia": 8,
+     "aceleracion": 0.3898,
+     "volatilidad": 0.436,
+     "saturacion": 0.136,
+     "estacional": false,
+     "query": "vestido asimétrico"
+    }
+   }
+  },
+  "corte.midi": {
+   "tipo": "corte",
+   "nombre": "Midi",
+   "padre": null,
+   "relaciones": [
+    "prenda.falda"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 45.2,
+     "estado_actual": "estable",
+     "score_24m": 43.2,
+     "crecimiento": 0.1991,
+     "persistencia": 9,
+     "aceleracion": 0.128,
+     "volatilidad": 0.579,
+     "saturacion": 0.452,
+     "estacional": false,
+     "query": "falda midi"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 78.5,
+     "estado_actual": "estable",
+     "score_24m": 43.5,
+     "crecimiento": 0.1615,
+     "persistencia": 10,
+     "aceleracion": 0.2029,
+     "volatilidad": 0.197,
+     "saturacion": 0.785,
+     "estacional": false,
+     "query": "falda midi"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 62.9,
+     "estado_actual": "estable",
+     "score_24m": 31.9,
+     "crecimiento": 0.0357,
+     "persistencia": 7,
+     "aceleracion": 0.1357,
+     "volatilidad": 0.178,
+     "saturacion": 0.629,
+     "estacional": false,
+     "query": "falda midi"
+    }
+   }
+  },
+  "corte.maxi": {
+   "tipo": "corte",
+   "nombre": "Maxi / largo",
+   "padre": null,
+   "relaciones": [
+    "prenda.vestido"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 53.1,
+     "estado_actual": "estable",
+     "score_24m": 22.8,
+     "crecimiento": -0.0549,
+     "persistencia": 3,
+     "aceleracion": -0.0374,
+     "volatilidad": 0.242,
+     "saturacion": 0.531,
+     "estacional": false,
+     "query": "vestido largo"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 73.5,
+     "estado_actual": "estable",
+     "score_24m": 36.6,
+     "crecimiento": 0.0627,
+     "persistencia": 8,
+     "aceleracion": 0.0699,
+     "volatilidad": 0.159,
+     "saturacion": 0.735,
+     "estacional": true,
+     "query": "vestido largo"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 51.6,
+     "estado_actual": "estable",
+     "score_24m": 27.9,
+     "crecimiento": -0.0298,
+     "persistencia": 5,
+     "aceleracion": 0.0194,
+     "volatilidad": 0.294,
+     "saturacion": 0.516,
+     "estacional": true,
+     "query": "vestido largo"
+    }
+   }
+  },
+  "corte.mini": {
+   "tipo": "corte",
+   "nombre": "Mini",
+   "padre": null,
+   "relaciones": [
+    "prenda.falda"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 8.2,
+     "estado_actual": "estable",
+     "score_24m": 23.7,
+     "crecimiento": 0.0312,
+     "persistencia": 7,
+     "aceleracion": 0.0807,
+     "volatilidad": 0.252,
+     "saturacion": 0.083,
+     "estacional": true,
+     "query": "minifalda"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 29.4,
+     "estado_actual": "estable",
+     "score_24m": 27.7,
+     "crecimiento": 0.0475,
+     "persistencia": 8,
+     "aceleracion": 0.0106,
+     "volatilidad": 0.141,
+     "saturacion": 0.294,
+     "estacional": false,
+     "query": "minifalda"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 53.3,
+     "estado_actual": "estable",
+     "score_24m": 26.7,
+     "crecimiento": -0.0169,
+     "persistencia": 5,
+     "aceleracion": 0.0187,
+     "volatilidad": 0.225,
+     "saturacion": 0.533,
+     "estacional": true,
+     "query": "minifalda"
+    }
+   }
+  },
+  "corte.sastreria": {
+   "tipo": "corte",
+   "nombre": "Sastrería",
+   "padre": null,
+   "relaciones": [
+    "prenda.blazer",
+    "prenda.pantalon_vestir"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 40.5,
+     "estado_actual": "estable",
+     "score_24m": 28.6,
+     "crecimiento": 0.0776,
+     "persistencia": 8,
+     "aceleracion": 0.1419,
+     "volatilidad": 0.118,
+     "saturacion": 0.405,
+     "estacional": false,
+     "query": "traje sastre"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 41.4,
+     "estado_actual": "pico_atencion",
+     "score_24m": 26.1,
+     "crecimiento": -0.0197,
+     "persistencia": 5,
+     "aceleracion": 0.1869,
+     "volatilidad": 0.327,
+     "saturacion": 0.414,
+     "estacional": false,
+     "query": "traje sastre"
+    }
+   }
+  },
+  "corte.plisado": {
+   "tipo": "corte",
+   "nombre": "Plisado",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 10.8,
+     "estado_actual": "estable",
+     "score_24m": 26.0,
+     "crecimiento": 0.0403,
+     "persistencia": 9,
+     "aceleracion": 0.1482,
+     "volatilidad": 0.128,
+     "saturacion": 0.107,
+     "estacional": false,
+     "query": "plisado"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 33.8,
+     "estado_actual": "estable",
+     "score_24m": 28.0,
+     "crecimiento": -0.0897,
+     "persistencia": 6,
+     "aceleracion": 0.0323,
+     "volatilidad": 0.324,
+     "saturacion": 0.338,
+     "estacional": false,
+     "query": "plisado"
+    }
+   }
+  },
+  "corte.drapeado": {
+   "tipo": "corte",
+   "nombre": "Drapeado",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 47.1,
+     "estado_actual": "estable",
+     "score_24m": 26.6,
+     "crecimiento": 0.062,
+     "persistencia": 5,
+     "aceleracion": 0.062,
+     "volatilidad": 0.295,
+     "saturacion": 0.471,
+     "estacional": false,
+     "query": "drapeado"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 58.8,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 38.5,
+     "crecimiento": 0.2744,
+     "persistencia": 10,
+     "aceleracion": 0.2049,
+     "volatilidad": 0.194,
+     "saturacion": 0.588,
+     "estacional": false,
+     "query": "drapeado"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 67.2,
+     "estado_actual": "estable",
+     "score_24m": 34.7,
+     "crecimiento": 0.0717,
+     "persistencia": 7,
+     "aceleracion": 0.0331,
+     "volatilidad": 0.247,
+     "saturacion": 0.672,
+     "estacional": false,
+     "query": "drapeado"
+    }
+   }
+  },
+  "corte.cut_out": {
+   "tipo": "corte",
+   "nombre": "Cut out",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 5.8,
+     "estado_actual": "pico_atencion",
+     "score_24m": 30.1,
+     "crecimiento": -0.2308,
+     "persistencia": 5,
+     "aceleracion": -0.3683,
+     "volatilidad": 0.674,
+     "saturacion": 0.058,
+     "estacional": false,
+     "query": "cut out"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 22.1,
+     "estado_actual": "pico_atencion",
+     "score_24m": 25.0,
+     "crecimiento": -0.0149,
+     "persistencia": 4,
+     "aceleracion": 0.3723,
+     "volatilidad": 0.587,
+     "saturacion": 0.221,
+     "estacional": false,
+     "query": "cut out"
+    }
+   }
+  },
+  "corte.espalda_descubierta": {
+   "tipo": "corte",
+   "nombre": "Espalda descubierta",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 18.7,
+     "estado_actual": "estable",
+     "score_24m": 28.6,
+     "crecimiento": 0.0136,
+     "persistencia": 7,
+     "aceleracion": -0.0191,
+     "volatilidad": 0.375,
+     "saturacion": 0.187,
+     "estacional": true,
+     "query": "espalda descubierta"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 60.2,
+     "estado_actual": "estable",
+     "score_24m": 37.2,
+     "crecimiento": 0.1778,
+     "persistencia": 9,
+     "aceleracion": 0.1712,
+     "volatilidad": 0.222,
+     "saturacion": 0.602,
+     "estacional": false,
+     "query": "espalda descubierta"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 40.7,
+     "estado_actual": "estable",
+     "score_24m": 26.4,
+     "crecimiento": -0.0279,
+     "persistencia": 5,
+     "aceleracion": 0.0338,
+     "volatilidad": 0.316,
+     "saturacion": 0.407,
+     "estacional": false,
+     "query": "espalda descubierta"
+    }
+   }
+  },
+  "corte.cuello_alto": {
+   "tipo": "corte",
+   "nombre": "Cuello alto",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 38.2,
+     "estado_actual": "pico_atencion",
+     "score_24m": 31.3,
+     "crecimiento": 0.1654,
+     "persistencia": 6,
+     "aceleracion": 0.2252,
+     "volatilidad": 0.516,
+     "saturacion": 0.382,
+     "estacional": true,
+     "query": "cuello alto"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 33.2,
+     "estado_actual": "pico_atencion",
+     "score_24m": 36.3,
+     "crecimiento": 0.2277,
+     "persistencia": 6,
+     "aceleracion": 0.2746,
+     "volatilidad": 0.789,
+     "saturacion": 0.333,
+     "estacional": true,
+     "query": "cuello alto"
+    }
+   }
+  },
+  "corte.hombros_descubiertos": {
+   "tipo": "corte",
+   "nombre": "Hombros descubiertos",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 26.9,
+     "estado_actual": "estable",
+     "score_24m": 25.9,
+     "crecimiento": 0.0094,
+     "persistencia": 7,
+     "aceleracion": 0.2903,
+     "volatilidad": 0.233,
+     "saturacion": 0.269,
+     "estacional": true,
+     "query": "hombros descubiertos"
+    }
+   }
+  },
+  "corte.strapless": {
+   "tipo": "corte",
+   "nombre": "Strapless",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 44.7,
+     "estado_actual": "estable",
+     "score_24m": 29.1,
+     "crecimiento": 0.0916,
+     "persistencia": 7,
+     "aceleracion": 0.0708,
+     "volatilidad": 0.209,
+     "saturacion": 0.447,
+     "estacional": true,
+     "query": "strapless"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 60.8,
+     "estado_actual": "estable",
+     "score_24m": 39.4,
+     "crecimiento": 0.1094,
+     "persistencia": 10,
+     "aceleracion": 0.036,
+     "volatilidad": 0.148,
+     "saturacion": 0.608,
+     "estacional": false,
+     "query": "strapless"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 15.2,
+     "estado_actual": "pico_atencion",
+     "score_24m": 52.3,
+     "crecimiento": 1.5417,
+     "persistencia": 8,
+     "aceleracion": 1.3988,
+     "volatilidad": 1.774,
+     "saturacion": 0.152,
+     "estacional": false,
+     "query": "strapless"
+    }
+   }
+  },
+  "tela.algodon": {
+   "tipo": "tela",
+   "nombre": "Algodón",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 81.8,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 50.4,
+     "crecimiento": 0.3471,
+     "persistencia": 12,
+     "aceleracion": 0.1421,
+     "volatilidad": 0.198,
+     "saturacion": 0.844,
+     "estacional": false,
+     "query": "algodón"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 79.2,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 49.2,
+     "crecimiento": 0.4729,
+     "persistencia": 12,
+     "aceleracion": 0.2829,
+     "volatilidad": 0.233,
+     "saturacion": 0.808,
+     "estacional": false,
+     "query": "algodón"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 84.7,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 50.6,
+     "crecimiento": 0.4963,
+     "persistencia": 12,
+     "aceleracion": 0.2366,
+     "volatilidad": 0.248,
+     "saturacion": 0.847,
+     "estacional": false,
+     "query": "algodón"
+    }
+   }
+  },
+  "tela.denim": {
+   "tipo": "tela",
+   "nombre": "Denim",
+   "padre": null,
+   "relaciones": [
+    "prenda.jean",
+    "prenda.chaqueta_denim"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 67.5,
+     "estado_actual": "estable",
+     "score_24m": 24.4,
+     "crecimiento": 0.0062,
+     "persistencia": 3,
+     "aceleracion": -0.2777,
+     "volatilidad": 0.173,
+     "saturacion": 0.675,
+     "estacional": true,
+     "query": "denim"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 74.3,
+     "estado_actual": "estable",
+     "score_24m": 41.5,
+     "crecimiento": 0.1067,
+     "persistencia": 10,
+     "aceleracion": 0.1285,
+     "volatilidad": 0.131,
+     "saturacion": 0.743,
+     "estacional": true,
+     "query": "mezclilla"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 44.6,
+     "estado_actual": "pico_atencion",
+     "score_24m": 25.1,
+     "crecimiento": 0.0531,
+     "persistencia": 4,
+     "aceleracion": -0.3463,
+     "volatilidad": 0.285,
+     "saturacion": 0.446,
+     "estacional": false,
+     "query": "denim"
+    }
+   }
+  },
+  "tela.lino": {
+   "tipo": "tela",
+   "nombre": "Lino",
+   "padre": null,
+   "relaciones": [
+    "prenda.camisa",
+    "estilo.playa_resort"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    11
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 71.2,
+     "estado_actual": "estable",
+     "score_24m": 35.4,
+     "crecimiento": 0.053,
+     "persistencia": 7,
+     "aceleracion": -0.1699,
+     "volatilidad": 0.2,
+     "saturacion": 0.713,
+     "estacional": true,
+     "query": "lino"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 69.9,
+     "estado_actual": "estable",
+     "score_24m": 34.2,
+     "crecimiento": 0.0967,
+     "persistencia": 6,
+     "aceleracion": -0.1215,
+     "volatilidad": 0.296,
+     "saturacion": 0.699,
+     "estacional": false,
+     "query": "lino"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 36.5,
+     "estado_actual": "pico_atencion",
+     "score_24m": 38.8,
+     "crecimiento": 0.126,
+     "persistencia": 5,
+     "aceleracion": -0.0492,
+     "volatilidad": 0.898,
+     "saturacion": 0.365,
+     "estacional": true,
+     "query": "lino"
+    }
+   }
+  },
+  "tela.lana": {
+   "tipo": "tela",
+   "nombre": "Lana",
+   "padre": null,
+   "relaciones": [
+    "prenda.abrigo",
+    "prenda.sueter"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 45.2,
+     "estado_actual": "estable",
+     "score_24m": 20.6,
+     "crecimiento": -0.0703,
+     "persistencia": 3,
+     "aceleracion": -0.0292,
+     "volatilidad": 0.191,
+     "saturacion": 0.452,
+     "estacional": true,
+     "query": "lana"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 45.7,
+     "estado_actual": "estable",
+     "score_24m": 23.0,
+     "crecimiento": -0.0519,
+     "persistencia": 3,
+     "aceleracion": 0.0248,
+     "volatilidad": 0.331,
+     "saturacion": 0.457,
+     "estacional": true,
+     "query": "lana"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 40.9,
+     "estado_actual": "pico_atencion",
+     "score_24m": 35.6,
+     "crecimiento": 0.1287,
+     "persistencia": 5,
+     "aceleracion": -0.013,
+     "volatilidad": 0.74,
+     "saturacion": 0.409,
+     "estacional": true,
+     "query": "lana"
+    }
+   }
+  },
+  "tela.cuero": {
+   "tipo": "tela",
+   "nombre": "Cuero",
+   "padre": null,
+   "relaciones": [
+    "prenda.chaqueta_cuero"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 70.8,
+     "estado_actual": "estable",
+     "score_24m": 30.7,
+     "crecimiento": 0.0692,
+     "persistencia": 6,
+     "aceleracion": -0.0304,
+     "volatilidad": 0.15,
+     "saturacion": 0.708,
+     "estacional": true,
+     "query": "cuero"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 72.1,
+     "estado_actual": "estable",
+     "score_24m": 39.0,
+     "crecimiento": 0.1161,
+     "persistencia": 9,
+     "aceleracion": 0.0828,
+     "volatilidad": 0.161,
+     "saturacion": 0.721,
+     "estacional": true,
+     "query": "cuero"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 53.8,
+     "estado_actual": "estable",
+     "score_24m": 28.7,
+     "crecimiento": 0.0254,
+     "persistencia": 5,
+     "aceleracion": 0.0141,
+     "volatilidad": 0.32,
+     "saturacion": 0.537,
+     "estacional": true,
+     "query": "cuero"
+    }
+   }
+  },
+  "tela.cuero_vegano": {
+   "tipo": "tela",
+   "nombre": "Cuero vegano",
+   "padre": null,
+   "relaciones": [
+    "prenda.chaqueta_cuero"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 30.4,
+     "estado_actual": "estable",
+     "score_24m": 28.0,
+     "crecimiento": -0.0783,
+     "persistencia": 4,
+     "aceleracion": 0.1135,
+     "volatilidad": 0.599,
+     "saturacion": 0.304,
+     "estacional": false,
+     "query": "polipiel"
+    }
+   }
+  },
+  "tela.seda": {
+   "tipo": "tela",
+   "nombre": "Seda",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 54.8,
+     "estado_actual": "estable",
+     "score_24m": 20.4,
+     "crecimiento": -0.0706,
+     "persistencia": 2,
+     "aceleracion": -0.0146,
+     "volatilidad": 0.215,
+     "saturacion": 0.548,
+     "estacional": true,
+     "query": "seda"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 81.5,
+     "estado_actual": "estable",
+     "score_24m": 40.6,
+     "crecimiento": 0.0426,
+     "persistencia": 9,
+     "aceleracion": -0.0506,
+     "volatilidad": 0.106,
+     "saturacion": 0.815,
+     "estacional": false,
+     "query": "seda"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 79.6,
+     "estado_actual": "estable",
+     "score_24m": 37.7,
+     "crecimiento": 0.0964,
+     "persistencia": 8,
+     "aceleracion": -0.0217,
+     "volatilidad": 0.14,
+     "saturacion": 0.796,
+     "estacional": true,
+     "query": "seda"
+    }
+   }
+  },
+  "tela.satin": {
+   "tipo": "tela",
+   "nombre": "Satín",
+   "padre": null,
+   "relaciones": [
+    "prenda.blusa",
+    "prenda.vestido"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 72.4,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 46.5,
+     "crecimiento": 0.5629,
+     "persistencia": 11,
+     "aceleracion": 0.3874,
+     "volatilidad": 0.355,
+     "saturacion": 0.724,
+     "estacional": false,
+     "query": "satín"
+    },
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 73.1,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 43.4,
+     "crecimiento": 1.7406,
+     "persistencia": 12,
+     "aceleracion": 1.5285,
+     "volatilidad": 0.545,
+     "saturacion": 0.731,
+     "estacional": false,
+     "query": "satín"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 76.2,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 46.8,
+     "crecimiento": 0.7748,
+     "persistencia": 12,
+     "aceleracion": 0.757,
+     "volatilidad": 0.326,
+     "saturacion": 0.762,
+     "estacional": false,
+     "query": "satén"
+    }
+   }
+  },
+  "tela.terciopelo": {
+   "tipo": "tela",
+   "nombre": "Terciopelo",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 15.9,
+     "estado_actual": "estable",
+     "score_24m": 21.0,
+     "crecimiento": -0.0861,
+     "persistencia": 3,
+     "aceleracion": -0.0861,
+     "volatilidad": 0.45,
+     "saturacion": 0.159,
+     "estacional": true,
+     "query": "terciopelo"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 17.6,
+     "estado_actual": "pico_atencion",
+     "score_24m": 22.8,
+     "crecimiento": 0.0144,
+     "persistencia": 3,
+     "aceleracion": 0.0858,
+     "volatilidad": 0.584,
+     "saturacion": 0.176,
+     "estacional": true,
+     "query": "terciopelo"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 32.7,
+     "estado_actual": "pico_atencion",
+     "score_24m": 33.4,
+     "crecimiento": 0.0051,
+     "persistencia": 4,
+     "aceleracion": -0.1092,
+     "volatilidad": 0.792,
+     "saturacion": 0.327,
+     "estacional": true,
+     "query": "terciopelo"
+    }
+   }
+  },
+  "tela.punto": {
+   "tipo": "tela",
+   "nombre": "Punto",
+   "padre": null,
+   "relaciones": [
+    "prenda.sueter",
+    "prenda.cardigan"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 14.8,
+     "estado_actual": "estable",
+     "score_24m": 18.2,
+     "crecimiento": -0.0273,
+     "persistencia": 4,
+     "aceleracion": 0.0196,
+     "volatilidad": 0.206,
+     "saturacion": 0.148,
+     "estacional": true,
+     "query": "tejido de punto"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 22.2,
+     "estado_actual": "estable",
+     "score_24m": 22.3,
+     "crecimiento": 0.0,
+     "persistencia": 6,
+     "aceleracion": 0.0825,
+     "volatilidad": 0.169,
+     "saturacion": 0.223,
+     "estacional": false,
+     "query": "tejido de punto"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 56.0,
+     "estado_actual": "estable",
+     "score_24m": 35.4,
+     "crecimiento": 0.098,
+     "persistencia": 8,
+     "aceleracion": 0.0729,
+     "volatilidad": 0.267,
+     "saturacion": 0.56,
+     "estacional": true,
+     "query": "tejido de punto"
+    }
+   }
+  },
+  "tela.poliester": {
+   "tipo": "tela",
+   "nombre": "Poliéster",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 61.0,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 45.5,
+     "crecimiento": 0.3213,
+     "persistencia": 10,
+     "aceleracion": -0.2305,
+     "volatilidad": 0.236,
+     "saturacion": 0.772,
+     "estacional": false,
+     "query": "poliéster"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 68.7,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 47.2,
+     "crecimiento": 0.4847,
+     "persistencia": 12,
+     "aceleracion": 0.3064,
+     "volatilidad": 0.268,
+     "saturacion": 0.687,
+     "estacional": false,
+     "query": "poliéster"
+    },
+    "ES": {
+     "calidad": "apta_senal",
+     "momentum": 63.1,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 43.6,
+     "crecimiento": 0.6601,
+     "persistencia": 11,
+     "aceleracion": 0.4039,
+     "volatilidad": 0.349,
+     "saturacion": 0.631,
+     "estacional": false,
+     "query": "poliéster"
+    }
+   }
+  },
+  "tela.elastano": {
+   "tipo": "tela",
+   "nombre": "Licra / elastano",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 91.0,
+     "estado_actual": "estable",
+     "score_24m": 35.5,
+     "crecimiento": 0.0206,
+     "persistencia": 7,
+     "aceleracion": 0.0093,
+     "volatilidad": 0.062,
+     "saturacion": 0.91,
+     "estacional": false,
+     "query": "licra"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 88.0,
+     "estado_actual": "estable",
+     "score_24m": 50.8,
+     "crecimiento": 0.2468,
+     "persistencia": 12,
+     "aceleracion": 0.0865,
+     "volatilidad": 0.153,
+     "saturacion": 0.88,
+     "estacional": false,
+     "query": "licra"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 77.3,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 48.5,
+     "crecimiento": 0.381,
+     "persistencia": 12,
+     "aceleracion": 0.3143,
+     "volatilidad": 0.224,
+     "saturacion": 0.773,
+     "estacional": false,
+     "query": "elastano"
+    }
+   }
+  },
+  "tela.viscosa": {
+   "tipo": "tela",
+   "nombre": "Viscosa",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 54.6,
+     "estado_actual": "pico_atencion",
+     "score_24m": 31.3,
+     "crecimiento": 0.1844,
+     "persistencia": 5,
+     "aceleracion": 0.0078,
+     "volatilidad": 0.457,
+     "saturacion": 0.546,
+     "estacional": false,
+     "query": "viscosa"
+    }
+   }
+  },
+  "tela.encaje": {
+   "tipo": "tela",
+   "nombre": "Encaje",
+   "padre": null,
+   "relaciones": [
+    "estilo.coquette"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 47.0,
+     "estado_actual": "estable",
+     "score_24m": 27.6,
+     "crecimiento": 0.0621,
+     "persistencia": 7,
+     "aceleracion": 0.1621,
+     "volatilidad": 0.13,
+     "saturacion": 0.47,
+     "estacional": false,
+     "query": "encaje"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 56.8,
+     "estado_actual": "estable",
+     "score_24m": 39.3,
+     "crecimiento": 0.1843,
+     "persistencia": 11,
+     "aceleracion": 0.2554,
+     "volatilidad": 0.117,
+     "saturacion": 0.568,
+     "estacional": false,
+     "query": "encaje"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 67.2,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 47.2,
+     "crecimiento": 0.323,
+     "persistencia": 12,
+     "aceleracion": 0.0601,
+     "volatilidad": 0.206,
+     "saturacion": 0.672,
+     "estacional": false,
+     "query": "encaje"
+    }
+   }
+  },
+  "tela.tul": {
+   "tipo": "tela",
+   "nombre": "Tul",
+   "padre": null,
+   "relaciones": [
+    "estilo.balletcore"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 16.8,
+     "estado_actual": "pico_atencion",
+     "score_24m": 26.0,
+     "crecimiento": -0.0099,
+     "persistencia": 6,
+     "aceleracion": 0.1877,
+     "volatilidad": 0.419,
+     "saturacion": 0.168,
+     "estacional": true,
+     "query": "tul"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 32.1,
+     "estado_actual": "estable",
+     "score_24m": 24.7,
+     "crecimiento": -0.0587,
+     "persistencia": 5,
+     "aceleracion": 0.0963,
+     "volatilidad": 0.311,
+     "saturacion": 0.321,
+     "estacional": true,
+     "query": "tul"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 20.4,
+     "estado_actual": "estable",
+     "score_24m": 18.8,
+     "crecimiento": -0.1026,
+     "persistencia": 4,
+     "aceleracion": -0.0036,
+     "volatilidad": 0.177,
+     "saturacion": 0.204,
+     "estacional": false,
+     "query": "tul"
+    }
+   }
+  },
+  "tela.pana": {
+   "tipo": "tela",
+   "nombre": "Pana",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 46.8,
+     "estado_actual": "estable",
+     "score_24m": 24.3,
+     "crecimiento": 0.0388,
+     "persistencia": 4,
+     "aceleracion": 0.0623,
+     "volatilidad": 0.293,
+     "saturacion": 0.468,
+     "estacional": true,
+     "query": "pana"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 42.4,
+     "estado_actual": "pico_atencion",
+     "score_24m": 29.7,
+     "crecimiento": 0.0994,
+     "persistencia": 5,
+     "aceleracion": 0.0972,
+     "volatilidad": 0.492,
+     "saturacion": 0.424,
+     "estacional": true,
+     "query": "pana"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 34.4,
+     "estado_actual": "pico_atencion",
+     "score_24m": 39.0,
+     "crecimiento": 0.1569,
+     "persistencia": 5,
+     "aceleracion": -0.0411,
+     "volatilidad": 0.932,
+     "saturacion": 0.344,
+     "estacional": false,
+     "query": "pana"
+    }
+   }
+  },
+  "tela.franela": {
+   "tipo": "tela",
+   "nombre": "Franela",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 28.7,
+     "estado_actual": "pico_atencion",
+     "score_24m": 25.7,
+     "crecimiento": -0.0227,
+     "persistencia": 3,
+     "aceleracion": 0.0049,
+     "volatilidad": 0.611,
+     "saturacion": 0.287,
+     "estacional": true,
+     "query": "franela"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 34.6,
+     "estado_actual": "pico_atencion",
+     "score_24m": 33.8,
+     "crecimiento": 0.1067,
+     "persistencia": 4,
+     "aceleracion": 0.0353,
+     "volatilidad": 0.84,
+     "saturacion": 0.346,
+     "estacional": true,
+     "query": "franela"
+    }
+   }
+  },
+  "tela.alpaca": {
+   "tipo": "tela",
+   "nombre": "Alpaca",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    25
+   ],
+   "mercados": {
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 23.2,
+     "estado_actual": "pico_atencion",
+     "score_24m": 30.8,
+     "crecimiento": 0.533,
+     "persistencia": 7,
+     "aceleracion": 0.59,
+     "volatilidad": 0.644,
+     "saturacion": 0.233,
+     "estacional": false,
+     "query": "alpaca"
+    }
+   }
+  },
+  "tela.crochet": {
+   "tipo": "tela",
+   "nombre": "Crochet",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    21
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 36.5,
+     "estado_actual": "estable",
+     "score_24m": 16.3,
+     "crecimiento": -0.1025,
+     "persistencia": 2,
+     "aceleracion": 0.0988,
+     "volatilidad": 0.125,
+     "saturacion": 0.365,
+     "estacional": false,
+     "query": "crochet"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 44.6,
+     "estado_actual": "estable",
+     "score_24m": 24.2,
+     "crecimiento": 0.0094,
+     "persistencia": 6,
+     "aceleracion": 0.0812,
+     "volatilidad": 0.078,
+     "saturacion": 0.446,
+     "estacional": false,
+     "query": "crochet"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 60.2,
+     "estado_actual": "estable",
+     "score_24m": 33.9,
+     "crecimiento": 0.1737,
+     "persistencia": 7,
+     "aceleracion": 0.2361,
+     "volatilidad": 0.326,
+     "saturacion": 0.603,
+     "estacional": false,
+     "query": "crochet"
+    }
+   }
+  },
+  "tela.bordado": {
+   "tipo": "tela",
+   "nombre": "Bordado",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    22
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 86.2,
+     "estado_actual": "estable",
+     "score_24m": 46.7,
+     "crecimiento": 0.1117,
+     "persistencia": 11,
+     "aceleracion": 0.0597,
+     "volatilidad": 0.098,
+     "saturacion": 0.863,
+     "estacional": false,
+     "query": "bordado"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 67.5,
+     "estado_actual": "estable",
+     "score_24m": 33.2,
+     "crecimiento": 0.0533,
+     "persistencia": 8,
+     "aceleracion": 0.0649,
+     "volatilidad": 0.069,
+     "saturacion": 0.675,
+     "estacional": false,
+     "query": "bordado"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 67.8,
+     "estado_actual": "estable",
+     "score_24m": 37.3,
+     "crecimiento": 0.0912,
+     "persistencia": 8,
+     "aceleracion": 0.0147,
+     "volatilidad": 0.232,
+     "saturacion": 0.678,
+     "estacional": false,
+     "query": "bordado"
+    }
+   }
+  },
+  "tela.fibras_naturales": {
+   "tipo": "tela",
+   "nombre": "Fibras naturales",
+   "padre": null,
+   "relaciones": [
+    "estilo.sostenible"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    23
+   ],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 12.8,
+     "estado_actual": "estable",
+     "score_24m": 18.2,
+     "crecimiento": -0.0667,
+     "persistencia": 4,
+     "aceleracion": -0.0607,
+     "volatilidad": 0.205,
+     "saturacion": 0.128,
+     "estacional": false,
+     "query": "fibras naturales"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 57.8,
+     "estado_actual": "estable",
+     "score_24m": 40.2,
+     "crecimiento": 0.1104,
+     "persistencia": 11,
+     "aceleracion": 0.1323,
+     "volatilidad": 0.11,
+     "saturacion": 0.578,
+     "estacional": false,
+     "query": "fibras naturales"
+    }
+   }
+  },
+  "tela.tecnica": {
+   "tipo": "tela",
+   "nombre": "Tela técnica / dry fit",
+   "padre": null,
+   "relaciones": [
+    "prenda.ropa_deportiva"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    27
+   ],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 54.3,
+     "estado_actual": "estable",
+     "score_24m": 46.3,
+     "crecimiento": 0.2187,
+     "persistencia": 10,
+     "aceleracion": 0.2718,
+     "volatilidad": 0.53,
+     "saturacion": 0.543,
+     "estacional": false,
+     "query": "tela dry fit"
+    }
+   }
+  },
+  "tela.neopreno": {
+   "tipo": "tela",
+   "nombre": "Neopreno",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 20.1,
+     "estado_actual": "estable",
+     "score_24m": 16.6,
+     "crecimiento": -0.0659,
+     "persistencia": 3,
+     "aceleracion": -0.0582,
+     "volatilidad": 0.155,
+     "saturacion": 0.201,
+     "estacional": false,
+     "query": "neopreno"
+    },
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 5.6,
+     "estado_actual": "estable",
+     "score_24m": 20.2,
+     "crecimiento": 0.0469,
+     "persistencia": 6,
+     "aceleracion": -0.0198,
+     "volatilidad": 0.183,
+     "saturacion": 0.056,
+     "estacional": true,
+     "query": "neopreno"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 48.7,
+     "estado_actual": "estable",
+     "score_24m": 26.9,
+     "crecimiento": -0.0085,
+     "persistencia": 6,
+     "aceleracion": 0.0049,
+     "volatilidad": 0.157,
+     "saturacion": 0.487,
+     "estacional": false,
+     "query": "neopreno"
+    }
+   }
+  },
+  "tela.gasa": {
+   "tipo": "tela",
+   "nombre": "Gasa",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 83.8,
+     "estado_actual": "estable",
+     "score_24m": 47.0,
+     "crecimiento": 0.083,
+     "persistencia": 11,
+     "aceleracion": -0.0599,
+     "volatilidad": 0.091,
+     "saturacion": 0.855,
+     "estacional": false,
+     "query": "gasa"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 85.8,
+     "estado_actual": "estable",
+     "score_24m": 49.8,
+     "crecimiento": 0.1771,
+     "persistencia": 12,
+     "aceleracion": 0.11,
+     "volatilidad": 0.123,
+     "saturacion": 0.858,
+     "estacional": false,
+     "query": "gasa"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 69.6,
+     "estado_actual": "estable",
+     "score_24m": 41.2,
+     "crecimiento": 0.1711,
+     "persistencia": 9,
+     "aceleracion": -0.0016,
+     "volatilidad": 0.266,
+     "saturacion": 0.696,
+     "estacional": true,
+     "query": "gasa"
+    }
+   }
+  },
+  "tela.organza": {
+   "tipo": "tela",
+   "nombre": "Organza",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 49.8,
+     "estado_actual": "estable",
+     "score_24m": 37.7,
+     "crecimiento": 0.1984,
+     "persistencia": 10,
+     "aceleracion": 0.2674,
+     "volatilidad": 0.237,
+     "saturacion": 0.498,
+     "estacional": false,
+     "query": "organza"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 50.2,
+     "estado_actual": "pico_atencion",
+     "score_24m": 32.7,
+     "crecimiento": 0.1464,
+     "persistencia": 7,
+     "aceleracion": 0.1191,
+     "volatilidad": 0.338,
+     "saturacion": 0.502,
+     "estacional": false,
+     "query": "organza"
+    }
+   }
+  },
+  "color.negro": {
+   "tipo": "color",
+   "nombre": "Negro",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#111111",
+   "familia": "neutro",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 61.2,
+     "estado_actual": "estable",
+     "score_24m": 26.1,
+     "crecimiento": 0.0545,
+     "persistencia": 4,
+     "aceleracion": 0.0295,
+     "volatilidad": 0.255,
+     "saturacion": 0.613,
+     "estacional": true,
+     "query": "negro"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 64.4,
+     "estado_actual": "estable",
+     "score_24m": 29.8,
+     "crecimiento": 0.0589,
+     "persistencia": 6,
+     "aceleracion": 0.0996,
+     "volatilidad": 0.186,
+     "saturacion": 0.644,
+     "estacional": true,
+     "query": "negro"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 65.5,
+     "estado_actual": "estable",
+     "score_24m": 26.1,
+     "crecimiento": 0.0383,
+     "persistencia": 4,
+     "aceleracion": 0.0181,
+     "volatilidad": 0.214,
+     "saturacion": 0.655,
+     "estacional": true,
+     "query": "negro"
+    }
+   }
+  },
+  "color.blanco": {
+   "tipo": "color",
+   "nombre": "Blanco",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#F5F5F0",
+   "familia": "neutro",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 64.7,
+     "estado_actual": "estable",
+     "score_24m": 25.7,
+     "crecimiento": 0.0388,
+     "persistencia": 4,
+     "aceleracion": -0.0438,
+     "volatilidad": 0.195,
+     "saturacion": 0.647,
+     "estacional": true,
+     "query": "blanco"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 66.7,
+     "estado_actual": "estable",
+     "score_24m": 31.5,
+     "crecimiento": 0.0349,
+     "persistencia": 7,
+     "aceleracion": 0.0349,
+     "volatilidad": 0.109,
+     "saturacion": 0.667,
+     "estacional": false,
+     "query": "blanco"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 38.3,
+     "estado_actual": "estable",
+     "score_24m": 22.5,
+     "crecimiento": 0.0455,
+     "persistencia": 5,
+     "aceleracion": 0.0053,
+     "volatilidad": 0.148,
+     "saturacion": 0.383,
+     "estacional": false,
+     "query": "blanco"
+    }
+   }
+  },
+  "color.beige": {
+   "tipo": "color",
+   "nombre": "Beige y arena",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#D9C7A7",
+   "familia": "neutro",
+   "v1": [
+    4
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 53.0,
+     "estado_actual": "estable",
+     "score_24m": 23.0,
+     "crecimiento": 0.0409,
+     "persistencia": 3,
+     "aceleracion": -0.0217,
+     "volatilidad": 0.276,
+     "saturacion": 0.53,
+     "estacional": true,
+     "query": "beige"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 67.9,
+     "estado_actual": "estable",
+     "score_24m": 38.7,
+     "crecimiento": 0.0795,
+     "persistencia": 9,
+     "aceleracion": -0.0243,
+     "volatilidad": 0.162,
+     "saturacion": 0.679,
+     "estacional": true,
+     "query": "beige"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 81.9,
+     "estado_actual": "estable",
+     "score_24m": 34.9,
+     "crecimiento": 0.0755,
+     "persistencia": 7,
+     "aceleracion": 0.0152,
+     "volatilidad": 0.125,
+     "saturacion": 0.819,
+     "estacional": false,
+     "query": "beige"
+    }
+   }
+  },
+  "color.crema": {
+   "tipo": "color",
+   "nombre": "Crema y marfil",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#F1E7D0",
+   "familia": "neutro",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 77.2,
+     "estado_actual": "estable",
+     "score_24m": 48.0,
+     "crecimiento": 0.1546,
+     "persistencia": 12,
+     "aceleracion": 0.1458,
+     "volatilidad": 0.135,
+     "saturacion": 0.772,
+     "estacional": true,
+     "query": "crema"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 85.3,
+     "estado_actual": "estable",
+     "score_24m": 44.1,
+     "crecimiento": 0.1467,
+     "persistencia": 10,
+     "aceleracion": 0.1342,
+     "volatilidad": 0.146,
+     "saturacion": 0.853,
+     "estacional": false,
+     "query": "crema"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 68.7,
+     "estado_actual": "estable",
+     "score_24m": 32.5,
+     "crecimiento": 0.1031,
+     "persistencia": 6,
+     "aceleracion": 0.0627,
+     "volatilidad": 0.267,
+     "saturacion": 0.687,
+     "estacional": true,
+     "query": "crema"
+    }
+   }
+  },
+  "color.gris": {
+   "tipo": "color",
+   "nombre": "Gris",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#8A8D91",
+   "familia": "neutro",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 62.4,
+     "estado_actual": "estable",
+     "score_24m": 30.5,
+     "crecimiento": 0.0839,
+     "persistencia": 6,
+     "aceleracion": -0.0913,
+     "volatilidad": 0.203,
+     "saturacion": 0.624,
+     "estacional": true,
+     "query": "gris"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 65.5,
+     "estado_actual": "estable",
+     "score_24m": 27.8,
+     "crecimiento": 0.0679,
+     "persistencia": 5,
+     "aceleracion": -0.0003,
+     "volatilidad": 0.184,
+     "saturacion": 0.655,
+     "estacional": true,
+     "query": "gris"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 57.9,
+     "estado_actual": "estable",
+     "score_24m": 27.9,
+     "crecimiento": 0.0,
+     "persistencia": 4,
+     "aceleracion": -0.1156,
+     "volatilidad": 0.336,
+     "saturacion": 0.579,
+     "estacional": true,
+     "query": "gris"
+    }
+   }
+  },
+  "color.camel": {
+   "tipo": "color",
+   "nombre": "Camel",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#B98A4E",
+   "familia": "marron",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 61.4,
+     "estado_actual": "estable",
+     "score_24m": 33.5,
+     "crecimiento": 0.1444,
+     "persistencia": 7,
+     "aceleracion": 0.0454,
+     "volatilidad": 0.262,
+     "saturacion": 0.614,
+     "estacional": true,
+     "query": "camel"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 41.8,
+     "estado_actual": "pico_atencion",
+     "score_24m": 33.5,
+     "crecimiento": 0.1435,
+     "persistencia": 8,
+     "aceleracion": 0.1912,
+     "volatilidad": 0.341,
+     "saturacion": 0.418,
+     "estacional": true,
+     "query": "camel"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 48.0,
+     "estado_actual": "estable",
+     "score_24m": 27.7,
+     "crecimiento": 0.0608,
+     "persistencia": 5,
+     "aceleracion": 0.1262,
+     "volatilidad": 0.351,
+     "saturacion": 0.48,
+     "estacional": false,
+     "query": "camel"
+    }
+   }
+  },
+  "color.marron": {
+   "tipo": "color",
+   "nombre": "Marrón",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#6B4A34",
+   "familia": "marron",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 64.1,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 45.6,
+     "crecimiento": 1.2355,
+     "persistencia": 12,
+     "aceleracion": 1.1503,
+     "volatilidad": 0.459,
+     "saturacion": 0.737,
+     "estacional": false,
+     "query": "marrón"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 60.2,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 43.8,
+     "crecimiento": 1.0395,
+     "persistencia": 12,
+     "aceleracion": 0.8939,
+     "volatilidad": 0.423,
+     "saturacion": 0.602,
+     "estacional": false,
+     "query": "café"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 67.2,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 47.3,
+     "crecimiento": 1.152,
+     "persistencia": 12,
+     "aceleracion": 0.5216,
+     "volatilidad": 0.45,
+     "saturacion": 0.672,
+     "estacional": false,
+     "query": "marrón"
+    }
+   }
+  },
+  "color.chocolate": {
+   "tipo": "color",
+   "nombre": "Chocolate",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#4A2C21",
+   "familia": "marron",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 75.3,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 47.2,
+     "crecimiento": 0.2714,
+     "persistencia": 11,
+     "aceleracion": 0.1228,
+     "volatilidad": 0.166,
+     "saturacion": 0.856,
+     "estacional": false,
+     "query": "chocolate"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 68.5,
+     "estado_actual": "estable",
+     "score_24m": 38.9,
+     "crecimiento": 0.1529,
+     "persistencia": 9,
+     "aceleracion": 0.0423,
+     "volatilidad": 0.19,
+     "saturacion": 0.685,
+     "estacional": true,
+     "query": "chocolate"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 67.3,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 49.1,
+     "crecimiento": 0.9102,
+     "persistencia": 12,
+     "aceleracion": 0.1025,
+     "volatilidad": 0.396,
+     "saturacion": 0.673,
+     "estacional": false,
+     "query": "chocolate"
+    }
+   }
+  },
+  "color.azul_marino": {
+   "tipo": "color",
+   "nombre": "Azul marino",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#1B2A4A",
+   "familia": "azul",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 74.8,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 48.5,
+     "crecimiento": 0.2847,
+     "persistencia": 12,
+     "aceleracion": 0.1197,
+     "volatilidad": 0.193,
+     "saturacion": 0.748,
+     "estacional": false,
+     "query": "azul marino"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 80.7,
+     "estado_actual": "estable",
+     "score_24m": 42.9,
+     "crecimiento": 0.1204,
+     "persistencia": 10,
+     "aceleracion": 0.068,
+     "volatilidad": 0.123,
+     "saturacion": 0.807,
+     "estacional": false,
+     "query": "azul marino"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 86.5,
+     "estado_actual": "estable",
+     "score_24m": 42.1,
+     "crecimiento": 0.0949,
+     "persistencia": 9,
+     "aceleracion": -0.0857,
+     "volatilidad": 0.119,
+     "saturacion": 0.874,
+     "estacional": false,
+     "query": "azul marino"
+    }
+   }
+  },
+  "color.azul_cielo": {
+   "tipo": "color",
+   "nombre": "Azul cielo",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#8DB9E0",
+   "familia": "azul",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 50.2,
+     "estado_actual": "estable",
+     "score_24m": 28.9,
+     "crecimiento": 0.0451,
+     "persistencia": 6,
+     "aceleracion": 0.0945,
+     "volatilidad": 0.262,
+     "saturacion": 0.502,
+     "estacional": true,
+     "query": "azul cielo"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 81.3,
+     "estado_actual": "estable",
+     "score_24m": 43.7,
+     "crecimiento": 0.1578,
+     "persistencia": 10,
+     "aceleracion": 0.1298,
+     "volatilidad": 0.165,
+     "saturacion": 0.813,
+     "estacional": false,
+     "query": "azul cielo"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 74.3,
+     "estado_actual": "estable",
+     "score_24m": 37.7,
+     "crecimiento": 0.1095,
+     "persistencia": 8,
+     "aceleracion": 0.0021,
+     "volatilidad": 0.192,
+     "saturacion": 0.743,
+     "estacional": false,
+     "query": "azul cielo"
+    }
+   }
+  },
+  "color.azul_petroleo": {
+   "tipo": "color",
+   "nombre": "Azul petróleo",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#1F4E5F",
+   "familia": "azul",
+   "v1": [
+    3
+   ],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 22.7,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 36.2,
+     "crecimiento": 0.5196,
+     "persistencia": 11,
+     "aceleracion": 0.2318,
+     "volatilidad": 0.349,
+     "saturacion": 0.227,
+     "estacional": false,
+     "query": "azul petróleo"
+    }
+   }
+  },
+  "color.azul_electrico": {
+   "tipo": "color",
+   "nombre": "Azul eléctrico",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#2A5BFF",
+   "familia": "azul",
+   "v1": [
+    30
+   ],
+   "mercados": {
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 33.6,
+     "estado_actual": "estable",
+     "score_24m": 28.4,
+     "crecimiento": 0.0307,
+     "persistencia": 7,
+     "aceleracion": 0.1298,
+     "volatilidad": 0.272,
+     "saturacion": 0.336,
+     "estacional": true,
+     "query": "azul eléctrico"
+    }
+   }
+  },
+  "color.turquesa": {
+   "tipo": "color",
+   "nombre": "Turquesa",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#2BB5B0",
+   "familia": "azul",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 32.6,
+     "estado_actual": "estable",
+     "score_24m": 23.1,
+     "crecimiento": -0.0463,
+     "persistencia": 5,
+     "aceleracion": 0.0565,
+     "volatilidad": 0.223,
+     "saturacion": 0.326,
+     "estacional": false,
+     "query": "turquesa"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 29.2,
+     "estado_actual": "estable",
+     "score_24m": 27.2,
+     "crecimiento": 0.0086,
+     "persistencia": 8,
+     "aceleracion": 0.0283,
+     "volatilidad": 0.115,
+     "saturacion": 0.292,
+     "estacional": false,
+     "query": "turquesa"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 71.3,
+     "estado_actual": "estable",
+     "score_24m": 29.2,
+     "crecimiento": -0.0206,
+     "persistencia": 5,
+     "aceleracion": -0.0322,
+     "volatilidad": 0.177,
+     "saturacion": 0.713,
+     "estacional": false,
+     "query": "turquesa"
+    }
+   }
+  },
+  "color.verde_oliva": {
+   "tipo": "color",
+   "nombre": "Verde oliva",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#5B6B47",
+   "familia": "verde",
+   "v1": [
+    1
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 77.2,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 47.2,
+     "crecimiento": 0.4864,
+     "persistencia": 11,
+     "aceleracion": 0.1992,
+     "volatilidad": 0.278,
+     "saturacion": 0.787,
+     "estacional": false,
+     "query": "verde oliva"
+    },
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 72.0,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 47.1,
+     "crecimiento": 0.668,
+     "persistencia": 11,
+     "aceleracion": 0.0543,
+     "volatilidad": 0.341,
+     "saturacion": 0.72,
+     "estacional": false,
+     "query": "verde oliva"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 71.8,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 49.7,
+     "crecimiento": 0.5393,
+     "persistencia": 12,
+     "aceleracion": 0.1566,
+     "volatilidad": 0.259,
+     "saturacion": 0.789,
+     "estacional": false,
+     "query": "verde oliva"
+    }
+   }
+  },
+  "color.verde_esmeralda": {
+   "tipo": "color",
+   "nombre": "Verde esmeralda",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#0E7A55",
+   "familia": "verde",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 47.1,
+     "estado_actual": "estable",
+     "score_24m": 21.4,
+     "crecimiento": -0.0692,
+     "persistencia": 3,
+     "aceleracion": 0.1138,
+     "volatilidad": 0.243,
+     "saturacion": 0.471,
+     "estacional": false,
+     "query": "verde esmeralda"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 35.4,
+     "estado_actual": "estable",
+     "score_24m": 14.9,
+     "crecimiento": -0.1449,
+     "persistencia": 1,
+     "aceleracion": 0.1451,
+     "volatilidad": 0.155,
+     "saturacion": 0.354,
+     "estacional": false,
+     "query": "verde esmeralda"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 77.8,
+     "estado_actual": "estable",
+     "score_24m": 35.6,
+     "crecimiento": 0.0964,
+     "persistencia": 7,
+     "aceleracion": -0.1369,
+     "volatilidad": 0.167,
+     "saturacion": 0.777,
+     "estacional": false,
+     "query": "verde esmeralda"
+    }
+   }
+  },
+  "color.verde_menta": {
+   "tipo": "color",
+   "nombre": "Verde menta",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#A8DCC3",
+   "familia": "verde",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 30.0,
+     "estado_actual": "estable",
+     "score_24m": 18.4,
+     "crecimiento": -0.1262,
+     "persistencia": 2,
+     "aceleracion": -0.1072,
+     "volatilidad": 0.277,
+     "saturacion": 0.3,
+     "estacional": true,
+     "query": "verde menta"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 23.0,
+     "estado_actual": "estable",
+     "score_24m": 26.1,
+     "crecimiento": 0.0222,
+     "persistencia": 7,
+     "aceleracion": -0.0284,
+     "volatilidad": 0.221,
+     "saturacion": 0.23,
+     "estacional": false,
+     "query": "verde menta"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 54.7,
+     "estado_actual": "estable",
+     "score_24m": 25.3,
+     "crecimiento": -0.0534,
+     "persistencia": 4,
+     "aceleracion": -0.0336,
+     "volatilidad": 0.241,
+     "saturacion": 0.547,
+     "estacional": false,
+     "query": "verde menta"
+    }
+   }
+  },
+  "color.mostaza": {
+   "tipo": "color",
+   "nombre": "Mostaza",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#C9A227",
+   "familia": "amarillo",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 8.4,
+     "estado_actual": "estable",
+     "score_24m": 18.1,
+     "crecimiento": -0.0734,
+     "persistencia": 3,
+     "aceleracion": 0.1367,
+     "volatilidad": 0.382,
+     "saturacion": 0.084,
+     "estacional": true,
+     "query": "mostaza"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 11.7,
+     "estado_actual": "estable",
+     "score_24m": 14.2,
+     "crecimiento": -0.0667,
+     "persistencia": 2,
+     "aceleracion": 0.1719,
+     "volatilidad": 0.212,
+     "saturacion": 0.117,
+     "estacional": true,
+     "query": "mostaza"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 34.3,
+     "estado_actual": "estable",
+     "score_24m": 32.3,
+     "crecimiento": 0.1196,
+     "persistencia": 10,
+     "aceleracion": 0.1711,
+     "volatilidad": 0.116,
+     "saturacion": 0.343,
+     "estacional": false,
+     "query": "mostaza"
+    }
+   }
+  },
+  "color.naranja": {
+   "tipo": "color",
+   "nombre": "Naranja",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#F28C28",
+   "familia": "naranja",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 61.6,
+     "estado_actual": "estable",
+     "score_24m": 24.6,
+     "crecimiento": 0.0394,
+     "persistencia": 4,
+     "aceleracion": 0.0734,
+     "volatilidad": 0.186,
+     "saturacion": 0.616,
+     "estacional": true,
+     "query": "naranja"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 71.8,
+     "estado_actual": "estable",
+     "score_24m": 25.5,
+     "crecimiento": 0.0047,
+     "persistencia": 4,
+     "aceleracion": 0.0535,
+     "volatilidad": 0.131,
+     "saturacion": 0.718,
+     "estacional": true,
+     "query": "naranja"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 70.6,
+     "estado_actual": "estable",
+     "score_24m": 29.8,
+     "crecimiento": -0.0012,
+     "persistencia": 6,
+     "aceleracion": 0.0128,
+     "volatilidad": 0.106,
+     "saturacion": 0.706,
+     "estacional": false,
+     "query": "naranja"
+    }
+   }
+  },
+  "color.terracota": {
+   "tipo": "color",
+   "nombre": "Terracota",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#B2542D",
+   "familia": "naranja",
+   "v1": [
+    5
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 71.8,
+     "estado_actual": "estable",
+     "score_24m": 37.6,
+     "crecimiento": 0.1342,
+     "persistencia": 8,
+     "aceleracion": 0.1472,
+     "volatilidad": 0.24,
+     "saturacion": 0.718,
+     "estacional": true,
+     "query": "terracota"
+    },
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 73.2,
+     "estado_actual": "estable",
+     "score_24m": 47.9,
+     "crecimiento": 0.2294,
+     "persistencia": 12,
+     "aceleracion": 0.1701,
+     "volatilidad": 0.181,
+     "saturacion": 0.733,
+     "estacional": false,
+     "query": "terracota"
+    },
+    "ES": {
+     "calidad": "apta_senal",
+     "momentum": 61.7,
+     "estado_actual": "pico_atencion",
+     "score_24m": 38.7,
+     "crecimiento": 0.5195,
+     "persistencia": 8,
+     "aceleracion": 0.0913,
+     "volatilidad": 0.433,
+     "saturacion": 0.617,
+     "estacional": false,
+     "query": "terracota"
+    }
+   }
+  },
+  "color.coral": {
+   "tipo": "color",
+   "nombre": "Coral",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#F26B5B",
+   "familia": "naranja",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 45.4,
+     "estado_actual": "estable",
+     "score_24m": 25.4,
+     "crecimiento": 0.0461,
+     "persistencia": 6,
+     "aceleracion": 0.1645,
+     "volatilidad": 0.149,
+     "saturacion": 0.454,
+     "estacional": true,
+     "query": "coral"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 13.0,
+     "estado_actual": "estable",
+     "score_24m": 27.1,
+     "crecimiento": 0.047,
+     "persistencia": 9,
+     "aceleracion": 0.0857,
+     "volatilidad": 0.153,
+     "saturacion": 0.13,
+     "estacional": false,
+     "query": "coral"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 55.1,
+     "estado_actual": "estable",
+     "score_24m": 33.9,
+     "crecimiento": 0.1536,
+     "persistencia": 7,
+     "aceleracion": 0.0964,
+     "volatilidad": 0.341,
+     "saturacion": 0.551,
+     "estacional": false,
+     "query": "coral"
+    }
+   }
+  },
+  "color.rojo": {
+   "tipo": "color",
+   "nombre": "Rojo",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#C22E22",
+   "familia": "rojo",
+   "v1": [
+    26
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 44.4,
+     "estado_actual": "estable",
+     "score_24m": 24.5,
+     "crecimiento": -0.0904,
+     "persistencia": 3,
+     "aceleracion": -0.3425,
+     "volatilidad": 0.342,
+     "saturacion": 0.444,
+     "estacional": true,
+     "query": "rojo"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 49.3,
+     "estado_actual": "estable",
+     "score_24m": 23.9,
+     "crecimiento": -0.0513,
+     "persistencia": 3,
+     "aceleracion": -0.2026,
+     "volatilidad": 0.305,
+     "saturacion": 0.493,
+     "estacional": true,
+     "query": "rojo"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 65.3,
+     "estado_actual": "estable",
+     "score_24m": 20.9,
+     "crecimiento": -0.0566,
+     "persistencia": 2,
+     "aceleracion": -0.059,
+     "volatilidad": 0.144,
+     "saturacion": 0.653,
+     "estacional": true,
+     "query": "rojo"
+    }
+   }
+  },
+  "color.borgona": {
+   "tipo": "color",
+   "nombre": "Borgoña y vino",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#6B2338",
+   "familia": "rojo",
+   "v1": [
+    2
+   ],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 64.5,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 50.7,
+     "crecimiento": 0.5266,
+     "persistencia": 10,
+     "aceleracion": -1.034,
+     "volatilidad": 0.437,
+     "saturacion": 0.645,
+     "estacional": false,
+     "query": "borgoña"
+    },
+    "ES": {
+     "calidad": "apta_senal",
+     "momentum": 58.6,
+     "estado_actual": "pico_atencion",
+     "score_24m": 37.5,
+     "crecimiento": 0.2828,
+     "persistencia": 7,
+     "aceleracion": -0.2652,
+     "volatilidad": 0.418,
+     "saturacion": 0.586,
+     "estacional": false,
+     "query": "borgoña"
+    }
+   }
+  },
+  "color.rosa": {
+   "tipo": "color",
+   "nombre": "Rosa",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#F4A6BD",
+   "familia": "rosa",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 64.2,
+     "estado_actual": "estable",
+     "score_24m": 36.5,
+     "crecimiento": 0.0799,
+     "persistencia": 9,
+     "aceleracion": 0.1045,
+     "volatilidad": 0.129,
+     "saturacion": 0.642,
+     "estacional": true,
+     "query": "rosa"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 71.4,
+     "estado_actual": "estable",
+     "score_24m": 37.3,
+     "crecimiento": 0.0502,
+     "persistencia": 9,
+     "aceleracion": 0.034,
+     "volatilidad": 0.078,
+     "saturacion": 0.714,
+     "estacional": false,
+     "query": "rosa"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 86.5,
+     "estado_actual": "estable",
+     "score_24m": 29.8,
+     "crecimiento": -0.0067,
+     "persistencia": 5,
+     "aceleracion": -0.0655,
+     "volatilidad": 0.07,
+     "saturacion": 0.865,
+     "estacional": false,
+     "query": "rosa"
+    }
+   }
+  },
+  "color.fucsia": {
+   "tipo": "color",
+   "nombre": "Fucsia",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#E4007C",
+   "familia": "rosa",
+   "v1": [
+    6
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 35.8,
+     "estado_actual": "estable",
+     "score_24m": 17.5,
+     "crecimiento": -0.1263,
+     "persistencia": 2,
+     "aceleracion": -0.0239,
+     "volatilidad": 0.187,
+     "saturacion": 0.357,
+     "estacional": false,
+     "query": "fucsia"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 35.4,
+     "estado_actual": "estable",
+     "score_24m": 19.0,
+     "crecimiento": -0.0428,
+     "persistencia": 4,
+     "aceleracion": 0.185,
+     "volatilidad": 0.105,
+     "saturacion": 0.354,
+     "estacional": false,
+     "query": "fucsia"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 22.6,
+     "estado_actual": "estable",
+     "score_24m": 18.6,
+     "crecimiento": -0.1662,
+     "persistencia": 3,
+     "aceleracion": 0.0526,
+     "volatilidad": 0.262,
+     "saturacion": 0.226,
+     "estacional": false,
+     "query": "fucsia"
+    }
+   }
+  },
+  "color.lavanda": {
+   "tipo": "color",
+   "nombre": "Lavanda y lila",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#B8A1D9",
+   "familia": "morado",
+   "v1": [
+    5
+   ],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 62.9,
+     "estado_actual": "estable",
+     "score_24m": 38.5,
+     "crecimiento": 0.107,
+     "persistencia": 9,
+     "aceleracion": 0.1041,
+     "volatilidad": 0.222,
+     "saturacion": 0.629,
+     "estacional": false,
+     "query": "lavanda"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 61.8,
+     "estado_actual": "estable",
+     "score_24m": 35.8,
+     "crecimiento": 0.0816,
+     "persistencia": 8,
+     "aceleracion": 0.1301,
+     "volatilidad": 0.242,
+     "saturacion": 0.618,
+     "estacional": false,
+     "query": "lavanda"
+    }
+   }
+  },
+  "color.morado": {
+   "tipo": "color",
+   "nombre": "Morado",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#6A2C91",
+   "familia": "morado",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 63.2,
+     "estado_actual": "estable",
+     "score_24m": 26.0,
+     "crecimiento": -0.0194,
+     "persistencia": 4,
+     "aceleracion": -0.0285,
+     "volatilidad": 0.212,
+     "saturacion": 0.632,
+     "estacional": true,
+     "query": "morado"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 60.6,
+     "estado_actual": "estable",
+     "score_24m": 27.8,
+     "crecimiento": 0.0211,
+     "persistencia": 6,
+     "aceleracion": 0.1322,
+     "volatilidad": 0.124,
+     "saturacion": 0.606,
+     "estacional": true,
+     "query": "morado"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 68.2,
+     "estado_actual": "estable",
+     "score_24m": 22.3,
+     "crecimiento": -0.0192,
+     "persistencia": 3,
+     "aceleracion": 0.0122,
+     "volatilidad": 0.103,
+     "saturacion": 0.682,
+     "estacional": false,
+     "query": "morado"
+    }
+   }
+  },
+  "color.dorado": {
+   "tipo": "color",
+   "nombre": "Dorado",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#C9A24A",
+   "familia": "metalico",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 14.2,
+     "estado_actual": "estable",
+     "score_24m": 17.6,
+     "crecimiento": 0.0303,
+     "persistencia": 4,
+     "aceleracion": -0.0771,
+     "volatilidad": 0.171,
+     "saturacion": 0.142,
+     "estacional": true,
+     "query": "dorado"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 18.6,
+     "estado_actual": "estable",
+     "score_24m": 26.1,
+     "crecimiento": 0.0372,
+     "persistencia": 8,
+     "aceleracion": -0.0065,
+     "volatilidad": 0.151,
+     "saturacion": 0.186,
+     "estacional": true,
+     "query": "dorado"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 39.9,
+     "estado_actual": "estable",
+     "score_24m": 32.4,
+     "crecimiento": 0.0692,
+     "persistencia": 9,
+     "aceleracion": 0.0,
+     "volatilidad": 0.146,
+     "saturacion": 0.399,
+     "estacional": false,
+     "query": "dorado"
+    }
+   }
+  },
+  "color.plateado": {
+   "tipo": "color",
+   "nombre": "Plateado",
+   "padre": null,
+   "relaciones": [],
+   "hex": "#B8BEC6",
+   "familia": "metalico",
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 61.8,
+     "estado_actual": "estable",
+     "score_24m": 35.5,
+     "crecimiento": 0.1837,
+     "persistencia": 8,
+     "aceleracion": 0.1227,
+     "volatilidad": 0.246,
+     "saturacion": 0.618,
+     "estacional": true,
+     "query": "plateado"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 69.9,
+     "estado_actual": "estable",
+     "score_24m": 36.6,
+     "crecimiento": 0.0743,
+     "persistencia": 8,
+     "aceleracion": -0.0609,
+     "volatilidad": 0.167,
+     "saturacion": 0.699,
+     "estacional": true,
+     "query": "plateado"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 62.1,
+     "estado_actual": "estable",
+     "score_24m": 29.1,
+     "crecimiento": 0.0537,
+     "persistencia": 6,
+     "aceleracion": 0.0607,
+     "volatilidad": 0.166,
+     "saturacion": 0.621,
+     "estacional": true,
+     "query": "plateado"
+    }
+   }
+  },
+  "estampado.floral": {
+   "tipo": "estampado",
+   "nombre": "Floral",
+   "padre": null,
+   "relaciones": [
+    "prenda.vestido"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 32.8,
+     "estado_actual": "estable",
+     "score_24m": 30.1,
+     "crecimiento": 0.1036,
+     "persistencia": 7,
+     "aceleracion": 0.2177,
+     "volatilidad": 0.382,
+     "saturacion": 0.328,
+     "estacional": true,
+     "query": "estampado floral"
+    }
+   }
+  },
+  "estampado.rayas": {
+   "tipo": "estampado",
+   "nombre": "Rayas",
+   "padre": null,
+   "relaciones": [
+    "prenda.camisa"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 21.5,
+     "estado_actual": "estable",
+     "score_24m": 21.5,
+     "crecimiento": 0.0531,
+     "persistencia": 6,
+     "aceleracion": 0.0237,
+     "volatilidad": 0.132,
+     "saturacion": 0.215,
+     "estacional": false,
+     "query": "rayas"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 83.8,
+     "estado_actual": "estable",
+     "score_24m": 44.0,
+     "crecimiento": 0.124,
+     "persistencia": 10,
+     "aceleracion": -0.019,
+     "volatilidad": 0.124,
+     "saturacion": 0.838,
+     "estacional": false,
+     "query": "rayas"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 75.5,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 45.9,
+     "crecimiento": 0.3036,
+     "persistencia": 11,
+     "aceleracion": 0.1735,
+     "volatilidad": 0.217,
+     "saturacion": 0.755,
+     "estacional": false,
+     "query": "rayas"
+    }
+   }
+  },
+  "estampado.cuadros": {
+   "tipo": "estampado",
+   "nombre": "Cuadros",
+   "padre": null,
+   "relaciones": [
+    "prenda.camisa"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    14
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 22.0,
+     "estado_actual": "estable",
+     "score_24m": 18.9,
+     "crecimiento": -0.1373,
+     "persistencia": 3,
+     "aceleracion": 0.0761,
+     "volatilidad": 0.296,
+     "saturacion": 0.22,
+     "estacional": true,
+     "query": "cuadros"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 32.2,
+     "estado_actual": "estable",
+     "score_24m": 20.9,
+     "crecimiento": 0.0,
+     "persistencia": 3,
+     "aceleracion": 0.1988,
+     "volatilidad": 0.37,
+     "saturacion": 0.323,
+     "estacional": true,
+     "query": "cuadros"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 52.0,
+     "estado_actual": "pico_atencion",
+     "score_24m": 33.9,
+     "crecimiento": 0.3248,
+     "persistencia": 7,
+     "aceleracion": 0.2687,
+     "volatilidad": 0.434,
+     "saturacion": 0.52,
+     "estacional": false,
+     "query": "cuadros"
+    }
+   }
+  },
+  "estampado.vichy": {
+   "tipo": "estampado",
+   "nombre": "Vichy / gingham",
+   "padre": "estampado.cuadros",
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    14
+   ],
+   "mercados": {
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 67.2,
+     "estado_actual": "estable",
+     "score_24m": 32.9,
+     "crecimiento": 0.1193,
+     "persistencia": 6,
+     "aceleracion": 0.0252,
+     "volatilidad": 0.294,
+     "saturacion": 0.672,
+     "estacional": true,
+     "query": "vichy"
+    }
+   }
+  },
+  "estampado.animal_print": {
+   "tipo": "estampado",
+   "nombre": "Animal print",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    13
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 42.2,
+     "estado_actual": "estable",
+     "score_24m": 25.8,
+     "crecimiento": 0.0202,
+     "persistencia": 5,
+     "aceleracion": -0.4516,
+     "volatilidad": 0.201,
+     "saturacion": 0.422,
+     "estacional": true,
+     "query": "animal print"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 68.0,
+     "estado_actual": "estable",
+     "score_24m": 40.2,
+     "crecimiento": 0.186,
+     "persistencia": 9,
+     "aceleracion": -0.2414,
+     "volatilidad": 0.201,
+     "saturacion": 0.68,
+     "estacional": true,
+     "query": "animal print"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 59.4,
+     "estado_actual": "estable",
+     "score_24m": 34.6,
+     "crecimiento": -0.0286,
+     "persistencia": 6,
+     "aceleracion": -0.3929,
+     "volatilidad": 0.329,
+     "saturacion": 0.594,
+     "estacional": false,
+     "query": "animal print"
+    }
+   }
+  },
+  "estampado.leopardo": {
+   "tipo": "estampado",
+   "nombre": "Leopardo",
+   "padre": "estampado.animal_print",
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    13
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 28.0,
+     "estado_actual": "pico_atencion",
+     "score_24m": 32.2,
+     "crecimiento": 0.12,
+     "persistencia": 7,
+     "aceleracion": -0.3018,
+     "volatilidad": 0.425,
+     "saturacion": 0.28,
+     "estacional": true,
+     "query": "leopardo"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 72.3,
+     "estado_actual": "estable",
+     "score_24m": 36.0,
+     "crecimiento": 0.0946,
+     "persistencia": 7,
+     "aceleracion": -0.3291,
+     "volatilidad": 0.194,
+     "saturacion": 0.723,
+     "estacional": false,
+     "query": "leopardo"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 52.1,
+     "estado_actual": "estable",
+     "score_24m": 31.2,
+     "crecimiento": -0.17,
+     "persistencia": 5,
+     "aceleracion": -0.3411,
+     "volatilidad": 0.346,
+     "saturacion": 0.521,
+     "estacional": false,
+     "query": "leopardo"
+    }
+   }
+  },
+  "estampado.tie_dye": {
+   "tipo": "estampado",
+   "nombre": "Tie dye",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 4.4,
+     "estado_actual": "baja_sostenida",
+     "score_24m": 16.4,
+     "crecimiento": -0.2838,
+     "persistencia": 1,
+     "aceleracion": -0.097,
+     "volatilidad": 0.458,
+     "saturacion": 0.044,
+     "estacional": false,
+     "query": "tie dye"
+    },
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 5.2,
+     "estado_actual": "estable",
+     "score_24m": 13.6,
+     "crecimiento": -0.1486,
+     "persistencia": 1,
+     "aceleracion": 0.0885,
+     "volatilidad": 0.301,
+     "saturacion": 0.052,
+     "estacional": false,
+     "query": "tie dye"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 11.2,
+     "estado_actual": "pico_atencion",
+     "score_24m": 32.8,
+     "crecimiento": 0.5227,
+     "persistencia": 3,
+     "aceleracion": 0.8509,
+     "volatilidad": 1.339,
+     "saturacion": 0.112,
+     "estacional": false,
+     "query": "tie dye"
+    }
+   }
+  },
+  "estampado.lunares": {
+   "tipo": "estampado",
+   "nombre": "Lunares",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 67.2,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 45.0,
+     "crecimiento": 0.8402,
+     "persistencia": 11,
+     "aceleracion": 0.8581,
+     "volatilidad": 0.479,
+     "saturacion": 0.672,
+     "estacional": false,
+     "query": "lunares"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 36.3,
+     "estado_actual": "pico_atencion",
+     "score_24m": 33.4,
+     "crecimiento": 0.5683,
+     "persistencia": 7,
+     "aceleracion": 0.5425,
+     "volatilidad": 0.642,
+     "saturacion": 0.363,
+     "estacional": false,
+     "query": "lunares"
+    }
+   }
+  },
+  "estampado.cachemira": {
+   "tipo": "estampado",
+   "nombre": "Cachemira / paisley",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 14.8,
+     "estado_actual": "estable",
+     "score_24m": 29.3,
+     "crecimiento": 0.0926,
+     "persistencia": 7,
+     "aceleracion": -0.6127,
+     "volatilidad": 0.351,
+     "saturacion": 0.147,
+     "estacional": false,
+     "query": "paisley"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 62.6,
+     "estado_actual": "estable",
+     "score_24m": 33.7,
+     "crecimiento": 0.0359,
+     "persistencia": 6,
+     "aceleracion": -0.53,
+     "volatilidad": 0.251,
+     "saturacion": 0.626,
+     "estacional": false,
+     "query": "paisley"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 27.4,
+     "estado_actual": "estable",
+     "score_24m": 30.9,
+     "crecimiento": -0.1499,
+     "persistencia": 4,
+     "aceleracion": -0.7691,
+     "volatilidad": 0.585,
+     "saturacion": 0.274,
+     "estacional": false,
+     "query": "cachemira"
+    }
+   }
+  },
+  "estampado.camuflado": {
+   "tipo": "estampado",
+   "nombre": "Camuflado",
+   "padre": null,
+   "relaciones": [
+    "prenda.pantalon_cargo"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 24.5,
+     "estado_actual": "estable",
+     "score_24m": 17.6,
+     "crecimiento": -0.1118,
+     "persistencia": 2,
+     "aceleracion": 0.1559,
+     "volatilidad": 0.326,
+     "saturacion": 0.245,
+     "estacional": true,
+     "query": "camuflado"
+    }
+   }
+  },
+  "estilo.minimalista": {
+   "tipo": "estilo",
+   "nombre": "Minimalista",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 19.9,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 39.5,
+     "crecimiento": 0.4059,
+     "persistencia": 11,
+     "aceleracion": 0.2801,
+     "volatilidad": 0.488,
+     "saturacion": 0.199,
+     "estacional": false,
+     "query": "minimalista"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 72.1,
+     "estado_actual": "estable",
+     "score_24m": 34.5,
+     "crecimiento": 0.2166,
+     "persistencia": 7,
+     "aceleracion": 0.1261,
+     "volatilidad": 0.241,
+     "saturacion": 0.721,
+     "estacional": false,
+     "query": "minimalista"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 72.2,
+     "estado_actual": "estable",
+     "score_24m": 28.6,
+     "crecimiento": -0.0607,
+     "persistencia": 5,
+     "aceleracion": -0.0006,
+     "volatilidad": 0.139,
+     "saturacion": 0.722,
+     "estacional": false,
+     "query": "minimalista"
+    }
+   }
+  },
+  "estilo.streetwear": {
+   "tipo": "estilo",
+   "nombre": "Streetwear",
+   "padre": null,
+   "relaciones": [
+    "prenda.sudadera",
+    "corte.oversize"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    8
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 64.7,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 43.7,
+     "crecimiento": 0.3153,
+     "persistencia": 10,
+     "aceleracion": -0.1064,
+     "volatilidad": 0.294,
+     "saturacion": 0.647,
+     "estacional": false,
+     "query": "streetwear"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 55.6,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 46.6,
+     "crecimiento": 0.4469,
+     "persistencia": 12,
+     "aceleracion": 0.1446,
+     "volatilidad": 0.322,
+     "saturacion": 0.556,
+     "estacional": false,
+     "query": "streetwear"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 26.7,
+     "estado_actual": "estable",
+     "score_24m": 44.8,
+     "crecimiento": 0.561,
+     "persistencia": 10,
+     "aceleracion": 0.1759,
+     "volatilidad": 0.76,
+     "saturacion": 0.267,
+     "estacional": false,
+     "query": "streetwear"
+    }
+   }
+  },
+  "estilo.vintage": {
+   "tipo": "estilo",
+   "nombre": "Vintage",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    7
+   ],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 31.8,
+     "estado_actual": "estable",
+     "score_24m": 14.9,
+     "crecimiento": -0.1549,
+     "persistencia": 1,
+     "aceleracion": -0.0241,
+     "volatilidad": 0.151,
+     "saturacion": 0.318,
+     "estacional": false,
+     "query": "ropa vintage"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 41.0,
+     "estado_actual": "estable",
+     "score_24m": 20.2,
+     "crecimiento": -0.0855,
+     "persistencia": 3,
+     "aceleracion": 0.0778,
+     "volatilidad": 0.216,
+     "saturacion": 0.41,
+     "estacional": false,
+     "query": "ropa vintage"
+    }
+   }
+  },
+  "estilo.segunda_mano": {
+   "tipo": "estilo",
+   "nombre": "Segunda mano",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    7
+   ],
+   "mercados": {
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 22.6,
+     "estado_actual": "estable",
+     "score_24m": 31.1,
+     "crecimiento": 0.1435,
+     "persistencia": 10,
+     "aceleracion": 0.3765,
+     "volatilidad": 0.202,
+     "saturacion": 0.226,
+     "estacional": false,
+     "query": "ropa de segunda mano"
+    }
+   }
+  },
+  "estilo.boho": {
+   "tipo": "estilo",
+   "nombre": "Boho",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 52.7,
+     "estado_actual": "pico_atencion",
+     "score_24m": 35.5,
+     "crecimiento": 0.1791,
+     "persistencia": 8,
+     "aceleracion": 0.0239,
+     "volatilidad": 0.306,
+     "saturacion": 0.527,
+     "estacional": false,
+     "query": "boho"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 46.2,
+     "estado_actual": "pico_atencion",
+     "score_24m": 24.0,
+     "crecimiento": 0.0146,
+     "persistencia": 3,
+     "aceleracion": -0.4287,
+     "volatilidad": 0.31,
+     "saturacion": 0.463,
+     "estacional": false,
+     "query": "boho"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 40.8,
+     "estado_actual": "pico_atencion",
+     "score_24m": 32.1,
+     "crecimiento": 0.0403,
+     "persistencia": 6,
+     "aceleracion": -0.1372,
+     "volatilidad": 0.44,
+     "saturacion": 0.408,
+     "estacional": false,
+     "query": "boho"
+    }
+   }
+  },
+  "estilo.y2k": {
+   "tipo": "estilo",
+   "nombre": "Y2K",
+   "padre": null,
+   "relaciones": [
+    "corte.tiro_bajo",
+    "prenda.crop_top"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 72.2,
+     "estado_actual": "estable",
+     "score_24m": 40.2,
+     "crecimiento": 0.1378,
+     "persistencia": 9,
+     "aceleracion": -0.1259,
+     "volatilidad": 0.173,
+     "saturacion": 0.723,
+     "estacional": false,
+     "query": "y2k"
+    },
+    "ES": {
+     "calidad": "apta_senal",
+     "momentum": 25.3,
+     "estado_actual": "alza_sostenida",
+     "score_24m": 43.7,
+     "crecimiento": 0.7175,
+     "persistencia": 10,
+     "aceleracion": 0.6763,
+     "volatilidad": 0.85,
+     "saturacion": 0.253,
+     "estacional": false,
+     "query": "y2k"
+    }
+   }
+  },
+  "estilo.retro": {
+   "tipo": "estilo",
+   "nombre": "Retro",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 43.4,
+     "estado_actual": "estable",
+     "score_24m": 23.9,
+     "crecimiento": -0.0596,
+     "persistencia": 4,
+     "aceleracion": 0.041,
+     "volatilidad": 0.282,
+     "saturacion": 0.434,
+     "estacional": false,
+     "query": "ropa retro"
+    }
+   }
+  },
+  "estilo.preppy": {
+   "tipo": "estilo",
+   "nombre": "Preppy",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 33.0,
+     "estado_actual": "baja_sostenida",
+     "score_24m": 19.3,
+     "crecimiento": -0.3378,
+     "persistencia": 1,
+     "aceleracion": -0.2621,
+     "volatilidad": 0.357,
+     "saturacion": 0.33,
+     "estacional": false,
+     "query": "preppy"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 11.3,
+     "estado_actual": "pico_atencion",
+     "score_24m": 21.0,
+     "crecimiento": 0.1148,
+     "persistencia": 4,
+     "aceleracion": 0.357,
+     "volatilidad": 0.489,
+     "saturacion": 0.113,
+     "estacional": false,
+     "query": "preppy"
+    }
+   }
+  },
+  "estilo.grunge": {
+   "tipo": "estilo",
+   "nombre": "Grunge",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 19.2,
+     "estado_actual": "baja_sostenida",
+     "score_24m": 17.1,
+     "crecimiento": -0.2722,
+     "persistencia": 1,
+     "aceleracion": -0.381,
+     "volatilidad": 0.327,
+     "saturacion": 0.192,
+     "estacional": false,
+     "query": "grunge"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 21.1,
+     "estado_actual": "pico_atencion",
+     "score_24m": 34.4,
+     "crecimiento": 0.265,
+     "persistencia": 5,
+     "aceleracion": 0.3171,
+     "volatilidad": 0.945,
+     "saturacion": 0.211,
+     "estacional": false,
+     "query": "grunge"
+    }
+   }
+  },
+  "estilo.cottagecore": {
+   "tipo": "estilo",
+   "nombre": "Cottagecore",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 5.4,
+     "estado_actual": "baja_sostenida",
+     "score_24m": 23.4,
+     "crecimiento": -0.4196,
+     "persistencia": 2,
+     "aceleracion": -0.664,
+     "volatilidad": 0.616,
+     "saturacion": 0.054,
+     "estacional": false,
+     "query": "cottagecore"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 19.4,
+     "estado_actual": "baja_sostenida",
+     "score_24m": 16.3,
+     "crecimiento": -0.2939,
+     "persistencia": 1,
+     "aceleracion": -0.3219,
+     "volatilidad": 0.281,
+     "saturacion": 0.194,
+     "estacional": false,
+     "query": "cottagecore"
+    },
+    "ES": {
+     "calidad": "apta_senal",
+     "momentum": 12.8,
+     "estado_actual": "pico_atencion",
+     "score_24m": 29.2,
+     "crecimiento": 0.3909,
+     "persistencia": 3,
+     "aceleracion": 0.4344,
+     "volatilidad": 1.066,
+     "saturacion": 0.128,
+     "estacional": false,
+     "query": "cottagecore"
+    }
+   }
+  },
+  "estilo.coquette": {
+   "tipo": "estilo",
+   "nombre": "Coquette",
+   "padre": null,
+   "relaciones": [
+    "tela.encaje",
+    "prenda.corse"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 9.8,
+     "estado_actual": "baja_sostenida",
+     "score_24m": 13.5,
+     "crecimiento": -0.3018,
+     "persistencia": 1,
+     "aceleracion": 0.2704,
+     "volatilidad": 0.256,
+     "saturacion": 0.098,
+     "estacional": false,
+     "query": "coquette"
+    }
+   }
+  },
+  "estilo.old_money": {
+   "tipo": "estilo",
+   "nombre": "Old money",
+   "padre": null,
+   "relaciones": [
+    "prenda.blazer"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_senal",
+     "momentum": 43.9,
+     "estado_actual": "estable",
+     "score_24m": 27.0,
+     "crecimiento": -0.1275,
+     "persistencia": 4,
+     "aceleracion": -0.3379,
+     "volatilidad": 0.35,
+     "saturacion": 0.439,
+     "estacional": true,
+     "query": "old money"
+    },
+    "MX": {
+     "calidad": "apta_senal",
+     "momentum": 22.9,
+     "estado_actual": "estable",
+     "score_24m": 16.4,
+     "crecimiento": -0.2075,
+     "persistencia": 1,
+     "aceleracion": -0.4124,
+     "volatilidad": 0.255,
+     "saturacion": 0.229,
+     "estacional": true,
+     "query": "old money"
+    },
+    "ES": {
+     "calidad": "apta_senal",
+     "momentum": 61.2,
+     "estado_actual": "estable",
+     "score_24m": 38.3,
+     "crecimiento": 0.0699,
+     "persistencia": 9,
+     "aceleracion": -0.2462,
+     "volatilidad": 0.159,
+     "saturacion": 0.613,
+     "estacional": false,
+     "query": "old money"
+    }
+   }
+  },
+  "estilo.western": {
+   "tipo": "estilo",
+   "nombre": "Western",
+   "padre": null,
+   "relaciones": [],
+   "hex": null,
+   "familia": null,
+   "v1": [],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 52.7,
+     "estado_actual": "estable",
+     "score_24m": 27.7,
+     "crecimiento": 0.0429,
+     "persistencia": 5,
+     "aceleracion": 0.007,
+     "volatilidad": 0.283,
+     "saturacion": 0.527,
+     "estacional": false,
+     "query": "western"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 22.1,
+     "estado_actual": "estable",
+     "score_24m": 33.1,
+     "crecimiento": 0.2045,
+     "persistencia": 10,
+     "aceleracion": -0.0384,
+     "volatilidad": 0.233,
+     "saturacion": 0.221,
+     "estacional": true,
+     "query": "western"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 18.8,
+     "estado_actual": "pico_atencion",
+     "score_24m": 46.4,
+     "crecimiento": 0.7795,
+     "persistencia": 8,
+     "aceleracion": 0.4702,
+     "volatilidad": 1.213,
+     "saturacion": 0.188,
+     "estacional": false,
+     "query": "western"
+    }
+   }
+  },
+  "estilo.playa_resort": {
+   "tipo": "estilo",
+   "nombre": "Playa y resort",
+   "padre": null,
+   "relaciones": [
+    "prenda.traje_bano",
+    "tela.lino"
+   ],
+   "hex": null,
+   "familia": null,
+   "v1": [
+    24
+   ],
+   "mercados": {
+    "CO": {
+     "calidad": "apta_backtest",
+     "momentum": 43.5,
+     "estado_actual": "estable",
+     "score_24m": 30.4,
+     "crecimiento": 0.0235,
+     "persistencia": 8,
+     "aceleracion": 0.0576,
+     "volatilidad": 0.147,
+     "saturacion": 0.435,
+     "estacional": false,
+     "query": "ropa de playa"
+    },
+    "MX": {
+     "calidad": "apta_backtest",
+     "momentum": 31.2,
+     "estado_actual": "estable",
+     "score_24m": 23.5,
+     "crecimiento": 0.0027,
+     "persistencia": 5,
+     "aceleracion": 0.0133,
+     "volatilidad": 0.256,
+     "saturacion": 0.312,
+     "estacional": false,
+     "query": "ropa de playa"
+    },
+    "ES": {
+     "calidad": "apta_backtest",
+     "momentum": 33.3,
+     "estado_actual": "pico_atencion",
+     "score_24m": 31.8,
+     "crecimiento": 0.1594,
+     "persistencia": 4,
+     "aceleracion": 0.1565,
+     "volatilidad": 0.797,
+     "saturacion": 0.333,
+     "estacional": false,
+     "query": "ropa de playa"
+    }
+   }
+  }
+ }
+}

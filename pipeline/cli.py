@@ -14,6 +14,7 @@ import sys
 from .calidad import escribir_informe, evaluar
 from .historia import DIR_RAW, descargar_historia
 from .fuentes.trends import BackendPytrends
+from .exportar_panel import main as exportar_main
 from .reporte_backtesting import main as backtest_main
 from .reporte_senales import main as senales_main
 from .reporte_trend_score import main as trend_score_main
@@ -45,6 +46,7 @@ def main(argv=None):
     t = sub.add_parser("trend_score", help="calibra el Trend Score (fase 4) y genera su informe")
     t.add_argument("--series", type=int, default=150, help="cuántas series incluir en el ajuste")
     t.add_argument("--cortes", type=int, default=8, help="cuántos cortes por serie")
+    sub.add_parser("exportar", help="consolida todo en src/data/v2/catalogo.json, para que lo lea el panel")
     a = p.parse_args(argv)
 
     tax = cargar()
@@ -95,6 +97,10 @@ def main(argv=None):
 
     if a.cmd == "trend_score":
         trend_score_main(n_series=a.series, n_cortes=a.cortes)
+        return 0
+
+    if a.cmd == "exportar":
+        exportar_main()
         return 0
 
 
