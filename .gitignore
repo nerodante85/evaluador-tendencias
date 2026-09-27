@@ -22,3 +22,6 @@ Thumbs.db
 
 # Pruebas de Python
 .pytest_cache/
+
+# Credenciales de fuentes de la fase 6 (MercadoLibre): nunca se suben
+data/v2/.secretos/

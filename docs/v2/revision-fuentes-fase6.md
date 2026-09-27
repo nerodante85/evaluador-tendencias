@@ -1,6 +1,6 @@
 # Fase 6 — revisión de acceso a nuevas fuentes
 
-Puerta de esta fase (`docs/v2/plan.md`): "cada fuente supera su revisión de acceso y términos" antes de integrarla al pipeline de la taxonomía. Esta vez la revisión dio **negativo para las dos fuentes gratuitas evaluadas** — con evidencia real, no una suposición — y eso es un resultado válido, no un fracaso: es exactamente para lo que existe esta puerta.
+Puerta de esta fase (`docs/v2/plan.md`): "cada fuente supera su revisión de acceso y términos" antes de integrarla al pipeline de la taxonomía. La revisión dio **negativo para las tres fuentes evaluadas hasta ahora** — con evidencia real, no una suposición — y eso es un resultado válido, no un fracaso: es exactamente para lo que existe esta puerta.
 
 ## Wikipedia Pageviews — acceso: sí. Integración automática: no.
 
@@ -35,7 +35,25 @@ Puerta de esta fase (`docs/v2/plan.md`): "cada fuente supera su revisión de acc
 
 **Conclusión:** el código queda listo y probado (`pipeline/fuentes/wikipedia.py`) para el día que tenga sentido usarlo, pero **no se conecta a `taxonomia/` ni a `pipeline/historia.py` todavía.** Sí podría valer la pena como un proyecto chico aparte: una lista curada a mano de ~15-20 conceptos amplios y bien establecidos (Denim, Moda, Streetwear si existe con otro título, etc.) — nunca para los ~150 nodos completos, la mayoría de los cuales (cortes específicos, estéticas de nicho) casi seguro no tienen artículo propio.
 
-## MercadoLibre — ya no es pública, necesita decisión
+## MercadoLibre — descartada: la API bloquea estos endpoints incluso con app registrada y token válido
+
+**Actualización (2026-09-27, con token real):** Ricardo registró la app en el DevCenter (`Client ID 1893963677539756`, scopes de solo lectura, sin tópicos) y completó el flujo OAuth completo (Authorization Code) hasta obtener un access token válido. Con ese token real:
+
+```
+GET /trends/MCO      -> 403 {"blocked_by":"PolicyAgent","code":"PA_UNAUTHORIZED_RESULT_FROM_POLICIES",
+                             "message":"At least one policy returned UNAUTHORIZED."}
+GET /sites/MCO/search?q=jean            -> el mismo 403
+GET /sites/MCO/search?q=chaqueta cuero  -> el mismo 403
+GET /sites/MCO/search?q=crop top        -> el mismo 403
+```
+
+Esto es distinto al 403 sin token de la primera ronda: el token sí es válido (si no lo fuera, el error sería 401 `invalid_token`, no este). El bloqueo lo pone un componente adicional de MercadoLibre ("PolicyAgent") **después** de validar el OAuth — una capa de autorización de negocio, no de autenticación.
+
+No es un caso aislado: se encontró un reporte de otro desarrollador con el mismo síntoma exacto — un token que funciona contra `/users/me` pero recibe 403 en `/sites/MLB/search` — y notas de que, desde 2025, MercadoLibre restringió el acceso a búsqueda pública para aplicaciones nuevas registradas por el flujo estándar del DevCenter; el acceso real parece requerir un nivel de integración ("certificación") que normalmente se obtiene teniendo tráfico real de un vendedor en producción, no un registro de consulta como el nuestro.
+
+**Conclusión: descartada, igual que Pinterest Trends.** No es un error de configuración recuperable desde este lado — es una puerta que MercadoLibre no abre para este tipo de uso. No tiene sentido invertir más tiempo en el adaptador (`pipeline/fuentes/mercadolibre.py` queda escrito y probado en vivo, sin conectar, por si algún día MercadoLibre habilita esto para integradores certificados). Sumado a que MercadoLibre tampoco opera en España, esta fuente como mucho hubiera aportado a 2 de los 3 mercados — ahora ni eso.
+
+### Lo que se sabía antes de tener el token (para el registro histórico)
 
 Se probó en vivo el endpoint de tendencias (`/trends/MCO`) y el de búsqueda de productos (`/sites/MCO/search`), ambos sin autenticación: **los dos devolvieron 403 Forbidden.** MercadoLibre exige hoy una aplicación registrada (client ID/secret, vía su portal de desarrolladores) incluso para búsquedas básicas — ya no es de acceso libre como se documentó como posibilidad en la fase 0.
 
@@ -80,7 +98,6 @@ Nota aparte para no confundir: esto es la API de **Pinterest Trends**, distinta 
 ## Decisión pendiente para Ricardo
 
 1. ¿Vale la pena una lista curada a mano de ~15-20 conceptos amplios para Wikipedia, sabiendo que no separa por país y que el volumen es bajo? ¿O se deja en pausa?
-2. ¿Quieres registrar una aplicación de desarrollador en MercadoLibre (con tu propia cuenta) para que se pueda evaluar su API de verdad?
-3. ¿Ya se definió presupuesto para un proveedor de pago, o sigue en pausa?
+2. ¿Ya se definió presupuesto para un proveedor de pago, o sigue en pausa?
 
-(Pinterest Trends ya no está en esta lista — se descartó por la forma del dato, no necesita una decisión tuya.)
+(MercadoLibre y Pinterest Trends ya no están en esta lista — las dos se descartaron con evidencia real: la primera por una política de la API que bloquea estos endpoints incluso con token válido, la segunda por la forma del dato. Ninguna necesita una decisión tuya.)
