@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T08:54",
+  "generated_at": "2026-09-28T09:32",
   "source": "Google Trends (pytrends, no oficial)",
   "version": 2,
   "trends": [
@@ -9,24 +9,24 @@
       "scope": "co",
       "name": "Verde oliva profundo",
       "code": "CM-26-C01",
-      "momentum": 0,
-      "dir": "estable",
+      "momentum": 24,
+      "dir": "subiendo",
       "note": "Lidera las preferencias de color en Colombia para el segundo semestre de 2026, junto con tonos tierra y azul petróleo.",
       "source": "Diario del Sur / HSB Noticias, jul. 2026",
       "traj": [
-        15,
         0,
         0,
         0,
         0,
-        0
+        0,
+        48
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "CO",
       "confianza": "baja",
       "yoy": null,
       "persistencia": 1,
-      "volatilidad": 3.42,
+      "volatilidad": 4.8,
       "volumen": 2,
       "estacional": false,
       "relacionadas": [],
@@ -38,7 +38,7 @@
       "scope": "co",
       "name": "Borgoña",
       "code": "CM-26-C02",
-      "momentum": 8,
+      "momentum": 32,
       "dir": "subiendo",
       "note": "Uno de los tonos que más terreno gana en el mercado colombiano este semestre.",
       "source": "Diario del Sur, jul. 2026",
@@ -47,25 +47,25 @@
         0,
         0,
         0,
-        0,
-        10
+        34,
+        38
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "CO",
       "confianza": "baja",
-      "yoy": -52,
-      "persistencia": 1,
-      "volatilidad": 3.53,
-      "volumen": 1,
+      "yoy": null,
+      "persistencia": 4,
+      "volatilidad": 2.34,
+      "volumen": 5,
       "estacional": false,
       "relacionadas": [
         {
           "termino": "borgoña color",
-          "crecimiento": "+110%"
+          "crecimiento": "+130%"
         },
         {
           "termino": "vestido borgoña",
-          "crecimiento": "+100%"
+          "crecimiento": "+70%"
         }
       ],
       "swatch": "#6B2338"
@@ -76,26 +76,26 @@
       "scope": "co",
       "name": "Azul petróleo",
       "code": "CM-26-C03",
-      "momentum": 16,
-      "dir": "bajando",
+      "momentum": 23,
+      "dir": "subiendo",
       "note": "Aporta elegancia a ambientes corporativos; una de las cuatro tonalidades líderes del semestre.",
       "source": "Diario del Sur, jul. 2026",
       "traj": [
         0,
-        0,
-        13,
         25,
-        14,
-        8
+        24,
+        16,
+        26,
+        26
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "CO",
       "confianza": "baja",
-      "yoy": null,
-      "persistencia": 6,
-      "volatilidad": 1.41,
-      "volumen": 7,
-      "estacional": true,
+      "yoy": 324,
+      "persistencia": 7,
+      "volatilidad": 1.01,
+      "volumen": 15,
+      "estacional": false,
       "relacionadas": [],
       "swatch": "#1F4E5F"
     },
@@ -105,10 +105,115 @@
       "scope": "co",
       "name": "Tonos tierra, arena y mantequilla",
       "code": "CM-26-C04",
-      "momentum": 12,
+      "momentum": 28,
       "dir": "subiendo",
       "note": "Colores predominantes en las colecciones vistas en Colombiamoda Miami 2026, para estilos versátiles y atemporales.",
       "source": "El País, jul. 2026",
+      "traj": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        56
+      ],
+      "sinDatosSuficientes": false,
+      "geoUsado": "global",
+      "confianza": "baja",
+      "yoy": null,
+      "persistencia": 1,
+      "volatilidad": 4.8,
+      "volumen": 2,
+      "estacional": false,
+      "relacionadas": [],
+      "swatch": "#C9A66B"
+    },
+    {
+      "id": 5,
+      "cat": "color",
+      "scope": "co",
+      "name": "Terracota y lavanda suave",
+      "code": "CM-26-C05",
+      "momentum": 29,
+      "dir": "subiendo",
+      "note": "Presentes de forma constante en colecciones colombianas 2026 junto a marfil cálido y metalizados sutiles.",
+      "source": "ModaColombia.es, feb. 2026",
+      "traj": [
+        24,
+        24,
+        18,
+        0,
+        19,
+        26
+      ],
+      "sinDatosSuficientes": false,
+      "geoUsado": "CO",
+      "confianza": "media",
+      "yoy": -14,
+      "persistencia": 6,
+      "volatilidad": 0.76,
+      "volumen": 19,
+      "estacional": false,
+      "relacionadas": [
+        {
+          "termino": "vestido color terracota",
+          "crecimiento": "+70%"
+        }
+      ],
+      "swatch": "#B2542D"
+    },
+    {
+      "id": 6,
+      "cat": "color",
+      "scope": "global",
+      "name": "Fucsia eléctrico",
+      "code": "CM-26-C06",
+      "momentum": 45,
+      "dir": "subiendo",
+      "note": "Rosa intenso presente en la paleta SS27 de WGSN como Pop Pink; el fucsia eléctrico es la lectura de prensa de ese territorio, no un color de la carta oficial.",
+      "source": "Prensa internacional; territorio de color WGSN SS27",
+      "traj": [
+        44,
+        46,
+        40,
+        51,
+        44,
+        45
+      ],
+      "sinDatosSuficientes": false,
+      "geoUsado": "global",
+      "confianza": "alta",
+      "yoy": -19,
+      "persistencia": 3,
+      "volatilidad": 0.19,
+      "volumen": 55,
+      "estacional": true,
+      "relacionadas": [
+        {
+          "termino": "uñas fucsia elegantes",
+          "crecimiento": "+120%"
+        },
+        {
+          "termino": "adidas fucsia",
+          "crecimiento": "+110%"
+        },
+        {
+          "termino": "fucsia boutique",
+          "crecimiento": "+60%"
+        }
+      ],
+      "swatch": "#E4007C"
+    },
+    {
+      "id": 7,
+      "cat": "prenda",
+      "scope": "co",
+      "name": "Vintage, segunda mano y circular",
+      "code": "CM-26-P01",
+      "momentum": 7,
+      "dir": "subiendo",
+      "note": "Gana protagonismo bajo el concepto de autenticidad como nuevo lujo; piezas heredadas y de segunda mano suman valor de estilo.",
+      "source": "El País (Colombiamoda 2026), jul. 2026",
       "traj": [
         0,
         0,
@@ -122,113 +227,8 @@
       "confianza": "baja",
       "yoy": null,
       "persistencia": 1,
-      "volatilidad": 4.8,
-      "volumen": 1,
-      "estacional": false,
-      "relacionadas": [],
-      "swatch": "#C9A66B"
-    },
-    {
-      "id": 5,
-      "cat": "color",
-      "scope": "co",
-      "name": "Terracota y lavanda suave",
-      "code": "CM-26-C05",
-      "momentum": 8,
-      "dir": "bajando",
-      "note": "Presentes de forma constante en colecciones colombianas 2026 junto a marfil cálido y metalizados sutiles.",
-      "source": "ModaColombia.es, feb. 2026",
-      "traj": [
-        18,
-        29,
-        22,
-        0,
-        0,
-        10
-      ],
-      "sinDatosSuficientes": false,
-      "geoUsado": "CO",
-      "confianza": "baja",
-      "yoy": -75,
-      "persistencia": 7,
-      "volatilidad": 0.94,
-      "volumen": 17,
-      "estacional": true,
-      "relacionadas": [
-        {
-          "termino": "color terracota vestido",
-          "crecimiento": "+70%"
-        },
-        {
-          "termino": "vestido terracota",
-          "crecimiento": "+40%"
-        }
-      ],
-      "swatch": "#B2542D"
-    },
-    {
-      "id": 6,
-      "cat": "color",
-      "scope": "global",
-      "name": "Fucsia eléctrico",
-      "code": "CM-26-C06",
-      "momentum": 43,
-      "dir": "estable",
-      "note": "Rosa intenso presente en la paleta SS27 de WGSN como Pop Pink; el fucsia eléctrico es la lectura de prensa de ese territorio, no un color de la carta oficial.",
-      "source": "Prensa internacional; territorio de color WGSN SS27",
-      "traj": [
-        49,
-        38,
-        50,
-        40,
-        53,
-        43
-      ],
-      "sinDatosSuficientes": false,
-      "geoUsado": "global",
-      "confianza": "alta",
-      "yoy": -24,
-      "persistencia": 2,
-      "volatilidad": 0.21,
-      "volumen": 57,
-      "estacional": true,
-      "relacionadas": [
-        {
-          "termino": "adidas fucsia",
-          "crecimiento": "+110%"
-        },
-        {
-          "termino": "fucsia boutique",
-          "crecimiento": "+90%"
-        }
-      ],
-      "swatch": "#E4007C"
-    },
-    {
-      "id": 7,
-      "cat": "prenda",
-      "scope": "co",
-      "name": "Vintage, segunda mano y circular",
-      "code": "CM-26-P01",
-      "momentum": 4,
-      "dir": "estable",
-      "note": "Gana protagonismo bajo el concepto de autenticidad como nuevo lujo; piezas heredadas y de segunda mano suman valor de estilo.",
-      "source": "El País (Colombiamoda 2026), jul. 2026",
-      "traj": [
-        17,
-        24,
-        0,
-        0,
-        0,
-        4
-      ],
-      "sinDatosSuficientes": false,
-      "geoUsado": "CO",
-      "confianza": "baja",
-      "yoy": null,
-      "persistencia": 4,
-      "volatilidad": 2.15,
-      "volumen": 4,
+      "volatilidad": 2.29,
+      "volumen": 3,
       "estacional": false,
       "relacionadas": []
     },
@@ -238,32 +238,27 @@
       "scope": "co",
       "name": "Streetwear oversize",
       "code": "CM-26-P02",
-      "momentum": 3,
-      "dir": "bajando",
+      "momentum": 19,
+      "dir": "subiendo",
       "note": "Sigue marcando la pauta en Colombia: prendas amplias, sudaderas y tenis dominan vitrinas y redes sociales.",
       "source": "Diario del Sur, may. 2026",
       "traj": [
         0,
-        24,
         0,
         0,
         0,
-        3
+        0,
+        38
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "CO",
       "confianza": "baja",
       "yoy": null,
-      "persistencia": 4,
-      "volatilidad": 1.99,
+      "persistencia": 2,
+      "volatilidad": 2.39,
       "volumen": 5,
       "estacional": false,
-      "relacionadas": [
-        {
-          "termino": "ropa oversize hombres",
-          "crecimiento": "+60%"
-        }
-      ]
+      "relacionadas": []
     },
     {
       "id": 9,
@@ -271,25 +266,25 @@
       "scope": "co",
       "name": "Denim de bota ancha y recta",
       "code": "CM-26-P03",
-      "momentum": 3,
+      "momentum": 7,
       "dir": "bajando",
       "note": "Se mantiene fuerte como alternativa a los cortes ajustados, en denim y prendas moldeadoras.",
       "source": "ModaColombia.es, feb. 2026",
       "traj": [
         0,
+        20,
         0,
-        16,
+        15,
         0,
-        0,
-        4
+        13
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "CO",
       "confianza": "baja",
       "yoy": null,
-      "persistencia": 4,
-      "volatilidad": 2.89,
-      "volumen": 4,
+      "persistencia": 5,
+      "volatilidad": 1.97,
+      "volumen": 3,
       "estacional": false,
       "relacionadas": []
     },
@@ -299,38 +294,38 @@
       "scope": "co",
       "name": "Blazers largos y capas suaves",
       "code": "CM-26-P04",
-      "momentum": 41,
-      "dir": "estable",
+      "momentum": 34,
+      "dir": "subiendo",
       "note": "Chaquetas ligeras y blazers largos se consolidan para días frescos, entre lo profesional y lo casual.",
       "source": "ModaColombia.es, feb. 2026",
       "traj": [
-        36,
-        45,
-        35,
-        27,
-        35,
-        42
+        40,
+        31,
+        20,
+        31,
+        34,
+        30
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "CO",
       "confianza": "alta",
-      "yoy": -27,
-      "persistencia": 4,
-      "volatilidad": 0.26,
-      "volumen": 50,
+      "yoy": -31,
+      "persistencia": 3,
+      "volatilidad": 0.27,
+      "volumen": 45,
       "estacional": true,
       "relacionadas": [
         {
+          "termino": "blazer oversize mujer",
+          "crecimiento": "+130%"
+        },
+        {
           "termino": "blazer cafe",
-          "crecimiento": "+100%"
+          "crecimiento": "+110%"
         },
         {
-          "termino": "blazer azul claro mujer",
+          "termino": "blazer blanco para mujer",
           "crecimiento": "+100%"
-        },
-        {
-          "termino": "blazer cafe mujer",
-          "crecimiento": "+90%"
         }
       ]
     },
@@ -340,7 +335,7 @@
       "scope": "co",
       "name": "Lino y algodón orgánico",
       "code": "CM-26-M01",
-      "momentum": 6,
+      "momentum": 9,
       "dir": "subiendo",
       "note": "Parte central de la apuesta 2026 hacia una moda más consciente y sostenible en el mercado colombiano.",
       "source": "ModaColombia.es / Diario del Sur, 2026",
@@ -349,16 +344,16 @@
         0,
         0,
         0,
-        0,
-        7
+        20,
+        18
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "CO",
       "confianza": "baja",
       "yoy": null,
-      "persistencia": 2,
-      "volatilidad": 3.68,
-      "volumen": 1,
+      "persistencia": 3,
+      "volatilidad": 2.25,
+      "volumen": 3,
       "estacional": false,
       "relacionadas": []
     },
@@ -368,34 +363,34 @@
       "scope": "co",
       "name": "Textiles reciclados",
       "code": "CM-26-M02",
-      "momentum": 4,
-      "dir": "estable",
+      "momentum": 9,
+      "dir": "subiendo",
       "note": "Diseñadores colombianos incorporan cada vez más materiales reciclados y procesos de menor impacto ambiental.",
       "source": "Diario del Sur, may. 2026",
       "traj": [
-        8,
+        18,
+        15,
         0,
-        9,
         0,
-        12,
-        4
+        0,
+        19
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "CO",
       "confianza": "baja",
-      "yoy": -61,
-      "persistencia": 4,
-      "volatilidad": 1.27,
-      "volumen": 9,
+      "yoy": -55,
+      "persistencia": 5,
+      "volatilidad": 1.0,
+      "volumen": 14,
       "estacional": false,
       "relacionadas": [
         {
           "termino": "que es la moda sostenible",
-          "crecimiento": "+140%"
+          "crecimiento": "+150%"
         },
         {
-          "termino": "que es moda sostenible",
-          "crecimiento": "+80%"
+          "termino": "ong moda sostenible",
+          "crecimiento": "+50%"
         }
       ]
     },
@@ -405,38 +400,38 @@
       "scope": "global",
       "name": "Animal print (cebra, pitón)",
       "code": "CM-26-M03",
-      "momentum": 30,
+      "momentum": 27,
       "dir": "estable",
       "note": "Tendencia en alza en Europa y EE.UU. según plataformas de análisis de imagen; presencia aún limitada en Colombia, oportunidad de diferenciación.",
       "source": "Heuritech / prensa internacional, 2026",
       "traj": [
+        30,
+        38,
+        28,
+        42,
         27,
-        38,
-        38,
-        38,
-        52,
-        25
+        33
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "global",
       "confianza": "alta",
-      "yoy": -6,
-      "persistencia": 5,
-      "volatilidad": 0.25,
-      "volumen": 45,
+      "yoy": 3,
+      "persistencia": 6,
+      "volatilidad": 0.26,
+      "volumen": 37,
       "estacional": true,
       "relacionadas": [
         {
+          "termino": "samba animal print",
+          "crecimiento": "+327100%"
+        },
+        {
           "termino": "adidas samba animal print",
-          "crecimiento": "+297100%"
+          "crecimiento": "+650%"
         },
         {
           "termino": "pantalon animal print adidas",
-          "crecimiento": "+86950%"
-        },
-        {
-          "termino": "adidas animal print",
-          "crecimiento": "+130%"
+          "crecimiento": "+400%"
         }
       ]
     },
@@ -446,37 +441,37 @@
       "scope": "global",
       "name": "Cuadros (gingham, Príncipe de Gales)",
       "code": "CM-26-M04",
-      "momentum": 36,
-      "dir": "subiendo",
+      "momentum": 38,
+      "dir": "estable",
       "note": "Los estampados de cuadros repuntan a nivel internacional; útiles en camisería y capas de invierno.",
       "source": "prensa internacional, 2026",
       "traj": [
+        36,
         35,
+        34,
         38,
-        38,
-        30,
-        44,
-        38
+        32,
+        49
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "global",
       "confianza": "alta",
-      "yoy": -9,
+      "yoy": -1,
       "persistencia": 4,
-      "volatilidad": 0.29,
-      "volumen": 46,
+      "volatilidad": 0.28,
+      "volumen": 45,
       "estacional": true,
       "relacionadas": [
         {
           "termino": "cuadros para sala",
-          "crecimiento": "+70%"
+          "crecimiento": "+100%"
         },
         {
-          "termino": "pijama cuadros",
-          "crecimiento": "+60%"
+          "termino": "camisas de cuadros hombre",
+          "crecimiento": "+40%"
         },
         {
-          "termino": "pijamas de cuadros mujer",
+          "termino": "falda de cuadros corta",
           "crecimiento": "+40%"
         }
       ]
@@ -487,7 +482,7 @@
       "scope": "asia",
       "name": "Guochao (moda con orgullo cultural chino)",
       "code": "CM-26-A01",
-      "momentum": 7,
+      "momentum": 15,
       "dir": "subiendo",
       "note": "Movimiento chino que fusiona orgullo cultural y streetwear; evolucionó de sudaderas con logos a colecciones más refinadas con siluetas de artes marciales y estética de pintura tradicional.",
       "source": "Heuritech / Deeka AI, 2026",
@@ -496,16 +491,16 @@
         0,
         0,
         0,
-        0,
-        8
+        14,
+        7
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "CN",
       "confianza": "baja",
-      "yoy": null,
-      "persistencia": 6,
-      "volatilidad": 2.02,
-      "volumen": 6,
+      "yoy": -16,
+      "persistencia": 7,
+      "volatilidad": 1.87,
+      "volumen": 9,
       "estacional": false,
       "relacionadas": []
     },
@@ -515,25 +510,25 @@
       "scope": "asia",
       "name": "Hanfu y renacimiento textil tradicional chino",
       "code": "CM-26-A02",
-      "momentum": 40,
-      "dir": "estable",
+      "momentum": 24,
+      "dir": "subiendo",
       "note": "La ropa tradicional china crece como símbolo de identidad entre jóvenes; ventas del sector multiplicadas en años recientes, con picos en festivales culturales.",
       "source": "Descubriendo China / Xinhua, 2026",
       "traj": [
-        53,
-        28,
-        55,
-        52,
-        62,
-        37
+        0,
+        0,
+        0,
+        0,
+        0,
+        48
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "CN",
-      "confianza": "alta",
-      "yoy": 294,
-      "persistencia": 10,
-      "volatilidad": 0.54,
-      "volumen": 32,
+      "confianza": "baja",
+      "yoy": null,
+      "persistencia": 1,
+      "volatilidad": 4.8,
+      "volumen": 2,
       "estacional": false,
       "relacionadas": []
     },
@@ -543,25 +538,25 @@
       "scope": "asia",
       "name": "Streetwear y minimalismo coreano",
       "code": "CM-26-A03",
-      "momentum": 4,
-      "dir": "estable",
+      "momentum": 21,
+      "dir": "subiendo",
       "note": "El streetwear surcoreano combina siluetas relajadas con detalles técnicos; muestra picos cíclicos ligados a lanzamientos de K-pop y K-dramas.",
       "source": "Accio.com, 2026",
       "traj": [
+        34,
+        0,
+        0,
+        0,
         13,
-        0,
-        0,
-        0,
-        0,
-        5
+        21
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "KR",
       "confianza": "baja",
-      "yoy": -77,
-      "persistencia": 3,
-      "volatilidad": 1.67,
-      "volumen": 4,
+      "yoy": 63,
+      "persistencia": 5,
+      "volatilidad": 1.37,
+      "volumen": 8,
       "estacional": false,
       "relacionadas": []
     },
@@ -571,38 +566,38 @@
       "scope": "asia",
       "name": "Hanbok reinterpretado",
       "code": "CM-26-A04",
-      "momentum": 47,
-      "dir": "estable",
+      "momentum": 56,
+      "dir": "subiendo",
       "note": "La moda inspirada en el hanbok impulsa crecimiento proyectado de doble dígito en exportaciones de moda coreana a plataformas globales, fusionada con streetwear.",
       "source": "Accio.com, 2026",
       "traj": [
-        49,
-        47,
-        47,
-        43,
-        41,
-        47
+        39,
+        37,
+        34,
+        33,
+        38,
+        70
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "KR",
       "confianza": "alta",
-      "yoy": -16,
-      "persistencia": 9,
-      "volatilidad": 0.21,
-      "volumen": 51,
-      "estacional": false,
+      "yoy": -6,
+      "persistencia": 8,
+      "volatilidad": 0.25,
+      "volumen": 42,
+      "estacional": true,
       "relacionadas": [
         {
-          "termino": "한복 입고 이자 세가 되네",
-          "crecimiento": "+22550%"
-        },
-        {
           "termino": "아이온 2 한복",
-          "crecimiento": "+19800%"
+          "crecimiento": "+20750%"
         },
         {
           "termino": "한복 입은 남자",
-          "crecimiento": "+1350%"
+          "crecimiento": "+1600%"
+        },
+        {
+          "termino": "한복 입고 이자 세가 되네",
+          "crecimiento": "+550%"
         }
       ]
     },
@@ -612,25 +607,25 @@
       "scope": "asia",
       "name": "Streetwear Harajuku y resurgimiento Y2K",
       "code": "CM-26-A05",
-      "momentum": 63,
-      "dir": "bajando",
+      "momentum": 67,
+      "dir": "estable",
       "note": "Tokio combina maximalismo juguetón, accesorios kawaii y el regreso de plataformas y metálicos Y2K con streetwear técnico e influencia del anime.",
       "source": "Fashionable Asia / Accio.com, 2026",
       "traj": [
-        72,
-        65,
+        68,
         60,
-        60,
-        53,
-        66
+        64,
+        57,
+        67,
+        68
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "JP",
       "confianza": "alta",
-      "yoy": -2,
-      "persistencia": 5,
+      "yoy": -1,
+      "persistencia": 6,
       "volatilidad": 0.11,
-      "volumen": 65,
+      "volumen": 67,
       "estacional": false,
       "relacionadas": []
     },
@@ -640,24 +635,24 @@
       "scope": "global",
       "name": "Pantalón capri",
       "code": "CM-26-G01",
-      "momentum": 17,
-      "dir": "subiendo",
+      "momentum": 5,
+      "dir": "bajando",
       "note": "Regresa como básico de verano más allá de su origen de los 2000, con fuerte crecimiento en Europa y EE.UU. y siluetas más voluminosas y expresivas.",
       "source": "Heuritech, 2026",
       "traj": [
         0,
+        20,
         0,
         0,
         0,
-        0,
-        20
+        10
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "global",
       "confianza": "baja",
       "yoy": null,
-      "persistencia": 1,
-      "volatilidad": 4.8,
+      "persistencia": 2,
+      "volatilidad": 3.53,
       "volumen": 1,
       "estacional": false,
       "relacionadas": []
@@ -668,40 +663,27 @@
       "scope": "latam",
       "name": "Artesanía elevada: crochet y tejido a mano",
       "code": "CM-26-L01",
-      "momentum": 53,
+      "momentum": 51,
       "dir": "bajando",
       "note": "El verano brasileño 2026 convierte el crochet en pieza de lujo: acabados sofisticados, flecos, argollas y detalles de joyería sobre beachwear y sombrerería.",
       "source": "Jornal do Brás / CNN Brasil, ene. 2026",
       "traj": [
-        63,
         58,
         58,
-        57,
+        59,
         52,
-        53
+        53,
+        48
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "BR",
       "confianza": "alta",
-      "yoy": 17,
-      "persistencia": 8,
+      "yoy": -4,
+      "persistencia": 7,
       "volatilidad": 0.22,
       "volumen": 59,
       "estacional": true,
-      "relacionadas": [
-        {
-          "termino": "lenço de crochê para cintura",
-          "crecimiento": "+28650%"
-        },
-        {
-          "termino": "headpiece crochê",
-          "crecimiento": "+8550%"
-        },
-        {
-          "termino": "lenço de crochê",
-          "crecimiento": "+350%"
-        }
-      ]
+      "relacionadas": []
     },
     {
       "id": 22,
@@ -709,7 +691,7 @@
       "scope": "latam",
       "name": "Bordado como estructura, no adorno",
       "code": "CM-26-L02",
-      "momentum": 6,
+      "momentum": 21,
       "dir": "subiendo",
       "note": "En el mayor encuentro textil de México el bordado deja de ser decoración y pasa a definir la caída y la narrativa de la prenda: deshilados, plisados y puntadas regionales como cartografía de identidad.",
       "source": "Harper's Bazaar México, 2026",
@@ -717,16 +699,16 @@
         0,
         0,
         0,
-        22,
-        25,
-        7
+        0,
+        0,
+        43
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "MX",
       "confianza": "baja",
       "yoy": null,
-      "persistencia": 3,
-      "volatilidad": 2.91,
+      "persistencia": 1,
+      "volatilidad": 4.8,
       "volumen": 2,
       "estacional": false,
       "relacionadas": []
@@ -737,8 +719,8 @@
       "scope": "latam",
       "name": "Fibras que revelan su origen",
       "code": "CM-26-L03",
-      "momentum": 17,
-      "dir": "subiendo",
+      "momentum": 0,
+      "dir": "estable",
       "note": "Algodón hilado a mano, fibras vegetales con irregularidad natural y lanas sin uniformidad industrial. El lujo se redefine como tiempo, técnica y origen en vez de brillo.",
       "source": "Harper's Bazaar México, 2026",
       "traj": [
@@ -747,15 +729,15 @@
         0,
         0,
         0,
-        20
+        0
       ],
-      "sinDatosSuficientes": false,
-      "geoUsado": "MX",
+      "sinDatosSuficientes": true,
+      "geoUsado": null,
       "confianza": "baja",
       "yoy": null,
-      "persistencia": 1,
-      "volatilidad": 4.8,
-      "volumen": 1,
+      "persistencia": 0,
+      "volatilidad": null,
+      "volumen": 0,
       "estacional": false,
       "relacionadas": []
     },
@@ -765,38 +747,38 @@
       "scope": "latam",
       "name": "Resort y beachwear tropical",
       "code": "CM-26-L04",
-      "momentum": 36,
+      "momentum": 35,
       "dir": "subiendo",
       "note": "Brasil exporta la estética de resort deluxe: sobreposiciones fluidas, boho sofisticado y minimalismo sensual. Miami Swim Week es la vitrina de los diseñadores latinos hacia el mercado global.",
       "source": "Revista Têxtil / Ruta 1825, 2026",
       "traj": [
+        30,
+        20,
+        20,
         32,
-        31,
-        22,
-        21,
-        33,
-        38
+        36,
+        33
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "BR",
       "confianza": "alta",
-      "yoy": -12,
+      "yoy": -16,
       "persistencia": 5,
-      "volatilidad": 0.39,
-      "volumen": 47,
+      "volatilidad": 0.4,
+      "volumen": 44,
       "estacional": true,
       "relacionadas": [
         {
           "termino": "moda praia 2026 tendência",
-          "crecimiento": "+47400%"
+          "crecimiento": "+46950%"
         },
         {
           "termino": "moda praia 2025",
-          "crecimiento": "+950%"
+          "crecimiento": "+650%"
         },
         {
           "termino": "so biquinis moda praia",
-          "crecimiento": "+300%"
+          "crecimiento": "+200%"
         }
       ]
     },
@@ -806,7 +788,7 @@
       "scope": "latam",
       "name": "Alpaca y algodón pima peruano",
       "code": "CM-26-L05",
-      "momentum": 2,
+      "momentum": 8,
       "dir": "subiendo",
       "note": "La fibra de alpaca es el tercer producto de exportación textil de Perú (US$27,8 millones en el primer trimestre de 2026, detrás de dos líneas de t-shirts de algodón). El sector cayó 8% y busca diversificar, lo que abre ventana de negociación con proveedores regionales.",
       "source": "ADEX / Infobae Perú, may. 2026",
@@ -815,16 +797,16 @@
         0,
         0,
         0,
-        22,
-        2
+        0,
+        15
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "PE",
       "confianza": "baja",
       "yoy": null,
       "persistencia": 3,
-      "volatilidad": 3.19,
-      "volumen": 2,
+      "volatilidad": 2.26,
+      "volumen": 3,
       "estacional": false,
       "relacionadas": []
     },
@@ -834,25 +816,25 @@
       "scope": "latam",
       "name": "Contraste energético (rojo vibrante, morado casi negro, amarillo quemado)",
       "code": "CM-26-L06",
-      "momentum": 3,
+      "momentum": 8,
       "dir": "estable",
       "note": "La paleta artesanal mexicana busca contraste emocional en vez de armonía clásica: rojos vibrantes, morados casi negros, azules saturados y amarillos quemados conviviendo en la misma prenda.",
       "source": "Harper's Bazaar México, 2026",
       "traj": [
         0,
+        16,
         0,
         0,
         0,
-        0,
-        4
+        16
       ],
       "sinDatosSuficientes": false,
       "geoUsado": "MX",
       "confianza": "baja",
       "yoy": null,
-      "persistencia": 2,
-      "volatilidad": 4.04,
-      "volumen": 1,
+      "persistencia": 3,
+      "volatilidad": 2.72,
+      "volumen": 2,
       "estacional": false,
       "relacionadas": [],
       "swatch": "#C22E22"
@@ -920,9 +902,37 @@
       "name": "Oferta masiva china de producto terminado",
       "code": "CM-26-A08",
       "momentum": 0,
-      "dir": "estable",
+      "dir": "bajando",
       "note": "Lo que se ofrece en volumen en la fase 3 de Cantón define la presión de precio que llega al mercado local entre 6 y 12 meses después. No es tendencia de estilo: es tendencia de costo.",
       "source": "Feria de Cantón, fase 3, oct.–nov. 2026",
+      "traj": [
+        0,
+        19,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sinDatosSuficientes": false,
+      "geoUsado": "CO",
+      "confianza": "baja",
+      "yoy": null,
+      "persistencia": 2,
+      "volatilidad": 3.36,
+      "volumen": 2,
+      "estacional": false,
+      "relacionadas": []
+    },
+    {
+      "id": 30,
+      "cat": "color",
+      "scope": "global",
+      "name": "Luminous Blue (color del año 2027)",
+      "code": "CM-26-G02",
+      "momentum": 0,
+      "dir": "estable",
+      "note": "WGSN y Coloro nombraron Luminous Blue color del año 2027. Su paleta SS27 la completan Energy Orange, Pop Pink, Meadowland Green y Clay.",
+      "source": "WGSN / Coloro, color del año 2027",
       "traj": [
         0,
         0,
@@ -938,34 +948,6 @@
       "persistencia": 0,
       "volatilidad": null,
       "volumen": 0,
-      "estacional": false,
-      "relacionadas": []
-    },
-    {
-      "id": 30,
-      "cat": "color",
-      "scope": "global",
-      "name": "Luminous Blue (color del año 2027)",
-      "code": "CM-26-G02",
-      "momentum": 1,
-      "dir": "subiendo",
-      "note": "WGSN y Coloro nombraron Luminous Blue color del año 2027. Su paleta SS27 la completan Energy Orange, Pop Pink, Meadowland Green y Clay.",
-      "source": "WGSN / Coloro, color del año 2027",
-      "traj": [
-        0,
-        0,
-        0,
-        0,
-        25,
-        1
-      ],
-      "sinDatosSuficientes": false,
-      "geoUsado": "global",
-      "confianza": "baja",
-      "yoy": null,
-      "persistencia": 2,
-      "volatilidad": 4.61,
-      "volumen": 1,
       "estacional": false,
       "relacionadas": [],
       "swatch": "#3E7BC1"
