@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-30T14:15",
+  "generated_at": "2026-11-02T15:15",
   "source": "TRM oficial · datos.gov.co (Banco de la República / Superfinanciera)",
   "usdcop": {
-    "actual": 3166.9,
-    "cambio_30d_pct": 0.48,
+    "actual": 3183.0,
+    "cambio_30d_pct": -0.31,
     "direccion": "estable",
     "trayectoria": [
-      3634,
-      3678,
-      3358,
-      3230,
+      3622,
+      3560,
+      3335,
+      3205,
       3141,
-      3167
+      3183
     ],
-    "fecha_dato": "2026-10-30",
+    "fecha_dato": "2026-10-31",
     "fuente": "TRM oficial · datos.gov.co (Banco de la República / Superfinanciera)"
   }
 }
